@@ -1,82 +1,21 @@
 openapi: 3.0.0
 info:
-  title: Eqcentric
-  version: 1.0.0
-  
+  title: 'Makini API'
+  description: 'Makini API'
+  contact: developer@eq-centric.com
+  version: '0.1'
 paths:
-  /sites:
-    get:
-      tags:
-        - Sites
-      summary: 'List sites'
-      operationId: listSites
-      responses:
-        200:
-          description: 'A list of site entities'
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Site'
-        default:
-          description: 'an "unexpected" error'
   /equipment:
     get:
-      tags:
-        - Equipment
-      summary: 'Search equipment list'
-      operationId: listEquipment
-      parameters:
-        - in: query
-          name: serial
-          description: 'Serial number'
-          schema:
-            type: string
-        - in: query
-          name: parentId
-          description: 'Parent equipment ID'
-          schema:
-            type: string
-        - in: query
-          name: _sort
-          schema:
-            enum: [createdAt,updatedAt]
-        - in: query
-          name: _sortOrder
-          schema:
-            enum: [asc,desc]
+      summary: 'Display equipment list'
+      operationId: EquipmentSearch
       responses:
-        200:
-          description: 'A list of equipment entities'
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Equipment'
-        default:
-          description: 'an "unexpected" error'
-    post:
-      tags:
-        - Equipment
-      summary: 'Create equipment'
-      operationId: createEquipment
-      responses:
-        200:
-          description: 'Equipment entity'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/EquipmentWrite'
-        default:
-          description: 'an "unexpected" error'
+        '200':
+          $ref: '#/components/responses/EquipmentResourceCollection'
   '/equipment/{key}':
     get:
-      tags:
-        - Equipment
-      summary: 'Get equipment'
-      operationId: getEquipmentById
+      summary: 'Display the specified resource.'
+      operationId: EquipmentGet
       parameters:
         -
           name: key
@@ -85,658 +24,201 @@ paths:
           schema:
             type: string
       responses:
-        200:
-          description: 'Equipment entity'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Equipment'
-        default:
-          description: 'an "unexpected" error'
-    put:
-      tags:
-        - Equipment
-      summary: 'Update equipment'
-      operationId: updateEquipmentById
-      parameters:
-        -
-          name: key
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        200:
-          description: 'Equipment entity'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/EquipmentWrite'
-        default:
-          description: 'an "unexpected" error'
-  /work-orders:
-    get:
-      tags:
-        - 'Work Orders'
-      summary: 'List work orders'
-      operationId: listWorkOrders
-      responses:
-        200:
-          description: 'A list with work orders'
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/WorkOrder'
-        default:
-          description: 'an "unexpected" error'
-    post:
-      tags:
-        - 'Work Orders'
-      summary: 'Create work order'
-      operationId: createWorkOrder
-      responses:
-        200:
-          description: 'Work order entity'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/WorkOrderCreate'
-        default:
-          description: 'an "unexpected" error'
-  '/work-orders/{key}':
-    get:
-      tags:
-        - 'Work Orders'
-      summary: 'Get work order'
-      operationId: getWorkOrderById
-      parameters:
-        -
-          name: key
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        200:
-          description: 'Work order entity'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/WorkOrder'
-        default:
-          description: 'an "unexpected" error'
-    put:
-      tags:
-        - 'Work Orders'
-      summary: 'Update work order'
-      operationId: updateWorkOrderById
-      parameters:
-        -
-          name: key
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        200:
-          description: 'Work order entity'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/WorkOrder'
-        default:
-          description: 'an "unexpected" error'
-    delete:
-      tags:
-        - 'Work Orders'
-      summary: 'Delete work order'
-      operationId: deleteWorkOrderById
-      parameters:
-        -
-          name: key
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        204:
-          description: 'Resource deleted'
-        default:
-          description: 'an "unexpected" error'
-  /storage:
-    get:
-      tags:
-        - Storage
-      summary: List storage facitlities
-      operationId: listStorageItems
-      responses:
-        200:
-          description: 'List of storage entities'
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Storage'
-        default:
-          description: 'an "unexpected" error'
-  '/storage/{key}/stock':
-    get:
-      tags:
-        - Storage
-      summary: 'Get stock information for storage ID'
-      operationId: 'getStorageStockById'
-      parameters:
-        -
-          name: key
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        200:
-          description: 'Part stock entity'
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/PartStock'
-        default:
-          description: 'an "unexpected" error'
+        '200':
+          $ref: '#/components/responses/EquipmentResourceItem'
   /parts:
     get:
-      tags:
-        - Parts
-      summary: 'List of parts'
-      operationId: listParts
-      parameters:
-        - in: query
-          name: serial
-          description: 'Serial number'
-          schema:
-            type: string
-        - in: query
-          name: equipmentId
-          description: 'Equipment ID'
-          schema:
-            type: string
-        - in: query
-          name: storageId
-          description: 'Storage ID'
-          schema:
-            type: string
-        - in: query
-          name: _sort
-          schema:
-            enum: [createdAt,updatedAt]
-        - in: query
-          name: _sortOrder
-          schema:
-            enum: [asc,desc]
+      summary: 'Display part list'
+      operationId: PartSearch
       responses:
-        200:
-          description: 'A list with parts'
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Part'
-        default:
-          description: 'an "unexpected" error'
-    post:
-      tags:
-        - Parts
-      summary: 'Create part'
-      operationId: createPart
-      responses:
-        200:
-          description: 'Part entity'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Part'
-        default:
-          description: 'an "unexpected" error'
+        '200':
+          $ref: '#/components/responses/PartResourceCollection'
   '/parts/{key}':
     get:
-      tags:
-        - Parts
-      summary: 'Get part'
-      operationId: getPartById
-      parameters:
-        -
-          name: key
-          in: path
-          required: true
-          schema:
-            type: string
+      summary: 'Display the specified resource.'
+      operationId: PartGet
       responses:
-        200:
-          description: 'Part entity'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Part'
-        default:
-          description: 'an "unexpected" error'
-    put:
-      tags:
-        - Parts
-      summary: 'Update part'
-      operationkey: updatePartById
-      parameters:
-        -
-          name: key
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        200:
-          description: 'Part entity'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Part'
-        default:
-          description: 'an "unexpected" error'
-    delete:
-      tags:
-        - Parts
-      summary: 'Delete part'
-      operationId: deletePartById
-      parameters:
-        -
-          name: key
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        204:
-          description: 'Resource deleted'
-        default:
-          description: 'an "unexpected" error'
-  '/parts/{key}/stock':
+        '200':
+          $ref: '#/components/responses/PartResourceItem'
+  /sites:
     get:
-      tags:
-        - 'Part stock'
-      summary: 'Get stock information for part ID'
-      operationId: 'getPartStockById'
-      parameters:
-        -
-          name: key
-          in: path
-          required: true
-          schema:
-            type: string
+      summary: 'Display site list'
+      operationId: SiteSearch
       responses:
-        200:
-          description: 'Part stock entity'
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/PartStock'
-        default:
-          description: 'an "unexpected" error'
-    put:
-      tags:
-        - 'Part stock'
-      summary: 'Update part stock'
-      operationId: updatePartStockById
-      parameters:
-        -
-          name: key
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        200:
-          description: 'Part stock entity'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PartStock'
-        default:
-          description: 'an "unexpected" error'
-  '/purchase-orders':
+        '200':
+          $ref: '#/components/responses/SiteResourceCollection'
+  '/sites/{key}':
     get:
-      tags:
-        - Purchase orders
-      summary: Get purchase orders
-      operationId: listPurchaseOrders
+      summary: 'Display the specified resource.'
+      operationId: SiteGet
       responses:
-        200:
-          description: 'List or purchase orders'
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/PurchaseOrder'
-        default:
-          description: 'an "unexpected" error'
-  '/purchase-orders/{key}':
+        '200':
+          $ref: '#/components/responses/SiteResourceItem'
+  /work-orders:
     get:
-      tags:
-        - Purchase orders
-      summary: Get purchase order by ID
-      operationId: getOurchaseOrderById
-      parameters:
-        -
-          name: key
-          in: path
-          required: true
-          schema:
-            type: string
+      summary: 'Display work orders list'
+      operationId: WorkOrderSearch
       responses:
-        200:
-          description: 'Purchase order'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PurchaseOrder'
-        default:
-          description: 'an "unexpected" error'
+        '200':
+          $ref: '#/components/responses/WorkOrderResourceCollection'
+  '/work-orders/{key}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: WorkOrderGet
+      responses:
+        '200':
+          $ref: '#/components/responses/WorkOrderResourceItem'
 components:
-  securitySchemes:
-    oAuth:
-      type: oauth2
-      description: This API uses OAuth 2 with the implicit grant flow.
-      flows:
-        authorizationCode:
-          authorizationUrl: /oauth/authorize
-          tokenUrl: /oauth/token
   schemas:
-    Storage:
-      properties:
-        key:
-          type: string
-        name:
-          type: string
-        isDefault:
-          type: boolean
-    EquipmentWrite:
-      properties:
-        parentId:
-          type: string
-          format: string
-        siteId:
-          type: string
-          format: string
-        modelId:
-          type: string
-          format: string
-        manufacturerId:
-          type: string
-          format: string
-        locationId:
-          type: string
-          format: string
-        name:
-          type: string
-          format: string
-        deactivatedAt:
-          type: string
-          format: date-time
-        taxonomy:
-          type: string
-          format: string
-        criticalSystem:
-          type: string
-          format: boolean
-        serialNumber:
-          type: string
-          format: string
-        runningHours:
-          type: string
-          format: integer
-        updatedAt:
-          type: string
-          format: date-time
-      type: object
-      xml:
-        name: Equipment
     Equipment:
-      required:
-        - key
       properties:
         key:
+          description: 'Equipment key'
           type: string
-          format: string
-        parentId:
-          type: string
-          format: string
-        siteId:
-          type: string
-          format: string
-        modelId:
-          type: string
-          format: string
-        manufacturerId:
-          type: string
-          format: string
-        locationId:
-          type: string
-          format: string
         name:
+          description: 'Equipment name'
           type: string
-          format: string
-        deactivatedAt:
+        parent_key:
+          type: string
+        site_key:
+          type: string
+        active:
+          type: boolean
+        deactivated:
           type: string
           format: date-time
-        taxonomy:
+        category:
           type: string
-          format: string
-        criticalSystem:
+        is_critical_system:
+          type: boolean
+        manufacturer:
           type: string
-          format: boolean
-        serialNumber:
-          type: string
-          format: string
-        runningHours:
-          type: string
-          format: integer
-        updatedAt:
+        updated_at:
           type: string
           format: date-time
-      type: object
-      xml:
-        name: Equipment
-    Site:
-      required:
-        - key
-      properties:
-        key:
+        serial_number:
           type: string
-          format: string
-        name:
-          type: string
-          format: string
-      type: object
-      xml:
-        name: Site
     Part:
-      required:
-        - key
       properties:
         key:
+          description: 'Part key'
           type: string
-          format: string
-        parentId:
+        part_number:
           type: string
-          format: string
-        modelId:
+        description:
           type: string
-          format: string
-        manufacturerId:
-          type: string
-          format: string
-        equipmentId:
-          type: string
-          format: string
-        partNumber:
-          type: string
-          format: string
-        serialNumber:
-          type: string
-          format: string
-        notes:
-          type: string
-          format: string
-        updatedAt:
-          type: string
-          format: date-time
-      type: object
-      xml:
-        name: Part
-    PartStock:
-      required:
-        - key
-      properties:
-        partId:
-          type: string
-          format: string
-        storageId:
-          type: string
-          format: string
-        partNumber:
-          type: string
-          format: string
-        quantity:
-          type: integer
-          format: integer
-        updatedAt:
-          type: string
-          format: date-time
-      type: object
-      xml:
-        name: PartStock
+        critical_spare:
+          type: boolean
+        active:
+          type: boolean
     PurchaseOrder:
-      required:
-        - key
       properties:
         key:
+          description: 'Purchase order key'
           type: string
-        deliveredAt:
+        cost:
           type: string
-          format: date-time
-        eta:
+        description:
           type: string
-          format: date-time
-        etd:
+        due_date:
           type: string
-          format: date-time
-        orderedAt:
-          type: string
-          format: date-time
-        createdAt:
-          type: string
-          format: date-time
-        positions:
-          type: array
-          items:
-            $ref: '#/components/schemas/PurchaseOrderItem'
-    PurchaseOrderItem:
-      required:
-        - key
-        - orderId
-      properties:
-        key:
-          type: string
-        orderId:
-          type: string
-        quantityUnit:
-          type: string
-        orderedQuantity:
-          type: integer
-        receivedQuantity:
-          type: integer
-        rejectedQuantity:
-          type: integer
-        modelId:
-          type: string
-        name:
-          type: string
-    WorkOrder:
-      required:
-        - key
-        - equipmentId
-      properties:
-        key:
-          type: string
-          format: string
-        name:
-          type: string
-          format: string
-        text:
-          type: string
-          format: string
-        scheduledAt:
-          type: string
-          format: date-time
-        completedAt:
-          type: string
-          format: date-time
         status:
           type: string
-          format: string
-        severity:
-          type: string
-          format: string
-        equipmentId:
-          type: string
-          format: string
-        standardJobId:
-          type: string
-          format: string
-        description:
-          type: string
-          format: string
-        updatedAt:
-          type: string
-          format: date-time
-        parts:
-          type: string
-          format: date-time
-        documents:
-          type: string
-          format: date-time
-      type: object
-      xml:
-        name: WorkOrder
-    WorkOrderCreate:
-      required:
-        - equipmentId
-        - name
+    Site:
       properties:
+        key:
+          description: 'Site key'
+          type: string
+        name:
+          description: 'Site name'
+          type: string
+    WorkOrder:
+      properties:
+        key:
+          description: 'Work order key'
+          type: string
+        equipment_key:
+          description: 'Equipment key'
+          type: string
         name:
           type: string
-          format: string
         text:
           type: string
-          format: string
-        scheduledAt:
-          type: string
-          format: date-time
-        severity:
-          type: string
-          format: string
-        equipmentId:
-          type: string
-          format: string
         description:
           type: string
-          format: string
-      type: object
-      xml:
-        name: WorkOrderCreate
-security:
-  - oAuth: []
+        severity:
+          type: string
+        scheduled_at:
+          type: string
+          format: date-time
+        completed_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+  responses:
+    EquipmentResourceCollection:
+      description: 'Equipment list'
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Equipment'
+    EquipmentResourceItem:
+      description: 'Equipment entity'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Equipment'
+    PartResourceCollection:
+      description: 'Part list'
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Part'
+    PartResourceItem:
+      description: 'Part entity'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Part'
+    SiteResourceCollection:
+      description: 'Site list'
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Site'
+    SiteResourceItem:
+      description: 'Site entity'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Site'
+    WorkOrderResourceCollection:
+      description: 'Work order list'
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/WorkOrder'
+    WorkOrderResourceItem:
+      description: 'Work order entity'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/WorkOrder'
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: 'https://api-dev.app.eq-centric.com/link/oauth/authorize'
+          scopes: {  }
+
