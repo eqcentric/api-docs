@@ -219,6 +219,6 @@ components:
       type: oauth2
       flows:
         authorizationCode:
-          authorizationUrl: 'https://api.app.eq-centric.com/link/oauth/authorize'
+          authorizationUrl: 'https://api-dev.app.eq-centric.com/link/oauth/authorize'
           scopes: {  }
 
