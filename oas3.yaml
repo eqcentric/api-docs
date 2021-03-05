@@ -80,6 +80,8 @@ components:
           type: string
         parent_key:
           type: string
+        description:
+          type: string
         site_key:
           type: string
         active:
@@ -98,12 +100,41 @@ components:
           format: date-time
         serial_number:
           type: string
+    LineItem:
+      properties:
+        key:
+          description: 'Line item key'
+          type: string
+        purchase_order_key:
+          type: string
+        entity_key:
+          type: string
+        entity_type:
+          type: string
+        storage_key:
+          type: string
+        description:
+          type: string
+        quantity:
+          type: string
+        value:
+          type: string
+        vendor_key:
+          type: string
+        delivery_at:
+          type: string
+        status:
+          type: string
+        number:
+          type: string
+        type:
+          type: string
     Part:
       properties:
         key:
           description: 'Part key'
           type: string
-        part_number:
+        number:
           type: string
         description:
           type: string
@@ -116,11 +147,15 @@ components:
         key:
           description: 'Purchase order key'
           type: string
+        number:
+          type: string
         cost:
           type: string
         description:
           type: string
-        due_date:
+        due_date_at:
+          type: string
+        vendor_key:
           type: string
         status:
           type: string
@@ -131,6 +166,43 @@ components:
           type: string
         name:
           description: 'Site name'
+          type: string
+    Vendor:
+      properties:
+        key:
+          description: 'Vendor key'
+          type: string
+        name:
+          type: string
+        short_name:
+          type: string
+        active:
+          type: string
+        vendor_contacts:
+          type: array
+          items:
+            $ref: '#/components/schemas/VendorContact'
+        address:
+          type: string
+        city:
+          type: string
+        state:
+          type: string
+        postcode:
+          type: string
+        country:
+          type: string
+    VendorContact:
+      properties:
+        first_name:
+          type: string
+        middle_name:
+          type: string
+        last_name:
+          type: string
+        phone_numbers:
+          type: string
+        emails:
           type: string
     WorkOrder:
       properties:
@@ -172,6 +244,20 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/Equipment'
+    LineItemResourceCollection:
+      description: 'Line Item list'
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/LineItem'
+    LineItemResourceItem:
+      description: 'Line Item entity'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/LineItem'
     PartResourceCollection:
       description: 'Part list'
       content:
@@ -200,6 +286,20 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/Site'
+    VendorResourceCollection:
+      description: 'Vendor list'
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Vendor'
+    VendorResourceItem:
+      description: 'Vendor entity'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Vendor'
     WorkOrderResourceCollection:
       description: 'Work order list'
       content:
@@ -219,6 +319,6 @@ components:
       type: oauth2
       flows:
         authorizationCode:
-          authorizationUrl: 'https://api.app.eq-centric.com/link/oauth/authorize'
+          authorizationUrl: 'https://api-dev.app.eq-centric.com/link/oauth/authorize'
           scopes: {  }
 
