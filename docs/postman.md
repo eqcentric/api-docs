@@ -14,7 +14,7 @@ Makini API reference.
 Follow these steps to quickly get started with the Makini API:
 
 1. [Sign up](https://app.makini.io/register) with Makini to get a set of credentials that are required 
-   for interacting with the API. [Learn more](docs/sign-up.md)
+   for interacting with the API. [Learn more](sign-up.md)
 2. Update Redirect URI in your application settings to `https://oauth.pstmn.io/v1/callback` 
 3. Download and install the [Postman app](https://www.postman.com/downloads/).
 4. Download the generic collection or use "Download Postman Collection" button in the [Dashboard](https://app.makini.io)
@@ -44,8 +44,8 @@ the application. Make sure you allow that action in your browser.
 Select a request type from the collection. By default, each request inherits authorization settings, so no additional
 setup is required. Click on "Send" button to dispatch request or use "Body" tab to modify parameters for POST/PUT requests.
 
-For detailed information on API endpoints, use [Makini API reference](oas3.yml) guide
+For detailed information on API endpoints, use [Makini API reference](../oas3.yml) guide
 
 **Read more**
-* [Creating the application](docs/sign-up.md)
-* [API authentication protocol](docs/authentication.md)
+* [Creating the application](sign-up.md)
+* [API authentication protocol](authentication.md)
