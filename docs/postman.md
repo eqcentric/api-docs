@@ -13,9 +13,12 @@ Makini API reference.
 
 Follow these steps to quickly get started with the Makini API:
 
-1. [Sign up](https://app.makini.io/register) with Makini to get a set of credentials that are required for interacting with the API.
-2. Download and install the Postman app
-3. Download the generic collection or use "Download Postman Collection"button in the Dashboard with credentials predefined.
+1. [Sign up](https://app.makini.io/register) with Makini to get a set of credentials that are required 
+   for interacting with the API. [Learn more](docs/sign-up.md)
+2. Update Redirect URI in your application settings to `https://oauth.pstmn.io/v1/callback` 
+3. Download and install the [Postman app](https://www.postman.com/downloads/).
+4. Download the generic collection or use "Download Postman Collection" button in the [Dashboard](https://app.makini.io)
+   with credentials predefined.
 
 ## Configuration
 
@@ -27,13 +30,13 @@ click on Variables tab and enter your credentials in "Current Value" column.
 
 ## Authentication
 
-Select collection in the list and click on "Authorization" tab. Collection already contains necessary setup for
+Select collection in the list and click on "Authorization" tab. Collection already contains the necessary setup for
 default authentication process. Click on "Get New Access Token" button to launch Makini Link.
 
 Once you finish authentication, it will redirect you back to Postman and show token information.
 Click on "Use Token" button to proceed with testing.
 
-*Note:* On the last step Makini Link will redirect you to Postman URL, that will attempt to communicate with 
+*Note:* On the last step Makini Link will redirect you to Postman URL that will attempt to communicate with 
 the application. Make sure you allow that action in your browser.
 
 ## Making requests
@@ -41,9 +44,8 @@ the application. Make sure you allow that action in your browser.
 Select a request type from the collection. By default, each request inherits authorization settings, so no additional
 setup is required. Click on "Send" button to dispatch request or use "Body" tab to modify parameters for POST/PUT requests.
 
-For detailed information on API endpoints, use [Makini API reference](https://#) guide
+For detailed information on API endpoints, use [Makini API reference](oas3.yml) guide
 
 **Read more**
-* Creating the application
-* API authentication protocol
-
+* [Creating the application](docs/sign-up.md)
+* [API authentication protocol](docs/authentication.md)
