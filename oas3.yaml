@@ -2,20 +2,19 @@ openapi: 3.0.0
 info:
   title: 'Makini API'
   description: 'Makini API'
-  contact: developer@eq-centric.com
   version: '0.1'
 paths:
-  /equipment:
+  /asssets:
     get:
-      summary: 'Display equipment list'
-      operationId: EquipmentSearch
+      summary: 'Display asssets list'
+      operationId: AssetSearch
       responses:
         '200':
-          $ref: '#/components/responses/EquipmentResourceCollection'
-  '/equipment/{key}':
+          $ref: '#/components/responses/AssetResourceCollection'
+  '/asssets/{key}':
     get:
       summary: 'Display the specified resource.'
-      operationId: EquipmentGet
+      operationId: AssetGet
       parameters:
         -
           name: key
@@ -25,7 +24,7 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/EquipmentResourceItem'
+          $ref: '#/components/responses/AssetResourceItem'
   /parts:
     get:
       summary: 'Display part list'
@@ -70,13 +69,13 @@ paths:
           $ref: '#/components/responses/WorkOrderResourceItem'
 components:
   schemas:
-    Equipment:
+    Asset:
       properties:
         key:
-          description: 'Equipment key'
+          description: 'Asset key'
           type: string
         name:
-          description: 'Equipment name'
+          description: 'Asset name'
           type: string
         parent_key:
           type: string
@@ -230,20 +229,20 @@ components:
           type: string
           format: date-time
   responses:
-    EquipmentResourceCollection:
-      description: 'Equipment list'
+    AssetResourceCollection:
+      description: 'Assets list'
       content:
         application/json:
           schema:
             type: array
             items:
-              $ref: '#/components/schemas/Equipment'
-    EquipmentResourceItem:
-      description: 'Equipment entity'
+              $ref: '#/components/schemas/Asset'
+    AssetResourceItem:
+      description: 'Asset entity'
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/Equipment'
+            $ref: '#/components/schemas/Asset'
     LineItemResourceCollection:
       description: 'Line Item list'
       content:
@@ -319,6 +318,6 @@ components:
       type: oauth2
       flows:
         authorizationCode:
-          authorizationUrl: 'https://api-dev.app.eq-centric.com/link/oauth/authorize'
+          authorizationUrl: 'https://api.makini.io/link/oauth/authorize'
+          tokenUrl: 'https://api.makini.io/link/oauth/token'
           scopes: {  }
-
