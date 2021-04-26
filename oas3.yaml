@@ -1,23 +1,26 @@
 openapi: 3.0.0
 info:
-  title: 'Makini API'
-  description: 'Makini API'
+  title: Makini API
+  description: Makini API
   version: '0.1'
+  contact:
+    name: Roman Kinyakin
+    email: roman@makini.io
 paths:
-  /asssets:
+  /assets:
     get:
-      summary: 'Display asssets list'
+      summary: Display asssets list
       operationId: AssetSearch
       responses:
         '200':
           $ref: '#/components/responses/AssetResourceCollection'
-  '/asssets/{key}':
+    parameters: []
+  '/assets/{key}':
     get:
-      summary: 'Display the specified resource.'
+      summary: Display the specified resource.
       operationId: AssetGet
       parameters:
-        -
-          name: key
+        - name: key
           in: path
           required: true
           schema:
@@ -25,44 +28,50 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/AssetResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
   /parts:
     get:
-      summary: 'Display part list'
+      summary: Display part list
       operationId: PartSearch
       responses:
         '200':
           $ref: '#/components/responses/PartResourceCollection'
   '/parts/{key}':
     get:
-      summary: 'Display the specified resource.'
+      summary: Display the specified resource.
       operationId: PartGet
       responses:
         '200':
           $ref: '#/components/responses/PartResourceItem'
   /sites:
     get:
-      summary: 'Display site list'
+      summary: Display site list
       operationId: SiteSearch
       responses:
         '200':
           $ref: '#/components/responses/SiteResourceCollection'
   '/sites/{key}':
     get:
-      summary: 'Display the specified resource.'
+      summary: Display the specified resource.
       operationId: SiteGet
       responses:
         '200':
           $ref: '#/components/responses/SiteResourceItem'
   /work-orders:
     get:
-      summary: 'Display work orders list'
+      summary: Display work orders list
       operationId: WorkOrderSearch
       responses:
         '200':
           $ref: '#/components/responses/WorkOrderResourceCollection'
   '/work-orders/{key}':
     get:
-      summary: 'Display the specified resource.'
+      summary: Display the specified resource.
       operationId: WorkOrderGet
       responses:
         '200':
@@ -72,10 +81,10 @@ components:
     Asset:
       properties:
         key:
-          description: 'Asset key'
+          description: Asset key
           type: string
         name:
-          description: 'Asset name'
+          description: Asset name
           type: string
         parent_key:
           type: string
@@ -102,7 +111,7 @@ components:
     LineItem:
       properties:
         key:
-          description: 'Line item key'
+          description: Line item key
           type: string
         purchase_order_key:
           type: string
@@ -131,7 +140,7 @@ components:
     Part:
       properties:
         key:
-          description: 'Part key'
+          description: Part key
           type: string
         number:
           type: string
@@ -144,7 +153,7 @@ components:
     PurchaseOrder:
       properties:
         key:
-          description: 'Purchase order key'
+          description: Purchase order key
           type: string
         number:
           type: string
@@ -161,15 +170,15 @@ components:
     Site:
       properties:
         key:
-          description: 'Site key'
+          description: Site key
           type: string
         name:
-          description: 'Site name'
+          description: Site name
           type: string
     Vendor:
       properties:
         key:
-          description: 'Vendor key'
+          description: Vendor key
           type: string
         name:
           type: string
@@ -206,10 +215,10 @@ components:
     WorkOrder:
       properties:
         key:
-          description: 'Work order key'
+          description: Work order key
           type: string
         equipment_key:
-          description: 'Equipment key'
+          description: Equipment key
           type: string
         name:
           type: string
@@ -230,7 +239,7 @@ components:
           format: date-time
   responses:
     AssetResourceCollection:
-      description: 'Assets list'
+      description: Assets list
       content:
         application/json:
           schema:
@@ -238,13 +247,13 @@ components:
             items:
               $ref: '#/components/schemas/Asset'
     AssetResourceItem:
-      description: 'Asset entity'
+      description: Asset entity
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Asset'
     LineItemResourceCollection:
-      description: 'Line Item list'
+      description: Line Item list
       content:
         application/json:
           schema:
@@ -252,13 +261,13 @@ components:
             items:
               $ref: '#/components/schemas/LineItem'
     LineItemResourceItem:
-      description: 'Line Item entity'
+      description: Line Item entity
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/LineItem'
     PartResourceCollection:
-      description: 'Part list'
+      description: Part list
       content:
         application/json:
           schema:
@@ -266,13 +275,13 @@ components:
             items:
               $ref: '#/components/schemas/Part'
     PartResourceItem:
-      description: 'Part entity'
+      description: Part entity
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Part'
     SiteResourceCollection:
-      description: 'Site list'
+      description: Site list
       content:
         application/json:
           schema:
@@ -280,13 +289,13 @@ components:
             items:
               $ref: '#/components/schemas/Site'
     SiteResourceItem:
-      description: 'Site entity'
+      description: Site entity
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Site'
     VendorResourceCollection:
-      description: 'Vendor list'
+      description: Vendor list
       content:
         application/json:
           schema:
@@ -294,13 +303,13 @@ components:
             items:
               $ref: '#/components/schemas/Vendor'
     VendorResourceItem:
-      description: 'Vendor entity'
+      description: Vendor entity
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/Vendor'
     WorkOrderResourceCollection:
-      description: 'Work order list'
+      description: Work order list
       content:
         application/json:
           schema:
@@ -308,7 +317,7 @@ components:
             items:
               $ref: '#/components/schemas/WorkOrder'
     WorkOrderResourceItem:
-      description: 'Work order entity'
+      description: Work order entity
       content:
         application/json:
           schema:
@@ -320,4 +329,9 @@ components:
         authorizationCode:
           authorizationUrl: 'https://api.makini.io/link/oauth/authorize'
           tokenUrl: 'https://api.makini.io/link/oauth/token'
-          scopes: {  }
+          scopes: {}
+security:
+  - oauth2: []
+servers:
+  - url: 'https://api.makini.io'
+    description: ''
