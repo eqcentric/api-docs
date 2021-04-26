@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "type": "item",
+      "title": "Getting started",
+      "uri": "docs/getting-started.md"
+    },
+    {
+      "type": "item",
+      "title": "Creating an application",
+      "uri": "docs/sign-up.md"
+    },
+    {
+      "type": "item",
+      "title": "Test API with Postman",
+      "uri": "docs/postman.md"
+    }
+  ]
+}
