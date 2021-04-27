@@ -9,7 +9,7 @@ info:
 paths:
   /assets:
     get:
-      summary: Display asssets list
+      summary: Display assets list
       operationId: AssetSearch
       responses:
         '200':
