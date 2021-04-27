@@ -1,5 +1,7 @@
 # Authentication
 
+## Basic process
+
 Makini uses OAuth 2.0 protocol to issue authentication tokens. In short, protocol consists of 3 actions:
 
 **1.** Initiate authentication consent screen for your app users.
