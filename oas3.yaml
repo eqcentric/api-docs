@@ -184,6 +184,9 @@ components:
         address:
           type: string
           description: Site address
+      required:
+        - key
+        - name
     Vendor:
       properties:
         key:
