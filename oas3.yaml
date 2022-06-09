@@ -108,6 +108,7 @@ components:
           format: date-time
         serial_number:
           type: string
+      title: ''
     LineItem:
       properties:
         key:
@@ -168,6 +169,7 @@ components:
         status:
           type: string
     Site:
+      type: object
       properties:
         key:
           description: Site key
@@ -175,6 +177,13 @@ components:
         name:
           description: Site name
           type: string
+        lat:
+          type: number
+          format: double
+          description: Site location latitude
+        address:
+          type: string
+          description: Site address
     Vendor:
       properties:
         key:
