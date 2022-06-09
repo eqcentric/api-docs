@@ -181,12 +181,35 @@ components:
           type: number
           format: double
           description: Site location latitude
+        lng:
+          type: number
+          description: Site location longitude
+          format: double
         address:
           type: string
           description: Site address
+        properties:
+          type: string
+          description: 'Key-value map for additional properties, e. g. IMO number'
+        notes:
+          type: string
+          format: text
+          description: Notes to asset in end-user's system
+        createdAt:
+          type: string
+          description: Time when entity was created
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        deletedAt:
+          type: string
+          format: date-time
       required:
         - key
         - name
+        - createdAt
+        - updatedAt
     Vendor:
       properties:
         key:
