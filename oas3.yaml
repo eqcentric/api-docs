@@ -196,9 +196,9 @@ components:
           format: text
           description: Notes to asset in end-user's system
         createdAt:
-          type: string
           description: Time when entity was created
           format: date-time
+          type: string
         updatedAt:
           type: string
           format: date-time
