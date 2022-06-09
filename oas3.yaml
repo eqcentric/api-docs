@@ -202,9 +202,11 @@ components:
         updatedAt:
           type: string
           format: date-time
+          description: Time when entity was last modified
         deletedAt:
           type: string
           format: date-time
+          description: Time when entity was deleted/archived
       required:
         - key
         - name
