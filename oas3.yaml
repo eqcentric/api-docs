@@ -79,36 +79,90 @@ paths:
 components:
   schemas:
     Asset:
+      title: ''
+      type: object
       properties:
         key:
-          description: Asset key
+          description: Unique asset identifier
           type: string
+        siteKey:
+          type: string
+          description: 'Identifier of site, which asset belongs to'
+        parentKey:
+          type: string
+          description: Identifier of parent asset if any
+        vendorKey:
+          type: string
+          description: 'Identifier of vendor, from which asset was purchased from'
+        modelKey:
+          type: string
+          description: Identifier of asset model
+        teamKey:
+          type: string
+          description: Identifier of team to which asset is assigned to
+        documentKeys:
+          type: array
+          description: List of identifiers of documents related to asset
+          items:
+            type: string
         name:
-          description: Asset name
+          description: Name of asset
           type: string
-        parent_key:
+        code:
           type: string
+          description: 'Identifier of asset in end-users internal taxonomy, e. g. SFI Code or SKU'
         description:
           type: string
-        site_key:
+          description: Description of asset
+        notes:
           type: string
-        active:
+          format: text
+          description: Notes to asset in end-user's system
+        categoryName:
+          type: string
+          description: Name of category asset is assigned to
+        criticality:
+          type: string
+          description: Description of asset criticality
+        isActive:
           type: boolean
-        deactivated:
+          description: Identifies if asset is currently in use
+        manufacturerName:
+          type: string
+          description: Name of asset manufacturer
+        modelName:
+          type: string
+          description: Name of asset model
+        serialNumber:
+          type: string
+          description: Serial number or barcode
+        activatedAt:
           type: string
           format: date-time
-        category:
-          type: string
-        is_critical_system:
-          type: boolean
-        manufacturer:
-          type: string
-        updated_at:
+          description: Time when asset was activated/enabled
+        deactivatedAt:
           type: string
           format: date-time
-        serial_number:
+          description: Time when asset was deactivated/disabled
+        createdAt:
           type: string
-      title: ''
+          format: date-time
+          description: Time when entity was created
+        updatedAt:
+          type: string
+          format: date-time
+          description: Time when entity was last modified
+        deletedAt:
+          type: string
+          description: Time when entity was deleted/archived
+          format: date-time
+      required:
+        - key
+        - siteKey
+        - name
+        - isActive
+        - createdAt
+        - updatedAt
     LineItem:
       properties:
         key:
@@ -139,18 +193,12 @@ components:
         type:
           type: string
     Part:
+      type: object
+      x-examples: {}
+      description: ''
       properties:
-        key:
-          description: Part key
-          type: string
-        number:
-          type: string
-        description:
-          type: string
-        critical_spare:
-          type: boolean
-        active:
-          type: boolean
+        '':
+          type: object
     PurchaseOrder:
       properties:
         key:
