@@ -197,8 +197,93 @@ components:
       x-examples: {}
       description: ''
       properties:
-        '':
-          type: object
+        key:
+          type: string
+          description: Unique team identifier
+        siteKeys:
+          type: array
+          description: 'Identifiers of sites, which part belongs to'
+          items:
+            type: string
+        parentKeys:
+          type: string
+          description: 'Identifier of assemblies, which part belongs to'
+        vendorKeys:
+          type: string
+          description: 'Identifiers of vendors, supplying the part'
+        documentKeys:
+          type: array
+          description: List of identifiers of documents related to part
+          items:
+            type: string
+        code:
+          type: string
+          description: 'Identifier of part in end-users internal taxonomy, e. g. SFI Code or SKU'
+        isAssembly:
+          type: boolean
+          description: Identifies if part is an assembly (contains nested parts)
+        partNumber:
+          type: string
+          description: Part number
+        name:
+          type: string
+          description: Name of part
+        description:
+          type: string
+          format: text
+          description: Description of part
+        notes:
+          type: string
+          format: text
+          description: Notes to part in end-user's system
+        criticality:
+          type: string
+          description: Description of criticality
+        isActive:
+          type: boolean
+          description: Identifies if part is currently in use
+        manufacturerName:
+          type: string
+          description: Name of asset manufacturer
+        minimumQuantity:
+          type: number
+          description: Minimal quanity of part
+        uom:
+          type: string
+          description: Unit of measure
+        cost:
+          type: number
+          description: Cost of purchase
+          format: double
+        currency:
+          type: string
+          description: Purchase currency
+        createdAt:
+          type: string
+          description: Time when entity was created
+          format: date-time
+        updatedAt:
+          type: string
+          description: Time when entity was last modified
+          format: date-time
+        deletedAt:
+          type: string
+          description: Time when entity was deleted/archived
+          format: date-time
+        inventory:
+          type: array
+          items: {}
+        drawings:
+          type: array
+          items: {}
+      required:
+        - key
+        - siteKeys
+        - isAssembly
+        - partNumber
+        - name
+        - isActive
+        - uom
     PurchaseOrder:
       properties:
         key:
