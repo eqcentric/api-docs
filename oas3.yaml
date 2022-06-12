@@ -753,6 +753,42 @@ components:
           description: Time when entity was created
       required:
         - key
+    Team:
+      title: Team
+      x-stoplight:
+        id: d71bsbivzgftd
+      type: object
+      properties:
+        key:
+          type: string
+          description: Unique team identifier
+        code:
+          type: string
+          description: 'Identifier of part in end-users internal taxonomy, e. g. SFI Code or SKU'
+        name:
+          type: string
+          description: Name of team
+        description:
+          type: string
+          description: Description of team
+          format: text
+        createdAt:
+          type: string
+          format: date-time
+          description: Time when entity was created
+        updatedAt:
+          type: string
+          format: date-time
+          description: Time when entity was last modified
+        deletedAt:
+          type: string
+          description: Time when entity was deleted/archived
+      required:
+        - key
+        - name
+        - description
+        - createdAt
+        - updatedAt
   responses:
     AssetResourceCollection:
       description: Assets list
