@@ -789,6 +789,41 @@ components:
         - description
         - createdAt
         - updatedAt
+    Document:
+      title: Document
+      x-stoplight:
+        id: ekmupujtgmw45
+      type: object
+      properties:
+        key:
+          type: string
+        entityKeys:
+          type: array
+          items: {}
+        name:
+          type: string
+        url:
+          type: string
+        contentType:
+          type: string
+        description:
+          type: string
+        notes:
+          type: string
+          format: text
+          description: Notes to asset in end-user's system
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+      required:
+        - key
+        - name
+        - url
+        - createdAt
+        - updatedAt
   responses:
     AssetResourceCollection:
       description: Assets list
