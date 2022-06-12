@@ -824,6 +824,74 @@ components:
         - url
         - createdAt
         - updatedAt
+    WorkRequest:
+      title: WorkRequest
+      x-stoplight:
+        id: 8k2f7xuauuf4j
+      type: object
+      properties:
+        key:
+          type: string
+        siteKey:
+          type: string
+        workOrderKey:
+          type: string
+        teamKey:
+          type: string
+        userRequestedKey:
+          type: string
+        userApprovedKey:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        instructions:
+          type: string
+        status:
+          type: string
+        severity:
+          type: string
+        estimatedTime:
+          type: string
+        roleName:
+          type: string
+        categoryName:
+          type: string
+        documentKey:
+          type: string
+        documentPage:
+          type: string
+        notes:
+          type: string
+          format: text
+          description: Notes to asset in end-user's system
+        approvedAt:
+          type: string
+          format: date-time
+        dueAt:
+          type: string
+          format: date-time
+        parts:
+          type: array
+          description: array of PartUsage
+          items: {}
+        createdAt:
+          type: string
+          description: Time when entity was created
+        updatedAt:
+          type: string
+          description: Time when entity was last modified
+        deletedAt:
+          type: string
+          description: Time when entity was deleted/archived
+      required:
+        - key
+        - siteKey
+        - title
+        - status
+        - createdAt
+        - updatedAt
   responses:
     AssetResourceCollection:
       description: Assets list
