@@ -285,22 +285,72 @@ components:
         - isActive
         - uom
     PurchaseOrder:
+      type: object
       properties:
         key:
           description: Purchase order key
           type: string
-        number:
+        siteKey:
           type: string
-        cost:
+        vendorKey:
+          type: string
+        orderNo:
+          type: string
+        orderDate:
+          type: string
+          format: date
+        status:
+          type: string
+        warehouseName:
+          type: string
+        title:
           type: string
         description:
           type: string
-        due_date_at:
+        dueAt:
           type: string
-        vendor_key:
+          format: date-time
+        approvedAt:
           type: string
-        status:
+          format: date-time
+        completedAt:
           type: string
+          format: date-time
+        shippingMethod:
+          type: string
+        terms:
+          type: string
+          format: text
+        notes:
+          type: string
+          format: text
+        deliveryAddress:
+          type: string
+          format: address
+        currency:
+          type: string
+        totalNetValue:
+          type: number
+          format: float
+        totalTaxValue:
+          type: number
+          format: float
+        totalGrossValue:
+          type: number
+          format: float
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        lines:
+          type: array
+          items: {}
+      required:
+        - key
+        - createdAt
+        - updatedAt
     Site:
       type: object
       properties:
