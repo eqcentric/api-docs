@@ -519,6 +519,79 @@ components:
         - scheduledAt
         - createdAt
         - updatedAt
+    PM:
+      title: PreventiveMaintenance
+      x-stoplight:
+        id: k4tri9krv6784
+      type: object
+      properties:
+        key:
+          type: string
+        siteKeys:
+          type: string
+        assetKeys:
+          type: string
+        teamKey:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        instructions:
+          type: string
+        status:
+          type: string
+        severity:
+          type: string
+        estimatedTime:
+          type: string
+        roleName:
+          type: string
+        categoryName:
+          type: string
+        documentKey:
+          type: string
+        documentPage:
+          type: string
+        notes:
+          type: string
+          description: Notes to asset in end-user's system
+          format: text
+        dueAt:
+          type: string
+          format: date-time
+        nextScheduledAt:
+          type: string
+        lastScheduledAt:
+          type: string
+        lastCompletedAt:
+          type: string
+        lastCompletionRemarks:
+          type: string
+          format: text
+        parts:
+          type: array
+          items: {}
+        triggers:
+          type: array
+          items: {}
+        createdAt:
+          type: string
+          format: date-time
+          description: Time when entity was created
+        updatedAt:
+          type: string
+          format: date-time
+          description: Time when entity was created
+        deletedAt:
+          type: string
+          format: date-time
+          description: Time when entity was deleted/archived
+      required:
+        - key
+        - siteKeys
+        - assetKeys
+        - title
   responses:
     AssetResourceCollection:
       description: Assets list
