@@ -396,12 +396,14 @@ components:
         - createdAt
         - updatedAt
     Vendor:
+      type: object
       properties:
         key:
           description: Vendor key
           type: string
         name:
           type: string
+          description: Vendor name
         short_name:
           type: string
         active:
