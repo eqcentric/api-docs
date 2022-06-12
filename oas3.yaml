@@ -383,30 +383,92 @@ components:
         emails:
           type: string
     WorkOrder:
+      type: object
       properties:
         key:
           description: Work order key
           type: string
-        equipment_key:
+        siteKey:
           description: Equipment key
           type: string
-        name:
+        assetKey:
           type: string
-        text:
+        workRequestKey:
           type: string
+        pmKey:
+          type: string
+        teamKey:
+          type: string
+        userAssignedKey:
+          type: string
+          format: date-time
+        userCompletedKey:
+          type: string
+          format: date-time
+        title:
+          type: string
+          format: text
         description:
+          type: string
+        instructions:
+          type: string
+          format: text
+        status:
           type: string
         severity:
           type: string
-        scheduled_at:
+        estimatedTime:
+          type: integer
+        roleName:
+          type: string
+        categoryName:
+          type: string
+        documentKey:
+          type: string
+        documentPage:
+          type: string
+        notes:
+          type: string
+          format: text
+        approvedAt:
           type: string
           format: date-time
-        completed_at:
+        dueAt:
           type: string
           format: date-time
-        updated_at:
+        scheduledAt:
           type: string
           format: date-time
+        completedAt:
+          type: string
+          format: date-time
+        completionRemarks:
+          type: string
+          format: text
+        parts:
+          type: array
+          items: {}
+        createdAt:
+          type: string
+          format: date-time
+          description: Time when entity was created
+        updatedAt:
+          type: string
+          format: date-time
+          description: Time when entity was last modified
+        deletedAt:
+          type: string
+          format: date-time
+          description: Time when entity was deleted/archived
+      required:
+        - key
+        - siteKey
+        - assetKey
+        - title
+        - status
+        - scheduledAt
+        - createdAt
+        - updatedAt
   responses:
     AssetResourceCollection:
       description: Assets list
