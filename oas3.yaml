@@ -729,6 +729,30 @@ components:
         - uom
         - createdAt
         - updatedAt
+    CounterReading:
+      title: CounterReading
+      x-stoplight:
+        id: n5zva0shvm8is
+      type: object
+      properties:
+        key:
+          type: string
+          description: Unique counter identifier
+        assetKey:
+          type: string
+          description: 'Identifier of asset, which counter belongs to'
+        counterKey:
+          type: string
+          description: 'Identifier of counter, which reading belongs to'
+        reading:
+          type: string
+          description: Value of counter
+        createdAt:
+          type: string
+          format: date-time
+          description: Time when entity was created
+      required:
+        - key
   responses:
     AssetResourceCollection:
       description: Assets list
