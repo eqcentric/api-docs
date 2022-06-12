@@ -594,6 +594,94 @@ components:
         - siteKeys
         - assetKeys
         - title
+    AssetDowntime:
+      title: AssetDowntime
+      x-stoplight:
+        id: ohrkom3gil8m5
+      type: object
+      properties:
+        key:
+          type: string
+          description: Unique asset identifier
+        assetKey:
+          type: string
+          description: 'Identifier of site, which asset belongs to'
+        description:
+          type: string
+          description: Downtime reason
+        startedAt:
+          type: string
+          format: date-time
+          description: Downtime start time
+        endedAt:
+          type: string
+          format: date-time
+          description: Downtime end time
+        categoryName:
+          type: string
+          description: Downtime category description
+        severity:
+          type: string
+          description: Downtime severity description
+        notes:
+          type: string
+          format: text
+          description: Notes in end-user's system
+        createdAt:
+          type: string
+          description: Time when entity was created
+          format: date-time
+        updatedAt:
+          type: string
+          description: Time when entity was last modified
+          format: date-time
+      required:
+        - key
+        - assetKey
+        - description
+        - startedAt
+        - endedAt
+        - createdAt
+        - updatedAt
+    Model:
+      title: Model
+      x-stoplight:
+        id: d4srrmmj6n800
+      type: object
+      properties:
+        key:
+          type: string
+          description: Unique model identifier
+        siteKey:
+          type: string
+          description: 'Identifier of site, which model belongs to'
+        documentKeys:
+          type: array
+          description: List of identifiers of documents related to model
+          items: {}
+        name:
+          type: string
+          description: Model name
+        manufacturerName:
+          type: string
+          description: Name of model manufacturer
+        createdAt:
+          type: string
+          format: date-time
+          description: Time when entity was created
+        updatedAt:
+          type: string
+          format: date-time
+          description: Time when entity was last modified
+        deletedAt:
+          type: string
+          format: date-time
+          description: Time when entity was deleted/archived
+      required:
+        - key
+        - name
+        - updatedAt
+        - deletedAt
   responses:
     AssetResourceCollection:
       description: Assets list
