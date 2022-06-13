@@ -272,7 +272,8 @@ components:
           format: text
         parts:
           type: array
-          items: {}
+          items:
+            $ref: '#/components/schemas/Part'
         createdAt:
           type: string
           format: date-time
@@ -450,7 +451,8 @@ components:
           format: date-time
         lines:
           type: array
-          items: {}
+          items:
+            $ref: '#/components/schemas/LineItem'
       required:
         - key
         - createdAt
@@ -510,7 +512,8 @@ components:
           items: {}
         triggers:
           type: array
-          items: {}
+          items:
+            $ref: ''
         createdAt:
           type: string
           format: date-time
@@ -528,6 +531,7 @@ components:
         - siteKeys
         - assetKeys
         - title
+        - triggers
     Model:
       title: Model
       x-stoplight:
@@ -711,6 +715,7 @@ components:
       x-stoplight:
         id: 8k2f7xuauuf4j
       type: object
+      description: ''
       properties:
         key:
           type: string
@@ -757,7 +762,8 @@ components:
         parts:
           type: array
           description: array of PartUsage
-          items: {}
+          items:
+            $ref: '#/components/schemas/Part'
         createdAt:
           type: string
           description: Time when entity was created
@@ -774,7 +780,6 @@ components:
         - status
         - createdAt
         - updatedAt
-      description: ''
     CounterReading:
       title: CounterReading
       x-stoplight:
@@ -872,34 +877,57 @@ components:
         - createdAt
         - updatedAt
     LineItem:
+      type: object
       properties:
-        key:
-          description: Line item key
+        assetKey:
           type: string
-        purchase_order_key:
+        partKey:
           type: string
-        entity_key:
+        lineNo:
           type: string
-        entity_type:
+        warehouseName:
           type: string
-        storage_key:
+        code:
+          type: string
+        title:
           type: string
         description:
           type: string
-        quantity:
+        lineRef:
           type: string
-        value:
+        qty:
+          type: number
+          format: double
+        uom:
           type: string
-        vendor_key:
+        cost:
+          type: number
+          format: double
+        currency:
           type: string
-        delivery_at:
+        lineTotalValue:
+          type: number
+          format: double
+        lineTaxValue:
+          type: number
+          format: double
+        notes:
           type: string
-        status:
+          format: text
+        createdAt:
           type: string
-        number:
+          format: date-time
+        updatedAt:
           type: string
-        type:
-          type: string
+          format: date-time
+      required:
+        - lineNo
+        - title
+        - description
+        - qty
+        - uom
+        - createdAt
+        - updatedAt
     Address:
       title: Address
       x-stoplight:
@@ -957,6 +985,39 @@ components:
       required:
         - drawingNo
         - drawingPos
+    PartUsage:
+      title: PartUsage
+      x-stoplight:
+        id: 9krvn5omn0xhh
+      type: object
+      properties:
+        partKeyid:
+          type: string
+        quantity:
+          type: integer
+    WorkTrigger:
+      title: WorkTrigger
+      x-stoplight:
+        id: 55pbv0hfj6d9d
+      type: object
+      properties:
+        uom:
+          type: string
+          description: Unit of measure
+        type:
+          type: string
+        interval:
+          type: integer
+        recurring:
+          type: boolean
+        dueAt:
+          type: string
+          format: date-time
+      required:
+        - uom
+        - type
+        - interval
+        - recurring
   responses:
     AssetResourceCollection:
       description: Assets list
