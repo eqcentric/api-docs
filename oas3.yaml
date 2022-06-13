@@ -929,6 +929,34 @@ components:
           format: date-time
       required:
         - quantity
+        - updatedAt
+    Drawing:
+      title: Drawing
+      x-stoplight:
+        id: qmk3hpqf6kd59
+      type: object
+      properties:
+        drawingNo:
+          type: string
+          description: Drawing number
+        drawingPos:
+          type: string
+          description: Position of part in the drawing
+        referenceNo:
+          type: string
+          description: Number of reference list related to drawing
+        referencePos:
+          type: string
+          description: Position of part in the reference list
+        documentKey:
+          type: string
+          description: Identifier of document
+        documentPage:
+          type: string
+          description: Page number where drawing is located in document
+      required:
+        - drawingNo
+        - drawingPos
   responses:
     AssetResourceCollection:
       description: Assets list
