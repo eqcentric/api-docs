@@ -936,6 +936,29 @@ components:
       properties:
         countryName:
           type: string
+        addressLines:
+          type: string
+          format: text
+        city:
+          type: string
+        postCode:
+          type: string
+        phone:
+          type: string
+        email:
+          type: string
+        notes:
+          type: string
+          format: text
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+      required:
+        - createdAt
+        - updatedAt
     Inventory:
       title: Inventory
       x-stoplight:
