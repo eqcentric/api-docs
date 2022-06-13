@@ -80,6 +80,7 @@ components:
   schemas:
     Site:
       type: object
+      description: ''
       properties:
         key:
           description: Site key
@@ -100,7 +101,9 @@ components:
           description: Site address
         properties:
           description: 'Key-value map for additional properties, e. g. IMO number'
-          type: string
+          type: array
+          items:
+            type: string
         notes:
           type: string
           format: text
@@ -457,7 +460,7 @@ components:
         - key
         - createdAt
         - updatedAt
-    PM:
+    PreventiveMaintenance:
       title: PreventiveMaintenance
       x-stoplight:
         id: k4tri9krv6784
@@ -650,6 +653,12 @@ components:
         deletedAt:
           type: string
           format: date-time
+      required:
+        - key
+        - name
+        - createdAt
+        - updatedAt
+        - deletedAt
     VendorContact:
       properties:
         first_name:
@@ -807,6 +816,9 @@ components:
           description: Time when entity was created
       required:
         - key
+        - assetKey
+        - counterKey
+        - createdAt
     Document:
       title: Document
       x-stoplight:
@@ -1021,11 +1033,15 @@ components:
           type: string
         quantity:
           type: integer
+      required:
+        - partKeyid
+        - quantity
     WorkTrigger:
       title: WorkTrigger
       x-stoplight:
         id: 55pbv0hfj6d9d
       type: object
+      x-examples: {}
       properties:
         uom:
           type: string
@@ -1044,7 +1060,6 @@ components:
         - type
         - interval
         - recurring
-      x-examples: {}
   responses:
     AssetResourceCollection:
       description: Assets list
