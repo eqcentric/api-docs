@@ -78,6 +78,50 @@ paths:
           $ref: '#/components/responses/WorkOrderResourceItem'
 components:
   schemas:
+    Site:
+      type: object
+      properties:
+        key:
+          description: Site key
+          type: string
+        name:
+          description: Site name
+          type: string
+        lat:
+          type: number
+          format: double
+          description: Site location latitude
+        lng:
+          type: number
+          description: Site location longitude
+          format: double
+        address:
+          type: string
+          description: Site address
+        properties:
+          type: string
+          description: 'Key-value map for additional properties, e. g. IMO number'
+        notes:
+          type: string
+          format: text
+          description: Notes to asset in end-user's system
+        createdAt:
+          description: Time when entity was created
+          format: date-time
+          type: string
+        updatedAt:
+          type: string
+          format: date-time
+          description: Time when entity was last modified
+        deletedAt:
+          type: string
+          format: date-time
+          description: Time when entity was deleted/archived
+      required:
+        - key
+        - name
+        - createdAt
+        - updatedAt
     Asset:
       title: ''
       type: object
@@ -163,277 +207,6 @@ components:
         - isActive
         - createdAt
         - updatedAt
-    LineItem:
-      properties:
-        key:
-          description: Line item key
-          type: string
-        purchase_order_key:
-          type: string
-        entity_key:
-          type: string
-        entity_type:
-          type: string
-        storage_key:
-          type: string
-        description:
-          type: string
-        quantity:
-          type: string
-        value:
-          type: string
-        vendor_key:
-          type: string
-        delivery_at:
-          type: string
-        status:
-          type: string
-        number:
-          type: string
-        type:
-          type: string
-    Part:
-      type: object
-      x-examples: {}
-      description: ''
-      properties:
-        key:
-          type: string
-          description: Unique team identifier
-        siteKeys:
-          type: array
-          description: 'Identifiers of sites, which part belongs to'
-          items:
-            type: string
-        parentKeys:
-          type: string
-          description: 'Identifier of assemblies, which part belongs to'
-        vendorKeys:
-          type: string
-          description: 'Identifiers of vendors, supplying the part'
-        documentKeys:
-          type: array
-          description: List of identifiers of documents related to part
-          items:
-            type: string
-        code:
-          type: string
-          description: 'Identifier of part in end-users internal taxonomy, e. g. SFI Code or SKU'
-        isAssembly:
-          type: boolean
-          description: Identifies if part is an assembly (contains nested parts)
-        partNumber:
-          type: string
-          description: Part number
-        name:
-          type: string
-          description: Name of part
-        description:
-          type: string
-          format: text
-          description: Description of part
-        notes:
-          type: string
-          format: text
-          description: Notes to part in end-user's system
-        criticality:
-          type: string
-          description: Description of criticality
-        isActive:
-          type: boolean
-          description: Identifies if part is currently in use
-        manufacturerName:
-          type: string
-          description: Name of asset manufacturer
-        minimumQuantity:
-          type: number
-          description: Minimal quanity of part
-        uom:
-          type: string
-          description: Unit of measure
-        cost:
-          type: number
-          description: Cost of purchase
-          format: double
-        currency:
-          type: string
-          description: Purchase currency
-        createdAt:
-          type: string
-          description: Time when entity was created
-          format: date-time
-        updatedAt:
-          type: string
-          description: Time when entity was last modified
-          format: date-time
-        deletedAt:
-          type: string
-          description: Time when entity was deleted/archived
-          format: date-time
-        inventory:
-          type: array
-          items: {}
-        drawings:
-          type: array
-          items: {}
-      required:
-        - key
-        - siteKeys
-        - isAssembly
-        - partNumber
-        - name
-        - isActive
-        - uom
-    PurchaseOrder:
-      type: object
-      properties:
-        key:
-          description: Purchase order key
-          type: string
-        siteKey:
-          type: string
-        vendorKey:
-          type: string
-        orderNo:
-          type: string
-        orderDate:
-          type: string
-          format: date
-        status:
-          type: string
-        warehouseName:
-          type: string
-        title:
-          type: string
-        description:
-          type: string
-        dueAt:
-          type: string
-          format: date-time
-        approvedAt:
-          type: string
-          format: date-time
-        completedAt:
-          type: string
-          format: date-time
-        shippingMethod:
-          type: string
-        terms:
-          type: string
-          format: text
-        notes:
-          type: string
-          format: text
-        deliveryAddress:
-          type: string
-          format: address
-        currency:
-          type: string
-        totalNetValue:
-          type: number
-          format: float
-        totalTaxValue:
-          type: number
-          format: float
-        totalGrossValue:
-          type: number
-          format: float
-        createdAt:
-          type: string
-          format: date-time
-        updatedAt:
-          type: string
-          format: date-time
-        lines:
-          type: array
-          items: {}
-      required:
-        - key
-        - createdAt
-        - updatedAt
-    Site:
-      type: object
-      properties:
-        key:
-          description: Site key
-          type: string
-        name:
-          description: Site name
-          type: string
-        lat:
-          type: number
-          format: double
-          description: Site location latitude
-        lng:
-          type: number
-          description: Site location longitude
-          format: double
-        address:
-          type: string
-          description: Site address
-        properties:
-          type: string
-          description: 'Key-value map for additional properties, e. g. IMO number'
-        notes:
-          type: string
-          format: text
-          description: Notes to asset in end-user's system
-        createdAt:
-          description: Time when entity was created
-          format: date-time
-          type: string
-        updatedAt:
-          type: string
-          format: date-time
-          description: Time when entity was last modified
-        deletedAt:
-          type: string
-          format: date-time
-          description: Time when entity was deleted/archived
-      required:
-        - key
-        - name
-        - createdAt
-        - updatedAt
-    Vendor:
-      type: object
-      properties:
-        key:
-          description: Vendor key
-          type: string
-        name:
-          type: string
-          description: Vendor name
-        short_name:
-          type: string
-        active:
-          type: string
-        vendor_contacts:
-          type: array
-          items:
-            $ref: '#/components/schemas/VendorContact'
-        address:
-          type: string
-        city:
-          type: string
-        state:
-          type: string
-        postcode:
-          type: string
-        country:
-          type: string
-    VendorContact:
-      properties:
-        first_name:
-          type: string
-        middle_name:
-          type: string
-        last_name:
-          type: string
-        phone_numbers:
-          type: string
-        emails:
-          type: string
     WorkOrder:
       type: object
       properties:
@@ -521,6 +294,167 @@ components:
         - scheduledAt
         - createdAt
         - updatedAt
+    Part:
+      type: object
+      x-examples: {}
+      description: ''
+      properties:
+        key:
+          type: string
+          description: Unique team identifier
+        siteKeys:
+          type: array
+          description: 'Identifiers of sites, which part belongs to'
+          items:
+            type: string
+        parentKeys:
+          type: string
+          description: 'Identifier of assemblies, which part belongs to'
+        vendorKeys:
+          type: string
+          description: 'Identifiers of vendors, supplying the part'
+        documentKeys:
+          type: array
+          description: List of identifiers of documents related to part
+          items:
+            type: string
+        code:
+          type: string
+          description: 'Identifier of part in end-users internal taxonomy, e. g. SFI Code or SKU'
+        isAssembly:
+          type: boolean
+          description: Identifies if part is an assembly (contains nested parts)
+        partNumber:
+          type: string
+          description: Part number
+        name:
+          type: string
+          description: Name of part
+        description:
+          type: string
+          format: text
+          description: Description of part
+        notes:
+          type: string
+          format: text
+          description: Notes to part in end-user's system
+        criticality:
+          type: string
+          description: Description of criticality
+        isActive:
+          type: boolean
+          description: Identifies if part is currently in use
+        manufacturerName:
+          type: string
+          description: Name of asset manufacturer
+        minimumQuantity:
+          type: number
+          description: Minimal quanity of part
+        uom:
+          type: string
+          description: Unit of measure
+        cost:
+          type: number
+          description: Cost of purchase
+          format: double
+        currency:
+          type: string
+          description: Purchase currency
+        createdAt:
+          type: string
+          description: Time when entity was created
+          format: date-time
+        updatedAt:
+          type: string
+          description: Time when entity was last modified
+          format: date-time
+        deletedAt:
+          type: string
+          description: Time when entity was deleted/archived
+          format: date-time
+        inventory:
+          type: array
+          items:
+            $ref: ''
+        drawings:
+          type: array
+          items:
+            $ref: ''
+      required:
+        - key
+        - siteKeys
+        - isAssembly
+        - partNumber
+        - name
+        - isActive
+        - uom
+    PurchaseOrder:
+      type: object
+      properties:
+        key:
+          description: Purchase order key
+          type: string
+        siteKey:
+          type: string
+        vendorKey:
+          type: string
+        orderNo:
+          type: string
+        orderDate:
+          type: string
+          format: date
+        status:
+          type: string
+        warehouseName:
+          type: string
+        title:
+          type: string
+        description:
+          type: string
+        dueAt:
+          type: string
+          format: date-time
+        approvedAt:
+          type: string
+          format: date-time
+        completedAt:
+          type: string
+          format: date-time
+        shippingMethod:
+          type: string
+        terms:
+          type: string
+          format: text
+        notes:
+          type: string
+          format: text
+        deliveryAddress:
+          type: string
+          format: address
+        currency:
+          type: string
+        totalNetValue:
+          type: number
+          format: float
+        totalTaxValue:
+          type: number
+          format: float
+        totalGrossValue:
+          type: number
+          format: float
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        lines:
+          type: array
+          items: {}
+      required:
+        - key
+        - createdAt
+        - updatedAt
     PM:
       title: PreventiveMaintenance
       x-stoplight:
@@ -594,55 +528,6 @@ components:
         - siteKeys
         - assetKeys
         - title
-    AssetDowntime:
-      title: AssetDowntime
-      x-stoplight:
-        id: ohrkom3gil8m5
-      type: object
-      properties:
-        key:
-          type: string
-          description: Unique asset identifier
-        assetKey:
-          type: string
-          description: 'Identifier of site, which asset belongs to'
-        description:
-          type: string
-          description: Downtime reason
-        startedAt:
-          type: string
-          format: date-time
-          description: Downtime start time
-        endedAt:
-          type: string
-          format: date-time
-          description: Downtime end time
-        categoryName:
-          type: string
-          description: Downtime category description
-        severity:
-          type: string
-          description: Downtime severity description
-        notes:
-          type: string
-          format: text
-          description: Notes in end-user's system
-        createdAt:
-          type: string
-          description: Time when entity was created
-          format: date-time
-        updatedAt:
-          type: string
-          description: Time when entity was last modified
-          format: date-time
-      required:
-        - key
-        - assetKey
-        - description
-        - startedAt
-        - endedAt
-        - createdAt
-        - updatedAt
     Model:
       title: Model
       x-stoplight:
@@ -704,8 +589,9 @@ components:
           type: string
           description: Unit of measure
         lastReading:
-          type: string
+          type: number
           description: Value of counter
+          format: double
         lastReadingAt:
           type: string
           format: date-time
@@ -729,84 +615,21 @@ components:
         - uom
         - createdAt
         - updatedAt
-    CounterReading:
-      title: CounterReading
-      x-stoplight:
-        id: n5zva0shvm8is
+    Vendor:
       type: object
       properties:
         key:
+          description: Vendor key
           type: string
-          description: Unique counter identifier
-        assetKey:
+        name:
+          description: Vendor name
           type: string
-          description: 'Identifier of asset, which counter belongs to'
-        counterKey:
-          type: string
-          description: 'Identifier of counter, which reading belongs to'
-        reading:
-          type: string
-          description: Value of counter
-        createdAt:
-          type: string
-          format: date-time
-          description: Time when entity was created
-      required:
-        - key
-    Team:
-      title: Team
-      x-stoplight:
-        id: d71bsbivzgftd
-      type: object
-      properties:
-        key:
-          type: string
-          description: Unique team identifier
         code:
+          description: Vendor code in the system
           type: string
-          description: 'Identifier of part in end-users internal taxonomy, e. g. SFI Code or SKU'
-        name:
-          type: string
-          description: Name of team
-        description:
-          type: string
-          description: Description of team
-          format: text
-        createdAt:
-          type: string
-          format: date-time
-          description: Time when entity was created
-        updatedAt:
-          type: string
-          format: date-time
-          description: Time when entity was last modified
-        deletedAt:
-          type: string
-          description: Time when entity was deleted/archived
-      required:
-        - key
-        - name
-        - description
-        - createdAt
-        - updatedAt
-    Document:
-      title: Document
-      x-stoplight:
-        id: ekmupujtgmw45
-      type: object
-      properties:
-        key:
-          type: string
-        entityKeys:
-          type: array
-          items: {}
-        name:
-          type: string
-        url:
-          type: string
-        contentType:
-          type: string
-        description:
+        address:
+          $ref: '#/components/schemas/Address'
+        currency:
           type: string
         notes:
           type: string
@@ -818,10 +641,69 @@ components:
         updatedAt:
           type: string
           format: date-time
+        deletedAt:
+          type: string
+          format: date-time
+    VendorContact:
+      properties:
+        first_name:
+          type: string
+        middle_name:
+          type: string
+        last_name:
+          type: string
+        phone_numbers:
+          type: string
+        emails:
+          type: string
+      title: ''
+    AssetDowntime:
+      title: AssetDowntime
+      x-stoplight:
+        id: ohrkom3gil8m5
+      type: object
+      properties:
+        key:
+          type: string
+          description: Unique asset identifier
+        assetKey:
+          type: string
+          description: 'Identifier of site, which asset belongs to'
+        description:
+          type: string
+          description: Downtime reason
+        startedAt:
+          type: string
+          format: date-time
+          description: Downtime start time
+        endedAt:
+          type: string
+          format: date-time
+          description: Downtime end time
+        categoryName:
+          type: string
+          description: Downtime category description
+        severity:
+          type: string
+          description: Downtime severity description
+        notes:
+          type: string
+          format: text
+          description: Notes in end-user's system
+        createdAt:
+          type: string
+          description: Time when entity was created
+          format: date-time
+        updatedAt:
+          type: string
+          description: Time when entity was last modified
+          format: date-time
       required:
         - key
-        - name
-        - url
+        - assetKey
+        - description
+        - startedAt
+        - endedAt
         - createdAt
         - updatedAt
     WorkRequest:
@@ -892,6 +774,161 @@ components:
         - status
         - createdAt
         - updatedAt
+      description: ''
+    CounterReading:
+      title: CounterReading
+      x-stoplight:
+        id: n5zva0shvm8is
+      type: object
+      properties:
+        key:
+          type: string
+          description: Unique counter identifier
+        assetKey:
+          type: string
+          description: 'Identifier of asset, which counter belongs to'
+        counterKey:
+          type: string
+          description: 'Identifier of counter, which reading belongs to'
+        reading:
+          type: number
+          description: Value of counter
+          format: double
+        createdAt:
+          type: string
+          format: date-time
+          description: Time when entity was created
+      required:
+        - key
+    Document:
+      title: Document
+      x-stoplight:
+        id: ekmupujtgmw45
+      type: object
+      properties:
+        key:
+          type: string
+        entityKeys:
+          type: array
+          items: {}
+        name:
+          type: string
+        url:
+          type: string
+        contentType:
+          type: string
+        description:
+          type: string
+        notes:
+          type: string
+          format: text
+          description: Notes to asset in end-user's system
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+      required:
+        - key
+        - name
+        - url
+        - createdAt
+        - updatedAt
+    Team:
+      title: Team
+      x-stoplight:
+        id: d71bsbivzgftd
+      type: object
+      properties:
+        key:
+          type: string
+          description: Unique team identifier
+        code:
+          type: string
+          description: 'Identifier of part in end-users internal taxonomy, e. g. SFI Code or SKU'
+        name:
+          type: string
+          description: Name of team
+        description:
+          type: string
+          description: Description of team
+          format: text
+        createdAt:
+          type: string
+          format: date-time
+          description: Time when entity was created
+        updatedAt:
+          type: string
+          format: date-time
+          description: Time when entity was last modified
+        deletedAt:
+          type: string
+          description: Time when entity was deleted/archived
+      required:
+        - key
+        - name
+        - description
+        - createdAt
+        - updatedAt
+    LineItem:
+      properties:
+        key:
+          description: Line item key
+          type: string
+        purchase_order_key:
+          type: string
+        entity_key:
+          type: string
+        entity_type:
+          type: string
+        storage_key:
+          type: string
+        description:
+          type: string
+        quantity:
+          type: string
+        value:
+          type: string
+        vendor_key:
+          type: string
+        delivery_at:
+          type: string
+        status:
+          type: string
+        number:
+          type: string
+        type:
+          type: string
+    Address:
+      title: Address
+      x-stoplight:
+        id: mo3wgkk4lv3ql
+      type: object
+      properties:
+        countryName:
+          type: string
+    Inventory:
+      title: Inventory
+      x-stoplight:
+        id: 9a7kzrfw9cq9w
+      type: object
+      properties:
+        code:
+          type: string
+          description: Identifier of inventory
+        name:
+          type: string
+          description: Name of inventory (e. g. waregouse name)
+        quantity:
+          type: string
+          description: Quantity of part available in inventory
+        updatedAt:
+          type: string
+          description: Time when entity was last modified
+          format: date-time
+      required:
+        - quantity
   responses:
     AssetResourceCollection:
       description: Assets list
