@@ -659,19 +659,6 @@ components:
         - createdAt
         - updatedAt
         - deletedAt
-    VendorContact:
-      properties:
-        first_name:
-          type: string
-        middle_name:
-          type: string
-        last_name:
-          type: string
-        phone_numbers:
-          type: string
-        emails:
-          type: string
-      title: ''
     AssetDowntime:
       title: AssetDowntime
       x-stoplight:
