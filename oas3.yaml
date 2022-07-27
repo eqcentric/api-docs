@@ -76,6 +76,33 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/WorkOrderResourceItem'
+  /vendors:
+    get:
+      summary: Display vendot list
+      operationId: AssetSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/VendorResourceCollection'
+    parameters: []
+  '/vendors/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: AssetGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/VendorResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
 components:
   schemas:
     Site:
