@@ -7,6 +7,20 @@ info:
     name: Roman Kinyakin
     email: roman@makini.io
 paths:
+  /sites:
+    get:
+      summary: Display site list
+      operationId: SiteSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/SiteResourceCollection'
+  '/sites/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: SiteGet
+      responses:
+        '200':
+          $ref: '#/components/responses/SiteResourceItem'
   /assets:
     get:
       summary: Display assets list
@@ -34,34 +48,6 @@ paths:
         name: key
         in: path
         required: true
-  /parts:
-    get:
-      summary: Display part list
-      operationId: PartSearch
-      responses:
-        '200':
-          $ref: '#/components/responses/PartResourceCollection'
-  '/parts/{key}':
-    get:
-      summary: Display the specified resource.
-      operationId: PartGet
-      responses:
-        '200':
-          $ref: '#/components/responses/PartResourceItem'
-  /sites:
-    get:
-      summary: Display site list
-      operationId: SiteSearch
-      responses:
-        '200':
-          $ref: '#/components/responses/SiteResourceCollection'
-  '/sites/{key}':
-    get:
-      summary: Display the specified resource.
-      operationId: SiteGet
-      responses:
-        '200':
-          $ref: '#/components/responses/SiteResourceItem'
   /work-orders:
     get:
       summary: Display work orders list
@@ -76,6 +62,47 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/WorkOrderResourceItem'
+  /parts:
+    get:
+      summary: Display part list
+      operationId: PartSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/PartResourceCollection'
+  '/parts/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: PartGet
+      responses:
+        '200':
+          $ref: '#/components/responses/PartResourceItem'
+  /purchase-orders:
+    get:
+      summary: Display purchase orders list
+      operationId: PurchaseOrdersSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/PurchaseOrderCollection'
+    parameters: []
+  '/purchase-orders/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: PurchaseOrdersGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/PurchaseOrderItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
   /vendors:
     get:
       summary: Display vendot list
@@ -1160,6 +1187,20 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/WorkOrder'
+    PurchaseOrderCollection:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/PurchaseOrder'
+    PurchaseOrderItem:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PurchaseOrder'
   securitySchemes:
     oauth2:
       type: oauth2
