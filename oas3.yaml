@@ -61,6 +61,44 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/WorkOrderResourceItem'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+        description: |-
+          {
+              "siteKey": "",
+              "assetKey": "",
+              "workRequestKey":"",
+              "pmKey": "",
+              "teamKey":"",
+              "userAssignedKey": "",
+              "userCompletedKey":"",
+              "completedAt": "",
+              "title": "",
+              "description": "",
+              "instructions":"",
+              "status": "",
+              "severity":"",
+              "estimatedTime": "",
+              "roleName": "",
+              "categoryName": "",
+              "documentKey":"",
+              "documentPage":"",
+              "notes":"",
+              "approvedAt":"",
+              "dueAt":"",
+              "completionRemarks":"",
+              "scheduledAt": "",
+              "parts": [
+                  {
+                      "partKey": "",
+                      "quantity": ""
+                  }
+              ]
+          }
   '/work-orders/{key}':
     get:
       summary: Display the specified resource.
