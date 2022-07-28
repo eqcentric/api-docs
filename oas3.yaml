@@ -63,32 +63,13 @@ paths:
         '200':
           $ref: '#/components/responses/WorkOrderResourceItem'
   /work-orders - POST:
-    get:
-      summary: Display work orders list
-      operationId: WorkOrderSearch
-      responses:
-        '200':
-          $ref: '#/components/responses/WorkOrderResourceCollection'
     post:
-      summary: ''
+      summary: Create work orders
       operationId: post-work-orders---copy
       responses:
         '200':
           $ref: '#/components/responses/WorkOrderResourceCollection'
     parameters: []
-  '/work-orders/{key} - copy':
-    get:
-      summary: Display the specified resource.
-      operationId: WorkOrderGet
-      responses:
-        '200':
-          $ref: '#/components/responses/WorkOrderResourceItem'
-    post:
-      summary: ''
-      operationId: post-work-orders-key---copy
-      responses:
-        '200':
-          $ref: '#/components/responses/WorkOrderResourceItem'
   /parts:
     get:
       summary: Display part list
