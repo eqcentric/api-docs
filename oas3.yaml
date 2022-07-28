@@ -535,6 +535,37 @@ paths:
         name: key
         in: path
         required: true
+  /line-item:
+    get:
+      summary: Display line item list
+      operationId: LineItemSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/LineItemResourceCollection'
+        '':
+          $ref: '#/components/responses/LineItemResourceCollection'
+    parameters: []
+  '/line-item/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: LineItemGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/LineItemResourceItem'
+        '':
+          $ref: '#/components/responses/LineItemResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
 components:
   schemas:
     Site:
