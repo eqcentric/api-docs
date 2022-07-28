@@ -389,16 +389,38 @@ paths:
         name: key
         in: path
         required: true
-  /inventory:
-    get:
-      summary: Display inventory list
-      operationId: InventorySearch
+  '/parts/{key}/inventory':
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+    post:
+      summary: Update Part Inventory
+      operationId: post-inventory
       responses:
         '200':
-          $ref: '#/components/responses/InventoryResourceCollection'
-        '':
-          $ref: '#/components/responses/InventoryResourceCollection'
-    parameters: []
+          $ref: '#/components/responses/PartResourceItem'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              x-examples:
+                example-1:
+                  code: ''
+                  name: ''
+                  quantity: ''
+              properties:
+                code:
+                  type: string
+                name:
+                  type: string
+                quantity:
+                  type: string
+              required:
+                - quantity
   '/inventory/{key}':
     get:
       summary: Display the specified resource.
