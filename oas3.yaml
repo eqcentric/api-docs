@@ -7,6 +7,20 @@ info:
     name: Roman Kinyakin
     email: roman@makini.io
 paths:
+  /sites:
+    get:
+      summary: Display site list
+      operationId: SiteSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/SiteResourceCollection'
+  '/sites/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: SiteGet
+      responses:
+        '200':
+          $ref: '#/components/responses/SiteResourceItem'
   /assets:
     get:
       summary: Display assets list
@@ -34,34 +48,6 @@ paths:
         name: key
         in: path
         required: true
-  /parts:
-    get:
-      summary: Display part list
-      operationId: PartSearch
-      responses:
-        '200':
-          $ref: '#/components/responses/PartResourceCollection'
-  '/parts/{key}':
-    get:
-      summary: Display the specified resource.
-      operationId: PartGet
-      responses:
-        '200':
-          $ref: '#/components/responses/PartResourceItem'
-  /sites:
-    get:
-      summary: Display site list
-      operationId: SiteSearch
-      responses:
-        '200':
-          $ref: '#/components/responses/SiteResourceCollection'
-  '/sites/{key}':
-    get:
-      summary: Display the specified resource.
-      operationId: SiteGet
-      responses:
-        '200':
-          $ref: '#/components/responses/SiteResourceItem'
   /work-orders:
     get:
       summary: Display work orders list
@@ -76,6 +62,20 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/WorkOrderResourceItem'
+  /parts:
+    get:
+      summary: Display part list
+      operationId: PartSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/PartResourceCollection'
+  '/parts/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: PartGet
+      responses:
+        '200':
+          $ref: '#/components/responses/PartResourceItem'
   /vendors:
     get:
       summary: Display vendot list
@@ -97,6 +97,438 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/VendorResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /asset-downtime:
+    get:
+      summary: Display asset downtime list
+      operationId: AssetDowntimeSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/AssetDowntimeResourceCollection'
+    parameters: []
+  '/asset-downtime/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: AssetDowntimeGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/AssetDowntimeResourceItem'
+        '':
+          $ref: '#/components/responses/AssetDowntimeResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /models:
+    get:
+      summary: Display model list
+      operationId: ModelSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/ModelResourceCollection'
+        '':
+          $ref: '#/components/responses/ModelResourceCollection'
+    parameters: []
+  '/models/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: ModelGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/ModelResourceItem'
+        '':
+          $ref: '#/components/responses/AssetDowntimeResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /counters:
+    get:
+      summary: Display counter list
+      operationId: CounterSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/CounterResourceCollection'
+        '':
+          $ref: '#/components/responses/CounterResourceCollection'
+    parameters: []
+  '/counters/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: CounterGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/CounterResourceItem'
+        '':
+          $ref: '#/components/responses/CounterResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /counter-reading:
+    get:
+      summary: Display counter reading list
+      operationId: CounterReadingSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/CounterReadingResourceCollection'
+        '':
+          $ref: '#/components/responses/CounterReadingResourceCollection'
+    parameters: []
+  '/counter-reading/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: CounterReadingGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/CounterReadingResourceItem'
+        '':
+          $ref: '#/components/responses/CounterReadingResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /teams:
+    get:
+      summary: Display team list
+      operationId: TeamSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/TeamResourceCollection'
+        '':
+          $ref: '#/components/responses/TeamResourceCollection'
+    parameters: []
+  '/teams/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: TeamGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/TeamResourceItem'
+        '':
+          $ref: '#/components/responses/TeamResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /address:
+    get:
+      summary: Display address list
+      operationId: AddressSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/AddressResourceCollection'
+        '':
+          $ref: '#/components/responses/AddressResourceCollection'
+    parameters: []
+  '/address/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: AddressGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/AddressResourceItem'
+        '':
+          $ref: '#/components/responses/AddressResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /inventory:
+    get:
+      summary: Display inventory list
+      operationId: InventorySearch
+      responses:
+        '200':
+          $ref: '#/components/responses/InventoryResourceCollection'
+        '':
+          $ref: '#/components/responses/InventoryResourceCollection'
+    parameters: []
+  '/inventory/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: InventoryGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/InventoryResourceItem'
+        '':
+          $ref: '#/components/responses/InventoryResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /drawing:
+    get:
+      summary: Display drawing list
+      operationId: DrawingSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/DrawingResourceCollection'
+        '':
+          $ref: '#/components/responses/DrawingResourceCollection'
+    parameters: []
+  '/drawing/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: DrawingGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/DrawingResourceItem'
+        '':
+          $ref: '#/components/responses/DrawingResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /work-request:
+    get:
+      summary: Display work request list
+      operationId: WorkRequestSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/WorkRequestResourceCollection'
+        '':
+          $ref: '#/components/responses/WorkRequestResourceCollection'
+    parameters: []
+  '/work-request/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: WorkRequestGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/WorkRequestResourceItem'
+        '':
+          $ref: '#/components/responses/WorkRequestResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /preventive-maintenance:
+    get:
+      summary: Display preventive maintenance list
+      operationId: PreventiveMaintenanceSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/PreventiveMaintenanceResourceCollection'
+        '':
+          $ref: '#/components/responses/PreventiveMaintenanceResourceCollection'
+    parameters: []
+  '/preventive-maintenance/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: PreventiveMaintenanceGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/PreventiveMaintenanceResourceItem'
+        '':
+          $ref: '#/components/responses/PreventiveMaintenanceResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /documents:
+    get:
+      summary: Display document list
+      operationId: DocumentSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/DocumentResourceCollection'
+        '':
+          $ref: '#/components/responses/DocumentResourceCollection'
+    parameters: []
+  '/documents/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: DocumentGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/DocumentResourceItem'
+        '':
+          $ref: '#/components/responses/DocumentResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /part-usage:
+    get:
+      summary: Display part usage list
+      operationId: PartUsageSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/PartUsageResourceCollection'
+        '':
+          $ref: '#/components/responses/PartUsageResourceItem'
+    parameters: []
+  '/part-usage/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: PartUsageGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/PartUsageResourceItem'
+        '':
+          $ref: '#/components/responses/DocumentResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /purchase-order:
+    get:
+      summary: Display purchase order list
+      operationId: PurchaseOrderSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/PurchaseOrderResourceCollection'
+        '':
+          $ref: '#/components/responses/PurchaseOrderResourceItem'
+    parameters: []
+  '/purchase-order/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: PurchaseOrderGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/PurchaseOrderResourceItem'
+        '':
+          $ref: '#/components/responses/DocumentResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /work-trigger:
+    get:
+      summary: Display work trigger list
+      operationId: WorkTriggerSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/WorkTriggerResourceCollection'
+        '':
+          $ref: '#/components/responses/WorkTriggerResourceCollection'
+    parameters: []
+  '/work-trigger/{key}':
+    get:
+      summary: Display the specified resource.
+      operationId: WorkTriggerGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/WorkTriggerResourceItem'
+        '':
+          $ref: '#/components/responses/DocumentResourceItem'
     parameters:
       - schema:
           type: string
@@ -1160,6 +1592,202 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/WorkOrder'
+    AssetDowntimeResourceCollection:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/AssetDowntime'
+    AssetDowntimeResourceItem:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AssetDowntime'
+    ModelResourceCollection:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Model'
+    ModelResourceItem:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Model'
+    CounterResourceCollection:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Counter'
+    CounterResourceItem:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Counter'
+    CounterReadingResourceCollection:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/CounterReading'
+    CounterReadingResourceItem:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/CounterReading'
+    TeamResourceCollection:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Team'
+    TeamResourceItem:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Team'
+    AddressResourceCollection:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Address'
+    AddressResourceItem:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Address'
+    InventoryResourceCollection:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Inventory'
+    InventoryResourceItem:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Inventory'
+    DrawingResourceCollection:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Drawing'
+    DrawingResourceItem:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Drawing'
+    WorkRequestResourceCollection:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/WorkRequest'
+    WorkRequestResourceItem:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/WorkRequest'
+    PreventiveMaintenanceResourceCollection:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/PreventiveMaintenance'
+    PreventiveMaintenanceResourceItem:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PreventiveMaintenance'
+    DocumentResourceCollection:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Document'
+    DocumentResourceItem:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Document'
+    PartUsageResourceItem:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PartUsage'
+    PartUsageResourceCollection:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/PartUsage'
+    PurchaseOrderResourceItem:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PurchaseOrder'
+    PurchaseOrderResourceCollection:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/PurchaseOrder'
+    WorkTriggerResourceItem:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/WorkTrigger'
+    WorkTriggerResourceCollection:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/WorkTrigger'
   securitySchemes:
     oauth2:
       type: oauth2
