@@ -62,6 +62,33 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/WorkOrderResourceItem'
+  /work-orders - POST:
+    get:
+      summary: Display work orders list
+      operationId: WorkOrderSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/WorkOrderResourceCollection'
+    post:
+      summary: ''
+      operationId: post-work-orders---copy
+      responses:
+        '200':
+          $ref: '#/components/responses/WorkOrderResourceCollection'
+    parameters: []
+  '/work-orders/{key} - copy':
+    get:
+      summary: Display the specified resource.
+      operationId: WorkOrderGet
+      responses:
+        '200':
+          $ref: '#/components/responses/WorkOrderResourceItem'
+    post:
+      summary: ''
+      operationId: post-work-orders-key---copy
+      responses:
+        '200':
+          $ref: '#/components/responses/WorkOrderResourceItem'
   /parts:
     get:
       summary: Display part list
@@ -380,49 +407,6 @@ paths:
         name: key
         in: path
         required: true
-  /work-request - copy:
-    get:
-      summary: Display work request list
-      operationId: WorkRequestSearch
-      responses:
-        '200':
-          $ref: '#/components/responses/WorkOrderResourceCollection'
-        '':
-          $ref: '#/components/responses/WorkRequestResourceCollection'
-    parameters: []
-    post:
-      summary: ''
-      operationId: post-work-request---copy
-      responses:
-        '200':
-          $ref: '#/components/responses/WorkOrderResourceCollection'
-  '/work-request/{key} - copy':
-    get:
-      summary: Display the specified resource.
-      operationId: WorkRequestGet
-      parameters:
-        - name: key
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          $ref: '#/components/responses/WorkOrderResourceItem'
-        '':
-          $ref: '#/components/responses/WorkRequestResourceItem'
-    parameters:
-      - schema:
-          type: string
-        name: key
-        in: path
-        required: true
-    post:
-      summary: ''
-      operationId: post-work-request-key---copy
-      responses:
-        '200':
-          description: OK
   /preventive-maintenance:
     get:
       summary: Display preventive maintenance list
