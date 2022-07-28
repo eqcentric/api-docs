@@ -16,7 +16,7 @@ paths:
           $ref: '#/components/responses/SiteResourceCollection'
   '/sites/{key}':
     get:
-      summary: Display the specified resource.
+      summary: Display specified sites
       operationId: SiteGet
       responses:
         '200':
