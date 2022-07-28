@@ -66,6 +66,34 @@ paths:
           application/json:
             schema:
               type: object
+              x-examples:
+                example-1:
+                  siteKey: ''
+                  assetKey: ''
+                  workRequestKey: ''
+                  pmKey: ''
+                  teamKey: ''
+                  userAssignedKey: ''
+                  userCompletedKey: ''
+                  completedAt: ''
+                  title: ''
+                  description: ''
+                  instructions: ''
+                  status: ''
+                  severity: ''
+                  estimatedTime: ''
+                  roleName: ''
+                  categoryName: ''
+                  documentKey: ''
+                  documentPage: ''
+                  notes: ''
+                  approvedAt: ''
+                  dueAt: ''
+                  completionRemarks: ''
+                  scheduledAt: ''
+                  parts:
+                    - partKey: ''
+                      quantity: ''
               properties:
                 siteKey:
                   type: string
@@ -122,34 +150,12 @@ paths:
                         type: string
                       quantity:
                         type: string
-              x-examples:
-                example-1:
-                  siteKey: ''
-                  assetKey: ''
-                  workRequestKey: ''
-                  pmKey: ''
-                  teamKey: ''
-                  userAssignedKey: ''
-                  userCompletedKey: ''
-                  completedAt: ''
-                  title: ''
-                  description: ''
-                  instructions: ''
-                  status: ''
-                  severity: ''
-                  estimatedTime: ''
-                  roleName: ''
-                  categoryName: ''
-                  documentKey: ''
-                  documentPage: ''
-                  notes: ''
-                  approvedAt: ''
-                  dueAt: ''
-                  completionRemarks: ''
-                  scheduledAt: ''
-                  parts:
-                    - partKey: ''
-                      quantity: ''
+              required:
+                - siteKey
+                - assetKey
+                - title
+                - status
+                - scheduledAt
         description: ''
   '/work-orders/{key}':
     get:
