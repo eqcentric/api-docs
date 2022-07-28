@@ -103,14 +103,6 @@ paths:
         name: key
         in: path
         required: true
-  /models:
-    get:
-      summary: Display Model list
-      operationId: AssetSearch
-      responses:
-        '200':
-          $ref: '#/components/responses/VendorResourceCollection'
-    parameters: []
 components:
   schemas:
     Site:
