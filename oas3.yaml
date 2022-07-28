@@ -31,7 +31,7 @@ paths:
     parameters: []
   '/assets/{key}':
     get:
-      summary: Display the specified resource.
+      summary: Display specified assets
       operationId: AssetGet
       parameters:
         - name: key
@@ -159,7 +159,7 @@ paths:
         description: ''
   '/work-orders/{key}':
     get:
-      summary: Display the specified resource.
+      summary: Display specified work orders
       operationId: WorkOrderGet
       responses:
         '200':
@@ -173,14 +173,14 @@ paths:
           $ref: '#/components/responses/PartResourceCollection'
   '/parts/{key}':
     get:
-      summary: Display the specified resource.
+      summary: Display specified parts
       operationId: PartGet
       responses:
         '200':
           $ref: '#/components/responses/PartResourceItem'
   /vendors:
     get:
-      summary: Display vendot list
+      summary: Display vendor list
       operationId: VendorSearch
       responses:
         '200':
@@ -188,7 +188,7 @@ paths:
     parameters: []
   '/vendors/{key}':
     get:
-      summary: Display the specified resource.
+      summary: Display specified vendors
       operationId: VendorGet
       parameters:
         - name: key
@@ -215,7 +215,7 @@ paths:
     parameters: []
   '/asset-downtime/{key}':
     get:
-      summary: Display the specified resource.
+      summary: Display specified asset downtime
       operationId: AssetDowntimeGet
       parameters:
         - name: key
@@ -246,7 +246,7 @@ paths:
     parameters: []
   '/models/{key}':
     get:
-      summary: Display the specified resource.
+      summary: Display specified models
       operationId: ModelGet
       parameters:
         - name: key
@@ -277,7 +277,7 @@ paths:
     parameters: []
   '/counters/{key}':
     get:
-      summary: Display the specified resource.
+      summary: Display specified counters
       operationId: CounterGet
       parameters:
         - name: key
@@ -308,7 +308,7 @@ paths:
     parameters: []
   '/counter-reading/{key}':
     get:
-      summary: Display the specified resource.
+      summary: Display specified counter reading
       operationId: CounterReadingGet
       parameters:
         - name: key
@@ -339,7 +339,7 @@ paths:
     parameters: []
   '/teams/{key}':
     get:
-      summary: Display the specified resource.
+      summary: Display specified teams
       operationId: TeamGet
       parameters:
         - name: key
@@ -404,7 +404,7 @@ paths:
     parameters: []
   '/work-request/{key}':
     get:
-      summary: Display the specified resource.
+      summary: Display specified work request
       operationId: WorkRequestGet
       parameters:
         - name: key
@@ -435,7 +435,7 @@ paths:
     parameters: []
   '/preventive-maintenance/{key}':
     get:
-      summary: Display the specified resource.
+      summary: Display specified preventive maintenance
       operationId: PreventiveMaintenanceGet
       parameters:
         - name: key
@@ -466,7 +466,7 @@ paths:
     parameters: []
   '/documents/{key}':
     get:
-      summary: Display the specified resource.
+      summary: Display specified documents
       operationId: DocumentGet
       parameters:
         - name: key
@@ -635,7 +635,7 @@ paths:
                         type: string
   '/purchase-order/{key}':
     get:
-      summary: Display the specified resource.
+      summary: Display specified purchase order
       operationId: PurchaseOrderGet
       parameters:
         - name: key
