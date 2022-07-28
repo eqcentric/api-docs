@@ -402,6 +402,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/PartResourceItem'
+        '':
+          $ref: '#/components/responses/PartResourceItem'
       requestBody:
         content:
           application/json:
@@ -421,27 +423,6 @@ paths:
                   type: string
               required:
                 - quantity
-  '/inventory/{key}':
-    get:
-      summary: Display the specified resource.
-      operationId: InventoryGet
-      parameters:
-        - name: key
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          $ref: '#/components/responses/InventoryResourceItem'
-        '':
-          $ref: '#/components/responses/InventoryResourceItem'
-    parameters:
-      - schema:
-          type: string
-        name: key
-        in: path
-        required: true
   /drawing:
     get:
       summary: Display drawing list
