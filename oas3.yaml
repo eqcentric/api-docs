@@ -57,7 +57,7 @@ paths:
           $ref: '#/components/responses/WorkOrderResourceCollection'
     post:
       summary: Create work orders
-      operationId: post-work-orders
+      operationId: WorkOrderCreate
       responses:
         '200':
           $ref: '#/components/responses/WorkOrderResourceItem'
@@ -358,37 +358,6 @@ paths:
         name: key
         in: path
         required: true
-  /address:
-    get:
-      summary: Display address list
-      operationId: AddressSearch
-      responses:
-        '200':
-          $ref: '#/components/responses/AddressResourceCollection'
-        '':
-          $ref: '#/components/responses/AddressResourceCollection'
-    parameters: []
-  '/address/{key}':
-    get:
-      summary: Display the specified resource.
-      operationId: AddressGet
-      parameters:
-        - name: key
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          $ref: '#/components/responses/AddressResourceItem'
-        '':
-          $ref: '#/components/responses/AddressResourceItem'
-    parameters:
-      - schema:
-          type: string
-        name: key
-        in: path
-        required: true
   '/parts/{key}/inventory':
     parameters:
       - schema:
@@ -398,7 +367,7 @@ paths:
         required: true
     post:
       summary: Update Part Inventory
-      operationId: post-inventory
+      operationId: PartInventoryCreate
       responses:
         '200':
           $ref: '#/components/responses/PartResourceItem'
@@ -423,37 +392,6 @@ paths:
                   type: string
               required:
                 - quantity
-  /drawing:
-    get:
-      summary: Display drawing list
-      operationId: DrawingSearch
-      responses:
-        '200':
-          $ref: '#/components/responses/DrawingResourceCollection'
-        '':
-          $ref: '#/components/responses/DrawingResourceCollection'
-    parameters: []
-  '/drawing/{key}':
-    get:
-      summary: Display the specified resource.
-      operationId: DrawingGet
-      parameters:
-        - name: key
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          $ref: '#/components/responses/DrawingResourceItem'
-        '':
-          $ref: '#/components/responses/DrawingResourceItem'
-    parameters:
-      - schema:
-          type: string
-        name: key
-        in: path
-        required: true
   /work-request:
     get:
       summary: Display work request list
@@ -547,37 +485,6 @@ paths:
         name: key
         in: path
         required: true
-  /part-usage:
-    get:
-      summary: Display part usage list
-      operationId: PartUsageSearch
-      responses:
-        '200':
-          $ref: '#/components/responses/PartUsageResourceCollection'
-        '':
-          $ref: '#/components/responses/PartUsageResourceItem'
-    parameters: []
-  '/part-usage/{key}':
-    get:
-      summary: Display the specified resource.
-      operationId: PartUsageGet
-      parameters:
-        - name: key
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          $ref: '#/components/responses/PartUsageResourceItem'
-        '':
-          $ref: '#/components/responses/DocumentResourceItem'
-    parameters:
-      - schema:
-          type: string
-        name: key
-        in: path
-        required: true
   /purchase-order:
     get:
       summary: Display purchase order list
@@ -588,6 +495,144 @@ paths:
         '':
           $ref: '#/components/responses/PurchaseOrderResourceItem'
     parameters: []
+    post:
+      summary: Create purchase order
+      operationId: PurchaseOrderCreate
+      responses:
+        '200':
+          $ref: '#/components/responses/PurchaseOrderResourceItem'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                siteKey:
+                  type: string
+                vendorKey:
+                  type: string
+                orderNo:
+                  type: string
+                orderDate:
+                  type: string
+                status:
+                  type: string
+                warehouseName:
+                  type: string
+                title:
+                  type: string
+                description:
+                  type: string
+                dueAt:
+                  type: string
+                shippingMethod:
+                  type: string
+                terms:
+                  type: string
+                notes:
+                  type: string
+                deliveryAddress:
+                  type: string
+                currency:
+                  type: string
+                lines:
+                  type: array
+                  items:
+                    type: object
+                    properties: {}
+              x-examples:
+                example-1:
+                  siteKey: ''
+                  vendorKey: ''
+                  orderNo: ''
+                  orderDate: ''
+                  status: ''
+                  warehouseName: ''
+                  title: ''
+                  description: ''
+                  dueAt: ''
+                  shippingMethod: ''
+                  terms: ''
+                  notes: ''
+                  deliveryAddress: ''
+                  currency: ''
+                  lines: []
+    put:
+      summary: Update purchase order
+      operationId: PurchaseOrderUpdate
+      responses:
+        '200':
+          $ref: '#/components/responses/PurchaseOrderResourceItem'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              x-examples:
+                example-1:
+                  title: sms20
+                  orderNo: '0000010699'
+                  siteKey: 01db0000ef62028d122fa879e935821753d0751d
+                  priority: null
+                  vendorKey: 09db0000dd925ddf7b247dd02e1ee998a2795722
+                  lines:
+                    - assetKey: 02db0000a17280e58b23b54f9f7b12f735c3c76d
+                      description: sms20-1
+                      qty: 2
+                      cost: 1
+                      deliveryAt: null
+                      status: 05_RECEIVEDBOAT
+                      lineNo: 1
+                      type: PART
+                      vendorKey: 09db0000dd925ddf7b247dd02e1ee998a2795722
+                      key: 05db00009d33142d1d3c6d8ec79b691de1314997
+                    - partKey: false
+                      description: Workwear Placeholder
+                      qty: 1
+                      cost: 2
+                      deliveryAt: null
+                      status: 05_RECEIVEDBOAT
+                      lineNo: 2
+                      type: PART
+                      vendorKey: 09db0000dd925ddf7b247dd02e1ee998a2795722
+              properties:
+                title:
+                  type: string
+                orderNo:
+                  type: string
+                siteKey:
+                  type: string
+                priority:
+                  nullable: true
+                vendorKey:
+                  type: string
+                lines:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      assetKey:
+                        type: string
+                      description:
+                        type: string
+                      qty:
+                        type: integer
+                      cost:
+                        type: integer
+                      deliveryAt:
+                        nullable: true
+                      status:
+                        type: string
+                      lineNo:
+                        type: integer
+                      type:
+                        type: string
+                      vendorKey:
+                        type: string
+                      key:
+                        type: string
+                      partKey:
+                        type: string
   '/purchase-order/{key}':
     get:
       summary: Display the specified resource.
@@ -603,68 +648,6 @@ paths:
           $ref: '#/components/responses/PurchaseOrderResourceItem'
         '':
           $ref: '#/components/responses/DocumentResourceItem'
-    parameters:
-      - schema:
-          type: string
-        name: key
-        in: path
-        required: true
-  /work-trigger:
-    get:
-      summary: Display work trigger list
-      operationId: WorkTriggerSearch
-      responses:
-        '200':
-          $ref: '#/components/responses/WorkTriggerResourceCollection'
-        '':
-          $ref: '#/components/responses/WorkTriggerResourceCollection'
-    parameters: []
-  '/work-trigger/{key}':
-    get:
-      summary: Display the specified resource.
-      operationId: WorkTriggerGet
-      parameters:
-        - name: key
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          $ref: '#/components/responses/WorkTriggerResourceItem'
-        '':
-          $ref: '#/components/responses/DocumentResourceItem'
-    parameters:
-      - schema:
-          type: string
-        name: key
-        in: path
-        required: true
-  /line-item:
-    get:
-      summary: Display line item list
-      operationId: LineItemSearch
-      responses:
-        '200':
-          $ref: '#/components/responses/LineItemResourceCollection'
-        '':
-          $ref: '#/components/responses/LineItemResourceCollection'
-    parameters: []
-  '/line-item/{key}':
-    get:
-      summary: Display the specified resource.
-      operationId: LineItemGet
-      parameters:
-        - name: key
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '200':
-          $ref: '#/components/responses/LineItemResourceItem'
-        '':
-          $ref: '#/components/responses/LineItemResourceItem'
     parameters:
       - schema:
           type: string
