@@ -20,8 +20,6 @@ A webhook enables Makini to push real-time notifications to your app. Makini use
 |Purchase orders|√|√|X|
 |Work orders|√|√|X|
 
-`Deleted` events: COMMING SOON
-
 
 ## Creating a Webhook
 
