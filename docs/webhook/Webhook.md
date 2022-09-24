@@ -49,21 +49,6 @@ with signature on headers: `[X-Webhook-Signature]={signature}`
 ## Handle webhooks from Makini
 Use `secret` from Webhooks page.
 
-
-### Encrypt SHA256 on Makini
-
-```javascript
-import crypto from "crypto";
-
-function generateSHA256Signature(secret: string, data: any) {
-  return crypto
-    .createHmac("sha256", secret)
-    .update(JSON.stringify(data))
-    .digest("base64");
-}
-
-```
-
 ### Validate Webhook from Makini by your app
 
 ```javascript
