@@ -464,6 +464,28 @@ paths:
         '':
           $ref: '#/components/responses/DocumentResourceCollection'
     parameters: []
+    post:
+      summary: ''
+      operationId: post-documents
+      responses:
+        '200':
+          $ref: '#/components/responses/DocumentResourceItem'
+      description: Upload a document file
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                file:
+                  type: string
+                  format: binary
+              required:
+                - name
+                - file
+        description: ''
   '/documents/{key}':
     get:
       summary: Display specified documents
