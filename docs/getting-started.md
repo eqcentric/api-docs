@@ -7,5 +7,6 @@ using one simple unified API.
 1. [Creating an application](sign-up.md)
 2. [Testing API with Postman](postman.md)
 3. [Authentication protocol](authentication.md)
-4. Development / production modes
+4. [Upload documents](upload-documents.md)
+5. Development / production modes
 
