@@ -676,6 +676,28 @@ paths:
         name: key
         in: path
         required: true
+  /labors:
+    get:
+      summary: Display labor list
+      tags: []
+      responses:
+        '200':
+          $ref: '#/components/responses/LaborResourceCollection'
+      operationId: LaborSearch
+  '/labors/{key}':
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+    get:
+      summary: Display specified labor
+      tags: []
+      responses:
+        '200':
+          $ref: '#/components/responses/LaborResourceItem'
+      operationId: LaborGet
 components:
   schemas:
     Site:
@@ -1650,6 +1672,74 @@ components:
         - type
         - interval
         - recurring
+    Labor:
+      title: Labor
+      x-stoplight:
+        id: 5hl5dpggyvn2v
+      type: object
+      properties:
+        key:
+          type: string
+          description: Unique Labor identifier
+        siteKeys:
+          type: array
+          description: Identifiers of Sites on which labor is employed
+          items:
+            type: string
+        locationKeys:
+          type: array
+          description: |-
+            List of identifiers of Locations on 
+            which labor is employed
+          items:
+            type: string
+        accountKey:
+          type: string
+          description: Identifier of Account labor is related to
+        teamKey:
+          type: string
+          description: Identifier of Team labor is related to
+        userId:
+          type: string
+          description: Identifier of user account associated with labor
+        name:
+          type: string
+          description: Name of labor
+        roleName:
+          type: string
+          description: Name of role
+        description:
+          type: string
+          description: Description of labor
+        notes:
+          type: string
+          description: Notes to labor in end-user's system
+        isActive:
+          type: boolean
+          description: Identifies if labor is currently in use
+        cost:
+          type: number
+          description: Labor cost
+          format: double
+        currency:
+          type: string
+          description: Currency
+        createdAt:
+          type: string
+          description: Time when entity was created
+          format: date-time
+        updatedAt:
+          type: string
+          description: Time when entity was last modified
+          format: date-time
+        deletedAt:
+          type: string
+          description: Time when entity was deleted/archived
+          format: date-time
+      required:
+        - key
+        - siteKeys
+        - name
   responses:
     AssetResourceCollection:
       description: Assets list
@@ -1931,6 +2021,20 @@ components:
             type: array
             items:
               $ref: '#/components/schemas/WorkTrigger'
+    LaborResourceCollection:
+      description: Labor list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Labor'
+    LaborResourceItem:
+      description: Labor entity
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Labor'
   securitySchemes:
     oauth2:
       type: oauth2
