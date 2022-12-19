@@ -1695,10 +1695,10 @@ components:
             type: string
         accountKey:
           type: string
-          description: Identifier of Account labor is related to
+          description: Identifier of Account which labor belong to
         teamKey:
           type: string
-          description: Identifier of Team labor is related to
+          description: Identifier of Team which labor belong to
         userId:
           type: string
           description: Identifier of user account associated with labor
