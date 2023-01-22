@@ -29,23 +29,6 @@ You can start receiving event notifications in your app using the steps in this 
 2. Create a webhook endpoint as an HTTP endpoint (URL) on your server.
 3. Handle requests from Makini by parsing event's data and signature verification is applied by Makini.
 
-
-### Callback payload
-
-Samepl callback payload
-```json
-{
-  "event": "assets.updated",
-  "body": [
-    "16c69269-0432-4382-b48f-eb3538b4b3d7",
-    "418e84a7-9ae4-4ab7-ad0f-43c4edba9098",
-    ...
-    "e5d5809d-a2f0-44be-aca2-aa6059b5206d"
-  ]
-}
-```
-with signature on headers: `[X-Webhook-Signature]={signature}`
-
 ## Handle webhooks from Makini
 Use `secret` from Webhooks page.
 
