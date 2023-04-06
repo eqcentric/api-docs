@@ -46,6 +46,16 @@ setup is required. Click on "Send" button to dispatch request or use "Body" tab 
 
 For detailed information on API endpoints, use [Makini API reference](../oas3.yml) guide
 
+## Pagination 
+We have created a pagination which displays multiple pages of results and creates a url something like this . Basically, it appends a `?page=1` and `per_page=10`
+
+Example:
+```
+curl --location 'https://api.makini.io/api/assets?page=2&per_page=5' \
+--header 'Accept: application/json' \
+--header 'Authorization: <API_TOKEN>'
+```
+
 **Read more**
 * [Creating the application](sign-up.md)
 * [API authentication protocol](authentication.md)
