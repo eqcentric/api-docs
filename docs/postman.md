@@ -49,11 +49,27 @@ For detailed information on API endpoints, use [Makini API reference](../oas3.ym
 ## Pagination 
 We have created a pagination which displays multiple pages of results and creates a url something like this `/api/assets?page=1&per_page=10` . Basically, it appends a `?page=1` and `per_page=10`
 
-Example:
+Request example:
 ```
 curl --location 'https://api.makini.io/api/assets?page=1&per_page=10' \
 --header 'Accept: application/json' \
 --header 'Authorization: <API_TOKEN>'
+```
+
+Reponse example:
+```json
+...
+
+  "meta":  {
+      "current_page": 2,
+      "from": 6,
+      "last_page": 10,
+      "path": "https://api.makini.io/api/assets",
+      "per_page": 5,
+      "to": 10,
+      "total": 46
+  }
+...
 ```
 
 **Read more**
