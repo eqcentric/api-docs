@@ -309,6 +309,10 @@ paths:
               properties:
                 status:
                   type: string
+                note:
+                  type: string
+                  x-stoplight:
+                    id: qqdkrtw0hfvgc
               required:
                 - status
           application/xml:
