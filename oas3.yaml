@@ -266,6 +266,64 @@ paths:
                 - status
                 - scheduledAt
         description: ''
+  '/work-orders/{key}/status':
+    put:
+      summary: Update Work order
+      operationId: WorkOrderUpdate
+      responses:
+        '200':
+          $ref: '#/components/responses/WorkOrderResourceItem'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              x-examples:
+                example-1:
+                  siteKey: ''
+                  assetKey: ''
+                  workRequestKey: ''
+                  pmKey: ''
+                  teamKey: ''
+                  userAssignedKey: ''
+                  userCompletedKey: ''
+                  completedAt: ''
+                  title: ''
+                  description: ''
+                  instructions: ''
+                  status: ''
+                  severity: ''
+                  estimatedTime: ''
+                  roleName: ''
+                  categoryName: ''
+                  documentKey: ''
+                  documentPage: ''
+                  notes: ''
+                  approvedAt: ''
+                  dueAt: ''
+                  completionRemarks: ''
+                  scheduledAt: ''
+                  parts:
+                    - partKey: ''
+                      quantity: ''
+              properties:
+                status:
+                  type: string
+              required:
+                - status
+          application/xml:
+            schema:
+              type: object
+              properties: {}
+        description: ''
+      x-stoplight:
+        id: ccugqxiaa4rmg
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
   /parts:
     get:
       summary: Display part list
