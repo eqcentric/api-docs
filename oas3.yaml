@@ -164,7 +164,6 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/WorkOrderResourceItem'
-  '/work-orders/{key}':
     put:
       summary: Update Work order
       operationId: WorkOrderUpdate
