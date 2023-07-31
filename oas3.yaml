@@ -164,6 +164,102 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/WorkOrderResourceItem'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              x-examples:
+                example-1:
+                  siteKey: ''
+                  assetKey: ''
+                  workRequestKey: ''
+                  pmKey: ''
+                  teamKey: ''
+                  userAssignedKey: ''
+                  userCompletedKey: ''
+                  completedAt: ''
+                  title: ''
+                  description: ''
+                  instructions: ''
+                  status: ''
+                  severity: ''
+                  estimatedTime: ''
+                  roleName: ''
+                  categoryName: ''
+                  documentKey: ''
+                  documentPage: ''
+                  notes: ''
+                  approvedAt: ''
+                  dueAt: ''
+                  completionRemarks: ''
+                  scheduledAt: ''
+                  parts:
+                    - partKey: ''
+                      quantity: ''
+              properties:
+                siteKey:
+                  type: string
+                assetKey:
+                  type: string
+                workRequestKey:
+                  type: string
+                pmKey:
+                  type: string
+                teamKey:
+                  type: string
+                userAssignedKey:
+                  type: string
+                userCompletedKey:
+                  type: string
+                completedAt:
+                  type: string
+                title:
+                  type: string
+                description:
+                  type: string
+                instructions:
+                  type: string
+                status:
+                  type: string
+                severity:
+                  type: string
+                estimatedTime:
+                  type: string
+                roleName:
+                  type: string
+                categoryName:
+                  type: string
+                documentKey:
+                  type: string
+                documentPage:
+                  type: string
+                notes:
+                  type: string
+                approvedAt:
+                  type: string
+                dueAt:
+                  type: string
+                completionRemarks:
+                  type: string
+                scheduledAt:
+                  type: string
+                parts:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      partKey:
+                        type: string
+                      quantity:
+                        type: string
+              required:
+                - siteKey
+                - assetKey
+                - title
+                - status
+                - scheduledAt
+        description: ''
   /parts:
     get:
       summary: Display part list
