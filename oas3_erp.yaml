@@ -1,6 +1,6 @@
 openapi: 3.0.0
 x-stoplight:
-  id: y7mgca9dlwrjm
+  id: 59lbrwb4gizuh
 info:
   title: ERP platforms
   description: ERP platforms
@@ -16,13 +16,21 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/SiteResourceCollection'
-  '/sites/{key}':
+  '/erp/sites/{key}':
     get:
       summary: Display specified sites
       operationId: SiteGet
       responses:
         '200':
           $ref: '#/components/responses/SiteResourceItem'
+      description: Display specified sites
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+        description: Key of site
   /erp/assets:
     get:
       summary: Display assets list
@@ -31,7 +39,7 @@ paths:
         '200':
           $ref: '#/components/responses/AssetResourceCollection'
     parameters: []
-  '/assets/{key}':
+  '/erp/assets/{key}':
     get:
       summary: Display specified assets
       operationId: AssetGet
@@ -159,7 +167,7 @@ paths:
                 - status
                 - scheduledAt
         description: ''
-  '/work-orders/{key}':
+  '/erp/work-orders/{key}':
     get:
       summary: Display specified work orders
       operationId: WorkOrderGet
@@ -268,10 +276,17 @@ paths:
                 - status
                 - scheduledAt
         description: ''
-  '/work-orders/{key}/status':
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+        description: Key of work order
+  '/erp/work-orders/{key}/status':
     put:
       summary: Update work order status
-      operationId: WorkOrderUpdate
+      operationId: WorkOrderUpdateStatus
       responses:
         '200':
           $ref: '#/components/responses/WorkOrderResourceItem'
@@ -314,7 +329,7 @@ paths:
                 note:
                   type: string
                   x-stoplight:
-                    id: 8kq8lkpsb9ji4
+                    id: 53w7oeqoivnm8
               required:
                 - status
           application/xml:
@@ -323,13 +338,14 @@ paths:
               properties: {}
         description: ''
       x-stoplight:
-        id: vumdpo1qw25f1
+        id: tr5f6tkzl3fwd
     parameters:
       - schema:
           type: string
         name: key
         in: path
         required: true
+        description: Key of work order
   /erp/parts:
     get:
       summary: Display part list
@@ -337,13 +353,21 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/PartResourceCollection'
-  '/parts/{key}':
+  '/erp/parts/{key}':
     get:
       summary: Display specified parts
       operationId: PartGet
       responses:
         '200':
           $ref: '#/components/responses/PartResourceItem'
+      description: ''
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+        description: Key of part
   /erp/vendors:
     get:
       summary: Display vendor list
@@ -352,7 +376,7 @@ paths:
         '200':
           $ref: '#/components/responses/VendorResourceCollection'
     parameters: []
-  '/vendors/{key}':
+  '/erp/vendors/{key}':
     get:
       summary: Display specified vendors
       operationId: VendorGet
@@ -379,7 +403,7 @@ paths:
         '200':
           $ref: '#/components/responses/AssetDowntimeResourceCollection'
     parameters: []
-  '/asset-downtime/{key}':
+  '/erp/asset-downtime/{key}':
     get:
       summary: Display specified asset downtime
       operationId: AssetDowntimeGet
@@ -391,8 +415,6 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/AssetDowntimeResourceItem'
-        '':
           $ref: '#/components/responses/AssetDowntimeResourceItem'
     parameters:
       - schema:
@@ -407,10 +429,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/ModelResourceCollection'
-        '':
-          $ref: '#/components/responses/ModelResourceCollection'
     parameters: []
-  '/models/{key}':
+  '/erp/models/{key}':
     get:
       summary: Display specified models
       operationId: ModelGet
@@ -423,8 +443,6 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/ModelResourceItem'
-        '':
-          $ref: '#/components/responses/AssetDowntimeResourceItem'
     parameters:
       - schema:
           type: string
@@ -438,10 +456,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/CounterResourceCollection'
-        '':
-          $ref: '#/components/responses/CounterResourceCollection'
     parameters: []
-  '/counters/{key}':
+  '/erp/counters/{key}':
     get:
       summary: Display specified counters
       operationId: CounterGet
@@ -453,8 +469,6 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/CounterResourceItem'
-        '':
           $ref: '#/components/responses/CounterResourceItem'
     parameters:
       - schema:
@@ -469,10 +483,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/CounterReadingResourceCollection'
-        '':
-          $ref: '#/components/responses/CounterReadingResourceCollection'
     parameters: []
-  '/counter-reading/{key}':
+  '/erp/counter-reading/{key}':
     get:
       summary: Display specified counter reading
       operationId: CounterReadingGet
@@ -484,8 +496,6 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/CounterReadingResourceItem'
-        '':
           $ref: '#/components/responses/CounterReadingResourceItem'
     parameters:
       - schema:
@@ -500,10 +510,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/TeamResourceCollection'
-        '':
-          $ref: '#/components/responses/TeamResourceCollection'
     parameters: []
-  '/teams/{key}':
+  '/erp/teams/{key}':
     get:
       summary: Display specified teams
       operationId: TeamGet
@@ -516,15 +524,13 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/TeamResourceItem'
-        '':
-          $ref: '#/components/responses/TeamResourceItem'
     parameters:
       - schema:
           type: string
         name: key
         in: path
         required: true
-  '/parts/{key}/inventory':
+  '/erp/parts/{key}/inventory':
     parameters:
       - schema:
           type: string
@@ -536,8 +542,6 @@ paths:
       operationId: PartInventoryCreate
       responses:
         '200':
-          $ref: '#/components/responses/PartResourceItem'
-        '':
           $ref: '#/components/responses/PartResourceItem'
       requestBody:
         content:
@@ -565,10 +569,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/WorkRequestResourceCollection'
-        '':
-          $ref: '#/components/responses/WorkRequestResourceCollection'
     parameters: []
-  '/work-request/{key}':
+  '/erp/work-request/{key}':
     get:
       summary: Display specified work request
       operationId: WorkRequestGet
@@ -581,14 +583,13 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/WorkRequestResourceItem'
-        '':
-          $ref: '#/components/responses/WorkRequestResourceItem'
     parameters:
       - schema:
           type: string
         name: key
         in: path
         required: true
+        description: Key of work request
   /erp/preventive-maintenance:
     get:
       summary: Display preventive maintenance list
@@ -596,10 +597,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/PreventiveMaintenanceResourceCollection'
-        '':
-          $ref: '#/components/responses/PreventiveMaintenanceResourceCollection'
     parameters: []
-  '/preventive-maintenance/{key}':
+  '/erp/preventive-maintenance/{key}':
     get:
       summary: Display specified preventive maintenance
       operationId: PreventiveMaintenanceGet
@@ -611,8 +610,6 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/PreventiveMaintenanceResourceItem'
-        '':
           $ref: '#/components/responses/PreventiveMaintenanceResourceItem'
     parameters:
       - schema:
@@ -626,8 +623,6 @@ paths:
       operationId: DocumentSearch
       responses:
         '200':
-          $ref: '#/components/responses/DocumentResourceCollection'
-        '':
           $ref: '#/components/responses/DocumentResourceCollection'
     parameters: []
     post:
@@ -652,7 +647,7 @@ paths:
                 - name
                 - file
         description: ''
-  '/documents/{key}':
+  '/erp/documents/{key}':
     get:
       summary: Display specified documents
       operationId: DocumentGet
@@ -664,8 +659,6 @@ paths:
             type: string
       responses:
         '200':
-          $ref: '#/components/responses/DocumentResourceItem'
-        '':
           $ref: '#/components/responses/DocumentResourceItem'
     parameters:
       - schema:
@@ -680,8 +673,6 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/PurchaseOrderResourceCollection'
-        '':
-          $ref: '#/components/responses/PurchaseOrderResourceItem'
     parameters: []
     post:
       summary: Create purchase order
@@ -821,7 +812,7 @@ paths:
                         type: string
                       partKey:
                         type: string
-  '/purchase-order/{key}':
+  '/erp/purchase-order/{key}':
     get:
       summary: Display specified purchase order
       operationId: PurchaseOrderGet
@@ -834,8 +825,6 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/PurchaseOrderResourceItem'
-        '':
-          $ref: '#/components/responses/DocumentResourceItem'
     parameters:
       - schema:
           type: string
@@ -850,7 +839,7 @@ paths:
         '200':
           $ref: '#/components/responses/LaborResourceCollection'
       operationId: LaborSearch
-  '/labors/{key}':
+  '/erp/labors/{key}':
     parameters:
       - schema:
           type: string
@@ -885,7 +874,7 @@ paths:
       responses: {}
       operationId: get-receipts
       x-stoplight:
-        id: c6nx9i8urp4ql
+        id: q9s49wu4ysl8p
   /erp/receiving:
     get:
       summary: Display receiving list
@@ -895,7 +884,7 @@ paths:
           $ref: '#/components/responses/ReceivingResourceCollection'
       operationId: get-receiving
       x-stoplight:
-        id: yp8bg9nsovxuy
+        id: qavj0sojcvj51
     parameters: []
   /erp/bom:
     get:
@@ -904,29 +893,25 @@ paths:
       responses: {}
       operationId: get-bom
       x-stoplight:
-        id: 7r2glbic73z04
+        id: mpxohuf0ksgeu
     parameters: []
   /erp/rfq:
     get:
       summary: Display request for quotation list
       tags: []
-      responses:
-        '200':
-          $ref: '#/components/responses/RequestForQuotationResourceCollection'
+      responses: {}
       operationId: get-rfq
       x-stoplight:
-        id: eq20ardbsckqp
+        id: nmzu035wa5dzl
     parameters: []
   /erp/purchase-requisitions:
     get:
       summary: Display purchase requisition list
       tags: []
-      responses:
-        '200':
-          $ref: '#/components/responses/PurchaseRequisitionResourceCollection'
+      responses: {}
       operationId: get-purchase-requisitions
       x-stoplight:
-        id: j646xwqjyheao
+        id: u2b8peojf1dtk
     parameters: []
 components:
   schemas:
@@ -979,7 +964,7 @@ components:
         - updatedAt
       title: ''
       x-stoplight:
-        id: 6oyxnvm2qycc0
+        id: h9cuzynajsv0c
     Asset:
       title: ''
       type: object
@@ -1066,7 +1051,7 @@ components:
         - createdAt
         - updatedAt
       x-stoplight:
-        id: 54j1g78wf0yz6
+        id: 41ny06ymx3b9h
     WorkOrder:
       type: object
       properties:
@@ -1156,7 +1141,7 @@ components:
         - createdAt
         - updatedAt
       x-stoplight:
-        id: 4yxa09o4ruwqz
+        id: tsthu9imqrnyw
     Receiving:
       title: Receiving
       type: object
@@ -1308,7 +1293,7 @@ components:
         - isActive
         - uom
       x-stoplight:
-        id: 00xfwokjlsnsu
+        id: 91cdbe9d1yjvf
     RequestForQuotation:
       type: object
       x-examples: {}
@@ -1404,7 +1389,7 @@ components:
         - isActive
         - uom
       x-stoplight:
-        id: 08r7o154t8q8v
+        id: agrc3krvfhqto
     PurchaseRequisition:
       type: object
       x-examples: {}
@@ -1500,7 +1485,7 @@ components:
         - isActive
         - uom
       x-stoplight:
-        id: aovrlvwp8z8nh
+        id: eu7ethitijdtn
     PurchaseOrder:
       type: object
       properties:
@@ -1570,11 +1555,11 @@ components:
         - createdAt
         - updatedAt
       x-stoplight:
-        id: fnvcajhajvlp9
+        id: c46qxkzn1u62c
     PreventiveMaintenance:
       title: PreventiveMaintenance
       x-stoplight:
-        id: s7m5x9xkiwkcz
+        id: 5p04gxkcqvylr
       type: object
       properties:
         key:
@@ -1650,7 +1635,7 @@ components:
     Model:
       title: Model
       x-stoplight:
-        id: i7sh8pofgj6qi
+        id: kyjh85s6fd2i9
       type: object
       properties:
         key:
@@ -1690,7 +1675,7 @@ components:
     Counter:
       title: Counter
       x-stoplight:
-        id: 8ffc04os5kvfs
+        id: eg57dhuppiqbw
       type: object
       properties:
         key:
@@ -1771,11 +1756,11 @@ components:
         - updatedAt
         - deletedAt
       x-stoplight:
-        id: j41ew5d9cju2u
+        id: 631bwhab2l9fc
     AssetDowntime:
       title: AssetDowntime
       x-stoplight:
-        id: vppjfnffwapt0
+        id: ualjnbiaegazo
       type: object
       properties:
         key:
@@ -1824,7 +1809,7 @@ components:
     WorkRequest:
       title: WorkRequest
       x-stoplight:
-        id: 25pu1vp2q0w8g
+        id: 6p73ubkfnv086
       type: object
       description: ''
       properties:
@@ -1894,7 +1879,7 @@ components:
     CounterReading:
       title: CounterReading
       x-stoplight:
-        id: 0985gjkg8qcnl
+        id: mobwkkzo1ys8r
       type: object
       properties:
         key:
@@ -1922,7 +1907,7 @@ components:
     Document:
       title: Document
       x-stoplight:
-        id: imh9q51k1cozk
+        id: 4um8dk3ogm3uc
       type: object
       properties:
         key:
@@ -1960,7 +1945,7 @@ components:
     Team:
       title: Team
       x-stoplight:
-        id: ztil40apjdc8t
+        id: f2ufradg0riqb
       type: object
       properties:
         key:
@@ -2046,11 +2031,11 @@ components:
         - createdAt
         - updatedAt
       x-stoplight:
-        id: w5pucm0fehpyc
+        id: pfafx28d7sv0u
     Address:
       title: Address
       x-stoplight:
-        id: 33lb48ogep6bp
+        id: gobwkd5o45isz
       type: object
       properties:
         countryName:
@@ -2081,7 +2066,7 @@ components:
     Inventory:
       title: Inventory
       x-stoplight:
-        id: l3b1vbam4g5gr
+        id: ioky0uhbzn1d0
       type: object
       properties:
         code:
@@ -2103,7 +2088,7 @@ components:
     Drawing:
       title: Drawing
       x-stoplight:
-        id: mm44u4sctq9js
+        id: p0hsbsk8z1xxo
       type: object
       properties:
         drawingNo:
@@ -2130,7 +2115,7 @@ components:
     PartUsage:
       title: PartUsage
       x-stoplight:
-        id: 6z39blzzxfi1r
+        id: 3448vgmc0sun6
       type: object
       properties:
         partKeyid:
@@ -2143,7 +2128,7 @@ components:
     WorkTrigger:
       title: WorkTrigger
       x-stoplight:
-        id: fh43hhu3wsjvn
+        id: 4jarczh3fred1
       type: object
       x-examples: {}
       properties:
@@ -2167,7 +2152,7 @@ components:
     Labor:
       title: Labor
       x-stoplight:
-        id: phndodb72eu2m
+        id: cf5aowp3uv5co
       type: object
       properties:
         key:
@@ -2275,48 +2260,48 @@ components:
     Project:
       title: Project
       x-stoplight:
-        id: nagdkvg4bjy13
+        id: qtklmgiamcipb
       type: object
       x-internal: false
       properties:
         key:
           type: string
           x-stoplight:
-            id: hzta4oxp399fp
+            id: fblfrhlndiqzl
         siteKey:
           type: string
           x-stoplight:
-            id: pp11hql6nrax6
+            id: hqjhd4zsctjs0
         name:
           type: string
           x-stoplight:
-            id: 50vjmn7u2o7mh
+            id: e033drumqvd12
         accountKey:
           type: string
           x-stoplight:
-            id: afr58s7ns06sq
+            id: wl0fz6429kiwx
         statusKey:
           type: string
           x-stoplight:
-            id: s7baani1c88bg
+            id: mtzpzbdhs19jg
         budget:
           type: string
           x-stoplight:
-            id: 0lhyf7590b4vq
+            id: euc68vcn9crkg
         createdAt:
           type: string
           x-stoplight:
-            id: vhveizl3r9eiy
+            id: dgavzczv6f4km
           format: date-time
         updatedAt:
           type: string
           x-stoplight:
-            id: rn1yiv65vxx7y
+            id: e1o3fni96maa7
           format: date-time
         deletedAt:
           type: string
           x-stoplight:
-            id: cnm0t65ihiwd1
+            id: pkv0a2p90c6i5
           format: date-time
       required:
         - key
