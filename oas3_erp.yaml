@@ -1,6 +1,6 @@
 openapi: 3.0.0
 x-stoplight:
-  id: ki0gy1rig5207
+  id: y7mgca9dlwrjm
 info:
   title: ERP platforms
   description: ERP platforms
@@ -314,7 +314,7 @@ paths:
                 note:
                   type: string
                   x-stoplight:
-                    id: m8wqiqlgdhc4b
+                    id: 8kq8lkpsb9ji4
               required:
                 - status
           application/xml:
@@ -323,7 +323,7 @@ paths:
               properties: {}
         description: ''
       x-stoplight:
-        id: zpq4mqiuaozzk
+        id: vumdpo1qw25f1
     parameters:
       - schema:
           type: string
@@ -885,7 +885,7 @@ paths:
       responses: {}
       operationId: get-receipts
       x-stoplight:
-        id: sxfm4pd70ytyo
+        id: c6nx9i8urp4ql
   /erp/receiving:
     get:
       summary: Display receiving list
@@ -895,7 +895,7 @@ paths:
           $ref: '#/components/responses/ReceivingResourceCollection'
       operationId: get-receiving
       x-stoplight:
-        id: kxgxqzrcht0hl
+        id: yp8bg9nsovxuy
     parameters: []
   /erp/bom:
     get:
@@ -904,25 +904,29 @@ paths:
       responses: {}
       operationId: get-bom
       x-stoplight:
-        id: 4ke75cj65d3j5
+        id: 7r2glbic73z04
     parameters: []
   /erp/rfq:
     get:
       summary: Display request for quotation list
       tags: []
-      responses: {}
+      responses:
+        '200':
+          $ref: '#/components/responses/RequestForQuotationResourceCollection'
       operationId: get-rfq
       x-stoplight:
-        id: mtuwesj44w1jn
+        id: eq20ardbsckqp
     parameters: []
   /erp/purchase-requisitions:
     get:
       summary: Display purchase requisition list
       tags: []
-      responses: {}
+      responses:
+        '200':
+          $ref: '#/components/responses/PurchaseRequisitionResourceCollection'
       operationId: get-purchase-requisitions
       x-stoplight:
-        id: 9x1hf09ted2vi
+        id: j646xwqjyheao
     parameters: []
 components:
   schemas:
@@ -975,7 +979,7 @@ components:
         - updatedAt
       title: ''
       x-stoplight:
-        id: rtbkrzl2liu6u
+        id: 6oyxnvm2qycc0
     Asset:
       title: ''
       type: object
@@ -1008,9 +1012,7 @@ components:
           type: string
         code:
           type: string
-          description: >-
-            Identifier of asset in end-users internal taxonomy, e. g. SFI Code
-            or SKU
+          description: 'Identifier of asset in end-users internal taxonomy, e. g. SFI Code or SKU'
         description:
           type: string
           description: Description of asset
@@ -1064,7 +1066,7 @@ components:
         - createdAt
         - updatedAt
       x-stoplight:
-        id: 87eiq1np4noxa
+        id: 54j1g78wf0yz6
     WorkOrder:
       type: object
       properties:
@@ -1154,7 +1156,7 @@ components:
         - createdAt
         - updatedAt
       x-stoplight:
-        id: o6smpv8iu4ri9
+        id: 4yxa09o4ruwqz
     Receiving:
       title: Receiving
       type: object
@@ -1237,9 +1239,7 @@ components:
             type: string
         code:
           type: string
-          description: >-
-            Identifier of part in end-users internal taxonomy, e. g. SFI Code or
-            SKU
+          description: 'Identifier of part in end-users internal taxonomy, e. g. SFI Code or SKU'
         isAssembly:
           type: boolean
           description: Identifies if part is an assembly (contains nested parts)
@@ -1308,7 +1308,199 @@ components:
         - isActive
         - uom
       x-stoplight:
-        id: t42baak4jistg
+        id: 00xfwokjlsnsu
+    RequestForQuotation:
+      type: object
+      x-examples: {}
+      description: ''
+      properties:
+        key:
+          type: string
+          description: Unique team identifier
+        siteKeys:
+          type: array
+          description: 'Identifiers of sites, which part belongs to'
+          items:
+            type: string
+        parentKeys:
+          type: string
+          description: 'Identifier of assemblies, which part belongs to'
+        vendorKeys:
+          type: string
+          description: 'Identifiers of vendors, supplying the part'
+        documentKeys:
+          type: array
+          description: List of identifiers of documents related to part
+          items:
+            type: string
+        code:
+          type: string
+          description: 'Identifier of part in end-users internal taxonomy, e. g. SFI Code or SKU'
+        isAssembly:
+          type: boolean
+          description: Identifies if part is an assembly (contains nested parts)
+        partNumber:
+          type: string
+          description: Part number
+        name:
+          type: string
+          description: Name of part
+        description:
+          type: string
+          format: text
+          description: Description of part
+        notes:
+          type: string
+          format: text
+          description: Notes to part in end-user's system
+        criticality:
+          type: string
+          description: Description of criticality
+        isActive:
+          type: boolean
+          description: Identifies if part is currently in use
+        manufacturerName:
+          type: string
+          description: Name of asset manufacturer
+        minimumQuantity:
+          type: number
+          description: Minimal quanity of part
+        uom:
+          type: string
+          description: Unit of measure
+        cost:
+          type: number
+          description: Cost of purchase
+          format: double
+        currency:
+          type: string
+          description: Purchase currency
+        createdAt:
+          type: string
+          description: Time when entity was created
+          format: date-time
+        updatedAt:
+          type: string
+          description: Time when entity was last modified
+          format: date-time
+        deletedAt:
+          type: string
+          description: Time when entity was deleted/archived
+          format: date-time
+        inventory:
+          type: array
+          items:
+            $ref: '#/components/schemas/Inventory'
+        drawings:
+          type: array
+          items:
+            $ref: '#/components/schemas/Drawing'
+      required:
+        - key
+        - siteKeys
+        - isAssembly
+        - partNumber
+        - name
+        - isActive
+        - uom
+      x-stoplight:
+        id: 08r7o154t8q8v
+    PurchaseRequisition:
+      type: object
+      x-examples: {}
+      description: ''
+      properties:
+        key:
+          type: string
+          description: Unique team identifier
+        siteKeys:
+          type: array
+          description: 'Identifiers of sites, which part belongs to'
+          items:
+            type: string
+        parentKeys:
+          type: string
+          description: 'Identifier of assemblies, which part belongs to'
+        vendorKeys:
+          type: string
+          description: 'Identifiers of vendors, supplying the part'
+        documentKeys:
+          type: array
+          description: List of identifiers of documents related to part
+          items:
+            type: string
+        code:
+          type: string
+          description: 'Identifier of part in end-users internal taxonomy, e. g. SFI Code or SKU'
+        isAssembly:
+          type: boolean
+          description: Identifies if part is an assembly (contains nested parts)
+        partNumber:
+          type: string
+          description: Part number
+        name:
+          type: string
+          description: Name of part
+        description:
+          type: string
+          format: text
+          description: Description of part
+        notes:
+          type: string
+          format: text
+          description: Notes to part in end-user's system
+        criticality:
+          type: string
+          description: Description of criticality
+        isActive:
+          type: boolean
+          description: Identifies if part is currently in use
+        manufacturerName:
+          type: string
+          description: Name of asset manufacturer
+        minimumQuantity:
+          type: number
+          description: Minimal quanity of part
+        uom:
+          type: string
+          description: Unit of measure
+        cost:
+          type: number
+          description: Cost of purchase
+          format: double
+        currency:
+          type: string
+          description: Purchase currency
+        createdAt:
+          type: string
+          description: Time when entity was created
+          format: date-time
+        updatedAt:
+          type: string
+          description: Time when entity was last modified
+          format: date-time
+        deletedAt:
+          type: string
+          description: Time when entity was deleted/archived
+          format: date-time
+        inventory:
+          type: array
+          items:
+            $ref: '#/components/schemas/Inventory'
+        drawings:
+          type: array
+          items:
+            $ref: '#/components/schemas/Drawing'
+      required:
+        - key
+        - siteKeys
+        - isAssembly
+        - partNumber
+        - name
+        - isActive
+        - uom
+      x-stoplight:
+        id: aovrlvwp8z8nh
     PurchaseOrder:
       type: object
       properties:
@@ -1378,11 +1570,11 @@ components:
         - createdAt
         - updatedAt
       x-stoplight:
-        id: w9h9iyl4irpvg
+        id: fnvcajhajvlp9
     PreventiveMaintenance:
       title: PreventiveMaintenance
       x-stoplight:
-        id: c72h2hpb95497
+        id: s7m5x9xkiwkcz
       type: object
       properties:
         key:
@@ -1458,7 +1650,7 @@ components:
     Model:
       title: Model
       x-stoplight:
-        id: qm9hmpjwjnf0w
+        id: i7sh8pofgj6qi
       type: object
       properties:
         key:
@@ -1498,7 +1690,7 @@ components:
     Counter:
       title: Counter
       x-stoplight:
-        id: iw53cl25ezg6m
+        id: 8ffc04os5kvfs
       type: object
       properties:
         key:
@@ -1579,11 +1771,11 @@ components:
         - updatedAt
         - deletedAt
       x-stoplight:
-        id: 3ob4rdiabk9og
+        id: j41ew5d9cju2u
     AssetDowntime:
       title: AssetDowntime
       x-stoplight:
-        id: fgk47q6lms1yb
+        id: vppjfnffwapt0
       type: object
       properties:
         key:
@@ -1632,7 +1824,7 @@ components:
     WorkRequest:
       title: WorkRequest
       x-stoplight:
-        id: eeg18p3har0iy
+        id: 25pu1vp2q0w8g
       type: object
       description: ''
       properties:
@@ -1702,7 +1894,7 @@ components:
     CounterReading:
       title: CounterReading
       x-stoplight:
-        id: enumlp9bos6u9
+        id: 0985gjkg8qcnl
       type: object
       properties:
         key:
@@ -1730,7 +1922,7 @@ components:
     Document:
       title: Document
       x-stoplight:
-        id: 9a6znzqbrsza7
+        id: imh9q51k1cozk
       type: object
       properties:
         key:
@@ -1768,7 +1960,7 @@ components:
     Team:
       title: Team
       x-stoplight:
-        id: yh3h5gnlcd5ba
+        id: ztil40apjdc8t
       type: object
       properties:
         key:
@@ -1776,9 +1968,7 @@ components:
           description: Unique team identifier
         code:
           type: string
-          description: >-
-            Identifier of part in end-users internal taxonomy, e. g. SFI Code or
-            SKU
+          description: 'Identifier of part in end-users internal taxonomy, e. g. SFI Code or SKU'
         name:
           type: string
           description: Name of team
@@ -1856,11 +2046,11 @@ components:
         - createdAt
         - updatedAt
       x-stoplight:
-        id: nqzros80oyege
+        id: w5pucm0fehpyc
     Address:
       title: Address
       x-stoplight:
-        id: dlx4pzg73oysu
+        id: 33lb48ogep6bp
       type: object
       properties:
         countryName:
@@ -1891,7 +2081,7 @@ components:
     Inventory:
       title: Inventory
       x-stoplight:
-        id: sudpsukvmqgmg
+        id: l3b1vbam4g5gr
       type: object
       properties:
         code:
@@ -1913,7 +2103,7 @@ components:
     Drawing:
       title: Drawing
       x-stoplight:
-        id: gil8qv0bgsiii
+        id: mm44u4sctq9js
       type: object
       properties:
         drawingNo:
@@ -1940,7 +2130,7 @@ components:
     PartUsage:
       title: PartUsage
       x-stoplight:
-        id: 8b5gimpltqaji
+        id: 6z39blzzxfi1r
       type: object
       properties:
         partKeyid:
@@ -1953,7 +2143,7 @@ components:
     WorkTrigger:
       title: WorkTrigger
       x-stoplight:
-        id: x6irud7ror1bi
+        id: fh43hhu3wsjvn
       type: object
       x-examples: {}
       properties:
@@ -1977,7 +2167,7 @@ components:
     Labor:
       title: Labor
       x-stoplight:
-        id: ueqdgxdr424v3
+        id: phndodb72eu2m
       type: object
       properties:
         key:
@@ -2085,48 +2275,48 @@ components:
     Project:
       title: Project
       x-stoplight:
-        id: 8ms8w9kldogsn
+        id: nagdkvg4bjy13
       type: object
       x-internal: false
       properties:
         key:
           type: string
           x-stoplight:
-            id: cep4oabch3ua4
+            id: hzta4oxp399fp
         siteKey:
           type: string
           x-stoplight:
-            id: 2huwyni2vm22v
+            id: pp11hql6nrax6
         name:
           type: string
           x-stoplight:
-            id: 0ue4gk2u8ly2q
+            id: 50vjmn7u2o7mh
         accountKey:
           type: string
           x-stoplight:
-            id: 2g3cgys146f1f
+            id: afr58s7ns06sq
         statusKey:
           type: string
           x-stoplight:
-            id: dc7njcuhprrvs
+            id: s7baani1c88bg
         budget:
           type: string
           x-stoplight:
-            id: 1e7v088kwdhew
+            id: 0lhyf7590b4vq
         createdAt:
           type: string
           x-stoplight:
-            id: 3t6yeodlmhquy
+            id: vhveizl3r9eiy
           format: date-time
         updatedAt:
           type: string
           x-stoplight:
-            id: 68znpjv9jl49o
+            id: rn1yiv65vxx7y
           format: date-time
         deletedAt:
           type: string
           x-stoplight:
-            id: r781wvvvgpyhx
+            id: cnm0t65ihiwd1
           format: date-time
       required:
         - key
@@ -2470,6 +2660,34 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/Labor'
+    RequestForQuotationResourceCollection:
+      description: RequestForQuotation list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/RequestForQuotation'
+    RequestForQuotationResourceItem:
+      description: RequestForQuotation entity
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RequestForQuotation'
+    PurchaseRequisitionResourceCollection:
+      description: PurchaseRequisition list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/PurchaseRequisition'
+    PurchaseRequisitionResourceItem:
+      description: PurchaseRequisition entity
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PurchaseRequisition'
   securitySchemes:
     oauth2:
       type: oauth2
