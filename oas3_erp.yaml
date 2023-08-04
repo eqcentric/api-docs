@@ -23,6 +23,50 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/InvoiceResourceCollection'
+  /receipts:
+    get:
+      summary: Display receipt list
+      tags: []
+      responses: {}
+      operationId: get-receipts
+      x-stoplight:
+        id: argtanbvr0dcz
+  /bom:
+    get:
+      summary: Display bill of materials list
+      tags: []
+      responses: {}
+      operationId: get-bom
+      x-stoplight:
+        id: yjhhhneaosl7g
+    parameters: []
+  /receiving:
+    get:
+      summary: Display receiving list
+      tags: []
+      responses: {}
+      operationId: get-receiving
+      x-stoplight:
+        id: hil8q7wejtot5
+    parameters: []
+  /rfq:
+    get:
+      summary: Display request for quotation list
+      tags: []
+      responses: {}
+      operationId: get-rfq
+      x-stoplight:
+        id: o052etz26q1pp
+    parameters: []
+  /purchase-requisitions:
+    get:
+      summary: Display purchase requisition list
+      tags: []
+      responses: {}
+      operationId: get-purchase-requisitions
+      x-stoplight:
+        id: jorglysuoj20h
+    parameters: []
 components:
   schemas:
     Site:
@@ -107,9 +151,7 @@ components:
           type: string
         code:
           type: string
-          description: >-
-            Identifier of asset in end-users internal taxonomy, e. g. SFI Code
-            or SKU
+          description: 'Identifier of asset in end-users internal taxonomy, e. g. SFI Code or SKU'
         description:
           type: string
           description: Description of asset
@@ -254,6 +296,62 @@ components:
         - updatedAt
       x-stoplight:
         id: 6d7a26n5tqedc
+    Receiving:
+      title: Receiving
+      type: object
+      x-internal: false
+      properties:
+        key:
+          type: string
+        siteKey:
+          type: string
+        vendorKey:
+          type: string
+        poKey:
+          type: string
+        code:
+          type: string
+        orderNo:
+          type: string
+        orderDate:
+          type: string
+          format: date
+        title:
+          type: string
+        description:
+          type: string
+        completedAt:
+          type: string
+          format: date-time
+        shippingMethod:
+          type: string
+        notes:
+          type: string
+        currencyKey:
+          type: string
+        totalNetValue:
+          type: number
+          format: float
+        totalTaxValue:
+          type: number
+          format: float
+        totalGrossValue:
+          type: number
+          format: float
+        lineItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/LineItem'
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+      required:
+        - key
+        - poKey
+        - code
     Part:
       type: object
       x-examples: {}
@@ -280,9 +378,7 @@ components:
             type: string
         code:
           type: string
-          description: >-
-            Identifier of part in end-users internal taxonomy, e. g. SFI Code or
-            SKU
+          description: 'Identifier of part in end-users internal taxonomy, e. g. SFI Code or SKU'
         isAssembly:
           type: boolean
           description: Identifies if part is an assembly (contains nested parts)
@@ -819,9 +915,7 @@ components:
           description: Unique team identifier
         code:
           type: string
-          description: >-
-            Identifier of part in end-users internal taxonomy, e. g. SFI Code or
-            SKU
+          description: 'Identifier of part in end-users internal taxonomy, e. g. SFI Code or SKU'
         name:
           type: string
           description: Name of team
