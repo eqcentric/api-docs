@@ -31,6 +31,17 @@ paths:
       operationId: get-receipts
       x-stoplight:
         id: argtanbvr0dcz
+  /receiving:
+    get:
+      summary: Display receiving list
+      tags: []
+      responses:
+        '200':
+          $ref: '#/components/responses/ReceivingResourceCollection'
+      operationId: get-receiving
+      x-stoplight:
+        id: hil8q7wejtot5
+    parameters: []
   /bom:
     get:
       summary: Display bill of materials list
@@ -39,15 +50,6 @@ paths:
       operationId: get-bom
       x-stoplight:
         id: yjhhhneaosl7g
-    parameters: []
-  /receiving:
-    get:
-      summary: Display receiving list
-      tags: []
-      responses: {}
-      operationId: get-receiving
-      x-stoplight:
-        id: hil8q7wejtot5
     parameters: []
   /rfq:
     get:
@@ -1551,6 +1553,20 @@ components:
             type: array
             items:
               $ref: '#/components/schemas/PartUsage'
+    ReceivingResourceItem:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Receiving'
+    ReceivingResourceCollection:
+      description: Example response
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/Receiving'
     PurchaseOrderResourceItem:
       description: Example response
       content:
