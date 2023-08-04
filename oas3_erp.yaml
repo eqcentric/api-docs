@@ -1,6 +1,6 @@
 openapi: 3.0.0
 x-stoplight:
-  id: zktlc0qzoj6ez
+  id: ki0gy1rig5207
 info:
   title: ERP platforms
   description: ERP platforms
@@ -9,29 +9,884 @@ info:
     name: Roman Kinyakin
     email: roman@makini.io
 paths:
-  /projects:
+  /erp/sites:
+    get:
+      summary: Display site list
+      operationId: SiteSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/SiteResourceCollection'
+  '/sites/{key}':
+    get:
+      summary: Display specified sites
+      operationId: SiteGet
+      responses:
+        '200':
+          $ref: '#/components/responses/SiteResourceItem'
+  /erp/assets:
+    get:
+      summary: Display assets list
+      operationId: AssetSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/AssetResourceCollection'
+    parameters: []
+  '/assets/{key}':
+    get:
+      summary: Display specified assets
+      operationId: AssetGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/AssetResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /erp/work-orders:
+    get:
+      summary: Display work orders list
+      operationId: WorkOrderSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/WorkOrderResourceCollection'
+    post:
+      summary: Create work orders
+      operationId: WorkOrderCreate
+      responses:
+        '200':
+          $ref: '#/components/responses/WorkOrderResourceItem'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              x-examples:
+                example-1:
+                  siteKey: ''
+                  assetKey: ''
+                  workRequestKey: ''
+                  pmKey: ''
+                  teamKey: ''
+                  userAssignedKey: ''
+                  userCompletedKey: ''
+                  completedAt: ''
+                  title: ''
+                  description: ''
+                  instructions: ''
+                  status: ''
+                  severity: ''
+                  estimatedTime: ''
+                  roleName: ''
+                  categoryName: ''
+                  documentKey: ''
+                  documentPage: ''
+                  notes: ''
+                  approvedAt: ''
+                  dueAt: ''
+                  completionRemarks: ''
+                  scheduledAt: ''
+                  parts:
+                    - partKey: ''
+                      quantity: ''
+              properties:
+                siteKey:
+                  type: string
+                assetKey:
+                  type: string
+                workRequestKey:
+                  type: string
+                pmKey:
+                  type: string
+                teamKey:
+                  type: string
+                userAssignedKey:
+                  type: string
+                userCompletedKey:
+                  type: string
+                completedAt:
+                  type: string
+                title:
+                  type: string
+                description:
+                  type: string
+                instructions:
+                  type: string
+                status:
+                  type: string
+                severity:
+                  type: string
+                estimatedTime:
+                  type: string
+                roleName:
+                  type: string
+                categoryName:
+                  type: string
+                documentKey:
+                  type: string
+                documentPage:
+                  type: string
+                notes:
+                  type: string
+                approvedAt:
+                  type: string
+                dueAt:
+                  type: string
+                completionRemarks:
+                  type: string
+                scheduledAt:
+                  type: string
+                parts:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      partKey:
+                        type: string
+                      quantity:
+                        type: string
+              required:
+                - siteKey
+                - assetKey
+                - title
+                - status
+                - scheduledAt
+        description: ''
+  '/work-orders/{key}':
+    get:
+      summary: Display specified work orders
+      operationId: WorkOrderGet
+      responses:
+        '200':
+          $ref: '#/components/responses/WorkOrderResourceItem'
+    put:
+      summary: Update work order
+      operationId: WorkOrderUpdate
+      responses:
+        '200':
+          $ref: '#/components/responses/WorkOrderResourceItem'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              x-examples:
+                example-1:
+                  siteKey: ''
+                  assetKey: ''
+                  workRequestKey: ''
+                  pmKey: ''
+                  teamKey: ''
+                  userAssignedKey: ''
+                  userCompletedKey: ''
+                  completedAt: ''
+                  title: ''
+                  description: ''
+                  instructions: ''
+                  status: ''
+                  severity: ''
+                  estimatedTime: ''
+                  roleName: ''
+                  categoryName: ''
+                  documentKey: ''
+                  documentPage: ''
+                  notes: ''
+                  approvedAt: ''
+                  dueAt: ''
+                  completionRemarks: ''
+                  scheduledAt: ''
+                  parts:
+                    - partKey: ''
+                      quantity: ''
+              properties:
+                siteKey:
+                  type: string
+                assetKey:
+                  type: string
+                workRequestKey:
+                  type: string
+                pmKey:
+                  type: string
+                teamKey:
+                  type: string
+                userAssignedKey:
+                  type: string
+                userCompletedKey:
+                  type: string
+                completedAt:
+                  type: string
+                title:
+                  type: string
+                description:
+                  type: string
+                instructions:
+                  type: string
+                status:
+                  type: string
+                severity:
+                  type: string
+                estimatedTime:
+                  type: string
+                roleName:
+                  type: string
+                categoryName:
+                  type: string
+                documentKey:
+                  type: string
+                documentPage:
+                  type: string
+                notes:
+                  type: string
+                approvedAt:
+                  type: string
+                dueAt:
+                  type: string
+                completionRemarks:
+                  type: string
+                scheduledAt:
+                  type: string
+                parts:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      partKey:
+                        type: string
+                      quantity:
+                        type: string
+              required:
+                - siteKey
+                - assetKey
+                - title
+                - status
+                - scheduledAt
+        description: ''
+  '/work-orders/{key}/status':
+    put:
+      summary: Update work order status
+      operationId: WorkOrderUpdate
+      responses:
+        '200':
+          $ref: '#/components/responses/WorkOrderResourceItem'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              x-examples:
+                example-1:
+                  siteKey: ''
+                  assetKey: ''
+                  workRequestKey: ''
+                  pmKey: ''
+                  teamKey: ''
+                  userAssignedKey: ''
+                  userCompletedKey: ''
+                  completedAt: ''
+                  title: ''
+                  description: ''
+                  instructions: ''
+                  status: ''
+                  severity: ''
+                  estimatedTime: ''
+                  roleName: ''
+                  categoryName: ''
+                  documentKey: ''
+                  documentPage: ''
+                  notes: ''
+                  approvedAt: ''
+                  dueAt: ''
+                  completionRemarks: ''
+                  scheduledAt: ''
+                  parts:
+                    - partKey: ''
+                      quantity: ''
+              properties:
+                status:
+                  type: string
+                note:
+                  type: string
+                  x-stoplight:
+                    id: m8wqiqlgdhc4b
+              required:
+                - status
+          application/xml:
+            schema:
+              type: object
+              properties: {}
+        description: ''
+      x-stoplight:
+        id: zpq4mqiuaozzk
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /erp/parts:
+    get:
+      summary: Display part list
+      operationId: PartSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/PartResourceCollection'
+  '/parts/{key}':
+    get:
+      summary: Display specified parts
+      operationId: PartGet
+      responses:
+        '200':
+          $ref: '#/components/responses/PartResourceItem'
+  /erp/vendors:
+    get:
+      summary: Display vendor list
+      operationId: VendorSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/VendorResourceCollection'
+    parameters: []
+  '/vendors/{key}':
+    get:
+      summary: Display specified vendors
+      operationId: VendorGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/VendorResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /erp/asset-downtime:
+    get:
+      summary: Display asset downtime list
+      operationId: AssetDowntimeSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/AssetDowntimeResourceCollection'
+    parameters: []
+  '/asset-downtime/{key}':
+    get:
+      summary: Display specified asset downtime
+      operationId: AssetDowntimeGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/AssetDowntimeResourceItem'
+        '':
+          $ref: '#/components/responses/AssetDowntimeResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /erp/models:
+    get:
+      summary: Display model list
+      operationId: ModelSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/ModelResourceCollection'
+        '':
+          $ref: '#/components/responses/ModelResourceCollection'
+    parameters: []
+  '/models/{key}':
+    get:
+      summary: Display specified models
+      operationId: ModelGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/ModelResourceItem'
+        '':
+          $ref: '#/components/responses/AssetDowntimeResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /erp/counters:
+    get:
+      summary: Display counter list
+      operationId: CounterSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/CounterResourceCollection'
+        '':
+          $ref: '#/components/responses/CounterResourceCollection'
+    parameters: []
+  '/counters/{key}':
+    get:
+      summary: Display specified counters
+      operationId: CounterGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/CounterResourceItem'
+        '':
+          $ref: '#/components/responses/CounterResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /erp/counter-reading:
+    get:
+      summary: Display counter reading list
+      operationId: CounterReadingSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/CounterReadingResourceCollection'
+        '':
+          $ref: '#/components/responses/CounterReadingResourceCollection'
+    parameters: []
+  '/counter-reading/{key}':
+    get:
+      summary: Display specified counter reading
+      operationId: CounterReadingGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/CounterReadingResourceItem'
+        '':
+          $ref: '#/components/responses/CounterReadingResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /erp/teams:
+    get:
+      summary: Display team list
+      operationId: TeamSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/TeamResourceCollection'
+        '':
+          $ref: '#/components/responses/TeamResourceCollection'
+    parameters: []
+  '/teams/{key}':
+    get:
+      summary: Display specified teams
+      operationId: TeamGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/TeamResourceItem'
+        '':
+          $ref: '#/components/responses/TeamResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  '/parts/{key}/inventory':
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+    post:
+      summary: Update Part Inventory
+      operationId: PartInventoryCreate
+      responses:
+        '200':
+          $ref: '#/components/responses/PartResourceItem'
+        '':
+          $ref: '#/components/responses/PartResourceItem'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              x-examples:
+                example-1:
+                  code: ''
+                  name: ''
+                  quantity: ''
+              properties:
+                code:
+                  type: string
+                name:
+                  type: string
+                quantity:
+                  type: string
+              required:
+                - quantity
+  /erp/work-request:
+    get:
+      summary: Display work request list
+      operationId: WorkRequestSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/WorkRequestResourceCollection'
+        '':
+          $ref: '#/components/responses/WorkRequestResourceCollection'
+    parameters: []
+  '/work-request/{key}':
+    get:
+      summary: Display specified work request
+      operationId: WorkRequestGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/WorkRequestResourceItem'
+        '':
+          $ref: '#/components/responses/WorkRequestResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /erp/preventive-maintenance:
+    get:
+      summary: Display preventive maintenance list
+      operationId: PreventiveMaintenanceSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/PreventiveMaintenanceResourceCollection'
+        '':
+          $ref: '#/components/responses/PreventiveMaintenanceResourceCollection'
+    parameters: []
+  '/preventive-maintenance/{key}':
+    get:
+      summary: Display specified preventive maintenance
+      operationId: PreventiveMaintenanceGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/PreventiveMaintenanceResourceItem'
+        '':
+          $ref: '#/components/responses/PreventiveMaintenanceResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /erp/documents:
+    get:
+      summary: Display document list
+      operationId: DocumentSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/DocumentResourceCollection'
+        '':
+          $ref: '#/components/responses/DocumentResourceCollection'
+    parameters: []
+    post:
+      summary: ''
+      operationId: post-documents
+      responses:
+        '200':
+          $ref: '#/components/responses/DocumentResourceItem'
+      description: Upload a document file
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                file:
+                  type: string
+                  format: binary
+              required:
+                - name
+                - file
+        description: ''
+  '/documents/{key}':
+    get:
+      summary: Display specified documents
+      operationId: DocumentGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/DocumentResourceItem'
+        '':
+          $ref: '#/components/responses/DocumentResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /erp/purchase-order:
+    get:
+      summary: Display purchase order list
+      operationId: PurchaseOrderSearch
+      responses:
+        '200':
+          $ref: '#/components/responses/PurchaseOrderResourceCollection'
+        '':
+          $ref: '#/components/responses/PurchaseOrderResourceItem'
+    parameters: []
+    post:
+      summary: Create purchase order
+      operationId: PurchaseOrderCreate
+      responses:
+        '200':
+          $ref: '#/components/responses/PurchaseOrderResourceItem'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                siteKey:
+                  type: string
+                vendorKey:
+                  type: string
+                orderNo:
+                  type: string
+                orderDate:
+                  type: string
+                status:
+                  type: string
+                warehouseName:
+                  type: string
+                title:
+                  type: string
+                description:
+                  type: string
+                dueAt:
+                  type: string
+                shippingMethod:
+                  type: string
+                terms:
+                  type: string
+                notes:
+                  type: string
+                deliveryAddress:
+                  type: string
+                currency:
+                  type: string
+                lines:
+                  type: array
+                  items:
+                    type: object
+                    properties: {}
+              x-examples:
+                example-1:
+                  siteKey: ''
+                  vendorKey: ''
+                  orderNo: ''
+                  orderDate: ''
+                  status: ''
+                  warehouseName: ''
+                  title: ''
+                  description: ''
+                  dueAt: ''
+                  shippingMethod: ''
+                  terms: ''
+                  notes: ''
+                  deliveryAddress: ''
+                  currency: ''
+                  lines: []
+    put:
+      summary: Update purchase order
+      operationId: PurchaseOrderUpdate
+      responses:
+        '200':
+          $ref: '#/components/responses/PurchaseOrderResourceItem'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              x-examples:
+                example-1:
+                  title: sms20
+                  orderNo: '0000010699'
+                  siteKey: 01db0000ef62028d122fa879e935821753d0751d
+                  priority: null
+                  vendorKey: 09db0000dd925ddf7b247dd02e1ee998a2795722
+                  lines:
+                    - assetKey: 02db0000a17280e58b23b54f9f7b12f735c3c76d
+                      description: sms20-1
+                      qty: 2
+                      cost: 1
+                      deliveryAt: null
+                      status: 05_RECEIVEDBOAT
+                      lineNo: 1
+                      type: PART
+                      vendorKey: 09db0000dd925ddf7b247dd02e1ee998a2795722
+                      key: 05db00009d33142d1d3c6d8ec79b691de1314997
+                    - partKey: false
+                      description: Workwear Placeholder
+                      qty: 1
+                      cost: 2
+                      deliveryAt: null
+                      status: 05_RECEIVEDBOAT
+                      lineNo: 2
+                      type: PART
+                      vendorKey: 09db0000dd925ddf7b247dd02e1ee998a2795722
+              properties:
+                title:
+                  type: string
+                orderNo:
+                  type: string
+                siteKey:
+                  type: string
+                priority:
+                  nullable: true
+                vendorKey:
+                  type: string
+                lines:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      assetKey:
+                        type: string
+                      description:
+                        type: string
+                      qty:
+                        type: integer
+                      cost:
+                        type: integer
+                      deliveryAt:
+                        nullable: true
+                      status:
+                        type: string
+                      lineNo:
+                        type: integer
+                      type:
+                        type: string
+                      vendorKey:
+                        type: string
+                      key:
+                        type: string
+                      partKey:
+                        type: string
+  '/purchase-order/{key}':
+    get:
+      summary: Display specified purchase order
+      operationId: PurchaseOrderGet
+      parameters:
+        - name: key
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/PurchaseOrderResourceItem'
+        '':
+          $ref: '#/components/responses/DocumentResourceItem'
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+  /erp/labors:
+    get:
+      summary: Display labor list
+      tags: []
+      responses:
+        '200':
+          $ref: '#/components/responses/LaborResourceCollection'
+      operationId: LaborSearch
+  '/labors/{key}':
+    parameters:
+      - schema:
+          type: string
+        name: key
+        in: path
+        required: true
+    get:
+      summary: Display specified labor
+      tags: []
+      responses:
+        '200':
+          $ref: '#/components/responses/LaborResourceItem'
+      operationId: LaborGet
+  /erp/projects:
     get:
       summary: Display project list
       operationId: ProjectSearch
       responses:
         '200':
           $ref: '#/components/responses/ProjectResourceCollection'
-  /invoices:
+  /erp/invoices:
     get:
       summary: Display invoice list
       operationId: InvoiceSearch
       responses:
         '200':
           $ref: '#/components/responses/InvoiceResourceCollection'
-  /receipts:
+  /erp/receipts:
     get:
       summary: Display receipt list
       tags: []
       responses: {}
       operationId: get-receipts
       x-stoplight:
-        id: argtanbvr0dcz
-  /receiving:
+        id: sxfm4pd70ytyo
+  /erp/receiving:
     get:
       summary: Display receiving list
       tags: []
@@ -40,34 +895,34 @@ paths:
           $ref: '#/components/responses/ReceivingResourceCollection'
       operationId: get-receiving
       x-stoplight:
-        id: hil8q7wejtot5
+        id: kxgxqzrcht0hl
     parameters: []
-  /bom:
+  /erp/bom:
     get:
       summary: Display bill of materials list
       tags: []
       responses: {}
       operationId: get-bom
       x-stoplight:
-        id: yjhhhneaosl7g
+        id: 4ke75cj65d3j5
     parameters: []
-  /rfq:
+  /erp/rfq:
     get:
       summary: Display request for quotation list
       tags: []
       responses: {}
       operationId: get-rfq
       x-stoplight:
-        id: o052etz26q1pp
+        id: mtuwesj44w1jn
     parameters: []
-  /purchase-requisitions:
+  /erp/purchase-requisitions:
     get:
       summary: Display purchase requisition list
       tags: []
       responses: {}
       operationId: get-purchase-requisitions
       x-stoplight:
-        id: jorglysuoj20h
+        id: 9x1hf09ted2vi
     parameters: []
 components:
   schemas:
@@ -120,7 +975,7 @@ components:
         - updatedAt
       title: ''
       x-stoplight:
-        id: k9o4gbx4jpgjn
+        id: rtbkrzl2liu6u
     Asset:
       title: ''
       type: object
@@ -153,7 +1008,9 @@ components:
           type: string
         code:
           type: string
-          description: 'Identifier of asset in end-users internal taxonomy, e. g. SFI Code or SKU'
+          description: >-
+            Identifier of asset in end-users internal taxonomy, e. g. SFI Code
+            or SKU
         description:
           type: string
           description: Description of asset
@@ -207,7 +1064,7 @@ components:
         - createdAt
         - updatedAt
       x-stoplight:
-        id: hqn2bmsx0ibko
+        id: 87eiq1np4noxa
     WorkOrder:
       type: object
       properties:
@@ -297,7 +1154,7 @@ components:
         - createdAt
         - updatedAt
       x-stoplight:
-        id: 6d7a26n5tqedc
+        id: o6smpv8iu4ri9
     Receiving:
       title: Receiving
       type: object
@@ -380,7 +1237,9 @@ components:
             type: string
         code:
           type: string
-          description: 'Identifier of part in end-users internal taxonomy, e. g. SFI Code or SKU'
+          description: >-
+            Identifier of part in end-users internal taxonomy, e. g. SFI Code or
+            SKU
         isAssembly:
           type: boolean
           description: Identifies if part is an assembly (contains nested parts)
@@ -449,7 +1308,7 @@ components:
         - isActive
         - uom
       x-stoplight:
-        id: 8i6nxpvqzw7fh
+        id: t42baak4jistg
     PurchaseOrder:
       type: object
       properties:
@@ -519,11 +1378,11 @@ components:
         - createdAt
         - updatedAt
       x-stoplight:
-        id: 5fxsxfo7cxlnk
+        id: w9h9iyl4irpvg
     PreventiveMaintenance:
       title: PreventiveMaintenance
       x-stoplight:
-        id: buun3p0hkjfw8
+        id: c72h2hpb95497
       type: object
       properties:
         key:
@@ -599,7 +1458,7 @@ components:
     Model:
       title: Model
       x-stoplight:
-        id: trjbsj7ssc28q
+        id: qm9hmpjwjnf0w
       type: object
       properties:
         key:
@@ -639,7 +1498,7 @@ components:
     Counter:
       title: Counter
       x-stoplight:
-        id: kfaflli1ec0k0
+        id: iw53cl25ezg6m
       type: object
       properties:
         key:
@@ -720,11 +1579,11 @@ components:
         - updatedAt
         - deletedAt
       x-stoplight:
-        id: 8i173td4fbwjw
+        id: 3ob4rdiabk9og
     AssetDowntime:
       title: AssetDowntime
       x-stoplight:
-        id: p0xlns6m6vyyy
+        id: fgk47q6lms1yb
       type: object
       properties:
         key:
@@ -773,7 +1632,7 @@ components:
     WorkRequest:
       title: WorkRequest
       x-stoplight:
-        id: i57s3nqtrpi2a
+        id: eeg18p3har0iy
       type: object
       description: ''
       properties:
@@ -843,7 +1702,7 @@ components:
     CounterReading:
       title: CounterReading
       x-stoplight:
-        id: 4pdaxtnlhzqzz
+        id: enumlp9bos6u9
       type: object
       properties:
         key:
@@ -871,7 +1730,7 @@ components:
     Document:
       title: Document
       x-stoplight:
-        id: s8icy8rg8nns0
+        id: 9a6znzqbrsza7
       type: object
       properties:
         key:
@@ -909,7 +1768,7 @@ components:
     Team:
       title: Team
       x-stoplight:
-        id: 3qt8nmqjrvaki
+        id: yh3h5gnlcd5ba
       type: object
       properties:
         key:
@@ -917,7 +1776,9 @@ components:
           description: Unique team identifier
         code:
           type: string
-          description: 'Identifier of part in end-users internal taxonomy, e. g. SFI Code or SKU'
+          description: >-
+            Identifier of part in end-users internal taxonomy, e. g. SFI Code or
+            SKU
         name:
           type: string
           description: Name of team
@@ -995,11 +1856,11 @@ components:
         - createdAt
         - updatedAt
       x-stoplight:
-        id: 3j1ge1ytb9ug4
+        id: nqzros80oyege
     Address:
       title: Address
       x-stoplight:
-        id: bhwy0pk4ehqij
+        id: dlx4pzg73oysu
       type: object
       properties:
         countryName:
@@ -1030,7 +1891,7 @@ components:
     Inventory:
       title: Inventory
       x-stoplight:
-        id: 0uv07b8tpz02d
+        id: sudpsukvmqgmg
       type: object
       properties:
         code:
@@ -1052,7 +1913,7 @@ components:
     Drawing:
       title: Drawing
       x-stoplight:
-        id: b0tis34vqx6u7
+        id: gil8qv0bgsiii
       type: object
       properties:
         drawingNo:
@@ -1079,7 +1940,7 @@ components:
     PartUsage:
       title: PartUsage
       x-stoplight:
-        id: 61nnxstw6x87z
+        id: 8b5gimpltqaji
       type: object
       properties:
         partKeyid:
@@ -1092,7 +1953,7 @@ components:
     WorkTrigger:
       title: WorkTrigger
       x-stoplight:
-        id: aabi430sqhohc
+        id: x6irud7ror1bi
       type: object
       x-examples: {}
       properties:
@@ -1116,7 +1977,7 @@ components:
     Labor:
       title: Labor
       x-stoplight:
-        id: n0r6qoo758gkg
+        id: ueqdgxdr424v3
       type: object
       properties:
         key:
@@ -1224,48 +2085,48 @@ components:
     Project:
       title: Project
       x-stoplight:
-        id: d4bwqkzxcildf
+        id: 8ms8w9kldogsn
       type: object
       x-internal: false
       properties:
         key:
           type: string
           x-stoplight:
-            id: u5st0drffhic2
+            id: cep4oabch3ua4
         siteKey:
           type: string
           x-stoplight:
-            id: k6j1l18tu4lrg
+            id: 2huwyni2vm22v
         name:
           type: string
           x-stoplight:
-            id: yveln5xt3flau
+            id: 0ue4gk2u8ly2q
         accountKey:
           type: string
           x-stoplight:
-            id: l570bylm7fgnb
+            id: 2g3cgys146f1f
         statusKey:
           type: string
           x-stoplight:
-            id: 1ijnddp104ijd
+            id: dc7njcuhprrvs
         budget:
           type: string
           x-stoplight:
-            id: 79yzzv98qub91
+            id: 1e7v088kwdhew
         createdAt:
           type: string
           x-stoplight:
-            id: 1036ymjzygucp
+            id: 3t6yeodlmhquy
           format: date-time
         updatedAt:
           type: string
           x-stoplight:
-            id: efxyk3xxisp1d
+            id: 68znpjv9jl49o
           format: date-time
         deletedAt:
           type: string
           x-stoplight:
-            id: eu2cyieozs1d2
+            id: r781wvvvgpyhx
           format: date-time
       required:
         - key
