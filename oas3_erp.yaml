@@ -1,7 +1,9 @@
 openapi: 3.0.0
+x-stoplight:
+  id: 5q21tklf51ntm
 info:
-  title: EAM platforms
-  description: EAM platforms
+  title: ERP platforms
+  description: ERP platforms
   version: '0.1'
   contact:
     name: Roman Kinyakin
@@ -14,6 +16,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/SiteResourceCollection'
+      x-stoplight:
+        id: w64gb7l2npl9a
   '/sites/{key}':
     get:
       summary: Display specified sites
@@ -21,6 +25,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/SiteResourceItem'
+      x-stoplight:
+        id: od8wwxatuc49f
   /assets:
     get:
       summary: Display assets list
@@ -28,6 +34,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/AssetResourceCollection'
+      x-stoplight:
+        id: dxkdkx03eju73
     parameters: []
   '/assets/{key}':
     get:
@@ -42,6 +50,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/AssetResourceItem'
+      x-stoplight:
+        id: da51478rs1o5w
     parameters:
       - schema:
           type: string
@@ -55,6 +65,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/WorkOrderResourceCollection'
+      x-stoplight:
+        id: azphxtdkvkx7a
     post:
       summary: Create work orders
       operationId: WorkOrderCreate
@@ -157,6 +169,8 @@ paths:
                 - status
                 - scheduledAt
         description: ''
+      x-stoplight:
+        id: dvsma7gany92n
   '/work-orders/{key}':
     get:
       summary: Display specified work orders
@@ -164,6 +178,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/WorkOrderResourceItem'
+      x-stoplight:
+        id: h3laeec0oflcb
     put:
       summary: Update work order
       operationId: WorkOrderUpdate
@@ -266,6 +282,8 @@ paths:
                 - status
                 - scheduledAt
         description: ''
+      x-stoplight:
+        id: dck5eb8wjyy1c
   '/work-orders/{key}/status':
     put:
       summary: Update work order status
@@ -321,7 +339,7 @@ paths:
               properties: {}
         description: ''
       x-stoplight:
-        id: ccugqxiaa4rmg
+        id: 3dw9g7bl3klaz
     parameters:
       - schema:
           type: string
@@ -335,6 +353,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/PartResourceCollection'
+      x-stoplight:
+        id: pe9hqbrc0vcdo
   '/parts/{key}':
     get:
       summary: Display specified parts
@@ -342,6 +362,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/PartResourceItem'
+      x-stoplight:
+        id: uitws0j5zk7b7
   /vendors:
     get:
       summary: Display vendor list
@@ -349,6 +371,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/VendorResourceCollection'
+      x-stoplight:
+        id: v3afl2lzjubx0
     parameters: []
   '/vendors/{key}':
     get:
@@ -363,6 +387,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/VendorResourceItem'
+      x-stoplight:
+        id: ib71in1kra3wf
     parameters:
       - schema:
           type: string
@@ -376,6 +402,8 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/AssetDowntimeResourceCollection'
+      x-stoplight:
+        id: yxp6nlvpnl41a
     parameters: []
   '/asset-downtime/{key}':
     get:
@@ -392,6 +420,8 @@ paths:
           $ref: '#/components/responses/AssetDowntimeResourceItem'
         '':
           $ref: '#/components/responses/AssetDowntimeResourceItem'
+      x-stoplight:
+        id: tqtmo6b22jbce
     parameters:
       - schema:
           type: string
@@ -407,6 +437,8 @@ paths:
           $ref: '#/components/responses/ModelResourceCollection'
         '':
           $ref: '#/components/responses/ModelResourceCollection'
+      x-stoplight:
+        id: qmvqk03bqbwqj
     parameters: []
   '/models/{key}':
     get:
@@ -423,6 +455,8 @@ paths:
           $ref: '#/components/responses/ModelResourceItem'
         '':
           $ref: '#/components/responses/AssetDowntimeResourceItem'
+      x-stoplight:
+        id: q4zl7e9mhqlc8
     parameters:
       - schema:
           type: string
@@ -438,6 +472,8 @@ paths:
           $ref: '#/components/responses/CounterResourceCollection'
         '':
           $ref: '#/components/responses/CounterResourceCollection'
+      x-stoplight:
+        id: wv9t0jkalrq3u
     parameters: []
   '/counters/{key}':
     get:
@@ -454,6 +490,8 @@ paths:
           $ref: '#/components/responses/CounterResourceItem'
         '':
           $ref: '#/components/responses/CounterResourceItem'
+      x-stoplight:
+        id: u1j8w9g7bm7c0
     parameters:
       - schema:
           type: string
@@ -469,6 +507,8 @@ paths:
           $ref: '#/components/responses/CounterReadingResourceCollection'
         '':
           $ref: '#/components/responses/CounterReadingResourceCollection'
+      x-stoplight:
+        id: ldry73y0znghp
     parameters: []
   '/counter-reading/{key}':
     get:
@@ -485,6 +525,8 @@ paths:
           $ref: '#/components/responses/CounterReadingResourceItem'
         '':
           $ref: '#/components/responses/CounterReadingResourceItem'
+      x-stoplight:
+        id: 5nakghxte1njz
     parameters:
       - schema:
           type: string
@@ -500,6 +542,8 @@ paths:
           $ref: '#/components/responses/TeamResourceCollection'
         '':
           $ref: '#/components/responses/TeamResourceCollection'
+      x-stoplight:
+        id: 404n0tjl7f82k
     parameters: []
   '/teams/{key}':
     get:
@@ -516,6 +560,8 @@ paths:
           $ref: '#/components/responses/TeamResourceItem'
         '':
           $ref: '#/components/responses/TeamResourceItem'
+      x-stoplight:
+        id: nb8xecd9614t8
     parameters:
       - schema:
           type: string
@@ -556,6 +602,8 @@ paths:
                   type: string
               required:
                 - quantity
+      x-stoplight:
+        id: 5ifmk3d4g1e6v
   /work-request:
     get:
       summary: Display work request list
@@ -565,6 +613,8 @@ paths:
           $ref: '#/components/responses/WorkRequestResourceCollection'
         '':
           $ref: '#/components/responses/WorkRequestResourceCollection'
+      x-stoplight:
+        id: qp2itzjx3invf
     parameters: []
   '/work-request/{key}':
     get:
@@ -581,6 +631,8 @@ paths:
           $ref: '#/components/responses/WorkRequestResourceItem'
         '':
           $ref: '#/components/responses/WorkRequestResourceItem'
+      x-stoplight:
+        id: 6a1wx0fkwu2j0
     parameters:
       - schema:
           type: string
@@ -596,6 +648,8 @@ paths:
           $ref: '#/components/responses/PreventiveMaintenanceResourceCollection'
         '':
           $ref: '#/components/responses/PreventiveMaintenanceResourceCollection'
+      x-stoplight:
+        id: 0veb1ltbhoab9
     parameters: []
   '/preventive-maintenance/{key}':
     get:
@@ -612,6 +666,8 @@ paths:
           $ref: '#/components/responses/PreventiveMaintenanceResourceItem'
         '':
           $ref: '#/components/responses/PreventiveMaintenanceResourceItem'
+      x-stoplight:
+        id: v7k8and9emzcc
     parameters:
       - schema:
           type: string
@@ -627,6 +683,8 @@ paths:
           $ref: '#/components/responses/DocumentResourceCollection'
         '':
           $ref: '#/components/responses/DocumentResourceCollection'
+      x-stoplight:
+        id: lhl6r7ztjt31f
     parameters: []
     post:
       summary: ''
@@ -650,6 +708,8 @@ paths:
                 - name
                 - file
         description: ''
+      x-stoplight:
+        id: burl50e5e9i5w
   '/documents/{key}':
     get:
       summary: Display specified documents
@@ -665,6 +725,8 @@ paths:
           $ref: '#/components/responses/DocumentResourceItem'
         '':
           $ref: '#/components/responses/DocumentResourceItem'
+      x-stoplight:
+        id: rorvyqkid7hn4
     parameters:
       - schema:
           type: string
@@ -680,6 +742,8 @@ paths:
           $ref: '#/components/responses/PurchaseOrderResourceCollection'
         '':
           $ref: '#/components/responses/PurchaseOrderResourceItem'
+      x-stoplight:
+        id: 4f7iuv1b8npcc
     parameters: []
     post:
       summary: Create purchase order
@@ -743,6 +807,8 @@ paths:
                   deliveryAddress: ''
                   currency: ''
                   lines: []
+      x-stoplight:
+        id: 4m1k8y7u436wc
     put:
       summary: Update purchase order
       operationId: PurchaseOrderUpdate
@@ -819,6 +885,8 @@ paths:
                         type: string
                       partKey:
                         type: string
+      x-stoplight:
+        id: fft43kpauqnlf
   '/purchase-order/{key}':
     get:
       summary: Display specified purchase order
@@ -834,6 +902,8 @@ paths:
           $ref: '#/components/responses/PurchaseOrderResourceItem'
         '':
           $ref: '#/components/responses/DocumentResourceItem'
+      x-stoplight:
+        id: tao3umgkjvsf2
     parameters:
       - schema:
           type: string
@@ -848,6 +918,8 @@ paths:
         '200':
           $ref: '#/components/responses/LaborResourceCollection'
       operationId: LaborSearch
+      x-stoplight:
+        id: kpquo0vxkj5q6
   '/labors/{key}':
     parameters:
       - schema:
@@ -862,6 +934,8 @@ paths:
         '200':
           $ref: '#/components/responses/LaborResourceItem'
       operationId: LaborGet
+      x-stoplight:
+        id: ag1fra9p0vfxs
 components:
   schemas:
     Site:
@@ -912,6 +986,8 @@ components:
         - createdAt
         - updatedAt
       title: ''
+      x-stoplight:
+        id: vzr07kuk12uhd
     Asset:
       title: ''
       type: object
@@ -997,6 +1073,8 @@ components:
         - isActive
         - createdAt
         - updatedAt
+      x-stoplight:
+        id: 7cawxv6n73tpf
     WorkOrder:
       type: object
       properties:
@@ -1085,6 +1163,8 @@ components:
         - scheduledAt
         - createdAt
         - updatedAt
+      x-stoplight:
+        id: q9ulgtejxu7zd
     Part:
       type: object
       x-examples: {}
@@ -1179,6 +1259,8 @@ components:
         - name
         - isActive
         - uom
+      x-stoplight:
+        id: dlrdrl1n8npyp
     PurchaseOrder:
       type: object
       properties:
@@ -1247,10 +1329,12 @@ components:
         - key
         - createdAt
         - updatedAt
+      x-stoplight:
+        id: 2xonwzmgykb84
     PreventiveMaintenance:
       title: PreventiveMaintenance
       x-stoplight:
-        id: k4tri9krv6784
+        id: btjnd3dy9zudb
       type: object
       properties:
         key:
@@ -1326,7 +1410,7 @@ components:
     Model:
       title: Model
       x-stoplight:
-        id: d4srrmmj6n800
+        id: o2078rq38eg7o
       type: object
       properties:
         key:
@@ -1366,7 +1450,7 @@ components:
     Counter:
       title: Counter
       x-stoplight:
-        id: 8tg0vgbjlplsy
+        id: pfbi2hcuixmzr
       type: object
       properties:
         key:
@@ -1446,10 +1530,12 @@ components:
         - createdAt
         - updatedAt
         - deletedAt
+      x-stoplight:
+        id: dzvlqkng0o5w3
     AssetDowntime:
       title: AssetDowntime
       x-stoplight:
-        id: ohrkom3gil8m5
+        id: oir4l1ofuc9pe
       type: object
       properties:
         key:
@@ -1498,7 +1584,7 @@ components:
     WorkRequest:
       title: WorkRequest
       x-stoplight:
-        id: 8k2f7xuauuf4j
+        id: l2e430a2mogka
       type: object
       description: ''
       properties:
@@ -1568,7 +1654,7 @@ components:
     CounterReading:
       title: CounterReading
       x-stoplight:
-        id: n5zva0shvm8is
+        id: 3k84nltrdny3i
       type: object
       properties:
         key:
@@ -1596,7 +1682,7 @@ components:
     Document:
       title: Document
       x-stoplight:
-        id: ekmupujtgmw45
+        id: mnu52waocn4c3
       type: object
       properties:
         key:
@@ -1634,7 +1720,7 @@ components:
     Team:
       title: Team
       x-stoplight:
-        id: d71bsbivzgftd
+        id: 06thhmqf1jngr
       type: object
       properties:
         key:
@@ -1719,10 +1805,12 @@ components:
         - uom
         - createdAt
         - updatedAt
+      x-stoplight:
+        id: vnq89b366dt61
     Address:
       title: Address
       x-stoplight:
-        id: mo3wgkk4lv3ql
+        id: pdzwl1eb7migl
       type: object
       properties:
         countryName:
@@ -1753,7 +1841,7 @@ components:
     Inventory:
       title: Inventory
       x-stoplight:
-        id: 9a7kzrfw9cq9w
+        id: ofyxo6ua4ljlu
       type: object
       properties:
         code:
@@ -1775,7 +1863,7 @@ components:
     Drawing:
       title: Drawing
       x-stoplight:
-        id: qmk3hpqf6kd59
+        id: dw922evj4brsc
       type: object
       properties:
         drawingNo:
@@ -1802,7 +1890,7 @@ components:
     PartUsage:
       title: PartUsage
       x-stoplight:
-        id: 9krvn5omn0xhh
+        id: lwnvtlm8f69lt
       type: object
       properties:
         partKeyid:
@@ -1815,7 +1903,7 @@ components:
     WorkTrigger:
       title: WorkTrigger
       x-stoplight:
-        id: 55pbv0hfj6d9d
+        id: s61aybi8i5qys
       type: object
       x-examples: {}
       properties:
@@ -1839,7 +1927,7 @@ components:
     Labor:
       title: Labor
       x-stoplight:
-        id: 5hl5dpggyvn2v
+        id: yq4mgt3kb922l
       type: object
       properties:
         key:

@@ -19,6 +19,11 @@
       "type": "item",
       "title": "EAM platforms",
       "uri": "oas3.yaml"
+    },
+    {
+      "type": "item",
+      "title": "ERP platforms",
+      "uri": "oas3_erp.yaml"
     }
   ]
 }
