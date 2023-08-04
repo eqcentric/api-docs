@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Makini API
+  title: EAM platforms
   description: Makini API
   version: '0.1'
   contact:
@@ -165,7 +165,7 @@ paths:
         '200':
           $ref: '#/components/responses/WorkOrderResourceItem'
     put:
-      summary: Update Work order
+      summary: Update work order
       operationId: WorkOrderUpdate
       responses:
         '200':
@@ -268,7 +268,7 @@ paths:
         description: ''
   '/work-orders/{key}/status':
     put:
-      summary: Update Work order
+      summary: Update work order status
       operationId: WorkOrderUpdate
       responses:
         '200':
