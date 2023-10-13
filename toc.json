@@ -17,13 +17,18 @@
     },
     {
       "type": "item",
-      "title": "EAM",
-      "uri": "oas3.yaml"
-    },
-    {
-      "type": "item",
-      "title": "ERP",
-      "uri": "oas3_erp.yaml"
+      "title": "Preferences API",
+      "uri": "oas3_multi.yaml"
     }
+    // {
+    //   "type": "item",
+    //   "title": "EAM",
+    //   "uri": "oas3.yaml"
+    // },
+    // {
+    //   "type": "item",
+    //   "title": "ERP",
+    //   "uri": "oas3_erp.yaml"
+    // }
   ]
 }
