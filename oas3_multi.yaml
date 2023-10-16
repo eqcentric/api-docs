@@ -7,7 +7,7 @@ info:
     name: ""
     url: ""
 servers:
-  - url: https://www.makini.io
+  - url: https://api.makini.io
 paths:
   /api/eam/organizations:
     get:
