@@ -35,7 +35,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -92,7 +92,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -126,7 +126,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -183,7 +183,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -194,6 +194,7 @@ paths:
   /api/eam/locations:
     get:
       description: List Locations
+      summary: List Locations
       parameters:
         - name: filter
           description: array
@@ -217,7 +218,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -274,7 +275,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -308,7 +309,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -365,7 +366,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -399,7 +400,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -456,7 +457,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -490,7 +491,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -547,7 +548,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -581,7 +582,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -638,7 +639,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -672,7 +673,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -729,7 +730,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -763,7 +764,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -820,7 +821,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -854,7 +855,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -911,7 +912,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -945,7 +946,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1002,7 +1003,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1036,7 +1037,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1093,7 +1094,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1127,7 +1128,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1184,7 +1185,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1204,7 +1205,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1251,7 +1252,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1300,7 +1301,7 @@ paths:
       description: ""
       parameters: []
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1325,7 +1326,7 @@ paths:
                   format: string
                 code:
                   type: string
-                  nullable: false
+                  nullable: true
                   format: string
                 orderNo:
                   type: string
@@ -1396,26 +1397,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "00000792504860"
-                vendorKey: "05000975326122"
-                code: "58368152"
+                siteKey: "03000851545728"
+                vendorKey: "05000951821562"
+                code: "21986260"
                 orderNo: string
-                orderDate: "1976-12-09T12:32:29Z"
-                statusKey: "07000052986367"
-                title: Iste quibusdam neque officiis tempora tenetur.
-                description: Libero architecto molestias voluptas tenetur.
-                dueAt: "2000-01-18T04:05:26Z"
-                approvedAt: "2011-06-27T23:04:38Z"
-                completedAt: "1978-02-08T19:04:52Z"
+                orderDate: "1990-02-02T03:16:09Z"
+                statusKey: "09000101738231"
+                title: Ut quia libero amet aspernatur non.
+                description: Et qui odit rem doloribus voluptatem aliquid.
+                dueAt: "1989-08-02T09:37:33Z"
+                approvedAt: "2014-02-28T07:12:57Z"
+                completedAt: "2002-01-12T18:29:19Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "06000206105600"
+                currencyKey: "02000688688507"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "1973-03-11T19:32:48Z"
-                updatedAt: "2019-11-05T21:37:06Z"
+                createdAt: "2021-10-27T03:31:38Z"
+                updatedAt: "2008-12-20T07:31:51Z"
   /api/eam/purchase-orders/{key}:
     get:
       description: Get a PurchaseOrder
@@ -1428,7 +1429,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1447,7 +1448,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1543,26 +1544,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "05000785729238"
-                vendorKey: "02000094703217"
-                code: "32218404"
+                siteKey: "03000992390695"
+                vendorKey: "01000328783244"
+                code: "46235893"
                 orderNo: string
-                orderDate: "1985-10-09T07:48:59Z"
-                statusKey: "04000537206809"
-                title: Quisquam et a facilis.
-                description: Et asperiores mollitia et.
-                dueAt: "1970-12-12T19:24:40Z"
-                approvedAt: "1988-06-09T14:26:25Z"
-                completedAt: "2010-05-21T12:14:59Z"
+                orderDate: "1981-10-16T00:00:35Z"
+                statusKey: "08000632854585"
+                title: Voluptas vero laboriosam vero.
+                description: Hic consectetur nostrum dolores consectetur ut.
+                dueAt: "2018-02-17T19:43:05Z"
+                approvedAt: "2021-04-13T09:14:01Z"
+                completedAt: "2000-10-03T19:46:30Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "07000826269498"
+                currencyKey: "02000338615172"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "1997-01-19T01:06:56Z"
-                updatedAt: "2007-05-03T07:31:46Z"
+                createdAt: "1972-08-20T18:43:26Z"
+                updatedAt: "2022-10-31T07:42:47Z"
   /api/eam/purchase-orders.line-items:
     get:
       description: List LineItems
@@ -1589,7 +1590,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1646,7 +1647,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1666,7 +1667,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1697,6 +1698,47 @@ paths:
                 filter: "[]"
                 page: 10
                 per_page: 10
+  /api/eam/materials/{key}/children:
+    get:
+      description: ""
+      parameters:
+        - name: key
+          description: string|required
+          in: path
+          style: simple
+          required: true
+          schema:
+            type: string
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - EAM/CMMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
   /api/eam/materials:
     get:
       description: List Parts
@@ -1723,7 +1765,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1780,7 +1822,48 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/eam/assets/{key}/materials:
+    get:
+      description: ""
+      parameters:
+        - name: key
+          description: string|required
+          in: path
+          style: simple
+          required: true
+          schema:
+            type: string
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1814,7 +1897,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1871,7 +1954,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1905,7 +1988,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1962,7 +2045,48 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/eam/asset-templates/{key}/materials:
+    get:
+      description: ""
+      parameters:
+        - name: key
+          description: string|required
+          in: path
+          style: simple
+          required: true
+          schema:
+            type: string
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -1996,7 +2120,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -2053,7 +2177,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -2087,7 +2211,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -2144,7 +2268,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -2178,7 +2302,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -2235,7 +2359,48 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/eam/pm/{key}/materials:
+    get:
+      description: ""
+      parameters:
+        - name: key
+          description: string|required
+          in: path
+          style: simple
+          required: true
+          schema:
+            type: string
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -2269,7 +2434,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -2326,7 +2491,48 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/eam/work-orders/{key}/materials:
+    get:
+      description: ""
+      parameters:
+        - name: key
+          description: string|required
+          in: path
+          style: simple
+          required: true
+          schema:
+            type: string
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -2346,7 +2552,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -2393,7 +2599,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -2442,7 +2648,7 @@ paths:
       description: ""
       parameters: []
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -2459,15 +2665,15 @@ paths:
               properties:
                 title:
                   type: string
-                  nullable: false
+                  nullable: true
                   format: string
                 statusKey:
                   type: string
-                  nullable: false
+                  nullable: true
                   format: string
                 scheduledAt:
                   type: string
-                  nullable: false
+                  nullable: true
                   format: string
                 siteKey:
                   type: string
@@ -2582,22 +2788,22 @@ paths:
                   nullable: true
                   format: string
               example:
-                title: Libero harum est quos enim quod qui perferendis.
-                statusKey: "05000398379950"
-                scheduledAt: "2021-09-09T14:32:51Z"
-                siteKey: "05000358810519"
-                locationKey: "04000821183395"
-                storeroomKey: "05000151901718"
-                assetKey: "02000250587282"
-                assetDowntimeKey: "02000440373737"
-                serviceRequestKey: "05000726166674"
-                pmKey: "09000514697310"
-                teamKey: "00000805686885"
-                laborAssignedKey: "03000777387254"
-                accountKey: "01000899856923"
-                userApprovedKey: "08000939925870"
-                code: "16985865"
-                description: Hic quasi beatae qui.
+                title: Quod et et sequi et excepturi quae quia.
+                statusKey: "06000321278523"
+                scheduledAt: "2007-09-26T11:18:24Z"
+                siteKey: "01000144070060"
+                locationKey: "03000961555478"
+                storeroomKey: "09000174148182"
+                assetKey: "07000168198944"
+                assetDowntimeKey: "07000893851970"
+                serviceRequestKey: "01000184620000"
+                pmKey: "04000781230554"
+                teamKey: "08000202210681"
+                laborAssignedKey: "07000461114681"
+                accountKey: "06000670777044"
+                userApprovedKey: "04000304426845"
+                code: "37938574"
+                description: Iusto veritatis deleniti odio voluptatem non qui.
                 instructions: string
                 severity: string
                 estimatedTime: 10
@@ -2606,13 +2812,13 @@ paths:
                 categoryName: string
                 documents: "[]"
                 notes: string
-                approvedAt: "2004-11-18T07:07:45Z"
-                dueAt: "2020-09-20T12:14:40Z"
-                completedAt: "2000-05-06T08:29:37Z"
+                approvedAt: "2016-02-19T06:12:14Z"
+                dueAt: "1989-04-15T18:49:50Z"
+                completedAt: "2018-09-11T13:33:50Z"
                 completionRemarks: string
-                createdAt: "1993-12-20T17:30:42Z"
-                updatedAt: "1978-11-07T18:21:31Z"
-                deletedAt: "2008-12-28T22:27:08Z"
+                createdAt: "1993-05-27T21:48:37Z"
+                updatedAt: "1999-05-08T07:38:54Z"
+                deletedAt: "1999-10-18T14:25:21Z"
   /api/eam/work-orders/{key}:
     get:
       description: Get a WorkOrder
@@ -2625,7 +2831,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -2644,7 +2850,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -2784,22 +2990,22 @@ paths:
                   nullable: true
                   format: string
               example:
-                title: Quaerat molestiae et quidem perspiciatis.
-                statusKey: "03000770728340"
-                scheduledAt: "1992-05-15T21:21:47Z"
-                siteKey: "02000968484117"
-                locationKey: "05000128568634"
-                storeroomKey: "07000076892483"
-                assetKey: "05000742767544"
-                assetDowntimeKey: "01000695017963"
-                serviceRequestKey: "07000802818123"
-                pmKey: "09000758312091"
-                teamKey: "05000467029228"
-                laborAssignedKey: "09000885007888"
-                accountKey: "06000472143094"
-                userApprovedKey: "05000133258514"
-                code: "90714832"
-                description: Odio iure ipsum amet deserunt et eos maxime.
+                title: Occaecati ut est dolor ipsam corrupti explicabo.
+                statusKey: "00000247879281"
+                scheduledAt: "1998-05-17T22:58:17Z"
+                siteKey: "05000466859971"
+                locationKey: "04000909535186"
+                storeroomKey: "00000981792758"
+                assetKey: "03000453069715"
+                assetDowntimeKey: "00000875032998"
+                serviceRequestKey: "00000915650005"
+                pmKey: "09000252138537"
+                teamKey: "01000652250160"
+                laborAssignedKey: "08000085451832"
+                accountKey: "00000204789598"
+                userApprovedKey: "07000855845590"
+                code: "82568375"
+                description: Quia ut beatae facilis totam veniam.
                 instructions: string
                 severity: string
                 estimatedTime: 10
@@ -2808,13 +3014,13 @@ paths:
                 categoryName: string
                 documents: "[]"
                 notes: string
-                approvedAt: "1982-04-30T21:35:38Z"
-                dueAt: "1980-03-20T09:26:13Z"
-                completedAt: "1992-06-28T19:05:47Z"
+                approvedAt: "2020-05-21T15:55:54Z"
+                dueAt: "2021-02-16T08:45:46Z"
+                completedAt: "1976-11-11T09:00:43Z"
                 completionRemarks: string
-                createdAt: "1976-04-20T21:58:44Z"
-                updatedAt: "1971-05-14T02:38:04Z"
-                deletedAt: "2011-03-12T12:25:44Z"
+                createdAt: "2019-02-07T12:48:41Z"
+                updatedAt: "2023-04-11T17:39:12Z"
+                deletedAt: "2020-12-17T16:53:38Z"
   /api/eam/service-requests:
     get:
       description: List ServiceRequests
@@ -2841,7 +3047,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -2898,7 +3104,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -2932,7 +3138,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -2981,7 +3187,7 @@ paths:
       description: ""
       parameters: []
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -3019,7 +3225,7 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -3053,7 +3259,7 @@ paths:
           schema:
             type: integer
       tags:
-        - EAM
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -3110,7 +3316,109 @@ paths:
           schema:
             type: string
       tags:
-        - EAM
+        - EAM/CMMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/eam/statuses/work-orders:
+    get:
+      description: ""
+      parameters:
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - EAM/CMMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/eam/statuses/purchase-orders:
+    get:
+      description: ""
+      parameters:
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - EAM/CMMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/eam/statuses/service-requests:
+    get:
+      description: ""
+      parameters:
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - EAM/CMMS
       responses:
         "200":
           description: Successful operation
@@ -5162,7 +5470,7 @@ paths:
                   format: string
                 code:
                   type: string
-                  nullable: false
+                  nullable: true
                   format: string
                 orderNo:
                   type: string
@@ -5233,26 +5541,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "06000021447693"
-                vendorKey: "03000108769659"
-                code: "59736219"
+                siteKey: "01000380000453"
+                vendorKey: "09000724652292"
+                code: "92475465"
                 orderNo: string
-                orderDate: "2021-09-11T19:14:30Z"
-                statusKey: "00000075856113"
-                title: Harum autem ut quia voluptas aliquid.
-                description: Perspiciatis id sed aut culpa.
-                dueAt: "1979-05-10T06:41:58Z"
-                approvedAt: "1980-08-10T11:49:38Z"
-                completedAt: "2017-12-07T15:25:49Z"
+                orderDate: "1985-01-09T03:19:10Z"
+                statusKey: "02000671331547"
+                title: Aut perspiciatis reiciendis ut quo fugit.
+                description: Similique assumenda dolorem id dolorem provident.
+                dueAt: "1982-09-11T01:18:00Z"
+                approvedAt: "2006-04-04T19:04:40Z"
+                completedAt: "1971-01-22T00:56:17Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "06000825454820"
+                currencyKey: "01000488903933"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "1977-06-18T19:24:25Z"
-                updatedAt: "1970-05-31T18:18:37Z"
+                createdAt: "1976-04-15T10:32:45Z"
+                updatedAt: "1989-10-05T07:37:17Z"
   /api/erp/purchase-orders/{key}:
     get:
       description: Get a PurchaseOrder
@@ -5380,26 +5688,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "03000302523168"
-                vendorKey: "04000937880834"
-                code: "98168804"
+                siteKey: "08000516656924"
+                vendorKey: "08000035053894"
+                code: "81917655"
                 orderNo: string
-                orderDate: "2016-12-26T16:59:00Z"
-                statusKey: "04000507826065"
-                title: Quidem recusandae est qui illum voluptatem.
-                description: Illo velit dolores qui unde.
-                dueAt: "1997-12-22T13:52:07Z"
-                approvedAt: "1979-06-01T19:47:44Z"
-                completedAt: "2020-07-28T04:25:59Z"
+                orderDate: "1972-12-16T11:43:34Z"
+                statusKey: "04000336698857"
+                title: Natus non minus aut animi sint.
+                description: Aut voluptatem at non temporibus.
+                dueAt: "1970-10-07T10:08:29Z"
+                approvedAt: "1974-08-23T19:09:21Z"
+                completedAt: "1972-03-30T10:26:20Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "09000999124585"
+                currencyKey: "09000097776324"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "2008-05-06T07:30:05Z"
-                updatedAt: "2007-05-11T17:38:14Z"
+                createdAt: "2017-01-25T14:51:05Z"
+                updatedAt: "2007-12-12T06:36:33Z"
   /api/erp/purchase-orders.line-items:
     get:
       description: List LineItems
@@ -5582,6 +5890,47 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/BillOfMaterial"
+  /api/erp/production-orders/{key}/materials:
+    get:
+      description: ""
+      parameters:
+        - name: key
+          description: string|required
+          in: path
+          style: simple
+          required: true
+          schema:
+            type: string
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - ERP
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
   /api/erp/production-orders:
     get:
       description: List ProductionOrders
@@ -5946,6 +6295,90 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/PurchaseRequisition"
+  /api/erp/materials/{partKey}/inventory:
+    post:
+      description: ""
+      parameters:
+        - name: partKey
+          description: string|required
+          in: path
+          style: simple
+          required: true
+          schema:
+            type: string
+      tags:
+        - ERP
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Part"
+      requestBody:
+        description: Request body
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter:
+                  type: array
+                  nullable: false
+                  format: array
+                page:
+                  type: integer
+                  nullable: false
+                  format: integer
+                per_page:
+                  type: integer
+                  nullable: false
+                  format: integer
+              example:
+                filter: "[]"
+                page: 10
+                per_page: 10
+  /api/erp/materials/{key}/children:
+    get:
+      description: ""
+      parameters:
+        - name: key
+          description: string|required
+          in: path
+          style: simple
+          required: true
+          schema:
+            type: string
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - ERP
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
   /api/erp/materials:
     get:
       description: List Parts
@@ -6037,49 +6470,6 @@ paths:
             application/json:
               schema:
                 type: object
-  /api/erp/materials/{partKey}/inventory:
-    post:
-      description: ""
-      parameters:
-        - name: partKey
-          description: string|required
-          in: path
-          style: simple
-          required: true
-          schema:
-            type: string
-      tags:
-        - ERP
-      responses:
-        "200":
-          description: Successful operation
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Part"
-      requestBody:
-        description: Request body
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                filter:
-                  type: array
-                  nullable: false
-                  format: array
-                page:
-                  type: integer
-                  nullable: false
-                  format: integer
-                per_page:
-                  type: integer
-                  nullable: false
-                  format: integer
-              example:
-                filter: "[]"
-                page: 10
-                per_page: 10
   /api/erp/inventories:
     get:
       description: List Inventories
@@ -6162,6 +6552,278 @@ paths:
           required: true
           schema:
             type: string
+      tags:
+        - ERP
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/erp/statuses/purchase-orders:
+    get:
+      description: ""
+      parameters:
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - ERP
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/erp/statuses/purchase-requisitions:
+    get:
+      description: ""
+      parameters:
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - ERP
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/erp/statuses/sales-orders:
+    get:
+      description: ""
+      parameters:
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - ERP
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/erp/statuses/projects:
+    get:
+      description: ""
+      parameters:
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - ERP
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/erp/statuses/invoices:
+    get:
+      description: ""
+      parameters:
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - ERP
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/erp/statuses/production-orders:
+    get:
+      description: ""
+      parameters:
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - ERP
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/erp/statuses/rfq:
+    get:
+      description: ""
+      parameters:
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - ERP
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/erp/statuses/receiving:
+    get:
+      description: ""
+      parameters:
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -7851,7 +8513,7 @@ paths:
                   format: string
                 code:
                   type: string
-                  nullable: false
+                  nullable: true
                   format: string
                 orderNo:
                   type: string
@@ -7922,26 +8584,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "01000439653896"
-                vendorKey: "08000422178306"
-                code: "27013021"
+                siteKey: "04000996849853"
+                vendorKey: "08000133631520"
+                code: "20229443"
                 orderNo: string
-                orderDate: "2004-11-18T16:46:53Z"
-                statusKey: "08000406171670"
-                title: Sit dolor ab eius velit culpa et.
-                description: Voluptate qui sunt maxime officiis impedit ipsum.
-                dueAt: "2012-05-03T04:46:59Z"
-                approvedAt: "1981-03-26T09:25:06Z"
-                completedAt: "1983-07-05T20:31:16Z"
+                orderDate: "2019-09-27T09:01:14Z"
+                statusKey: "09000873173700"
+                title: Eum hic aliquam a rem omnis molestias.
+                description: Sit omnis odio consequatur.
+                dueAt: "2019-01-06T07:47:33Z"
+                approvedAt: "2005-07-29T04:00:05Z"
+                completedAt: "2012-05-31T01:22:46Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "09000359197061"
+                currencyKey: "09000099064602"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "1999-05-20T13:52:24Z"
-                updatedAt: "1986-01-30T10:32:06Z"
+                createdAt: "1986-12-10T00:46:09Z"
+                updatedAt: "1977-12-03T15:11:28Z"
   /api/wms/purchase-orders/{key}:
     get:
       description: Get a PurchaseOrder
@@ -8069,26 +8731,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "01000711365123"
-                vendorKey: "01000037927311"
-                code: "50588305"
+                siteKey: "04000880977807"
+                vendorKey: "08000044765627"
+                code: "64162690"
                 orderNo: string
-                orderDate: "1986-07-05T16:33:54Z"
-                statusKey: "09000511001153"
-                title: Est similique accusantium aliquid iste ut.
-                description: Consequatur assumenda ipsa praesentium velit in.
-                dueAt: "2000-01-20T22:20:12Z"
-                approvedAt: "2020-06-21T20:05:38Z"
-                completedAt: "1992-06-01T02:12:12Z"
+                orderDate: "1971-05-15T18:44:34Z"
+                statusKey: "01000031089589"
+                title: Et beatae praesentium debitis ut explicabo vel.
+                description: Non quos quia et eaque nulla.
+                dueAt: "1978-04-06T15:09:21Z"
+                approvedAt: "1993-10-19T09:35:16Z"
+                completedAt: "1989-12-27T18:59:49Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "04000058345938"
+                currencyKey: "00000596361187"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "2002-06-01T14:00:08Z"
-                updatedAt: "2020-12-01T08:30:40Z"
+                createdAt: "1971-08-23T22:06:36Z"
+                updatedAt: "1973-06-13T19:00:24Z"
   /api/wms/purchase-orders.line-items:
     get:
       description: List LineItems
@@ -8223,6 +8885,47 @@ paths:
                 filter: "[]"
                 page: 10
                 per_page: 10
+  /api/wms/materials/{key}/children:
+    get:
+      description: ""
+      parameters:
+        - name: key
+          description: string|required
+          in: path
+          style: simple
+          required: true
+          schema:
+            type: string
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - WMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
   /api/wms/materials:
     get:
       description: List Parts
@@ -8705,6 +9408,142 @@ paths:
             application/json:
               schema:
                 type: object
+  /api/wms/statuses/purchase-orders:
+    get:
+      description: ""
+      parameters:
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - WMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/wms/statuses/sales-orders:
+    get:
+      description: ""
+      parameters:
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - WMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/wms/statuses/stock-transfers:
+    get:
+      description: ""
+      parameters:
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - WMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/wms/statuses/shipment-orders:
+    get:
+      description: ""
+      parameters:
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
+      tags:
+        - WMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
   /api/integrations/current:
     get:
       description: ""
@@ -8791,17 +9630,17 @@ components:
           nullable: false
           format: string
       example:
-        key: "05000504399268"
-        currencyKey: "01000031732838"
+        key: "06000593657422"
+        currencyKey: "00000680173133"
         name: string
-        code: "72413746"
-        description: Voluptates inventore voluptate vero.
+        code: "78200647"
+        description: Asperiores eveniet reiciendis laboriosam.
         addresses: "[]"
         billingAddress: string
         contacts: "[]"
-        createdAt: "1983-03-29T05:28:06Z"
-        updatedAt: "2011-08-29T08:12:33Z"
-        deletedAt: "1973-05-04T10:30:40Z"
+        createdAt: "2001-05-18T19:46:01Z"
+        updatedAt: "2004-10-01T00:00:34Z"
+        deletedAt: "1998-11-11T08:03:09Z"
     Site:
       title: Site
       properties:
@@ -8866,18 +9705,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "09000807795889"
-        organizationKey: "04000855952660"
-        customerKey: "09000029914790"
+        key: "04000381517896"
+        organizationKey: "01000497565066"
+        customerKey: "03000437829699"
         name: string
         lat: string
         lng: string
         address: string
         properties: string
         notes: string
-        createdAt: "1979-07-01T07:07:54Z"
-        updatedAt: "1997-09-23T17:26:13Z"
-        deletedAt: "2021-09-10T01:21:16Z"
+        createdAt: "2016-11-30T22:06:57Z"
+        updatedAt: "1990-05-11T02:31:34Z"
+        deletedAt: "1983-06-16T18:08:40Z"
     Location:
       title: Location
       properties:
@@ -8937,17 +9776,17 @@ components:
           nullable: false
           format: string
       example:
-        key: "08000995234539"
-        siteKey: "07000746518509"
-        parentKey: "01000497472895"
+        key: "06000887565570"
+        siteKey: "06000854822137"
+        parentKey: "08000519676017"
         name: string
-        description: Quae occaecati debitis omnis animi.
-        code: "78354654"
+        description: Distinctio fugiat est ut dolores delectus.
+        code: "47375147"
         type: string
         address: string
-        createdAt: "2021-11-20T10:50:32Z"
-        updatedAt: "1977-05-21T20:39:06Z"
-        deletedAt: "2012-02-04T22:35:41Z"
+        createdAt: "1985-11-26T21:41:01Z"
+        updatedAt: "1996-07-15T13:41:49Z"
+        deletedAt: "2013-06-01T14:58:31Z"
     Storeroom:
       title: Storeroom
       properties:
@@ -9017,19 +9856,19 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000773057196"
-        parentKey: "06000960723310"
-        siteKey: "01000506989261"
-        locationKey: "01000059518717"
-        userManagerKey: "08000466033446"
-        code: "93456685"
+        key: "08000786813077"
+        parentKey: "07000471371469"
+        siteKey: "06000219576053"
+        locationKey: "05000305398591"
+        userManagerKey: "01000337008902"
+        code: "11890560"
         name: string
         type: string
-        description: Officiis libero sed nam optio eligendi.
+        description: Iusto aut autem quibusdam non.
         priority: string
-        createdAt: "2004-01-16T05:46:30Z"
-        updatedAt: "1987-05-14T11:11:29Z"
-        deletedAt: "1992-01-19T02:41:07Z"
+        createdAt: "1987-12-02T01:07:42Z"
+        updatedAt: "1977-11-21T07:52:52Z"
+        deletedAt: "1974-04-25T04:05:03Z"
     Account:
       title: Account
       properties:
@@ -9069,13 +9908,13 @@ components:
           nullable: false
           format: string
       example:
-        key: "06000308381730"
-        code: "58507230"
+        key: "00000562306652"
+        code: "97724483"
         name: string
-        description: Et amet quo tenetur autem vero non.
-        createdAt: "2003-10-20T08:21:35Z"
-        updatedAt: "1971-02-13T07:02:36Z"
-        deletedAt: "1997-10-09T17:05:12Z"
+        description: Et quis quaerat cupiditate ut.
+        createdAt: "1994-03-29T18:01:40Z"
+        updatedAt: "1972-10-07T18:46:51Z"
+        deletedAt: "1971-08-20T09:46:57Z"
     Team:
       title: Team
       properties:
@@ -9120,14 +9959,14 @@ components:
           nullable: false
           format: string
       example:
-        key: "00000002451510"
-        accountKey: "01000116646242"
-        code: "21950124"
+        key: "01000918880689"
+        accountKey: "05000995343184"
+        code: "46940032"
         name: string
-        description: Est itaque id minus adipisci maxime sed.
-        createdAt: "2010-10-06T20:13:52Z"
-        updatedAt: "2004-07-01T05:06:21Z"
-        deletedAt: "2003-07-09T16:33:45Z"
+        description: Rem labore pariatur veritatis omnis totam.
+        createdAt: "1980-06-15T17:27:12Z"
+        updatedAt: "2003-12-14T18:24:30Z"
+        deletedAt: "1972-03-10T22:41:02Z"
     Labor:
       title: Labor
       properties:
@@ -9212,22 +10051,22 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000192672668"
+        key: "06000899888104"
         siteKeys: "[]"
         locationKeys: "[]"
-        accountKey: "05000258924958"
-        teamKey: "04000971986754"
+        accountKey: "00000579221941"
+        teamKey: "08000951881881"
         userId: string
         name: string
         roleName: string
-        description: Repellat dolor voluptate officiis natus sed ea.
+        description: Quia voluptatibus explicabo molestiae est.
         note: string
         isActive: string
         cost: string
         currency: string
-        createdAt: "1990-12-17T18:47:58Z"
-        updatedAt: "2013-02-04T18:17:26Z"
-        deletedAt: "2003-08-20T06:23:47Z"
+        createdAt: "1972-09-24T17:37:40Z"
+        updatedAt: "1988-08-24T14:47:49Z"
+        deletedAt: "1975-09-13T12:47:40Z"
     User:
       title: User
       properties:
@@ -9292,18 +10131,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "01000927444861"
-        organizationKey: "07000904462687"
+        key: "09000962786201"
+        organizationKey: "00000923759273"
         siteKeys: "[]"
         locationKeys: "[]"
         name: string
         roleName: string
-        description: Corporis atque dicta et aut quo ut.
+        description: Delectus velit eaque asperiores itaque molestiae.
         notes: string
         isActive: string
-        createdAt: "1976-02-25T10:27:58Z"
-        updatedAt: "1981-09-27T10:27:34Z"
-        deletedAt: "2000-03-24T01:43:20Z"
+        createdAt: "1972-11-10T15:46:44Z"
+        updatedAt: "2015-12-05T23:48:27Z"
+        deletedAt: "2008-09-24T20:13:17Z"
     UnitOfMeasure:
       title: UnitOfMeasure
       properties:
@@ -9328,9 +10167,9 @@ components:
           nullable: false
           format: boolean
       example:
-        key: "09000913152368"
+        key: "03000891154916"
         name: string
-        code: "76274749"
+        code: "46349200"
         isActive: string
     Company:
       title: Company
@@ -9391,17 +10230,17 @@ components:
           nullable: false
           format: string
       example:
-        key: "06000031465055"
-        parentKey: "04000908379531"
+        key: "00000998087530"
+        parentKey: "00000275523557"
         name: string
-        code: "27249758"
+        code: "91433961"
         addresses: "[]"
         billingAddress: "[]"
-        currencyKey: "00000055428098"
+        currencyKey: "07000721518098"
         notes: string
-        createdAt: "1982-07-25T13:32:22Z"
-        updatedAt: "1994-05-03T00:38:44Z"
-        deletedAt: "1991-12-05T13:41:10Z"
+        createdAt: "2012-10-15T08:21:09Z"
+        updatedAt: "1983-08-08T19:47:10Z"
+        deletedAt: "1996-11-08T13:41:04Z"
     Vendor:
       title: Vendor
       properties:
@@ -9451,15 +10290,15 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000631567089"
+        key: "05000789700316"
         name: string
-        code: "40240510"
+        code: "22115027"
         address: string
         currency: string
         notes: string
-        createdAt: "1981-03-14T22:52:10Z"
-        updatedAt: "2001-01-17T15:18:31Z"
-        deletedAt: "2003-02-10T06:10:41Z"
+        createdAt: "1986-02-16T04:16:55Z"
+        updatedAt: "1977-12-08T23:38:59Z"
+        deletedAt: "2001-06-30T20:31:31Z"
     Customer:
       title: Customer
       properties:
@@ -9524,18 +10363,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000712574875"
+        key: "08000522884740"
         name: string
-        code: "86129237"
+        code: "42697923"
         address: string
         notes: string
         isActive: string
         contactPerson: string
         paymentTerms: string
         currencyCode: string
-        createdAt: "1980-01-09T08:10:09Z"
-        updatedAt: "1991-12-29T05:18:09Z"
-        deletedAt: "1996-11-03T02:51:20Z"
+        createdAt: "2023-01-18T12:12:13Z"
+        updatedAt: "1979-01-14T04:27:22Z"
+        deletedAt: "1997-10-06T05:08:42Z"
     Stock:
       title: Stock
       properties:
@@ -9605,19 +10444,19 @@ components:
           nullable: false
           format: string
       example:
-        key: "06000376115080"
-        productKey: "08000432752807"
-        materialKey: "05000469481541"
-        locationKey: "05000803034529"
-        storeroomKey: "09000618793471"
-        assetKey: "06000393353637"
+        key: "04000175347311"
+        productKey: "00000363544601"
+        materialKey: "07000724527783"
+        locationKey: "04000123078711"
+        storeroomKey: "04000221347497"
+        assetKey: "05000527946312"
         position: string
-        uomKey: "06000473893491"
+        uomKey: "08000209269617"
         quantity: string
-        expiresAt: "1999-11-14T23:54:46Z"
-        createdAt: "2023-01-01T20:12:14Z"
-        updatedAt: "1996-01-31T11:55:11Z"
-        deletedAt: "1989-05-15T00:47:54Z"
+        expiresAt: "1988-08-03T20:14:01Z"
+        createdAt: "1996-12-14T12:39:16Z"
+        updatedAt: "1976-01-10T05:09:23Z"
+        deletedAt: "1993-06-21T00:48:49Z"
     PurchaseOrderStatus:
       title: PurchaseOrderStatus
       properties:
@@ -9727,18 +10566,18 @@ components:
           nullable: false
           format: array
       example:
-        key: "08000788354924"
-        siteKey: "04000842426833"
-        orderDate: "2004-08-16T17:47:09Z"
-        vendorKey: "03000975563287"
+        key: "03000996131894"
+        siteKey: "05000049668000"
+        orderDate: "2008-05-11T03:44:51Z"
+        vendorKey: "09000465305674"
         orderNo: string
         status: string
         warehouseName: string
-        title: Impedit et tenetur ut cupiditate dolore repellat.
-        description: Quos aliquam sit illo quidem ullam delectus.
-        dueAt: "1984-05-28T10:05:40Z"
-        approvedAt: "1973-12-12T14:47:17Z"
-        completedAt: "1978-01-18T06:21:36Z"
+        title: Velit ducimus natus sequi et.
+        description: Similique architecto nam fuga.
+        dueAt: "1973-03-12T01:52:34Z"
+        approvedAt: "1992-01-07T23:07:04Z"
+        completedAt: "2006-10-21T05:45:59Z"
         shippingMethod: string
         terms: string
         notes: string
@@ -9746,7 +10585,7 @@ components:
         currency: string
         totalNetValue: string
         totalGrossValue: string
-        updatedAt: "2008-10-05T19:21:33Z"
+        updatedAt: "2002-02-05T22:33:21Z"
         lines: "[]"
     PurchaseOrder:
       title: PurchaseOrder
@@ -9857,18 +10696,18 @@ components:
           nullable: false
           format: array
       example:
-        key: "01000531992047"
-        siteKey: "00000217428306"
-        orderDate: "2002-06-30T13:28:15Z"
-        vendorKey: "09000687006893"
+        key: "02000758058490"
+        siteKey: "04000323448855"
+        orderDate: "1982-12-08T03:41:41Z"
+        vendorKey: "00000194693322"
         orderNo: string
         status: string
         warehouseName: string
-        title: Tempora sunt cumque vel ipsum.
-        description: Aut et ducimus dolorem sunt totam.
-        dueAt: "1995-11-09T10:25:42Z"
-        approvedAt: "1986-08-28T15:21:51Z"
-        completedAt: "1974-10-14T22:51:24Z"
+        title: Aliquid sit totam ratione voluptates adipisci.
+        description: Similique expedita aut et aliquam qui omnis.
+        dueAt: "1978-07-21T15:04:12Z"
+        approvedAt: "1972-05-22T13:49:27Z"
+        completedAt: "1981-01-13T12:51:56Z"
         shippingMethod: string
         terms: string
         notes: string
@@ -9876,7 +10715,7 @@ components:
         currency: string
         totalNetValue: string
         totalGrossValue: string
-        updatedAt: "2008-12-19T14:24:27Z"
+        updatedAt: "1976-09-23T04:01:48Z"
         lines: "[]"
     PurchaseOrderCollection:
       type: array
@@ -10006,16 +10845,16 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000605733471"
-        locationKey: "00000882504395"
-        assetKey: "01000500272770"
-        partKey: "04000954239233"
-        vendorKey: "06000505013112"
+        key: "09000192922179"
+        locationKey: "03000740964575"
+        assetKey: "05000418900419"
+        partKey: "08000373261892"
+        vendorKey: "01000637881107"
         lineNo: string
         warehouseName: string
-        code: "57329161"
-        title: Non quia incidunt et sed cumque amet.
-        description: Explicabo quasi magni ut quo mollitia non.
+        code: "79579209"
+        title: Ratione non sequi molestiae.
+        description: Nihil sed et quas.
         lineRef: string
         quantity: string
         receivedQuantity: string
@@ -10027,9 +10866,9 @@ components:
         lineTotalValue: string
         lineTaxValue: string
         notes: string
-        dueAt: "1990-03-02T19:33:01Z"
-        createdAt: "1979-01-07T21:10:48Z"
-        updatedAt: "1999-05-10T17:28:31Z"
+        dueAt: "2022-10-05T11:39:25Z"
+        createdAt: "1975-03-31T09:26:40Z"
+        updatedAt: "1978-04-13T15:29:09Z"
     Part:
       title: Part
       properties:
@@ -10159,18 +10998,18 @@ components:
           nullable: false
           format: array
       example:
-        key: "06000357617401"
+        key: "02000386552029"
         siteKeys: "[]"
         parentKeys: "[]"
         assetKeys: "[]"
         vendorKeys: string
         documents: "[]"
-        accountKey: "00000018245736"
-        code: "36719334"
+        accountKey: "06000249031786"
+        code: "90790782"
         isAssembly: string
         partNumber: string
         name: string
-        description: Dolore aut aspernatur dolore asperiores.
+        description: Cum harum possimus quod vel eligendi velit.
         notes: string
         criticality: string
         isActive: string
@@ -10179,11 +11018,129 @@ components:
         uom: string
         cost: string
         currency: string
-        createdAt: "1997-02-08T20:10:48Z"
-        updatedAt: "2017-01-31T09:44:55Z"
-        deletedAt: "1971-05-06T06:29:08Z"
+        createdAt: "2021-08-08T06:59:42Z"
+        updatedAt: "1982-07-30T23:38:47Z"
+        deletedAt: "1986-06-02T17:16:26Z"
         inventory: "[]"
         drawings: "[]"
+    MaterialItem:
+      title: MaterialItem
+      properties:
+        key:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        materialKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        assemblyKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        assetKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        assetTemplateKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        workOrderKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        pmKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        productionOrderKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        partNumber:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        drawingNumber:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        positionNumber:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        documentKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        name:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        uomKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        quantity:
+          type: object
+          description: Description
+          nullable: false
+          format: object
+        requiredQuantity:
+          type: object
+          description: Description
+          nullable: false
+          format: object
+        createdAt:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        updatedAt:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        deletedAt:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+      example:
+        key: "08000751494155"
+        materialKey: "09000442672791"
+        assemblyKey: "01000292893824"
+        assetKey: "05000653361283"
+        assetTemplateKey: "06000168665973"
+        workOrderKey: "02000037283069"
+        pmKey: "01000831243832"
+        productionOrderKey: "05000217491898"
+        partNumber: string
+        drawingNumber: string
+        positionNumber: string
+        documentKey: "03000503381705"
+        name: string
+        uomKey: "05000601029365"
+        quantity: string
+        requiredQuantity: string
+        createdAt: "1975-07-10T14:11:40Z"
+        updatedAt: "1972-04-03T06:21:51Z"
+        deletedAt: "2015-06-07T22:05:16Z"
     Asset:
       title: Asset
       properties:
@@ -10303,17 +11260,17 @@ components:
           nullable: false
           format: string
       example:
-        key: "09000654981282"
-        siteKey: "02000930762286"
-        parentKey: "06000575560081"
-        vendorKey: "06000805733561"
-        modelKey: "02000218234094"
-        teamKey: "07000226827667"
+        key: "06000795084525"
+        siteKey: "07000836564687"
+        parentKey: "02000333095573"
+        vendorKey: "09000597401290"
+        modelKey: "08000022138994"
+        teamKey: "01000754562847"
         documents: "[]"
-        locationKey: "07000712869218"
-        accountKey: "08000969650158"
+        locationKey: "02000888811006"
+        accountKey: "03000294149110"
         name: string
-        description: Quod occaecati nulla occaecati eos.
+        description: Voluptatum sit laborum voluptatum amet quia in.
         notes: string
         categoryName: string
         criticality: string
@@ -10321,11 +11278,11 @@ components:
         manufacturerName: string
         modelName: string
         serialNumber: string
-        activatedAt: "1979-07-12T22:47:09Z"
-        deactivatedAt: "1989-11-20T01:21:51Z"
-        createdAt: "2022-10-03T03:39:01Z"
-        updatedAt: "1983-09-24T08:15:34Z"
-        deletedAt: "1979-06-14T10:48:04Z"
+        activatedAt: "2000-07-20T18:30:38Z"
+        deactivatedAt: "2013-06-25T23:40:00Z"
+        createdAt: "2001-02-02T19:13:34Z"
+        updatedAt: "1989-03-20T20:34:46Z"
+        deletedAt: "1971-07-14T23:43:56Z"
     AssetDownTime:
       title: AssetDownTime
       properties:
@@ -10380,16 +11337,16 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000345259125"
-        assetKey: "06000899372750"
-        description: Molestias fuga sed qui omnis voluptas sint.
-        startedAt: "1992-09-27T23:22:10Z"
-        endedAt: "1997-09-03T05:30:20Z"
+        key: "05000387814357"
+        assetKey: "03000797714553"
+        description: Voluptas amet minima sint ut.
+        startedAt: "1972-12-25T20:57:06Z"
+        endedAt: "2007-07-02T04:04:22Z"
         categoryName: string
         severity: string
         notes: string
-        createdAt: "2019-08-01T20:32:58Z"
-        updatedAt: "1986-02-23T05:43:24Z"
+        createdAt: "2020-04-10T01:59:36Z"
+        updatedAt: "2001-12-22T21:13:45Z"
     Model:
       title: Model
       properties:
@@ -10434,14 +11391,14 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000417177574"
-        siteKey: "07000600301091"
+        key: "00000897409406"
+        siteKey: "00000726224985"
         documents: "[]"
         name: string
         manufacturerName: string
-        createdAt: "1979-11-13T07:31:54Z"
-        updatedAt: "1970-03-12T00:04:45Z"
-        deletedAt: "1987-09-28T04:22:47Z"
+        createdAt: "1977-08-02T06:45:09Z"
+        updatedAt: "1991-05-26T15:45:01Z"
+        deletedAt: "1978-10-09T06:08:56Z"
     Counter:
       title: Counter
       properties:
@@ -10496,16 +11453,16 @@ components:
           nullable: false
           format: string
       example:
-        key: "06000392259526"
-        siteKey: "08000416833012"
-        assetKey: "09000540515492"
+        key: "01000823833719"
+        siteKey: "07000107489452"
+        assetKey: "03000449740508"
         name: string
         uom: string
         lastReading: string
-        lastReadingAt: "2011-04-02T01:58:47Z"
-        createdAt: "2020-12-19T15:29:44Z"
-        updatedAt: "1984-07-02T16:34:48Z"
-        deletedAt: "1989-12-17T10:55:33Z"
+        lastReadingAt: "1990-03-30T01:10:34Z"
+        createdAt: "2011-08-22T09:07:44Z"
+        updatedAt: "2009-11-22T00:40:15Z"
+        deletedAt: "1997-06-14T07:40:51Z"
     CounterReading:
       title: CounterReading
       properties:
@@ -10535,11 +11492,11 @@ components:
           nullable: false
           format: string
       example:
-        key: "04000044498061"
-        assetKey: "01000316621441"
-        meterKey: "08000024618047"
+        key: "08000397302333"
+        assetKey: "08000942873890"
+        meterKey: "06000243497026"
         reading: string
-        createdAt: "2006-03-07T15:40:58Z"
+        createdAt: "1971-01-07T04:19:31Z"
     PreventiveMaintenance:
       title: PreventiveMaintenance
       properties:
@@ -10679,13 +11636,13 @@ components:
           nullable: false
           format: string
       example:
-        key: "06000782177968"
+        key: "04000887789050"
         siteKeys: "[]"
         assetKeys: "[]"
-        teamKey: "06000318490308"
-        accountKey: "09000839924862"
-        title: Necessitatibus tempore quibusdam qui.
-        description: Blanditiis doloribus non aperiam aut mollitia.
+        teamKey: "02000722264904"
+        accountKey: "07000521555000"
+        title: Qui dolorum labore veniam vel nam.
+        description: Id nobis sunt repellendus ipsa quasi est.
         instructions: string
         status: string
         severity: string
@@ -10693,19 +11650,19 @@ components:
         roleName: string
         categoryName: string
         documents: "[]"
-        documentKey: "02000062887394"
+        documentKey: "07000680858307"
         documentPage: string
         notes: string
-        dueAt: "2022-08-03T10:27:27Z"
-        nextScheduledAt: "2010-11-08T02:18:05Z"
-        lastScheduledAt: "2010-08-03T04:38:05Z"
-        lastCompletedAt: "1987-09-20T04:26:33Z"
+        dueAt: "1978-10-27T07:03:35Z"
+        nextScheduledAt: "2011-02-26T11:55:48Z"
+        lastScheduledAt: "2020-02-25T09:31:49Z"
+        lastCompletedAt: "1987-03-06T04:54:08Z"
         lastCompletionRemarks: string
         materials: "[]"
         triggers: "[]"
-        createdAt: "2020-02-24T21:01:44Z"
-        updatedAt: "2017-11-03T01:11:12Z"
-        deletedAt: "1984-03-10T04:22:20Z"
+        createdAt: "2001-04-15T22:27:07Z"
+        updatedAt: "2018-03-05T19:38:12Z"
+        deletedAt: "2009-09-03T13:33:32Z"
     WorkOrderStatus:
       title: WorkOrderStatus
       properties:
@@ -10870,38 +11827,38 @@ components:
           nullable: false
           format: string
       example:
-        key: "05000996522447"
-        siteKey: "08000134566629"
-        assetKey: "03000834147285"
-        accountKey: "01000403702273"
-        title: Soluta totam deserunt voluptatem nostrum nulla.
-        description: In aliquid et saepe enim ut voluptatum.
-        workRequestKey: "01000752649848"
-        code: "54046962"
-        pmKey: "07000200939534"
-        teamKey: "06000786745929"
-        userAssignedKey: "08000497610603"
-        userCompletedKey: "09000596541241"
-        organizationKey: "05000361737354"
+        key: "06000229908497"
+        siteKey: "09000175591163"
+        assetKey: "05000811001423"
+        accountKey: "05000951800238"
+        title: Sunt qui saepe voluptatum aspernatur.
+        description: Eum dolore nemo aut occaecati fugiat ab a.
+        workRequestKey: "09000087668013"
+        code: "55902076"
+        pmKey: "09000193032020"
+        teamKey: "09000040864936"
+        userAssignedKey: "05000871208612"
+        userCompletedKey: "01000186467674"
+        organizationKey: "04000806863015"
         instructions: string
         status: string
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
-        documentKey: "08000455602869"
+        documentKey: "09000539811070"
         documentPage: string
         notes: string
-        approvedAt: "2014-05-08T18:58:44Z"
-        dueAt: "2007-08-16T18:52:34Z"
-        scheduledAt: "2006-03-03T06:12:15Z"
-        completedAt: "1995-08-13T07:54:18Z"
+        approvedAt: "2021-10-30T02:22:46Z"
+        dueAt: "2016-07-07T06:28:45Z"
+        scheduledAt: "1977-12-31T22:39:48Z"
+        completedAt: "1977-11-16T03:44:28Z"
         completionRemarks: string
         materials: string
         documents: "[]"
-        createdAt: "1975-08-29T18:48:25Z"
-        updatedAt: "1984-09-04T02:06:31Z"
-        deletedAt: "1998-06-11T15:01:39Z"
+        createdAt: "1982-02-25T11:33:53Z"
+        updatedAt: "1994-12-03T16:17:46Z"
+        deletedAt: "1982-12-27T23:09:33Z"
     WorkOrder:
       title: WorkOrder
       properties:
@@ -11066,38 +12023,38 @@ components:
           nullable: false
           format: string
       example:
-        key: "06000372487033"
-        siteKey: "07000011146508"
-        assetKey: "09000939526303"
-        accountKey: "08000004831177"
-        title: Ullam quia inventore quis mollitia molestiae.
-        description: Cumque iure facere quia optio eos quos nemo.
-        workRequestKey: "03000547772678"
-        code: "67679560"
-        pmKey: "02000859603943"
-        teamKey: "07000891055885"
-        userAssignedKey: "02000728673501"
-        userCompletedKey: "08000949132912"
-        organizationKey: "09000166972257"
+        key: "00000613934759"
+        siteKey: "06000789242878"
+        assetKey: "03000776811206"
+        accountKey: "01000254148102"
+        title: Dolorum animi in nemo fugit eos.
+        description: Est eum cum quibusdam eligendi non dicta nihil.
+        workRequestKey: "04000869457455"
+        code: "01433746"
+        pmKey: "01000254090414"
+        teamKey: "06000370910405"
+        userAssignedKey: "06000461840790"
+        userCompletedKey: "07000563675506"
+        organizationKey: "08000307548527"
         instructions: string
         status: string
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
-        documentKey: "05000407726478"
+        documentKey: "00000478924900"
         documentPage: string
         notes: string
-        approvedAt: "2001-05-06T19:40:02Z"
-        dueAt: "2019-10-06T09:01:05Z"
-        scheduledAt: "2021-12-15T03:43:52Z"
-        completedAt: "1985-05-22T19:22:14Z"
+        approvedAt: "1991-05-27T23:56:56Z"
+        dueAt: "1981-04-11T18:02:23Z"
+        scheduledAt: "2004-07-23T05:56:17Z"
+        completedAt: "1997-12-11T07:17:26Z"
         completionRemarks: string
         materials: string
         documents: "[]"
-        createdAt: "2018-11-22T20:47:42Z"
-        updatedAt: "1992-10-19T22:02:16Z"
-        deletedAt: "1985-01-29T10:30:26Z"
+        createdAt: "1973-04-03T10:25:13Z"
+        updatedAt: "1982-03-06T20:44:04Z"
+        deletedAt: "1974-04-27T02:08:23Z"
     WorkOrderCollection:
       type: array
       items:
@@ -11221,29 +12178,29 @@ components:
           nullable: false
           format: string
       example:
-        key: "04000776558308"
-        siteKey: "05000705324617"
-        locationKey: "01000429172071"
-        storeroomKey: "09000783455704"
-        assetKey: "04000121325911"
-        workOrderKey: "06000110928799"
-        teamKey: "07000939158129"
-        userRequestedKey: "00000594344340"
-        userApprovedKey: "09000522105847"
+        key: "07000910015059"
+        siteKey: "09000272703373"
+        locationKey: "09000832867904"
+        storeroomKey: "07000856861677"
+        assetKey: "01000578549915"
+        workOrderKey: "05000206609535"
+        teamKey: "07000759973360"
+        userRequestedKey: "01000718115818"
+        userApprovedKey: "03000074491085"
         documents: "[]"
-        title: Et quis numquam nulla nam ipsum non.
-        description: Porro debitis occaecati hic id.
-        statusKey: "03000322737620"
+        title: Iusto et aut repellat delectus aliquid quia quis.
+        description: Nesciunt et consequuntur ratione eligendi.
+        statusKey: "02000694558326"
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
         notes: string
-        approvedAt: "2022-03-20T06:27:37Z"
-        dueAt: "2011-11-07T14:33:51Z"
-        createdAt: "1973-08-01T23:13:14Z"
-        updatedAt: "1971-06-04T09:36:33Z"
-        deletedAt: "2022-07-22T19:51:06Z"
+        approvedAt: "1990-10-18T23:31:28Z"
+        dueAt: "2009-01-09T00:20:37Z"
+        createdAt: "1977-05-07T06:09:53Z"
+        updatedAt: "1996-08-01T10:35:17Z"
+        deletedAt: "2015-04-02T18:46:47Z"
     Document:
       title: Document
       properties:
@@ -11298,16 +12255,16 @@ components:
           nullable: false
           format: string
       example:
-        key: "09000497639014"
+        key: "06000545500004"
         entityKeys: "[]"
         name: string
         url: string
         type: string
         contentType: string
-        description: Incidunt maiores sit qui vel non odio.
+        description: Vel deserunt quo magni.
         notes: string
-        createdAt: "1980-02-25T13:12:32Z"
-        updatedAt: "2008-01-26T02:05:05Z"
+        createdAt: "2023-09-02T08:12:12Z"
+        updatedAt: "1998-05-23T04:09:45Z"
     Inventory:
       title: Inventory
       properties:
@@ -11342,12 +12299,82 @@ components:
           nullable: false
           format: string
       example:
-        code: "76226717"
+        code: "47213623"
         name: string
         quantity: 10
         unitCost: 10
-        locationKey: "06000389610351"
-        updatedAt: "1997-01-29T17:49:40Z"
+        locationKey: "00000174599876"
+        updatedAt: "1976-11-03T13:16:47Z"
+    Status:
+      title: Status
+      properties:
+        key:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        organizationKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        parentKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        name:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        code:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        subCode:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        scope:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        isActive:
+          type: boolean
+          description: Description
+          nullable: false
+          format: boolean
+        createdAt:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        updatedAt:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        deletedAt:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+      example:
+        key: "01000367532630"
+        organizationKey: "06000699701081"
+        parentKey: "08000380956839"
+        name: string
+        code: "35658399"
+        subCode: string
+        scope: string
+        isActive: string
+        createdAt: "1983-08-14T10:28:21Z"
+        updatedAt: "1982-06-22T20:03:42Z"
+        deletedAt: "2001-03-12T00:52:41Z"
     Tax:
       title: Tax
       properties:
@@ -11397,15 +12424,15 @@ components:
           nullable: false
           format: string
       example:
-        key: "03000806521190"
-        organizationKey: "02000352110716"
+        key: "02000164042932"
+        organizationKey: "06000232870868"
         name: string
         type: string
         taxPercentage: string
         isActive: string
-        createdAt: "2000-01-17T08:43:57Z"
-        updatedAt: "2006-01-14T09:05:53Z"
-        deletedAt: "1994-02-11T23:32:14Z"
+        createdAt: "1980-10-23T07:35:14Z"
+        updatedAt: "2011-05-31T22:22:51Z"
+        deletedAt: "2015-09-20T04:46:13Z"
     Currency:
       title: Currency
       properties:
@@ -11450,14 +12477,14 @@ components:
           nullable: false
           format: string
       example:
-        key: "00000760121464"
+        key: "04000470670225"
         name: string
-        code: "94348743"
+        code: "35875864"
         isBase: string
         isActive: string
-        createdAt: "1992-10-31T12:14:45Z"
-        updatedAt: "2020-10-21T18:34:41Z"
-        deletedAt: "1998-04-15T06:48:31Z"
+        createdAt: "1990-10-17T11:08:48Z"
+        updatedAt: "1979-04-12T19:37:46Z"
+        deletedAt: "2007-03-16T10:23:17Z"
     ExchangeRate:
       title: ExchangeRate
       properties:
@@ -11487,11 +12514,11 @@ components:
           nullable: false
           format: string
       example:
-        key: "06000921402004"
-        currencyKey: "04000728845063"
-        baseCurrencyKey: "03000310603553"
+        key: "04000835176051"
+        currencyKey: "04000342239926"
+        baseCurrencyKey: "02000909611477"
         rate: string
-        createdAt: "1975-07-10T19:35:33Z"
+        createdAt: "1996-09-17T16:12:32Z"
     Product:
       title: Product
       properties:
@@ -11616,18 +12643,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "04000348274660"
-        groupKey: "03000558719662"
-        uomKey: "01000923064564"
-        code: "14555015"
+        key: "07000513290261"
+        groupKey: "00000928381524"
+        uomKey: "06000201862204"
+        code: "27824535"
         name: string
-        description: Ipsam enim aut iure voluptas sit itaque quo.
+        description: Est quod et accusamus ab excepturi.
         type: string
         isTaxable: string
         taxKeys: "[]"
         status: string
         price: string
-        currencyKey: "01000065791183"
+        currencyKey: "09000686795580"
         quantity: string
         sku: string
         upc: string
@@ -11637,9 +12664,9 @@ components:
         reorderLevel: string
         dimensions: string
         supplyOptions: "[]"
-        createdAt: "1991-01-14T16:42:32Z"
-        updatedAt: "2002-12-03T17:06:42Z"
-        deletedAt: "1976-08-23T21:41:55Z"
+        createdAt: "2009-01-20T11:45:39Z"
+        updatedAt: "2004-06-21T15:58:52Z"
+        deletedAt: "2015-10-10T21:54:04Z"
     SalesOrder:
       title: SalesOrder
       properties:
@@ -11719,21 +12746,21 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000631667991"
-        customerKey: "05000653815955"
-        userKey: "08000976115957"
-        code: "19614427"
+        key: "05000929734954"
+        customerKey: "09000693039861"
+        userKey: "00000636856593"
+        code: "44266820"
         orderNumber: string
         date: string
-        statusKey: "05000238081179"
-        shipmentDate: "1995-02-17T05:12:35Z"
+        statusKey: "02000491840394"
+        shipmentDate: "1996-08-31T18:04:11Z"
         contactPerson: string
         lines: "[]"
-        currencyKey: "09000192529372"
+        currencyKey: "04000626984828"
         currencyRate: string
-        createdAt: "2001-09-13T03:46:01Z"
-        updatedAt: "1988-06-17T22:37:25Z"
-        deletedAt: "2008-11-15T12:56:29Z"
+        createdAt: "1990-11-21T20:47:22Z"
+        updatedAt: "1987-02-19T00:08:00Z"
+        deletedAt: "2012-10-15T01:32:12Z"
     Project:
       title: Project
       properties:
@@ -11783,15 +12810,15 @@ components:
           nullable: false
           format: string
       example:
-        key: "09000972019064"
-        siteKey: "04000534587673"
+        key: "07000351965747"
+        siteKey: "09000266747762"
         name: string
-        accountKey: "06000275499043"
-        statusKey: "00000595336763"
+        accountKey: "00000358470687"
+        statusKey: "00000962011285"
         budget: string
-        createdAt: "2009-02-05T16:12:52Z"
-        updatedAt: "1979-02-03T20:41:54Z"
-        deletedAt: "2021-10-18T18:29:23Z"
+        createdAt: "2022-02-14T14:27:33Z"
+        updatedAt: "1992-12-26T06:52:06Z"
+        deletedAt: "1997-12-18T23:15:34Z"
     Invoice:
       title: Invoice
       properties:
@@ -11861,19 +12888,19 @@ components:
           nullable: false
           format: string
       example:
-        key: "06000785923451"
+        key: "09000679177691"
         invoiceNumber: string
-        vendorKey: "09000987302026"
-        poKey: "00000018227628"
-        statusKey: "07000819774378"
+        vendorKey: "05000786462850"
+        poKey: "08000275821360"
+        statusKey: "04000010747079"
         lineItems: "[]"
-        invoiceDate: "2018-10-13T06:09:28Z"
-        dueDate: "1993-10-30T14:46:24Z"
-        receivedDate: "2007-07-28T21:07:28Z"
-        currencyKey: "00000238789466"
-        createdAt: "2010-01-12T07:20:09Z"
-        updatedAt: "2017-03-21T22:51:44Z"
-        deletedAt: "2005-05-06T03:14:56Z"
+        invoiceDate: "1980-06-05T20:55:30Z"
+        dueDate: "2012-06-08T22:03:36Z"
+        receivedDate: "1994-08-26T21:21:33Z"
+        currencyKey: "00000333618199"
+        createdAt: "2006-10-21T11:37:40Z"
+        updatedAt: "1996-07-02T05:50:38Z"
+        deletedAt: "2004-03-19T11:20:40Z"
     Receipt:
       title: Receipt
       type: object
@@ -11982,25 +13009,25 @@ components:
           nullable: false
           format: string
       example:
-        key: "09000874906792"
-        siteKey: "09000136881534"
-        vendorKey: "03000933036962"
-        poKey: "04000624342311"
-        code: "87801828"
+        key: "09000881382489"
+        siteKey: "06000752051409"
+        vendorKey: "05000567289422"
+        poKey: "08000430169174"
+        code: "21469510"
         orderNo: string
-        orderDate: "2011-04-21T19:26:10Z"
-        title: Voluptatem expedita ipsum doloremque nam aut id.
-        description: Fugiat voluptatum non aut qui enim tempora porro.
-        completedAt: "1972-12-28T17:51:59Z"
+        orderDate: "1992-07-17T02:31:54Z"
+        title: Quia dolor rem qui quae quos voluptate et.
+        description: Fuga enim minima molestiae saepe qui dolor.
+        completedAt: "2005-05-27T21:51:38Z"
         shippingMethod: string
         notes: string
-        currencyKey: "09000851492553"
+        currencyKey: "02000514939587"
         totalNetValue: string
         totalTaxValue: string
         totalGrossValue: string
         lineItems: "[]"
-        createdAt: "1980-12-27T10:25:22Z"
-        updatedAt: "1997-10-01T23:57:27Z"
+        createdAt: "1981-11-15T12:17:32Z"
+        updatedAt: "2016-12-15T05:08:46Z"
     RequestForQuotation:
       title: RequestForQuotation
       type: object
@@ -12051,14 +13078,14 @@ components:
           nullable: false
           format: string
       example:
-        key: "08000838302984"
-        parentKey: "09000546078960"
-        code: "35374862"
+        key: "00000928101536"
+        parentKey: "01000307329850"
+        code: "60543974"
         name: string
-        description: Est qui dicta quod omnis ea vel ducimus.
-        updatedAt: "2008-11-21T20:37:43Z"
-        createdAt: "1987-04-19T08:49:17Z"
-        deletedAt: "1996-02-25T20:06:17Z"
+        description: Aut ea sed cupiditate aut.
+        updatedAt: "1998-06-30T14:16:55Z"
+        createdAt: "2023-06-04T21:57:29Z"
+        deletedAt: "2022-07-08T01:51:37Z"
     StockTransfer:
       title: StockTransfer
       properties:
@@ -12123,18 +13150,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "06000139986263"
-        fromLocationKey: "06000699427110"
-        toLocationKey: "09000101866821"
-        fromStoreroomKey: "01000430473497"
-        toStoreroomKey: "01000786996666"
-        code: "26053202"
+        key: "07000252681948"
+        fromLocationKey: "03000797897680"
+        toLocationKey: "04000565548573"
+        fromStoreroomKey: "02000919632767"
+        toStoreroomKey: "04000353248189"
+        code: "22337184"
         date: string
         lineItems: string
         orderNumber: string
-        createdAt: "1972-12-23T20:28:13Z"
-        updatedAt: "2007-08-24T05:28:05Z"
-        deletedAt: "1992-08-24T23:43:57Z"
+        createdAt: "2000-06-27T22:32:29Z"
+        updatedAt: "1975-03-05T22:51:58Z"
+        deletedAt: "1979-07-24T02:45:12Z"
     StockAdjustment:
       title: StockAdjustment
       properties:
@@ -12204,19 +13231,19 @@ components:
           nullable: false
           format: string
       example:
-        key: "04000764750642"
-        locationKey: "08000869772816"
-        storeroomKey: "01000603461283"
-        userKey: "02000692843049"
+        key: "02000052398020"
+        locationKey: "09000065310408"
+        storeroomKey: "02000226365066"
+        userKey: "08000637532054"
         date: string
         reason: string
         lineItems: "[]"
         adjustmentNumber: string
         total: string
         type: string
-        createdAt: "2006-08-15T11:35:14Z"
-        updatedAt: "2018-05-24T11:52:45Z"
-        deletedAt: "2012-06-02T05:31:35Z"
+        createdAt: "1984-08-17T07:07:41Z"
+        updatedAt: "2000-08-22T14:26:45Z"
+        deletedAt: "2000-09-29T08:39:55Z"
     ShipmentOrder:
       title: ShipmentOrder
       properties:
@@ -12301,22 +13328,22 @@ components:
           nullable: false
           format: string
       example:
-        key: "00000576223901"
-        userKey: "03000941757770"
-        customerKey: "07000043975975"
-        vendorKey: "00000589794316"
+        key: "04000838995549"
+        userKey: "06000627022682"
+        customerKey: "01000887383287"
+        vendorKey: "06000611323039"
         orderNumber: string
         shipmentNumber: string
         date: string
-        statusKey: "05000223527910"
+        statusKey: "02000804593157"
         lineItems: "[]"
         destinationAddress: string
         carrierName: string
         shippingMethod: string
         notes: string
-        createdAt: "2013-12-05T22:04:12Z"
-        updatedAt: "1979-06-11T08:11:46Z"
-        deletedAt: "1981-01-29T03:02:05Z"
+        createdAt: "1971-01-14T08:52:53Z"
+        updatedAt: "1974-07-07T17:05:56Z"
+        deletedAt: "2021-06-09T09:47:57Z"
     ShipmentOrderDelivered: []
     Integration:
       title: Integration
