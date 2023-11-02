@@ -1248,7 +1248,7 @@ paths:
               properties:
                 status:
                   type: string
-                  nullable: false
+                  nullable: true
                   format: string
               example:
                 status: string
@@ -1425,26 +1425,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "00000353153069"
-                vendorKey: "01000219338589"
-                code: "89324516"
+                siteKey: "05000841650026"
+                vendorKey: "04000132478300"
+                code: "81820603"
                 orderNo: string
-                orderDate: "2012-05-03T11:20:38Z"
-                statusKey: "05000970842835"
-                title: Omnis eligendi non numquam.
-                description: Sint dolore accusamus at fugiat minus.
-                dueAt: "1993-09-15T11:37:00Z"
-                approvedAt: "1998-08-10T02:05:02Z"
-                completedAt: "1995-05-17T07:13:24Z"
+                orderDate: "1986-12-23T23:16:50Z"
+                statusKey: "02000896544745"
+                title: Dolorum ut dignissimos cumque animi placeat.
+                description: Cumque quia est provident odit vel.
+                dueAt: "1979-12-13T05:05:24Z"
+                approvedAt: "2017-08-31T11:00:18Z"
+                completedAt: "2017-06-30T02:39:22Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "06000267135545"
+                currencyKey: "03000557636698"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "1981-06-10T18:01:35Z"
-                updatedAt: "1970-05-24T19:16:29Z"
+                createdAt: "1977-06-05T19:04:51Z"
+                updatedAt: "1989-07-18T15:10:28Z"
   /api/eam/purchase-orders/{key}:
     get:
       description: Get a PurchaseOrder
@@ -1574,26 +1574,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "02000632323927"
-                vendorKey: "00000394399556"
-                code: "10574300"
+                siteKey: "01000578138817"
+                vendorKey: "03000143261227"
+                code: "91491732"
                 orderNo: string
-                orderDate: "1989-06-24T08:42:36Z"
-                statusKey: "00000212680992"
-                title: Porro voluptas asperiores excepturi modi vero.
-                description: Numquam qui quo in vitae ipsum rerum nihil.
-                dueAt: "2006-12-12T05:00:09Z"
-                approvedAt: "2007-12-15T09:24:20Z"
-                completedAt: "2001-04-03T20:21:52Z"
+                orderDate: "1987-04-18T03:12:41Z"
+                statusKey: "07000570332750"
+                title: Sit qui optio et ad rerum et.
+                description: Iure non magni harum sit.
+                dueAt: "1986-06-17T12:31:56Z"
+                approvedAt: "1976-08-11T18:46:05Z"
+                completedAt: "2010-12-10T12:37:05Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "02000133788480"
+                currencyKey: "09000084558499"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "2000-04-28T10:30:23Z"
-                updatedAt: "2022-09-16T17:21:46Z"
+                createdAt: "1972-10-27T19:01:20Z"
+                updatedAt: "1985-11-14T20:34:24Z"
   /api/eam/purchase-orders.line-items:
     get:
       description: List LineItems
@@ -2001,6 +2001,124 @@ paths:
             application/json:
               schema:
                 type: object
+    put:
+      description: ""
+      summary: ""
+      parameters:
+        - name: key
+          description: string|required
+          in: path
+          style: simple
+          required: true
+          schema:
+            type: string
+      tags:
+        - EAM/CMMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Asset"
+      requestBody:
+        description: Request body
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                siteKey:
+                  type: string
+                  nullable: true
+                  format: string
+                parentKey:
+                  type: string
+                  nullable: true
+                  format: string
+                vendorKey:
+                  type: string
+                  nullable: true
+                  format: string
+                modelKey:
+                  type: string
+                  nullable: true
+                  format: string
+                teamKey:
+                  type: string
+                  nullable: true
+                  format: string
+                locationKey:
+                  type: string
+                  nullable: true
+                  format: string
+                accountKey:
+                  type: string
+                  nullable: true
+                  format: string
+                name:
+                  type: string
+                  nullable: true
+                  format: string
+                description:
+                  type: string
+                  nullable: true
+                  format: string
+                notes:
+                  type: string
+                  nullable: true
+                  format: string
+                categoryName:
+                  type: string
+                  nullable: true
+                  format: string
+                criticality:
+                  type: string
+                  nullable: true
+                  format: string
+                isActive:
+                  type: boolean
+                  nullable: true
+                  format: boolean
+                manufacturerName:
+                  type: string
+                  nullable: true
+                  format: string
+                modelName:
+                  type: string
+                  nullable: true
+                  format: string
+                serialNumber:
+                  type: string
+                  nullable: true
+                  format: string
+                activatedAt:
+                  type: string
+                  nullable: true
+                  format: string
+                deactivatedAt:
+                  type: string
+                  nullable: true
+                  format: string
+              example:
+                siteKey: "07000942015389"
+                parentKey: "08000730928786"
+                vendorKey: "03000444157019"
+                modelKey: "04000470398215"
+                teamKey: "08000531687108"
+                locationKey: "06000216721022"
+                accountKey: "05000698100443"
+                name: string
+                description: Vel mollitia vel et.
+                notes: string
+                categoryName: string
+                criticality: string
+                isActive: string
+                manufacturerName: string
+                modelName: string
+                serialNumber: string
+                activatedAt: "2013-11-15T22:25:19Z"
+                deactivatedAt: "1978-09-12T21:14:20Z"
   /api/eam/assets-downtime:
     get:
       description: List AssetDownTimes
@@ -2622,7 +2740,7 @@ paths:
               properties:
                 status:
                   type: string
-                  nullable: false
+                  nullable: true
                   format: string
               example:
                 status: string
@@ -2843,22 +2961,22 @@ paths:
                   nullable: true
                   format: string
               example:
-                title: Fugit hic consequatur officia cupiditate placeat.
-                statusKey: "09000964386413"
-                scheduledAt: "1989-10-18T14:46:31Z"
-                siteKey: "09000669728865"
-                locationKey: "06000258917349"
-                storeroomKey: "00000132951832"
-                assetKey: "04000809186967"
-                assetDowntimeKey: "05000665738670"
-                serviceRequestKey: "04000522959054"
-                pmKey: "05000597927398"
-                teamKey: "06000156625360"
-                laborAssignedKey: "07000681185221"
-                accountKey: "06000459195664"
-                userApprovedKey: "07000766769845"
-                code: "96905258"
-                description: Harum culpa eos qui rerum aut harum.
+                title: Beatae temporibus molestiae sapiente quia earum.
+                statusKey: "08000207202305"
+                scheduledAt: "1988-02-29T23:48:46Z"
+                siteKey: "00000238118140"
+                locationKey: "03000137493976"
+                storeroomKey: "08000412524182"
+                assetKey: "00000041784730"
+                assetDowntimeKey: "05000732478431"
+                serviceRequestKey: "07000879187559"
+                pmKey: "02000516613207"
+                teamKey: "02000875796809"
+                laborAssignedKey: "06000790293825"
+                accountKey: "09000542619478"
+                userApprovedKey: "02000313477316"
+                code: "19148120"
+                description: Labore dolorem quo iure sint et aut tempore.
                 instructions: string
                 severity: string
                 estimatedTime: 10
@@ -2867,13 +2985,13 @@ paths:
                 categoryName: string
                 documents: "[]"
                 notes: string
-                approvedAt: "2002-11-09T08:48:40Z"
-                dueAt: "1990-02-05T09:16:04Z"
-                completedAt: "2018-09-03T05:32:29Z"
+                approvedAt: "1981-11-30T14:03:01Z"
+                dueAt: "2002-03-26T14:54:11Z"
+                completedAt: "1990-07-20T05:12:48Z"
                 completionRemarks: string
-                createdAt: "2019-04-02T12:34:43Z"
-                updatedAt: "1991-09-11T10:32:35Z"
-                deletedAt: "2017-05-09T23:14:53Z"
+                createdAt: "1975-11-11T05:08:00Z"
+                updatedAt: "1984-12-11T11:33:14Z"
+                deletedAt: "2023-06-08T14:57:52Z"
   /api/eam/work-orders/{key}:
     get:
       description: Get a WorkOrder
@@ -3047,22 +3165,22 @@ paths:
                   nullable: true
                   format: string
               example:
-                title: Ipsam alias in et sunt facilis.
-                statusKey: "04000899285891"
-                scheduledAt: "2001-10-29T09:20:09Z"
-                siteKey: "01000106389299"
-                locationKey: "04000411658446"
-                storeroomKey: "00000018217519"
-                assetKey: "02000807762241"
-                assetDowntimeKey: "09000424876291"
-                serviceRequestKey: "07000271990311"
-                pmKey: "06000386207616"
-                teamKey: "08000693828972"
-                laborAssignedKey: "09000371920429"
-                accountKey: "06000404042067"
-                userApprovedKey: "09000312668696"
-                code: "54010840"
-                description: Porro est optio illum qui harum.
+                title: Et ipsam qui quo consequatur aut.
+                statusKey: "06000132150799"
+                scheduledAt: "2014-05-18T04:23:40Z"
+                siteKey: "06000002395971"
+                locationKey: "02000926212384"
+                storeroomKey: "00000599834706"
+                assetKey: "07000508805212"
+                assetDowntimeKey: "08000977350735"
+                serviceRequestKey: "03000089070750"
+                pmKey: "02000802972721"
+                teamKey: "06000698076580"
+                laborAssignedKey: "02000502449423"
+                accountKey: "05000472708381"
+                userApprovedKey: "04000702919731"
+                code: "67040476"
+                description: Tempore dolore est voluptatem eum et.
                 instructions: string
                 severity: string
                 estimatedTime: 10
@@ -3071,13 +3189,13 @@ paths:
                 categoryName: string
                 documents: "[]"
                 notes: string
-                approvedAt: "1977-04-23T22:16:35Z"
-                dueAt: "2001-09-03T10:27:32Z"
-                completedAt: "1978-10-14T20:36:35Z"
+                approvedAt: "1989-07-11T13:25:53Z"
+                dueAt: "1973-04-09T09:10:18Z"
+                completedAt: "2005-03-30T09:23:57Z"
                 completionRemarks: string
-                createdAt: "2004-01-12T14:05:03Z"
-                updatedAt: "1978-11-18T12:30:48Z"
-                deletedAt: "1987-08-06T04:53:26Z"
+                createdAt: "2001-03-18T13:22:48Z"
+                updatedAt: "2018-07-28T19:59:57Z"
+                deletedAt: "1977-06-11T13:07:36Z"
   /api/eam/service-requests:
     get:
       description: List ServiceRequests
@@ -5476,7 +5594,7 @@ paths:
               properties:
                 status:
                   type: string
-                  nullable: false
+                  nullable: true
                   format: string
               example:
                 status: string
@@ -5653,26 +5771,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "04000063632914"
-                vendorKey: "02000007583322"
-                code: "05167425"
+                siteKey: "04000553002966"
+                vendorKey: "02000369077642"
+                code: "86026819"
                 orderNo: string
-                orderDate: "2002-01-15T22:35:02Z"
-                statusKey: "02000211638181"
-                title: Ipsa quia praesentium ipsam qui consequuntur ut.
-                description: Dolorum ea minus quod quia rerum aut quibusdam.
-                dueAt: "2001-02-15T10:52:27Z"
-                approvedAt: "1976-10-05T04:03:33Z"
-                completedAt: "2013-02-20T09:13:29Z"
+                orderDate: "1979-11-02T19:01:12Z"
+                statusKey: "01000444896383"
+                title: Harum modi aut doloremque ratione in.
+                description: Quia ut doloribus ut qui.
+                dueAt: "2001-07-26T21:41:53Z"
+                approvedAt: "2000-06-16T19:43:04Z"
+                completedAt: "1989-05-26T01:35:45Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "03000872122774"
+                currencyKey: "08000198135792"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "1979-11-25T16:45:44Z"
-                updatedAt: "1994-02-27T00:25:50Z"
+                createdAt: "1986-12-10T12:30:18Z"
+                updatedAt: "1991-12-22T00:34:51Z"
   /api/erp/purchase-orders/{key}:
     get:
       description: Get a PurchaseOrder
@@ -5802,26 +5920,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "06000323666675"
-                vendorKey: "03000566759353"
-                code: "34647486"
+                siteKey: "08000877379538"
+                vendorKey: "06000020138792"
+                code: "90355608"
                 orderNo: string
-                orderDate: "1971-10-17T18:58:51Z"
-                statusKey: "04000985153684"
-                title: Officia in vero esse praesentium.
-                description: Sit neque quos eos placeat fugiat aut.
-                dueAt: "1994-07-11T16:52:41Z"
-                approvedAt: "2003-12-14T06:41:00Z"
-                completedAt: "2018-02-24T10:26:34Z"
+                orderDate: "1993-12-12T21:16:37Z"
+                statusKey: "03000017506430"
+                title: Dolore amet consequatur consequuntur nihil optio.
+                description: Ipsa architecto magni doloremque omnis sit.
+                dueAt: "1976-12-23T07:17:40Z"
+                approvedAt: "2022-11-19T22:44:11Z"
+                completedAt: "2000-10-07T17:18:49Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "01000532371229"
+                currencyKey: "04000774149499"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "2000-07-28T03:21:45Z"
-                updatedAt: "2022-09-16T21:28:55Z"
+                createdAt: "2004-05-28T12:09:59Z"
+                updatedAt: "1979-03-06T20:50:51Z"
   /api/erp/purchase-orders.line-items:
     get:
       description: List LineItems
@@ -8585,7 +8703,7 @@ paths:
               properties:
                 status:
                   type: string
-                  nullable: false
+                  nullable: true
                   format: string
               example:
                 status: string
@@ -8762,26 +8880,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "00000057058114"
-                vendorKey: "06000755424210"
-                code: "74733736"
+                siteKey: "03000166896942"
+                vendorKey: "00000559247121"
+                code: "17213554"
                 orderNo: string
-                orderDate: "1995-03-18T18:26:52Z"
-                statusKey: "04000359727125"
-                title: Quasi quisquam explicabo reprehenderit quos sint.
-                description: Saepe cumque ut aut qui quis est deleniti.
-                dueAt: "1985-08-08T08:28:19Z"
-                approvedAt: "2023-06-03T23:46:03Z"
-                completedAt: "2016-12-11T01:20:43Z"
+                orderDate: "2011-01-21T13:40:40Z"
+                statusKey: "06000808520471"
+                title: Hic impedit est voluptas beatae incidunt modi.
+                description: Ut necessitatibus velit animi ullam nobis.
+                dueAt: "1982-07-09T14:09:34Z"
+                approvedAt: "2023-03-24T05:15:24Z"
+                completedAt: "1996-07-31T02:26:09Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "05000954396614"
+                currencyKey: "02000484580614"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "2005-03-26T13:46:34Z"
-                updatedAt: "2014-12-09T13:59:18Z"
+                createdAt: "2009-03-23T21:02:36Z"
+                updatedAt: "1979-04-21T02:15:25Z"
   /api/wms/purchase-orders/{key}:
     get:
       description: Get a PurchaseOrder
@@ -8911,26 +9029,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "02000555378425"
-                vendorKey: "03000823068117"
-                code: "34574096"
+                siteKey: "09000029753580"
+                vendorKey: "09000535534560"
+                code: "94160819"
                 orderNo: string
-                orderDate: "2002-10-18T07:49:13Z"
-                statusKey: "03000152736386"
-                title: Omnis et voluptas et aperiam aut.
-                description: Unde sit hic est qui atque exercitationem.
-                dueAt: "2009-03-03T12:53:09Z"
-                approvedAt: "1986-08-13T14:26:33Z"
-                completedAt: "2008-04-02T04:07:53Z"
+                orderDate: "1985-02-03T15:55:07Z"
+                statusKey: "07000551640718"
+                title: Est dolorem voluptatem et dolorem minus.
+                description: Est itaque et animi sit ut deleniti magnam.
+                dueAt: "2007-01-13T16:41:41Z"
+                approvedAt: "1970-02-19T12:32:08Z"
+                completedAt: "2015-02-10T08:51:32Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "09000586965290"
+                currencyKey: "01000226409779"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "1982-05-04T19:13:55Z"
-                updatedAt: "1995-01-09T12:50:12Z"
+                createdAt: "1978-06-02T02:06:47Z"
+                updatedAt: "2022-11-12T11:29:50Z"
   /api/wms/purchase-orders.line-items:
     get:
       description: List LineItems
@@ -9831,17 +9949,17 @@ components:
           nullable: false
           format: string
       example:
-        key: "05000200533784"
-        currencyKey: "04000554135486"
+        key: "01000027032989"
+        currencyKey: "03000559470094"
         name: string
-        code: "06958824"
-        description: Occaecati velit eveniet nemo vel velit.
+        code: "52879166"
+        description: Ut corrupti eius tenetur aut quasi non.
         addresses: "[]"
         billingAddress: string
         contacts: "[]"
-        createdAt: "2003-02-02T08:32:42Z"
-        updatedAt: "2007-12-28T02:42:55Z"
-        deletedAt: "1979-12-13T06:17:27Z"
+        createdAt: "1973-03-20T17:54:46Z"
+        updatedAt: "1993-03-10T22:38:13Z"
+        deletedAt: "1973-11-08T08:31:37Z"
     Site:
       title: Site
       properties:
@@ -9906,18 +10024,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "04000116501485"
-        organizationKey: "00000016111773"
-        customerKey: "00000604791888"
+        key: "05000003173780"
+        organizationKey: "08000746922192"
+        customerKey: "02000841209333"
         name: string
         lat: string
         lng: string
         address: string
         properties: string
         notes: string
-        createdAt: "2019-01-04T19:07:31Z"
-        updatedAt: "1987-08-03T17:35:47Z"
-        deletedAt: "2015-06-24T10:11:10Z"
+        createdAt: "2019-02-20T13:24:42Z"
+        updatedAt: "2018-09-06T17:52:42Z"
+        deletedAt: "1987-07-16T19:36:27Z"
     Location:
       title: Location
       properties:
@@ -9977,17 +10095,17 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000150333704"
-        siteKey: "09000916434339"
-        parentKey: "05000861741634"
+        key: "04000519705464"
+        siteKey: "01000834538940"
+        parentKey: "07000178746629"
         name: string
-        description: Quis expedita officia illum fugiat nisi.
-        code: "67782253"
+        description: Magnam recusandae voluptatem nesciunt tempora.
+        code: "35230205"
         type: string
         address: string
-        createdAt: "2023-08-14T23:39:53Z"
-        updatedAt: "1999-03-22T22:34:28Z"
-        deletedAt: "2004-11-09T04:03:15Z"
+        createdAt: "1988-10-19T07:07:24Z"
+        updatedAt: "1999-01-19T11:59:17Z"
+        deletedAt: "1998-02-08T13:08:02Z"
     Storeroom:
       title: Storeroom
       properties:
@@ -10057,19 +10175,19 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000764492783"
-        parentKey: "02000985913294"
-        siteKey: "05000371483703"
-        locationKey: "04000806086577"
-        userManagerKey: "03000512539560"
-        code: "26529608"
+        key: "00000577821228"
+        parentKey: "03000569788174"
+        siteKey: "08000709731148"
+        locationKey: "05000763485199"
+        userManagerKey: "04000273616947"
+        code: "93154680"
         name: string
         type: string
-        description: Ea fugit animi labore et molestiae ea non.
+        description: Et et neque qui sequi.
         priority: string
-        createdAt: "1995-06-10T03:44:58Z"
-        updatedAt: "2002-04-04T13:59:26Z"
-        deletedAt: "1993-09-13T08:32:46Z"
+        createdAt: "2015-02-13T20:52:29Z"
+        updatedAt: "2016-04-05T20:07:13Z"
+        deletedAt: "1987-11-07T11:41:53Z"
     Account:
       title: Account
       properties:
@@ -10109,13 +10227,13 @@ components:
           nullable: false
           format: string
       example:
-        key: "04000988108258"
-        code: "50773602"
+        key: "00000082413560"
+        code: "49081121"
         name: string
-        description: Et sint qui qui voluptatem quasi et voluptatem.
-        createdAt: "1977-07-10T16:01:48Z"
-        updatedAt: "1982-10-02T08:41:40Z"
-        deletedAt: "2002-09-21T09:49:14Z"
+        description: Voluptatibus voluptatem quas pariatur.
+        createdAt: "1978-12-01T16:26:11Z"
+        updatedAt: "1993-03-15T13:41:19Z"
+        deletedAt: "1991-12-04T00:50:19Z"
     Team:
       title: Team
       properties:
@@ -10160,14 +10278,14 @@ components:
           nullable: false
           format: string
       example:
-        key: "08000281793882"
-        accountKey: "07000673896892"
-        code: "51822026"
+        key: "04000401676298"
+        accountKey: "02000349122938"
+        code: "16676534"
         name: string
-        description: Natus numquam quos est sunt minus aliquid.
-        createdAt: "1970-07-02T11:54:20Z"
-        updatedAt: "1987-03-07T05:58:33Z"
-        deletedAt: "1999-10-21T17:56:56Z"
+        description: Accusamus non quo aut nisi nesciunt.
+        createdAt: "1983-01-08T21:55:49Z"
+        updatedAt: "1982-02-13T09:41:02Z"
+        deletedAt: "2013-07-23T09:12:30Z"
     Labor:
       title: Labor
       properties:
@@ -10252,22 +10370,22 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000945662224"
+        key: "03000877570101"
         siteKeys: "[]"
         locationKeys: "[]"
-        accountKey: "04000468420515"
-        teamKey: "00000062956214"
+        accountKey: "01000865465634"
+        teamKey: "03000849893008"
         userId: string
         name: string
         roleName: string
-        description: Architecto ipsam est recusandae explicabo.
+        description: Recusandae maiores et harum voluptatem id.
         note: string
         isActive: string
         cost: string
         currency: string
-        createdAt: "1998-06-29T01:18:35Z"
-        updatedAt: "1995-04-25T22:37:11Z"
-        deletedAt: "2018-02-13T00:22:52Z"
+        createdAt: "2014-08-20T21:04:33Z"
+        updatedAt: "1991-05-25T08:26:08Z"
+        deletedAt: "1971-07-11T17:43:12Z"
     User:
       title: User
       properties:
@@ -10332,18 +10450,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "01000666167032"
-        organizationKey: "06000699742349"
+        key: "09000281677215"
+        organizationKey: "07000077460711"
         siteKeys: "[]"
         locationKeys: "[]"
         name: string
         roleName: string
-        description: Hic earum saepe qui iste.
+        description: Est voluptates excepturi molestiae voluptatem.
         notes: string
         isActive: string
-        createdAt: "2007-12-03T06:21:24Z"
-        updatedAt: "2003-06-19T07:45:17Z"
-        deletedAt: "1992-07-12T18:19:15Z"
+        createdAt: "2010-02-25T10:15:58Z"
+        updatedAt: "1998-11-07T10:16:37Z"
+        deletedAt: "1975-08-15T23:53:23Z"
     UnitOfMeasure:
       title: UnitOfMeasure
       properties:
@@ -10368,9 +10486,9 @@ components:
           nullable: false
           format: boolean
       example:
-        key: "01000577549429"
+        key: "08000340683921"
         name: string
-        code: "12780723"
+        code: "90877667"
         isActive: string
     Company:
       title: Company
@@ -10431,17 +10549,17 @@ components:
           nullable: false
           format: string
       example:
-        key: "05000704603669"
-        parentKey: "07000307608781"
+        key: "03000553808850"
+        parentKey: "08000094452152"
         name: string
-        code: "29462285"
+        code: "00099820"
         addresses: "[]"
         billingAddress: "[]"
-        currencyKey: "08000635606517"
+        currencyKey: "06000687882467"
         notes: string
-        createdAt: "1982-04-24T13:37:42Z"
-        updatedAt: "2003-03-01T11:38:05Z"
-        deletedAt: "2014-04-14T00:24:39Z"
+        createdAt: "2006-04-09T12:48:11Z"
+        updatedAt: "1980-08-02T12:45:42Z"
+        deletedAt: "2006-09-02T13:17:23Z"
     Vendor:
       title: Vendor
       properties:
@@ -10491,15 +10609,15 @@ components:
           nullable: false
           format: string
       example:
-        key: "05000852163085"
+        key: "02000532591520"
         name: string
-        code: "69355738"
+        code: "27368015"
         address: string
         currency: string
         notes: string
-        createdAt: "2000-07-30T07:06:01Z"
-        updatedAt: "2009-06-27T05:35:18Z"
-        deletedAt: "2008-02-14T21:44:36Z"
+        createdAt: "1988-04-13T23:26:50Z"
+        updatedAt: "2019-03-27T09:28:36Z"
+        deletedAt: "2006-01-28T00:16:11Z"
     Customer:
       title: Customer
       properties:
@@ -10564,18 +10682,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000740202973"
+        key: "01000541713821"
         name: string
-        code: "53142016"
+        code: "68169992"
         address: string
         notes: string
         isActive: string
         contactPerson: string
         paymentTerms: string
         currencyCode: string
-        createdAt: "2008-02-08T12:21:08Z"
-        updatedAt: "1973-09-28T09:49:31Z"
-        deletedAt: "1982-11-13T09:53:25Z"
+        createdAt: "1989-07-11T07:56:22Z"
+        updatedAt: "1992-05-08T02:21:53Z"
+        deletedAt: "2013-09-10T12:48:58Z"
     Stock:
       title: Stock
       properties:
@@ -10645,19 +10763,19 @@ components:
           nullable: false
           format: string
       example:
-        key: "04000172924296"
-        productKey: "03000620835749"
-        materialKey: "00000040134024"
-        locationKey: "07000076536489"
-        storeroomKey: "01000483926363"
-        assetKey: "02000762830417"
+        key: "03000187905671"
+        productKey: "07000343945331"
+        materialKey: "02000582603323"
+        locationKey: "04000611874799"
+        storeroomKey: "09000857868126"
+        assetKey: "07000013431299"
         position: string
-        uomKey: "02000638133234"
+        uomKey: "04000347986854"
         quantity: string
-        expiresAt: "1991-05-01T20:21:28Z"
-        createdAt: "2018-09-25T01:17:31Z"
-        updatedAt: "2021-03-30T08:05:16Z"
-        deletedAt: "1979-02-09T05:20:48Z"
+        expiresAt: "1982-09-19T04:16:54Z"
+        createdAt: "1998-04-02T15:48:10Z"
+        updatedAt: "1971-10-30T21:59:07Z"
+        deletedAt: "1986-07-06T08:52:23Z"
     PurchaseOrderStatus:
       title: PurchaseOrderStatus
       properties:
@@ -10767,18 +10885,18 @@ components:
           nullable: false
           format: array
       example:
-        key: "00000727490335"
-        siteKey: "07000046453508"
-        orderDate: "1988-02-08T05:09:14Z"
-        vendorKey: "00000924869200"
+        key: "09000160668566"
+        siteKey: "07000338368271"
+        orderDate: "1984-01-20T20:32:42Z"
+        vendorKey: "06000881425037"
         orderNo: string
         status: string
         warehouseName: string
-        title: Voluptatem est reprehenderit ullam sapiente sed.
-        description: Esse id animi et autem quas cumque.
-        dueAt: "1998-06-02T06:39:06Z"
-        approvedAt: "1985-05-19T09:47:09Z"
-        completedAt: "1993-01-21T21:06:39Z"
+        title: Similique qui distinctio optio veniam.
+        description: Ducimus vel sint rerum enim.
+        dueAt: "1986-02-17T09:41:35Z"
+        approvedAt: "1984-04-27T13:46:39Z"
+        completedAt: "1983-12-18T12:58:07Z"
         shippingMethod: string
         terms: string
         notes: string
@@ -10786,7 +10904,7 @@ components:
         currency: string
         totalNetValue: string
         totalGrossValue: string
-        updatedAt: "2001-03-30T17:15:00Z"
+        updatedAt: "1970-02-08T03:02:37Z"
         lines: "[]"
     PurchaseOrder:
       title: PurchaseOrder
@@ -10897,18 +11015,18 @@ components:
           nullable: false
           format: array
       example:
-        key: "06000292522847"
-        siteKey: "01000547352063"
-        orderDate: "1979-03-07T20:04:23Z"
-        vendorKey: "03000440350990"
+        key: "02000554023473"
+        siteKey: "01000050778746"
+        orderDate: "1982-05-13T02:29:38Z"
+        vendorKey: "00000408430291"
         orderNo: string
         status: string
         warehouseName: string
-        title: Non harum et voluptatem porro nihil.
-        description: Harum et expedita non.
-        dueAt: "1975-11-25T21:45:37Z"
-        approvedAt: "2001-08-16T14:11:20Z"
-        completedAt: "1988-07-16T02:05:25Z"
+        title: Voluptatem autem labore ut ab omnis harum.
+        description: Sunt est est quam.
+        dueAt: "1977-02-04T03:31:19Z"
+        approvedAt: "2017-02-20T13:39:22Z"
+        completedAt: "2014-05-09T13:21:39Z"
         shippingMethod: string
         terms: string
         notes: string
@@ -10916,7 +11034,7 @@ components:
         currency: string
         totalNetValue: string
         totalGrossValue: string
-        updatedAt: "1993-05-20T16:37:31Z"
+        updatedAt: "2015-09-03T15:50:18Z"
         lines: "[]"
     PurchaseOrderCollection:
       type: array
@@ -11046,16 +11164,16 @@ components:
           nullable: false
           format: string
       example:
-        key: "06000684203730"
-        locationKey: "01000832441336"
-        assetKey: "02000653838839"
-        partKey: "03000519392732"
-        vendorKey: "05000277354851"
+        key: "02000876501971"
+        locationKey: "00000290793629"
+        assetKey: "02000999240353"
+        partKey: "08000321173179"
+        vendorKey: "01000004439570"
         lineNo: string
         warehouseName: string
-        code: "32385748"
-        title: Perferendis dicta quia enim et.
-        description: Tenetur quis laudantium vitae quam enim.
+        code: "31611831"
+        title: Tenetur repellat harum saepe aspernatur ut et.
+        description: Est sapiente libero nemo.
         lineRef: string
         quantity: string
         receivedQuantity: string
@@ -11067,9 +11185,9 @@ components:
         lineTotalValue: string
         lineTaxValue: string
         notes: string
-        dueAt: "1973-04-05T06:25:22Z"
-        createdAt: "1982-02-15T11:26:43Z"
-        updatedAt: "1976-12-14T15:38:57Z"
+        dueAt: "2009-08-27T11:36:27Z"
+        createdAt: "2003-07-28T03:31:20Z"
+        updatedAt: "1972-02-28T21:19:12Z"
     Part:
       title: Part
       properties:
@@ -11199,18 +11317,18 @@ components:
           nullable: false
           format: array
       example:
-        key: "09000363807873"
+        key: "04000650780196"
         siteKeys: "[]"
         parentKeys: "[]"
         assetKeys: "[]"
         vendorKeys: string
         documents: "[]"
-        accountKey: "01000763695117"
-        code: "79181372"
+        accountKey: "05000601823491"
+        code: "56490657"
         isAssembly: string
         partNumber: string
         name: string
-        description: Doloremque id perspiciatis magnam soluta.
+        description: Et quisquam ducimus et aperiam.
         notes: string
         criticality: string
         isActive: string
@@ -11219,9 +11337,9 @@ components:
         uom: string
         cost: string
         currency: string
-        createdAt: "1987-10-24T23:18:14Z"
-        updatedAt: "2012-11-07T18:42:55Z"
-        deletedAt: "1994-05-01T13:28:38Z"
+        createdAt: "1996-09-10T20:19:47Z"
+        updatedAt: "2019-04-01T22:15:58Z"
+        deletedAt: "2000-01-03T13:18:09Z"
         inventory: "[]"
         drawings: "[]"
     MaterialItem:
@@ -11323,25 +11441,25 @@ components:
           nullable: false
           format: string
       example:
-        key: "06000573114306"
-        materialKey: "03000900245177"
-        assemblyKey: "04000316792821"
-        assetKey: "02000194760657"
-        assetTemplateKey: "03000389579242"
-        workOrderKey: "08000969726183"
-        pmKey: "04000404361479"
-        productionOrderKey: "06000358252378"
+        key: "08000651612641"
+        materialKey: "05000077308490"
+        assemblyKey: "02000258570706"
+        assetKey: "04000145365560"
+        assetTemplateKey: "03000271835339"
+        workOrderKey: "03000401631142"
+        pmKey: "08000487775186"
+        productionOrderKey: "05000339422787"
         partNumber: string
         drawingNumber: string
         positionNumber: string
-        documentKey: "07000696839234"
+        documentKey: "06000178939840"
         name: string
-        uomKey: "07000525357528"
+        uomKey: "09000008674593"
         quantity: string
         requiredQuantity: string
-        createdAt: "2003-11-13T23:54:09Z"
-        updatedAt: "1991-08-14T01:33:25Z"
-        deletedAt: "2020-10-29T17:19:05Z"
+        createdAt: "1975-11-29T16:21:12Z"
+        updatedAt: "1997-05-08T03:59:28Z"
+        deletedAt: "2004-03-07T21:30:05Z"
     Asset:
       title: Asset
       properties:
@@ -11461,17 +11579,17 @@ components:
           nullable: false
           format: string
       example:
-        key: "06000111017791"
-        siteKey: "09000745335275"
-        parentKey: "00000511267728"
-        vendorKey: "07000035821686"
-        modelKey: "07000073820446"
-        teamKey: "07000616019250"
+        key: "07000003833168"
+        siteKey: "08000797817367"
+        parentKey: "02000716156589"
+        vendorKey: "04000374850689"
+        modelKey: "07000577536096"
+        teamKey: "06000150771144"
         documents: "[]"
-        locationKey: "02000501327140"
-        accountKey: "03000642270929"
+        locationKey: "00000517615306"
+        accountKey: "05000233656131"
         name: string
-        description: Dignissimos velit suscipit omnis aut.
+        description: Et ea molestias at voluptas.
         notes: string
         categoryName: string
         criticality: string
@@ -11479,11 +11597,11 @@ components:
         manufacturerName: string
         modelName: string
         serialNumber: string
-        activatedAt: "1985-05-22T00:52:58Z"
-        deactivatedAt: "1999-06-21T20:20:49Z"
-        createdAt: "2012-05-08T23:50:56Z"
-        updatedAt: "1977-03-10T09:40:24Z"
-        deletedAt: "1989-11-17T04:12:18Z"
+        activatedAt: "2000-02-18T10:35:11Z"
+        deactivatedAt: "2003-11-17T21:35:54Z"
+        createdAt: "1979-02-14T15:55:10Z"
+        updatedAt: "1984-06-09T14:19:27Z"
+        deletedAt: "1984-01-10T13:52:26Z"
     AssetDownTime:
       title: AssetDownTime
       properties:
@@ -11538,16 +11656,16 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000109622179"
-        assetKey: "01000204781507"
-        description: Est iste fugiat qui.
-        startedAt: "2014-07-21T01:29:53Z"
-        endedAt: "2011-02-09T15:33:06Z"
+        key: "02000184955929"
+        assetKey: "03000743385047"
+        description: Deleniti consectetur mollitia facere ad.
+        startedAt: "1999-12-16T19:13:42Z"
+        endedAt: "1973-12-11T05:27:07Z"
         categoryName: string
         severity: string
         notes: string
-        createdAt: "2020-09-09T15:28:08Z"
-        updatedAt: "2019-08-17T04:37:45Z"
+        createdAt: "2008-07-15T23:00:49Z"
+        updatedAt: "2015-04-28T11:16:55Z"
     Model:
       title: Model
       properties:
@@ -11592,14 +11710,14 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000095130771"
-        siteKey: "07000403830774"
+        key: "04000587902449"
+        siteKey: "08000255837862"
         documents: "[]"
         name: string
         manufacturerName: string
-        createdAt: "2021-01-28T03:09:59Z"
-        updatedAt: "1993-07-13T16:37:17Z"
-        deletedAt: "1998-08-28T02:03:44Z"
+        createdAt: "2008-08-11T20:40:55Z"
+        updatedAt: "2010-02-22T20:17:15Z"
+        deletedAt: "1996-10-19T02:23:55Z"
     Counter:
       title: Counter
       properties:
@@ -11654,16 +11772,16 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000301890974"
-        siteKey: "06000755065174"
-        assetKey: "01000223254995"
+        key: "03000121165817"
+        siteKey: "06000155917513"
+        assetKey: "05000996219898"
         name: string
         uom: string
         lastReading: string
-        lastReadingAt: "1987-03-28T03:38:25Z"
-        createdAt: "1974-02-26T00:11:58Z"
-        updatedAt: "1972-08-12T05:19:03Z"
-        deletedAt: "1978-09-25T10:01:00Z"
+        lastReadingAt: "1982-12-27T22:32:36Z"
+        createdAt: "1984-02-11T17:49:35Z"
+        updatedAt: "1995-01-15T03:42:56Z"
+        deletedAt: "1982-01-05T05:58:18Z"
     CounterReading:
       title: CounterReading
       properties:
@@ -11693,11 +11811,11 @@ components:
           nullable: false
           format: string
       example:
-        key: "04000973770103"
-        assetKey: "01000497063829"
-        meterKey: "01000303214491"
+        key: "05000869402221"
+        assetKey: "08000841485439"
+        meterKey: "00000602252642"
         reading: string
-        createdAt: "2013-03-24T12:17:07Z"
+        createdAt: "2008-10-03T23:02:50Z"
     PreventiveMaintenance:
       title: PreventiveMaintenance
       properties:
@@ -11837,13 +11955,13 @@ components:
           nullable: false
           format: string
       example:
-        key: "05000010138794"
+        key: "09000238098101"
         siteKeys: "[]"
         assetKeys: "[]"
-        teamKey: "02000667441837"
-        accountKey: "08000986670242"
-        title: Magni mollitia voluptas quae et.
-        description: In tempora delectus ut cumque.
+        teamKey: "08000759270458"
+        accountKey: "08000581523567"
+        title: Tenetur aliquid perferendis et unde.
+        description: Debitis et rem nobis ullam dolore quod.
         instructions: string
         status: string
         severity: string
@@ -11851,19 +11969,19 @@ components:
         roleName: string
         categoryName: string
         documents: "[]"
-        documentKey: "08000950821579"
+        documentKey: "04000522525722"
         documentPage: string
         notes: string
-        dueAt: "2015-01-05T00:40:46Z"
-        nextScheduledAt: "1989-07-17T02:52:29Z"
-        lastScheduledAt: "1978-03-06T13:28:43Z"
-        lastCompletedAt: "2016-10-19T21:49:41Z"
+        dueAt: "1971-07-30T02:46:20Z"
+        nextScheduledAt: "1975-08-14T10:17:24Z"
+        lastScheduledAt: "1998-08-12T12:03:18Z"
+        lastCompletedAt: "2003-10-16T17:00:35Z"
         lastCompletionRemarks: string
         materials: "[]"
         triggers: "[]"
-        createdAt: "1975-09-23T21:06:18Z"
-        updatedAt: "2022-06-22T15:45:43Z"
-        deletedAt: "1972-09-29T18:08:48Z"
+        createdAt: "2009-07-27T06:42:57Z"
+        updatedAt: "1974-04-13T22:50:24Z"
+        deletedAt: "2005-11-14T11:18:19Z"
     WorkOrderStatus:
       title: WorkOrderStatus
       properties:
@@ -12028,38 +12146,38 @@ components:
           nullable: false
           format: string
       example:
-        key: "04000404269052"
-        siteKey: "07000032683685"
-        assetKey: "08000118010064"
-        accountKey: "09000732325317"
-        title: Vero consequuntur sit dicta non et.
-        description: Itaque dolore ea optio fugiat.
-        workRequestKey: "00000238472064"
-        code: "11384793"
-        pmKey: "06000759959995"
-        teamKey: "09000803657638"
-        userAssignedKey: "09000644634280"
-        userCompletedKey: "09000261794941"
-        organizationKey: "04000224940457"
+        key: "07000210742568"
+        siteKey: "00000405716730"
+        assetKey: "09000842807064"
+        accountKey: "07000843854894"
+        title: Ut in repellat repellat omnis.
+        description: Id inventore modi accusamus beatae.
+        workRequestKey: "09000970751634"
+        code: "50799343"
+        pmKey: "00000069691801"
+        teamKey: "07000171413640"
+        userAssignedKey: "09000859042065"
+        userCompletedKey: "06000024111834"
+        organizationKey: "02000713550323"
         instructions: string
         status: string
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
-        documentKey: "00000057529872"
+        documentKey: "07000405372799"
         documentPage: string
         notes: string
-        approvedAt: "1985-08-11T15:17:30Z"
-        dueAt: "1990-09-27T13:39:09Z"
-        scheduledAt: "1988-05-30T00:47:57Z"
-        completedAt: "2003-10-30T19:00:26Z"
+        approvedAt: "2004-11-11T22:36:55Z"
+        dueAt: "1970-10-26T03:30:49Z"
+        scheduledAt: "1974-11-09T02:40:26Z"
+        completedAt: "2003-01-05T00:51:36Z"
         completionRemarks: string
         materials: string
         documents: "[]"
-        createdAt: "1994-06-16T21:26:32Z"
-        updatedAt: "2004-10-15T05:37:00Z"
-        deletedAt: "1996-07-18T07:44:38Z"
+        createdAt: "1972-12-20T01:33:24Z"
+        updatedAt: "1982-06-18T06:05:43Z"
+        deletedAt: "1978-11-15T05:04:42Z"
     WorkOrder:
       title: WorkOrder
       properties:
@@ -12224,38 +12342,38 @@ components:
           nullable: false
           format: string
       example:
-        key: "08000684635489"
-        siteKey: "04000771539741"
-        assetKey: "07000867465892"
-        accountKey: "02000360731171"
-        title: Beatae qui dolorum amet ea.
-        description: Nobis similique ut alias minima.
-        workRequestKey: "07000954430284"
-        code: "29082452"
-        pmKey: "07000014905332"
-        teamKey: "09000346518715"
-        userAssignedKey: "03000238880766"
-        userCompletedKey: "05000972679868"
-        organizationKey: "00000616768299"
+        key: "02000710204803"
+        siteKey: "01000714942611"
+        assetKey: "01000463091279"
+        accountKey: "08000071979978"
+        title: Fugit ut in temporibus nam consequatur.
+        description: Eum porro qui doloribus ipsum.
+        workRequestKey: "08000133763510"
+        code: "43874842"
+        pmKey: "09000944240609"
+        teamKey: "00000909697178"
+        userAssignedKey: "06000112729934"
+        userCompletedKey: "01000145258592"
+        organizationKey: "03000033413097"
         instructions: string
         status: string
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
-        documentKey: "07000486524800"
+        documentKey: "09000570463989"
         documentPage: string
         notes: string
-        approvedAt: "1981-08-09T11:53:38Z"
-        dueAt: "1997-04-21T06:44:33Z"
-        scheduledAt: "1986-11-30T17:33:25Z"
-        completedAt: "2009-08-14T01:10:12Z"
+        approvedAt: "1993-03-18T15:01:14Z"
+        dueAt: "2001-05-18T07:02:13Z"
+        scheduledAt: "1988-01-14T00:58:12Z"
+        completedAt: "2020-09-29T19:37:02Z"
         completionRemarks: string
         materials: string
         documents: "[]"
-        createdAt: "1999-11-23T03:59:49Z"
-        updatedAt: "1972-08-26T11:07:35Z"
-        deletedAt: "1993-07-10T00:52:43Z"
+        createdAt: "2021-03-30T07:23:33Z"
+        updatedAt: "2001-10-20T17:33:01Z"
+        deletedAt: "1979-03-01T21:19:02Z"
     WorkOrderCollection:
       type: array
       items:
@@ -12379,29 +12497,29 @@ components:
           nullable: false
           format: string
       example:
-        key: "03000901545678"
-        siteKey: "03000809904527"
-        locationKey: "04000365340681"
-        storeroomKey: "02000518556177"
-        assetKey: "02000259063834"
-        workOrderKey: "05000718052159"
-        teamKey: "04000966011403"
-        userRequestedKey: "01000524003439"
-        userApprovedKey: "02000495826694"
+        key: "01000899459196"
+        siteKey: "04000719565777"
+        locationKey: "06000415570755"
+        storeroomKey: "00000627994362"
+        assetKey: "05000425331350"
+        workOrderKey: "08000081558440"
+        teamKey: "08000907776816"
+        userRequestedKey: "03000373397237"
+        userApprovedKey: "09000002821647"
         documents: "[]"
-        title: Eos ipsum vel mollitia.
-        description: Explicabo eos sed neque eum non.
-        statusKey: "05000631535070"
+        title: Quia cumque quae eum odit sunt quo qui.
+        description: Corporis magnam nulla nisi quia.
+        statusKey: "03000929587626"
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
         notes: string
-        approvedAt: "2005-05-02T05:54:53Z"
-        dueAt: "2012-08-28T23:42:04Z"
-        createdAt: "1974-04-03T21:00:21Z"
-        updatedAt: "1971-06-27T06:17:48Z"
-        deletedAt: "2020-08-12T20:18:05Z"
+        approvedAt: "1981-01-31T04:15:52Z"
+        dueAt: "2006-10-13T03:33:00Z"
+        createdAt: "1983-10-29T01:29:19Z"
+        updatedAt: "2019-07-16T12:34:18Z"
+        deletedAt: "1976-12-22T10:34:58Z"
     Document:
       title: Document
       properties:
@@ -12456,16 +12574,16 @@ components:
           nullable: false
           format: string
       example:
-        key: "01000766991051"
+        key: "07000619950707"
         entityKeys: "[]"
         name: string
         url: string
         type: string
         contentType: string
-        description: Voluptatem omnis aliquid consequatur.
+        description: Vero omnis iure possimus omnis.
         notes: string
-        createdAt: "2003-10-04T16:40:52Z"
-        updatedAt: "2008-09-20T01:40:25Z"
+        createdAt: "2014-10-03T06:28:54Z"
+        updatedAt: "1999-03-04T11:09:00Z"
     Inventory:
       title: Inventory
       properties:
@@ -12500,12 +12618,12 @@ components:
           nullable: false
           format: string
       example:
-        code: "19821160"
+        code: "20189730"
         name: string
         quantity: 10
         unitCost: 10
-        locationKey: "00000378628680"
-        updatedAt: "1975-04-30T08:43:16Z"
+        locationKey: "09000049138220"
+        updatedAt: "1989-08-29T05:30:04Z"
     Status:
       title: Status
       properties:
@@ -12565,17 +12683,17 @@ components:
           nullable: false
           format: string
       example:
-        key: "08000966019998"
-        organizationKey: "09000658410239"
-        parentKey: "06000226514796"
+        key: "00000540749351"
+        organizationKey: "01000623295928"
+        parentKey: "07000240048633"
         name: string
-        code: "39829023"
+        code: "94113716"
         subCode: string
         scope: string
         isActive: string
-        createdAt: "2004-11-21T18:57:41Z"
-        updatedAt: "1993-02-01T08:20:22Z"
-        deletedAt: "1995-07-17T00:33:24Z"
+        createdAt: "1983-05-02T06:50:07Z"
+        updatedAt: "2002-09-04T05:23:39Z"
+        deletedAt: "2006-07-14T11:39:15Z"
     Tax:
       title: Tax
       properties:
@@ -12625,15 +12743,15 @@ components:
           nullable: false
           format: string
       example:
-        key: "00000236210764"
-        organizationKey: "07000908210163"
+        key: "02000668671437"
+        organizationKey: "07000379386347"
         name: string
         type: string
         taxPercentage: string
         isActive: string
-        createdAt: "2002-10-15T08:38:17Z"
-        updatedAt: "2019-11-21T18:42:22Z"
-        deletedAt: "1984-03-07T04:34:11Z"
+        createdAt: "2008-07-02T01:54:17Z"
+        updatedAt: "1975-07-26T19:43:21Z"
+        deletedAt: "2020-01-06T07:18:45Z"
     Currency:
       title: Currency
       properties:
@@ -12678,14 +12796,14 @@ components:
           nullable: false
           format: string
       example:
-        key: "06000909202604"
+        key: "08000562006678"
         name: string
-        code: "91576156"
+        code: "63725018"
         isBase: string
         isActive: string
-        createdAt: "2017-08-19T18:24:38Z"
-        updatedAt: "1989-03-02T12:14:41Z"
-        deletedAt: "2015-07-16T03:21:26Z"
+        createdAt: "2022-09-23T19:40:34Z"
+        updatedAt: "1996-09-26T23:55:25Z"
+        deletedAt: "2020-12-12T10:10:23Z"
     ExchangeRate:
       title: ExchangeRate
       properties:
@@ -12715,11 +12833,11 @@ components:
           nullable: false
           format: string
       example:
-        key: "03000264570322"
-        currencyKey: "00000161731103"
-        baseCurrencyKey: "01000013429838"
+        key: "05000612257568"
+        currencyKey: "06000805521474"
+        baseCurrencyKey: "09000018814382"
         rate: string
-        createdAt: "2002-04-27T17:16:51Z"
+        createdAt: "2002-09-04T05:07:14Z"
     Product:
       title: Product
       properties:
@@ -12844,18 +12962,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "08000127002523"
-        groupKey: "04000108307609"
-        uomKey: "03000755515919"
-        code: "67692057"
+        key: "07000521926775"
+        groupKey: "03000748207877"
+        uomKey: "00000253802003"
+        code: "37115524"
         name: string
-        description: Atque eum occaecati debitis unde.
+        description: Dolorem blanditiis et id sapiente enim sit.
         type: string
         isTaxable: string
         taxKeys: "[]"
         status: string
         price: string
-        currencyKey: "04000800293065"
+        currencyKey: "05000993916763"
         quantity: string
         sku: string
         upc: string
@@ -12865,9 +12983,9 @@ components:
         reorderLevel: string
         dimensions: string
         supplyOptions: "[]"
-        createdAt: "2015-12-19T15:50:57Z"
-        updatedAt: "1987-03-04T21:12:35Z"
-        deletedAt: "1981-04-24T16:57:26Z"
+        createdAt: "1989-10-17T19:04:33Z"
+        updatedAt: "1971-07-31T09:39:31Z"
+        deletedAt: "1981-08-01T12:44:08Z"
     SalesOrder:
       title: SalesOrder
       properties:
@@ -12947,21 +13065,21 @@ components:
           nullable: false
           format: string
       example:
-        key: "00000210464115"
-        customerKey: "04000073237365"
-        userKey: "07000458620862"
-        code: "47533370"
+        key: "04000114135807"
+        customerKey: "01000960574423"
+        userKey: "01000651820344"
+        code: "18025767"
         orderNumber: string
         date: string
-        statusKey: "02000700164493"
-        shipmentDate: "2017-07-23T16:38:50Z"
+        statusKey: "08000227519168"
+        shipmentDate: "2020-01-04T11:46:43Z"
         contactPerson: string
         lines: "[]"
-        currencyKey: "09000123741625"
+        currencyKey: "07000033628505"
         currencyRate: string
-        createdAt: "1984-12-21T23:22:36Z"
-        updatedAt: "2018-11-23T13:51:38Z"
-        deletedAt: "2003-07-04T22:41:13Z"
+        createdAt: "2010-05-20T03:30:47Z"
+        updatedAt: "1973-12-25T11:11:10Z"
+        deletedAt: "1997-09-16T12:37:36Z"
     Project:
       title: Project
       properties:
@@ -13011,15 +13129,15 @@ components:
           nullable: false
           format: string
       example:
-        key: "01000378836421"
-        siteKey: "04000165089033"
+        key: "06000268236009"
+        siteKey: "03000155427349"
         name: string
-        accountKey: "07000853063602"
-        statusKey: "03000051278656"
+        accountKey: "00000108839280"
+        statusKey: "08000134998023"
         budget: string
-        createdAt: "1998-06-27T19:49:07Z"
-        updatedAt: "2000-11-11T22:00:26Z"
-        deletedAt: "1971-06-04T18:58:52Z"
+        createdAt: "2006-03-04T06:13:22Z"
+        updatedAt: "2001-03-24T09:02:23Z"
+        deletedAt: "1988-01-28T15:12:39Z"
     Invoice:
       title: Invoice
       properties:
@@ -13089,19 +13207,19 @@ components:
           nullable: false
           format: string
       example:
-        key: "05000529151374"
+        key: "00000224812715"
         invoiceNumber: string
-        vendorKey: "00000661762040"
-        poKey: "05000678407040"
-        statusKey: "06000679576156"
+        vendorKey: "00000166705711"
+        poKey: "05000429013652"
+        statusKey: "01000200010748"
         lineItems: "[]"
-        invoiceDate: "2001-07-13T15:28:07Z"
-        dueDate: "2009-07-30T05:59:34Z"
-        receivedDate: "1988-04-16T04:21:56Z"
-        currencyKey: "01000390957103"
-        createdAt: "2015-07-27T05:46:04Z"
-        updatedAt: "2022-09-16T05:00:59Z"
-        deletedAt: "2016-04-21T00:24:44Z"
+        invoiceDate: "1993-06-05T00:00:32Z"
+        dueDate: "2005-02-21T12:33:20Z"
+        receivedDate: "1982-06-30T14:07:45Z"
+        currencyKey: "08000378601756"
+        createdAt: "1974-01-14T00:12:35Z"
+        updatedAt: "1993-01-12T08:35:30Z"
+        deletedAt: "1971-09-27T08:04:09Z"
     Receipt:
       title: Receipt
       type: object
@@ -13210,25 +13328,25 @@ components:
           nullable: false
           format: string
       example:
-        key: "03000727692855"
-        siteKey: "09000530036654"
-        vendorKey: "07000552386460"
-        poKey: "05000039392100"
-        code: "93017336"
+        key: "02000816754402"
+        siteKey: "08000186604358"
+        vendorKey: "06000538503039"
+        poKey: "03000230398482"
+        code: "73453000"
         orderNo: string
-        orderDate: "2010-12-12T05:00:20Z"
-        title: Quasi totam aspernatur quaerat.
-        description: Et nihil dolores et velit nihil.
-        completedAt: "1982-07-08T19:15:42Z"
+        orderDate: "2002-03-02T16:03:03Z"
+        title: Modi ad ea et.
+        description: Corrupti commodi eum quos atque quod non.
+        completedAt: "2002-09-02T19:58:53Z"
         shippingMethod: string
         notes: string
-        currencyKey: "02000990144054"
+        currencyKey: "06000912057513"
         totalNetValue: string
         totalTaxValue: string
         totalGrossValue: string
         lineItems: "[]"
-        createdAt: "1982-09-06T17:24:33Z"
-        updatedAt: "1976-12-11T07:21:29Z"
+        createdAt: "2010-03-04T09:05:08Z"
+        updatedAt: "1979-10-06T22:20:20Z"
     RequestForQuotation:
       title: RequestForQuotation
       type: object
@@ -13279,14 +13397,14 @@ components:
           nullable: false
           format: string
       example:
-        key: "05000654297799"
-        parentKey: "09000752954794"
-        code: "05764556"
+        key: "00000881998545"
+        parentKey: "09000573946806"
+        code: "01241310"
         name: string
-        description: Cupiditate est id rem ea voluptatem doloremque.
-        updatedAt: "2000-12-07T10:51:28Z"
-        createdAt: "2017-02-25T11:18:45Z"
-        deletedAt: "1988-08-07T04:52:26Z"
+        description: Ab voluptates dolor natus soluta rerum.
+        updatedAt: "1998-07-17T05:09:02Z"
+        createdAt: "1996-09-17T02:50:29Z"
+        deletedAt: "1983-03-19T00:05:28Z"
     StockTransfer:
       title: StockTransfer
       properties:
@@ -13351,18 +13469,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "01000499295832"
-        fromLocationKey: "08000246271297"
-        toLocationKey: "03000962643745"
-        fromStoreroomKey: "02000982178521"
-        toStoreroomKey: "08000097421959"
-        code: "27412015"
+        key: "01000723370602"
+        fromLocationKey: "02000617165454"
+        toLocationKey: "01000898146803"
+        fromStoreroomKey: "09000904766839"
+        toStoreroomKey: "05000398870478"
+        code: "59375036"
         date: string
         lineItems: string
         orderNumber: string
-        createdAt: "1993-07-03T23:28:59Z"
-        updatedAt: "2005-04-11T05:52:58Z"
-        deletedAt: "2002-10-08T00:30:22Z"
+        createdAt: "1974-01-28T03:41:11Z"
+        updatedAt: "2010-12-16T01:43:18Z"
+        deletedAt: "2009-03-07T14:44:00Z"
     StockAdjustment:
       title: StockAdjustment
       properties:
@@ -13432,19 +13550,19 @@ components:
           nullable: false
           format: string
       example:
-        key: "04000373249363"
-        locationKey: "09000810704993"
-        storeroomKey: "05000354716682"
-        userKey: "05000662646192"
+        key: "01000850164358"
+        locationKey: "07000417390404"
+        storeroomKey: "07000708654862"
+        userKey: "03000619339373"
         date: string
         reason: string
         lineItems: "[]"
         adjustmentNumber: string
         total: string
         type: string
-        createdAt: "1983-12-11T22:28:53Z"
-        updatedAt: "1977-12-16T14:46:52Z"
-        deletedAt: "1979-11-01T18:41:19Z"
+        createdAt: "1979-02-04T16:01:14Z"
+        updatedAt: "2008-10-11T00:36:12Z"
+        deletedAt: "1994-08-26T05:53:30Z"
     ShipmentOrder:
       title: ShipmentOrder
       properties:
@@ -13529,22 +13647,22 @@ components:
           nullable: false
           format: string
       example:
-        key: "09000078963083"
-        userKey: "07000548514247"
-        customerKey: "04000645041588"
-        vendorKey: "01000135123952"
+        key: "02000063435868"
+        userKey: "05000224641658"
+        customerKey: "08000427546351"
+        vendorKey: "08000678209886"
         orderNumber: string
         shipmentNumber: string
         date: string
-        statusKey: "03000108774219"
+        statusKey: "03000890221317"
         lineItems: "[]"
         destinationAddress: string
         carrierName: string
         shippingMethod: string
         notes: string
-        createdAt: "1990-08-29T00:27:55Z"
-        updatedAt: "1980-06-30T12:47:30Z"
-        deletedAt: "1972-10-11T07:45:38Z"
+        createdAt: "2008-07-31T21:47:02Z"
+        updatedAt: "1976-12-06T04:01:13Z"
+        deletedAt: "2005-08-25T09:35:54Z"
     ShipmentOrderDelivered: []
     Integration:
       title: Integration
