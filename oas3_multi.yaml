@@ -11,8 +11,42 @@ servers:
 paths:
   /api/eam/organizations:
     get:
-      description: List Organizations
-      summary: List Organizations
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -35,6 +69,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -128,6 +169,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -197,8 +245,42 @@ paths:
                 type: object
   /api/eam/locations:
     get:
-      description: List Locations
-      summary: List Locations
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -221,6 +303,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -290,8 +379,42 @@ paths:
                 type: object
   /api/eam/storerooms:
     get:
-      description: List Storerooms
-      summary: List Storerooms
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -314,6 +437,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -383,8 +513,42 @@ paths:
                 type: object
   /api/eam/accounts:
     get:
-      description: List Accounts
-      summary: List Accounts
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -407,6 +571,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -476,8 +647,42 @@ paths:
                 type: object
   /api/eam/teams:
     get:
-      description: List Teams
-      summary: List Teams
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -500,6 +705,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -569,8 +781,42 @@ paths:
                 type: object
   /api/eam/labors:
     get:
-      description: List Labors
-      summary: List Labors
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -593,6 +839,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -662,8 +915,42 @@ paths:
                 type: object
   /api/eam/users:
     get:
-      description: List Users
-      summary: List Users
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -686,6 +973,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -755,8 +1049,42 @@ paths:
                 type: object
   /api/eam/uom:
     get:
-      description: List UnitOfMeasures
-      summary: List UnitOfMeasures
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -779,6 +1107,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -848,8 +1183,42 @@ paths:
                 type: object
   /api/eam/companies:
     get:
-      description: List Companies
-      summary: List Companies
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -872,6 +1241,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -941,8 +1317,42 @@ paths:
                 type: object
   /api/eam/vendors:
     get:
-      description: List Vendors
-      summary: List Vendors
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -965,6 +1375,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -1034,8 +1451,42 @@ paths:
                 type: object
   /api/eam/customers:
     get:
-      description: List Customers
-      summary: List Customers
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -1058,6 +1509,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -1127,8 +1585,42 @@ paths:
                 type: object
   /api/eam/stocks:
     get:
-      description: List Stocks
-      summary: List Stocks
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -1151,6 +1643,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -1254,8 +1753,42 @@ paths:
                 status: string
   /api/eam/purchase-orders:
     get:
-      description: List PurchaseOrders
-      summary: List PurchaseOrders
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -1278,6 +1811,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -1425,26 +1965,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "05000841650026"
-                vendorKey: "04000132478300"
-                code: "81820603"
+                siteKey: "03000581213502"
+                vendorKey: "05000273731005"
+                code: "22191243"
                 orderNo: string
-                orderDate: "1986-12-23T23:16:50Z"
-                statusKey: "02000896544745"
-                title: Dolorum ut dignissimos cumque animi placeat.
-                description: Cumque quia est provident odit vel.
-                dueAt: "1979-12-13T05:05:24Z"
-                approvedAt: "2017-08-31T11:00:18Z"
-                completedAt: "2017-06-30T02:39:22Z"
+                orderDate: "2006-03-28T12:15:26Z"
+                statusKey: "07000284121987"
+                title: Dolor voluptatibus voluptatem fuga ipsam.
+                description: Consequuntur unde numquam eaque amet.
+                dueAt: "1986-09-09T21:11:52Z"
+                approvedAt: "1990-08-14T17:53:05Z"
+                completedAt: "1985-06-25T01:20:57Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "03000557636698"
+                currencyKey: "03000064550733"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "1977-06-05T19:04:51Z"
-                updatedAt: "1989-07-18T15:10:28Z"
+                createdAt: "1998-10-16T03:05:26Z"
+                updatedAt: "2020-07-13T02:17:22Z"
   /api/eam/purchase-orders/{key}:
     get:
       description: Get a PurchaseOrder
@@ -1574,30 +2114,64 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "01000578138817"
-                vendorKey: "03000143261227"
-                code: "91491732"
+                siteKey: "06000574295759"
+                vendorKey: "04000325702075"
+                code: "48951470"
                 orderNo: string
-                orderDate: "1987-04-18T03:12:41Z"
-                statusKey: "07000570332750"
-                title: Sit qui optio et ad rerum et.
-                description: Iure non magni harum sit.
-                dueAt: "1986-06-17T12:31:56Z"
-                approvedAt: "1976-08-11T18:46:05Z"
-                completedAt: "2010-12-10T12:37:05Z"
+                orderDate: "1994-12-30T04:41:49Z"
+                statusKey: "00000071693449"
+                title: Non non quis ut repellendus voluptas nostrum.
+                description: Et ratione quasi eum enim est.
+                dueAt: "1989-11-07T10:32:34Z"
+                approvedAt: "2004-03-18T08:52:37Z"
+                completedAt: "1988-01-21T16:21:38Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "09000084558499"
+                currencyKey: "06000043898615"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "1972-10-27T19:01:20Z"
-                updatedAt: "1985-11-14T20:34:24Z"
+                createdAt: "2009-01-10T22:34:10Z"
+                updatedAt: "2017-05-29T02:00:02Z"
   /api/eam/purchase-orders.line-items:
     get:
-      description: List LineItems
-      summary: List LineItems
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -1620,6 +2194,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -1727,10 +2308,15 @@ paths:
                   type: integer
                   nullable: false
                   format: integer
+                sort:
+                  type: array
+                  nullable: false
+                  format: array
               example:
                 filter: "[]"
                 page: 10
                 per_page: 10
+                sort: "[]"
   /api/eam/materials/{key}/children:
     get:
       description: Get MaterialItem
@@ -1764,6 +2350,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -1775,8 +2368,42 @@ paths:
                 type: object
   /api/eam/materials:
     get:
-      description: List Parts
-      summary: List Parts
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -1799,6 +2426,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -1899,6 +2533,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -1910,8 +2551,42 @@ paths:
                 type: object
   /api/eam/assets:
     get:
-      description: List Assets
-      summary: List Assets
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -1934,6 +2609,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -2101,15 +2783,15 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "07000942015389"
-                parentKey: "08000730928786"
-                vendorKey: "03000444157019"
-                modelKey: "04000470398215"
-                teamKey: "08000531687108"
-                locationKey: "06000216721022"
-                accountKey: "05000698100443"
+                siteKey: "08000169199381"
+                parentKey: "03000214372117"
+                vendorKey: "03000808670923"
+                modelKey: "05000298039223"
+                teamKey: "08000726277527"
+                locationKey: "03000256999457"
+                accountKey: "08000425135776"
                 name: string
-                description: Vel mollitia vel et.
+                description: Tenetur sunt totam ratione non velit.
                 notes: string
                 categoryName: string
                 criticality: string
@@ -2117,12 +2799,46 @@ paths:
                 manufacturerName: string
                 modelName: string
                 serialNumber: string
-                activatedAt: "2013-11-15T22:25:19Z"
-                deactivatedAt: "1978-09-12T21:14:20Z"
+                activatedAt: "1992-11-19T21:16:22Z"
+                deactivatedAt: "1998-12-29T00:24:23Z"
   /api/eam/assets-downtime:
     get:
-      description: List AssetDownTimes
-      summary: List AssetDownTimes
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -2145,6 +2861,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -2245,6 +2968,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -2256,8 +2986,42 @@ paths:
                 type: object
   /api/eam/asset-templates:
     get:
-      description: List Models
-      summary: List Models
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -2280,6 +3044,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -2349,8 +3120,42 @@ paths:
                 type: object
   /api/eam/meters:
     get:
-      description: List Counters
-      summary: List Counters
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -2373,6 +3178,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -2442,8 +3254,42 @@ paths:
                 type: object
   /api/eam/meter-readings:
     get:
-      description: List CounterReadings
-      summary: List CounterReadings
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -2466,6 +3312,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -2566,6 +3419,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -2577,8 +3437,42 @@ paths:
                 type: object
   /api/eam/pm:
     get:
-      description: List PreventiveMaintenances
-      summary: List PreventiveMaintenances
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -2601,6 +3495,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -2701,6 +3602,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -2746,8 +3654,42 @@ paths:
                 status: string
   /api/eam/work-orders:
     get:
-      description: List WorkOrders
-      summary: List WorkOrders
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -2770,6 +3712,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -2961,22 +3910,22 @@ paths:
                   nullable: true
                   format: string
               example:
-                title: Beatae temporibus molestiae sapiente quia earum.
-                statusKey: "08000207202305"
-                scheduledAt: "1988-02-29T23:48:46Z"
-                siteKey: "00000238118140"
-                locationKey: "03000137493976"
-                storeroomKey: "08000412524182"
-                assetKey: "00000041784730"
-                assetDowntimeKey: "05000732478431"
-                serviceRequestKey: "07000879187559"
-                pmKey: "02000516613207"
-                teamKey: "02000875796809"
-                laborAssignedKey: "06000790293825"
-                accountKey: "09000542619478"
-                userApprovedKey: "02000313477316"
-                code: "19148120"
-                description: Labore dolorem quo iure sint et aut tempore.
+                title: Consequatur libero odio voluptates vero.
+                statusKey: "08000684998809"
+                scheduledAt: "2014-08-25T19:34:53Z"
+                siteKey: "07000297652388"
+                locationKey: "00000488836292"
+                storeroomKey: "02000013538059"
+                assetKey: "00000683500677"
+                assetDowntimeKey: "07000656980960"
+                serviceRequestKey: "03000640085507"
+                pmKey: "03000209847897"
+                teamKey: "06000708405837"
+                laborAssignedKey: "00000788524934"
+                accountKey: "03000484067944"
+                userApprovedKey: "00000798753047"
+                code: "64604633"
+                description: Ut sed a nihil sit magni pariatur nesciunt.
                 instructions: string
                 severity: string
                 estimatedTime: 10
@@ -2985,13 +3934,13 @@ paths:
                 categoryName: string
                 documents: "[]"
                 notes: string
-                approvedAt: "1981-11-30T14:03:01Z"
-                dueAt: "2002-03-26T14:54:11Z"
-                completedAt: "1990-07-20T05:12:48Z"
+                approvedAt: "1993-11-23T06:21:15Z"
+                dueAt: "1986-12-12T13:56:38Z"
+                completedAt: "2007-08-02T11:38:58Z"
                 completionRemarks: string
-                createdAt: "1975-11-11T05:08:00Z"
-                updatedAt: "1984-12-11T11:33:14Z"
-                deletedAt: "2023-06-08T14:57:52Z"
+                createdAt: "2021-11-02T14:37:52Z"
+                updatedAt: "2017-12-06T15:55:55Z"
+                deletedAt: "1990-04-09T14:44:54Z"
   /api/eam/work-orders/{key}:
     get:
       description: Get a WorkOrder
@@ -3165,22 +4114,22 @@ paths:
                   nullable: true
                   format: string
               example:
-                title: Et ipsam qui quo consequatur aut.
-                statusKey: "06000132150799"
-                scheduledAt: "2014-05-18T04:23:40Z"
-                siteKey: "06000002395971"
-                locationKey: "02000926212384"
-                storeroomKey: "00000599834706"
-                assetKey: "07000508805212"
-                assetDowntimeKey: "08000977350735"
-                serviceRequestKey: "03000089070750"
-                pmKey: "02000802972721"
-                teamKey: "06000698076580"
-                laborAssignedKey: "02000502449423"
-                accountKey: "05000472708381"
-                userApprovedKey: "04000702919731"
-                code: "67040476"
-                description: Tempore dolore est voluptatem eum et.
+                title: Eligendi repellat a ea harum.
+                statusKey: "04000790560532"
+                scheduledAt: "1987-10-01T19:42:22Z"
+                siteKey: "00000650512079"
+                locationKey: "01000740651556"
+                storeroomKey: "02000063961999"
+                assetKey: "00000458918479"
+                assetDowntimeKey: "01000784100395"
+                serviceRequestKey: "09000656354566"
+                pmKey: "01000260348049"
+                teamKey: "07000905894678"
+                laborAssignedKey: "00000605342301"
+                accountKey: "08000464937048"
+                userApprovedKey: "04000573728243"
+                code: "18950311"
+                description: Quia incidunt libero dolorum atque.
                 instructions: string
                 severity: string
                 estimatedTime: 10
@@ -3189,17 +4138,51 @@ paths:
                 categoryName: string
                 documents: "[]"
                 notes: string
-                approvedAt: "1989-07-11T13:25:53Z"
-                dueAt: "1973-04-09T09:10:18Z"
-                completedAt: "2005-03-30T09:23:57Z"
+                approvedAt: "1990-01-18T01:48:36Z"
+                dueAt: "1988-11-16T02:12:47Z"
+                completedAt: "2004-04-16T10:15:23Z"
                 completionRemarks: string
-                createdAt: "2001-03-18T13:22:48Z"
-                updatedAt: "2018-07-28T19:59:57Z"
-                deletedAt: "1977-06-11T13:07:36Z"
+                createdAt: "2022-09-25T22:50:53Z"
+                updatedAt: "1974-06-07T09:01:37Z"
+                deletedAt: "1978-05-16T04:56:44Z"
   /api/eam/service-requests:
     get:
-      description: List ServiceRequests
-      summary: List ServiceRequests
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -3222,6 +4205,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -3291,8 +4281,42 @@ paths:
                 type: object
   /api/eam/documents:
     get:
-      description: List Documents
-      summary: List Documents
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -3315,6 +4339,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -3415,8 +4446,42 @@ paths:
                 type: object
   /api/eam/inventories:
     get:
-      description: List Inventories
-      summary: List Inventories
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -3439,6 +4504,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -3532,6 +4604,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -3567,6 +4646,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -3602,6 +4688,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - EAM/CMMS
       responses:
@@ -3637,6 +4730,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -3706,8 +4806,42 @@ paths:
                 type: object
   /api/erp/organizations:
     get:
-      description: List Organizations
-      summary: List Organizations
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -3730,6 +4864,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -3799,8 +4940,42 @@ paths:
                 type: object
   /api/erp/locations:
     get:
-      description: List Locations
-      summary: List Locations
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -3823,6 +4998,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -3892,8 +5074,42 @@ paths:
                 type: object
   /api/erp/storerooms:
     get:
-      description: List Storerooms
-      summary: List Storerooms
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -3916,6 +5132,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -3985,8 +5208,42 @@ paths:
                 type: object
   /api/erp/accounts:
     get:
-      description: List Accounts
-      summary: List Accounts
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -4009,6 +5266,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -4078,8 +5342,42 @@ paths:
                 type: object
   /api/erp/teams:
     get:
-      description: List Teams
-      summary: List Teams
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -4102,6 +5400,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -4171,8 +5476,42 @@ paths:
                 type: object
   /api/erp/labors:
     get:
-      description: List Labors
-      summary: List Labors
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -4195,6 +5534,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -4264,8 +5610,42 @@ paths:
                 type: object
   /api/erp/users:
     get:
-      description: List Users
-      summary: List Users
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -4288,6 +5668,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -4357,8 +5744,42 @@ paths:
                 type: object
   /api/erp/taxes:
     get:
-      description: List Taxes
-      summary: List Taxes
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -4381,6 +5802,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -4450,8 +5878,42 @@ paths:
                 type: object
   /api/erp/currencies:
     get:
-      description: List Currencies
-      summary: List Currencies
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -4474,6 +5936,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -4543,8 +6012,42 @@ paths:
                 type: object
   /api/erp/exchange-rates:
     get:
-      description: List ExchangeRates
-      summary: List ExchangeRates
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -4567,6 +6070,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -4636,8 +6146,42 @@ paths:
                 type: object
   /api/erp/uom:
     get:
-      description: List UnitOfMeasures
-      summary: List UnitOfMeasures
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -4660,6 +6204,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -4729,8 +6280,42 @@ paths:
                 type: object
   /api/erp/companies:
     get:
-      description: List Companies
-      summary: List Companies
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -4753,6 +6338,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -4822,8 +6414,42 @@ paths:
                 type: object
   /api/erp/vendors:
     get:
-      description: List Vendors
-      summary: List Vendors
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -4846,6 +6472,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -4915,8 +6548,42 @@ paths:
                 type: object
   /api/erp/customers:
     get:
-      description: List Customers
-      summary: List Customers
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -4939,6 +6606,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -5008,8 +6682,42 @@ paths:
                 type: object
   /api/erp/products:
     get:
-      description: List Products
-      summary: List Products
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -5032,6 +6740,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -5101,8 +6816,42 @@ paths:
                 type: object
   /api/erp/stocks:
     get:
-      description: List Stocks
-      summary: List Stocks
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -5125,6 +6874,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -5194,8 +6950,42 @@ paths:
                 type: object
   /api/erp/sales-orders:
     get:
-      description: List SalesOrders
-      summary: List SalesOrders
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -5218,6 +7008,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -5287,8 +7084,42 @@ paths:
                 type: object
   /api/erp/projects:
     get:
-      description: List Projects
-      summary: List Projects
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -5311,6 +7142,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -5380,8 +7218,42 @@ paths:
                 type: object
   /api/erp/invoices:
     get:
-      description: List Invoices
-      summary: List Invoices
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -5404,6 +7276,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -5473,8 +7352,42 @@ paths:
                 type: object
   /api/erp/receipts:
     get:
-      description: List Receipts
-      summary: List Receipts
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -5497,6 +7410,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -5600,8 +7520,42 @@ paths:
                 status: string
   /api/erp/purchase-orders:
     get:
-      description: List PurchaseOrders
-      summary: List PurchaseOrders
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -5624,6 +7578,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -5771,26 +7732,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "04000553002966"
-                vendorKey: "02000369077642"
-                code: "86026819"
+                siteKey: "08000313503777"
+                vendorKey: "05000969288722"
+                code: "90238963"
                 orderNo: string
-                orderDate: "1979-11-02T19:01:12Z"
-                statusKey: "01000444896383"
-                title: Harum modi aut doloremque ratione in.
-                description: Quia ut doloribus ut qui.
-                dueAt: "2001-07-26T21:41:53Z"
-                approvedAt: "2000-06-16T19:43:04Z"
-                completedAt: "1989-05-26T01:35:45Z"
+                orderDate: "1998-12-19T12:30:22Z"
+                statusKey: "02000790303097"
+                title: Soluta dolor est aperiam non magnam.
+                description: Aut cumque qui eos rerum.
+                dueAt: "1971-08-17T15:31:25Z"
+                approvedAt: "2010-05-12T17:02:15Z"
+                completedAt: "2011-08-09T05:28:45Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "08000198135792"
+                currencyKey: "07000211709223"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "1986-12-10T12:30:18Z"
-                updatedAt: "1991-12-22T00:34:51Z"
+                createdAt: "1998-09-16T18:12:45Z"
+                updatedAt: "2011-11-04T14:03:38Z"
   /api/erp/purchase-orders/{key}:
     get:
       description: Get a PurchaseOrder
@@ -5920,30 +7881,64 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "08000877379538"
-                vendorKey: "06000020138792"
-                code: "90355608"
+                siteKey: "06000400350351"
+                vendorKey: "04000632443904"
+                code: "68925970"
                 orderNo: string
-                orderDate: "1993-12-12T21:16:37Z"
-                statusKey: "03000017506430"
-                title: Dolore amet consequatur consequuntur nihil optio.
-                description: Ipsa architecto magni doloremque omnis sit.
-                dueAt: "1976-12-23T07:17:40Z"
-                approvedAt: "2022-11-19T22:44:11Z"
-                completedAt: "2000-10-07T17:18:49Z"
+                orderDate: "1982-01-28T00:39:25Z"
+                statusKey: "01000817712496"
+                title: Et nihil aut qui.
+                description: Repellat ut consequuntur veritatis et a.
+                dueAt: "1987-03-22T22:42:03Z"
+                approvedAt: "2001-10-07T03:19:12Z"
+                completedAt: "1976-09-15T20:01:13Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "04000774149499"
+                currencyKey: "09000817820077"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "2004-05-28T12:09:59Z"
-                updatedAt: "1979-03-06T20:50:51Z"
+                createdAt: "2003-09-13T22:15:49Z"
+                updatedAt: "2006-01-09T17:20:15Z"
   /api/erp/purchase-orders.line-items:
     get:
-      description: List LineItems
-      summary: List LineItems
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -5966,6 +7961,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -6035,8 +8037,42 @@ paths:
                 type: object
   /api/erp/bom:
     get:
-      description: List BillOfMaterials
-      summary: List BillOfMaterials
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -6059,6 +8095,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -6159,6 +8202,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -6170,8 +8220,42 @@ paths:
                 type: object
   /api/erp/production-orders:
     get:
-      description: List ProductionOrders
-      summary: List ProductionOrders
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -6194,6 +8278,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -6263,8 +8354,42 @@ paths:
                 $ref: "#/components/schemas/ProductionOrder"
   /api/erp/receiving:
     get:
-      description: List Receivings
-      summary: List Receivings
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -6287,6 +8412,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -6356,8 +8488,42 @@ paths:
                 type: object
   /api/erp/rfq:
     get:
-      description: List RequestForQuotations
-      summary: List RequestForQuotations
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -6380,6 +8546,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -6449,8 +8622,42 @@ paths:
                 $ref: "#/components/schemas/RequestForQuotation"
   /api/erp/purchase-requisitions:
     get:
-      description: List PurchaseRequisitions
-      summary: List PurchaseRequisitions
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -6473,6 +8680,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -6580,10 +8794,15 @@ paths:
                   type: integer
                   nullable: false
                   format: integer
+                sort:
+                  type: array
+                  nullable: false
+                  format: array
               example:
                 filter: "[]"
                 page: 10
                 per_page: 10
+                sort: "[]"
   /api/erp/materials/{key}/children:
     get:
       description: Get MaterialItem
@@ -6617,6 +8836,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -6628,8 +8854,42 @@ paths:
                 type: object
   /api/erp/materials:
     get:
-      description: List Parts
-      summary: List Parts
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -6652,6 +8912,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -6721,8 +8988,42 @@ paths:
                 type: object
   /api/erp/inventories:
     get:
-      description: List Inventories
-      summary: List Inventories
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -6745,6 +9046,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -6838,6 +9146,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -6873,6 +9188,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -6908,6 +9230,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -6943,6 +9272,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -6978,6 +9314,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -7013,6 +9356,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -7048,6 +9398,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -7083,6 +9440,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - ERP
       responses:
@@ -7094,8 +9458,42 @@ paths:
                 type: object
   /api/wms/organizations:
     get:
-      description: List Organizations
-      summary: List Organizations
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -7118,6 +9516,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -7211,6 +9616,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -7280,8 +9692,42 @@ paths:
                 type: object
   /api/wms/locations:
     get:
-      description: List Locations
-      summary: List Locations
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -7304,6 +9750,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -7373,8 +9826,42 @@ paths:
                 type: object
   /api/wms/storerooms:
     get:
-      description: List Storerooms
-      summary: List Storerooms
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -7397,6 +9884,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -7466,8 +9960,42 @@ paths:
                 type: object
   /api/wms/accounts:
     get:
-      description: List Accounts
-      summary: List Accounts
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -7490,6 +10018,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -7559,8 +10094,42 @@ paths:
                 type: object
   /api/wms/teams:
     get:
-      description: List Teams
-      summary: List Teams
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -7583,6 +10152,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -7652,8 +10228,42 @@ paths:
                 type: object
   /api/wms/labors:
     get:
-      description: List Labors
-      summary: List Labors
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -7676,6 +10286,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -7745,8 +10362,42 @@ paths:
                 type: object
   /api/wms/users:
     get:
-      description: List Users
-      summary: List Users
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -7769,6 +10420,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -7838,8 +10496,42 @@ paths:
                 type: object
   /api/wms/currencies:
     get:
-      description: List Currencies
-      summary: List Currencies
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -7862,6 +10554,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -7931,8 +10630,42 @@ paths:
                 type: object
   /api/wms/uom:
     get:
-      description: List UnitOfMeasures
-      summary: List UnitOfMeasures
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -7955,6 +10688,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -8024,8 +10764,42 @@ paths:
                 type: object
   /api/wms/companies:
     get:
-      description: List Companies
-      summary: List Companies
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -8048,6 +10822,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -8117,8 +10898,42 @@ paths:
                 type: object
   /api/wms/vendors:
     get:
-      description: List Vendors
-      summary: List Vendors
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -8141,6 +10956,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -8210,8 +11032,42 @@ paths:
                 type: object
   /api/wms/customers:
     get:
-      description: List Customers
-      summary: List Customers
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -8234,6 +11090,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -8303,8 +11166,42 @@ paths:
                 type: object
   /api/wms/groups:
     get:
-      description: List ProductGroups
-      summary: List ProductGroups
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -8327,6 +11224,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -8396,8 +11300,42 @@ paths:
                 type: object
   /api/wms/products:
     get:
-      description: List Products
-      summary: List Products
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -8420,6 +11358,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -8489,8 +11434,42 @@ paths:
                 type: object
   /api/wms/stocks:
     get:
-      description: List Stocks
-      summary: List Stocks
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -8513,6 +11492,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -8582,8 +11568,42 @@ paths:
                 type: object
   /api/wms/sales-orders:
     get:
-      description: List SalesOrders
-      summary: List SalesOrders
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -8606,6 +11626,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -8709,8 +11736,42 @@ paths:
                 status: string
   /api/wms/purchase-orders:
     get:
-      description: List PurchaseOrders
-      summary: List PurchaseOrders
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -8733,6 +11794,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -8880,26 +11948,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "03000166896942"
-                vendorKey: "00000559247121"
-                code: "17213554"
+                siteKey: "01000581748855"
+                vendorKey: "09000279599919"
+                code: "62011006"
                 orderNo: string
-                orderDate: "2011-01-21T13:40:40Z"
-                statusKey: "06000808520471"
-                title: Hic impedit est voluptas beatae incidunt modi.
-                description: Ut necessitatibus velit animi ullam nobis.
-                dueAt: "1982-07-09T14:09:34Z"
-                approvedAt: "2023-03-24T05:15:24Z"
-                completedAt: "1996-07-31T02:26:09Z"
+                orderDate: "1980-01-14T14:59:02Z"
+                statusKey: "08000784702290"
+                title: Maiores sint quia sit aut aspernatur rerum.
+                description: Corporis vitae et excepturi ad accusantium iste.
+                dueAt: "2020-08-19T03:38:49Z"
+                approvedAt: "2020-01-24T03:01:28Z"
+                completedAt: "1988-12-13T15:37:21Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "02000484580614"
+                currencyKey: "03000181354441"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "2009-03-23T21:02:36Z"
-                updatedAt: "1979-04-21T02:15:25Z"
+                createdAt: "1995-05-02T18:23:01Z"
+                updatedAt: "1973-11-21T04:41:36Z"
   /api/wms/purchase-orders/{key}:
     get:
       description: Get a PurchaseOrder
@@ -9029,30 +12097,64 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "09000029753580"
-                vendorKey: "09000535534560"
-                code: "94160819"
+                siteKey: "06000272689022"
+                vendorKey: "05000891274150"
+                code: "84978639"
                 orderNo: string
-                orderDate: "1985-02-03T15:55:07Z"
-                statusKey: "07000551640718"
-                title: Est dolorem voluptatem et dolorem minus.
-                description: Est itaque et animi sit ut deleniti magnam.
-                dueAt: "2007-01-13T16:41:41Z"
-                approvedAt: "1970-02-19T12:32:08Z"
-                completedAt: "2015-02-10T08:51:32Z"
+                orderDate: "1971-11-19T02:11:40Z"
+                statusKey: "06000938850092"
+                title: Odio eos omnis suscipit quod vel.
+                description: In quis quidem perspiciatis.
+                dueAt: "2004-01-22T23:00:28Z"
+                approvedAt: "1996-12-08T21:45:09Z"
+                completedAt: "1990-03-29T04:09:30Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "01000226409779"
+                currencyKey: "01000987443296"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "1978-06-02T02:06:47Z"
-                updatedAt: "2022-11-12T11:29:50Z"
+                createdAt: "2018-09-14T01:07:47Z"
+                updatedAt: "2011-06-17T23:24:11Z"
   /api/wms/purchase-orders.line-items:
     get:
-      description: List LineItems
-      summary: List LineItems
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -9075,6 +12177,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -9182,10 +12291,15 @@ paths:
                   type: integer
                   nullable: false
                   format: integer
+                sort:
+                  type: array
+                  nullable: false
+                  format: array
               example:
                 filter: "[]"
                 page: 10
                 per_page: 10
+                sort: "[]"
   /api/wms/materials/{key}/children:
     get:
       description: Get MaterialItem
@@ -9219,6 +12333,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -9230,8 +12351,42 @@ paths:
                 type: object
   /api/wms/materials:
     get:
-      description: List Parts
-      summary: List Parts
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -9254,6 +12409,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -9323,8 +12485,42 @@ paths:
                 type: object
   /api/wms/stock-transfers:
     get:
-      description: List StockTransfers
-      summary: List StockTransfers
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -9347,6 +12543,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -9416,8 +12619,42 @@ paths:
                 type: object
   /api/wms/stock-adjustments:
     get:
-      description: List StockAdjustments
-      summary: List StockAdjustments
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -9440,6 +12677,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -9509,8 +12753,42 @@ paths:
                 type: object
   /api/wms/shipment-orders:
     get:
-      description: List ShipmentOrders
-      summary: List ShipmentOrders
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -9533,6 +12811,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -9630,8 +12915,42 @@ paths:
               properties: []
   /api/wms/inventories:
     get:
-      description: List Inventories
-      summary: List Inventories
+      description: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
+      summary: |2+
+         Get list of entities
+
+         Filtering:
+
+         * filter[name]=HelloFromMakiniAPI
+         * filter[name:contains]=Makini
+         * filter[name:startsWith]=Hello
+         * filter[name:startsWith]=API
+         * filter[createdAt:gt]=2023-11-07
+         * filter[createdAt:gteq]=2023-11-07
+         * filter[createdAt:lt]=2023-11-07
+         * filter[createdAt:lted]=2023-11-07
+
+         Sorting
+         * sort[createdAt]=1 // DESC
+         * sort[createdAt]=0 // ASC
+
       parameters:
         - name: filter
           description: array
@@ -9654,6 +12973,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -9747,6 +13073,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -9782,6 +13115,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -9817,6 +13157,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -9852,6 +13199,13 @@ paths:
           required: false
           schema:
             type: integer
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
       tags:
         - WMS
       responses:
@@ -9949,17 +13303,17 @@ components:
           nullable: false
           format: string
       example:
-        key: "01000027032989"
-        currencyKey: "03000559470094"
+        key: "00000379320811"
+        currencyKey: "02000569353052"
         name: string
-        code: "52879166"
-        description: Ut corrupti eius tenetur aut quasi non.
+        code: "81588107"
+        description: Ut accusantium animi aut qui nam quidem.
         addresses: "[]"
         billingAddress: string
         contacts: "[]"
-        createdAt: "1973-03-20T17:54:46Z"
-        updatedAt: "1993-03-10T22:38:13Z"
-        deletedAt: "1973-11-08T08:31:37Z"
+        createdAt: "2023-03-21T12:11:43Z"
+        updatedAt: "2005-04-13T21:33:54Z"
+        deletedAt: "1991-10-14T19:38:08Z"
     Site:
       title: Site
       properties:
@@ -10024,18 +13378,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "05000003173780"
-        organizationKey: "08000746922192"
-        customerKey: "02000841209333"
+        key: "00000618264277"
+        organizationKey: "03000893288134"
+        customerKey: "09000840042708"
         name: string
         lat: string
         lng: string
         address: string
         properties: string
         notes: string
-        createdAt: "2019-02-20T13:24:42Z"
-        updatedAt: "2018-09-06T17:52:42Z"
-        deletedAt: "1987-07-16T19:36:27Z"
+        createdAt: "2005-07-17T08:11:12Z"
+        updatedAt: "2005-08-31T22:27:41Z"
+        deletedAt: "2015-03-05T13:07:46Z"
     Location:
       title: Location
       properties:
@@ -10095,17 +13449,17 @@ components:
           nullable: false
           format: string
       example:
-        key: "04000519705464"
-        siteKey: "01000834538940"
-        parentKey: "07000178746629"
+        key: "03000468247527"
+        siteKey: "01000975529071"
+        parentKey: "01000626975424"
         name: string
-        description: Magnam recusandae voluptatem nesciunt tempora.
-        code: "35230205"
+        description: Exercitationem amet iusto dicta dolorum.
+        code: "17315166"
         type: string
         address: string
-        createdAt: "1988-10-19T07:07:24Z"
-        updatedAt: "1999-01-19T11:59:17Z"
-        deletedAt: "1998-02-08T13:08:02Z"
+        createdAt: "2018-08-29T17:58:51Z"
+        updatedAt: "1984-03-21T11:46:53Z"
+        deletedAt: "1977-02-25T08:12:46Z"
     Storeroom:
       title: Storeroom
       properties:
@@ -10175,19 +13529,19 @@ components:
           nullable: false
           format: string
       example:
-        key: "00000577821228"
-        parentKey: "03000569788174"
-        siteKey: "08000709731148"
-        locationKey: "05000763485199"
-        userManagerKey: "04000273616947"
-        code: "93154680"
+        key: "04000343347023"
+        parentKey: "08000457227000"
+        siteKey: "05000195743341"
+        locationKey: "00000251006730"
+        userManagerKey: "06000221587556"
+        code: "16185562"
         name: string
         type: string
-        description: Et et neque qui sequi.
+        description: Omnis quas natus aut quisquam provident.
         priority: string
-        createdAt: "2015-02-13T20:52:29Z"
-        updatedAt: "2016-04-05T20:07:13Z"
-        deletedAt: "1987-11-07T11:41:53Z"
+        createdAt: "1997-02-06T09:07:52Z"
+        updatedAt: "1971-04-15T00:07:11Z"
+        deletedAt: "2015-05-31T10:21:05Z"
     Account:
       title: Account
       properties:
@@ -10227,13 +13581,13 @@ components:
           nullable: false
           format: string
       example:
-        key: "00000082413560"
-        code: "49081121"
+        key: "08000467394299"
+        code: "36667772"
         name: string
-        description: Voluptatibus voluptatem quas pariatur.
-        createdAt: "1978-12-01T16:26:11Z"
-        updatedAt: "1993-03-15T13:41:19Z"
-        deletedAt: "1991-12-04T00:50:19Z"
+        description: Ut omnis nemo numquam amet officia.
+        createdAt: "2016-08-18T06:16:46Z"
+        updatedAt: "1996-12-29T13:13:05Z"
+        deletedAt: "1974-09-16T23:30:51Z"
     Team:
       title: Team
       properties:
@@ -10278,14 +13632,14 @@ components:
           nullable: false
           format: string
       example:
-        key: "04000401676298"
-        accountKey: "02000349122938"
-        code: "16676534"
+        key: "04000781065811"
+        accountKey: "03000944946353"
+        code: "45614507"
         name: string
-        description: Accusamus non quo aut nisi nesciunt.
-        createdAt: "1983-01-08T21:55:49Z"
-        updatedAt: "1982-02-13T09:41:02Z"
-        deletedAt: "2013-07-23T09:12:30Z"
+        description: Perspiciatis libero quo non nisi.
+        createdAt: "1971-06-06T09:55:40Z"
+        updatedAt: "2001-04-08T02:19:48Z"
+        deletedAt: "1979-05-23T23:54:13Z"
     Labor:
       title: Labor
       properties:
@@ -10370,22 +13724,22 @@ components:
           nullable: false
           format: string
       example:
-        key: "03000877570101"
+        key: "07000636498619"
         siteKeys: "[]"
         locationKeys: "[]"
-        accountKey: "01000865465634"
-        teamKey: "03000849893008"
+        accountKey: "00000474935929"
+        teamKey: "01000454434631"
         userId: string
         name: string
         roleName: string
-        description: Recusandae maiores et harum voluptatem id.
+        description: Aut ea enim rerum ut eius eaque.
         note: string
         isActive: string
         cost: string
         currency: string
-        createdAt: "2014-08-20T21:04:33Z"
-        updatedAt: "1991-05-25T08:26:08Z"
-        deletedAt: "1971-07-11T17:43:12Z"
+        createdAt: "1994-08-08T10:48:59Z"
+        updatedAt: "1990-06-03T05:47:27Z"
+        deletedAt: "1983-05-30T11:07:54Z"
     User:
       title: User
       properties:
@@ -10450,18 +13804,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "09000281677215"
-        organizationKey: "07000077460711"
+        key: "00000654483601"
+        organizationKey: "02000493422993"
         siteKeys: "[]"
         locationKeys: "[]"
         name: string
         roleName: string
-        description: Est voluptates excepturi molestiae voluptatem.
+        description: Vel et est dolor mollitia dicta ipsum.
         notes: string
         isActive: string
-        createdAt: "2010-02-25T10:15:58Z"
-        updatedAt: "1998-11-07T10:16:37Z"
-        deletedAt: "1975-08-15T23:53:23Z"
+        createdAt: "1984-06-22T14:56:46Z"
+        updatedAt: "2010-12-04T13:56:12Z"
+        deletedAt: "2016-05-10T21:21:36Z"
     UnitOfMeasure:
       title: UnitOfMeasure
       properties:
@@ -10486,9 +13840,9 @@ components:
           nullable: false
           format: boolean
       example:
-        key: "08000340683921"
+        key: "01000160328772"
         name: string
-        code: "90877667"
+        code: "53042231"
         isActive: string
     Company:
       title: Company
@@ -10549,17 +13903,17 @@ components:
           nullable: false
           format: string
       example:
-        key: "03000553808850"
-        parentKey: "08000094452152"
+        key: "00000839723026"
+        parentKey: "07000594517080"
         name: string
-        code: "00099820"
+        code: "95509341"
         addresses: "[]"
         billingAddress: "[]"
-        currencyKey: "06000687882467"
+        currencyKey: "06000505654195"
         notes: string
-        createdAt: "2006-04-09T12:48:11Z"
-        updatedAt: "1980-08-02T12:45:42Z"
-        deletedAt: "2006-09-02T13:17:23Z"
+        createdAt: "1986-03-22T21:38:43Z"
+        updatedAt: "1977-08-19T05:53:32Z"
+        deletedAt: "1980-02-12T05:13:44Z"
     Vendor:
       title: Vendor
       properties:
@@ -10609,15 +13963,15 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000532591520"
+        key: "09000288930722"
         name: string
-        code: "27368015"
+        code: "31136792"
         address: string
         currency: string
         notes: string
-        createdAt: "1988-04-13T23:26:50Z"
-        updatedAt: "2019-03-27T09:28:36Z"
-        deletedAt: "2006-01-28T00:16:11Z"
+        createdAt: "2022-03-22T17:58:51Z"
+        updatedAt: "1998-07-08T08:14:29Z"
+        deletedAt: "1981-03-10T03:27:51Z"
     Customer:
       title: Customer
       properties:
@@ -10682,18 +14036,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "01000541713821"
+        key: "09000554691870"
         name: string
-        code: "68169992"
+        code: "71923413"
         address: string
         notes: string
         isActive: string
         contactPerson: string
         paymentTerms: string
         currencyCode: string
-        createdAt: "1989-07-11T07:56:22Z"
-        updatedAt: "1992-05-08T02:21:53Z"
-        deletedAt: "2013-09-10T12:48:58Z"
+        createdAt: "2007-04-14T22:08:14Z"
+        updatedAt: "2000-09-02T10:10:29Z"
+        deletedAt: "1988-02-09T01:59:58Z"
     Stock:
       title: Stock
       properties:
@@ -10763,19 +14117,19 @@ components:
           nullable: false
           format: string
       example:
-        key: "03000187905671"
-        productKey: "07000343945331"
-        materialKey: "02000582603323"
-        locationKey: "04000611874799"
-        storeroomKey: "09000857868126"
-        assetKey: "07000013431299"
+        key: "04000124936266"
+        productKey: "01000538140698"
+        materialKey: "09000128758718"
+        locationKey: "03000285424534"
+        storeroomKey: "00000327981951"
+        assetKey: "01000014277906"
         position: string
-        uomKey: "04000347986854"
+        uomKey: "05000706821374"
         quantity: string
-        expiresAt: "1982-09-19T04:16:54Z"
-        createdAt: "1998-04-02T15:48:10Z"
-        updatedAt: "1971-10-30T21:59:07Z"
-        deletedAt: "1986-07-06T08:52:23Z"
+        expiresAt: "1989-07-24T05:57:46Z"
+        createdAt: "1996-01-25T06:30:59Z"
+        updatedAt: "2019-10-23T16:56:39Z"
+        deletedAt: "2020-09-03T02:03:18Z"
     PurchaseOrderStatus:
       title: PurchaseOrderStatus
       properties:
@@ -10885,18 +14239,18 @@ components:
           nullable: false
           format: array
       example:
-        key: "09000160668566"
-        siteKey: "07000338368271"
-        orderDate: "1984-01-20T20:32:42Z"
-        vendorKey: "06000881425037"
+        key: "06000946455711"
+        siteKey: "03000814386203"
+        orderDate: "1976-07-18T11:14:18Z"
+        vendorKey: "07000117307172"
         orderNo: string
         status: string
         warehouseName: string
-        title: Similique qui distinctio optio veniam.
-        description: Ducimus vel sint rerum enim.
-        dueAt: "1986-02-17T09:41:35Z"
-        approvedAt: "1984-04-27T13:46:39Z"
-        completedAt: "1983-12-18T12:58:07Z"
+        title: Eaque quis nam officia illum ut facere veritatis.
+        description: Cumque necessitatibus sit quos eveniet.
+        dueAt: "2017-07-19T15:28:02Z"
+        approvedAt: "1979-08-02T19:48:41Z"
+        completedAt: "1970-11-11T02:03:54Z"
         shippingMethod: string
         terms: string
         notes: string
@@ -10904,7 +14258,7 @@ components:
         currency: string
         totalNetValue: string
         totalGrossValue: string
-        updatedAt: "1970-02-08T03:02:37Z"
+        updatedAt: "1984-05-02T04:53:11Z"
         lines: "[]"
     PurchaseOrder:
       title: PurchaseOrder
@@ -11015,18 +14369,18 @@ components:
           nullable: false
           format: array
       example:
-        key: "02000554023473"
-        siteKey: "01000050778746"
-        orderDate: "1982-05-13T02:29:38Z"
-        vendorKey: "00000408430291"
+        key: "01000211915456"
+        siteKey: "01000356922722"
+        orderDate: "1971-11-16T15:42:58Z"
+        vendorKey: "00000876668070"
         orderNo: string
         status: string
         warehouseName: string
-        title: Voluptatem autem labore ut ab omnis harum.
-        description: Sunt est est quam.
-        dueAt: "1977-02-04T03:31:19Z"
-        approvedAt: "2017-02-20T13:39:22Z"
-        completedAt: "2014-05-09T13:21:39Z"
+        title: Facere laudantium tenetur eum et.
+        description: Eaque reiciendis nobis eos est explicabo.
+        dueAt: "2002-12-24T04:44:38Z"
+        approvedAt: "1998-07-18T18:34:42Z"
+        completedAt: "2011-03-21T10:32:56Z"
         shippingMethod: string
         terms: string
         notes: string
@@ -11034,7 +14388,7 @@ components:
         currency: string
         totalNetValue: string
         totalGrossValue: string
-        updatedAt: "2015-09-03T15:50:18Z"
+        updatedAt: "1973-05-03T04:58:22Z"
         lines: "[]"
     PurchaseOrderCollection:
       type: array
@@ -11164,16 +14518,16 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000876501971"
-        locationKey: "00000290793629"
-        assetKey: "02000999240353"
-        partKey: "08000321173179"
-        vendorKey: "01000004439570"
+        key: "07000907742489"
+        locationKey: "05000408017372"
+        assetKey: "07000265238403"
+        partKey: "03000895599842"
+        vendorKey: "07000845865127"
         lineNo: string
         warehouseName: string
-        code: "31611831"
-        title: Tenetur repellat harum saepe aspernatur ut et.
-        description: Est sapiente libero nemo.
+        code: "54385320"
+        title: Est sed corporis laborum.
+        description: Voluptates voluptas veniam qui delectus.
         lineRef: string
         quantity: string
         receivedQuantity: string
@@ -11185,9 +14539,9 @@ components:
         lineTotalValue: string
         lineTaxValue: string
         notes: string
-        dueAt: "2009-08-27T11:36:27Z"
-        createdAt: "2003-07-28T03:31:20Z"
-        updatedAt: "1972-02-28T21:19:12Z"
+        dueAt: "1980-08-29T16:25:25Z"
+        createdAt: "1989-11-10T23:22:43Z"
+        updatedAt: "2008-06-11T05:01:18Z"
     Part:
       title: Part
       properties:
@@ -11317,18 +14671,18 @@ components:
           nullable: false
           format: array
       example:
-        key: "04000650780196"
+        key: "05000033316153"
         siteKeys: "[]"
         parentKeys: "[]"
         assetKeys: "[]"
         vendorKeys: string
         documents: "[]"
-        accountKey: "05000601823491"
-        code: "56490657"
+        accountKey: "09000195052067"
+        code: "26378213"
         isAssembly: string
         partNumber: string
         name: string
-        description: Et quisquam ducimus et aperiam.
+        description: Est omnis sint pariatur quam.
         notes: string
         criticality: string
         isActive: string
@@ -11337,9 +14691,9 @@ components:
         uom: string
         cost: string
         currency: string
-        createdAt: "1996-09-10T20:19:47Z"
-        updatedAt: "2019-04-01T22:15:58Z"
-        deletedAt: "2000-01-03T13:18:09Z"
+        createdAt: "1979-10-26T03:39:12Z"
+        updatedAt: "2003-06-23T19:35:11Z"
+        deletedAt: "1986-09-10T00:55:06Z"
         inventory: "[]"
         drawings: "[]"
     MaterialItem:
@@ -11441,25 +14795,25 @@ components:
           nullable: false
           format: string
       example:
-        key: "08000651612641"
-        materialKey: "05000077308490"
-        assemblyKey: "02000258570706"
-        assetKey: "04000145365560"
-        assetTemplateKey: "03000271835339"
-        workOrderKey: "03000401631142"
-        pmKey: "08000487775186"
-        productionOrderKey: "05000339422787"
+        key: "03000733242753"
+        materialKey: "03000112017089"
+        assemblyKey: "01000199380637"
+        assetKey: "09000114922728"
+        assetTemplateKey: "06000727015079"
+        workOrderKey: "09000811781361"
+        pmKey: "04000153770016"
+        productionOrderKey: "03000414878472"
         partNumber: string
         drawingNumber: string
         positionNumber: string
-        documentKey: "06000178939840"
+        documentKey: "05000054942905"
         name: string
-        uomKey: "09000008674593"
+        uomKey: "03000958784570"
         quantity: string
         requiredQuantity: string
-        createdAt: "1975-11-29T16:21:12Z"
-        updatedAt: "1997-05-08T03:59:28Z"
-        deletedAt: "2004-03-07T21:30:05Z"
+        createdAt: "2017-09-06T02:18:36Z"
+        updatedAt: "1995-11-25T04:28:23Z"
+        deletedAt: "1972-03-11T17:34:40Z"
     Asset:
       title: Asset
       properties:
@@ -11579,17 +14933,17 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000003833168"
-        siteKey: "08000797817367"
-        parentKey: "02000716156589"
-        vendorKey: "04000374850689"
-        modelKey: "07000577536096"
-        teamKey: "06000150771144"
+        key: "03000905349614"
+        siteKey: "00000091730985"
+        parentKey: "07000121674076"
+        vendorKey: "02000498276752"
+        modelKey: "06000361773487"
+        teamKey: "06000863695155"
         documents: "[]"
-        locationKey: "00000517615306"
-        accountKey: "05000233656131"
+        locationKey: "00000549666450"
+        accountKey: "03000208223111"
         name: string
-        description: Et ea molestias at voluptas.
+        description: Ex qui totam saepe earum iste.
         notes: string
         categoryName: string
         criticality: string
@@ -11597,11 +14951,11 @@ components:
         manufacturerName: string
         modelName: string
         serialNumber: string
-        activatedAt: "2000-02-18T10:35:11Z"
-        deactivatedAt: "2003-11-17T21:35:54Z"
-        createdAt: "1979-02-14T15:55:10Z"
-        updatedAt: "1984-06-09T14:19:27Z"
-        deletedAt: "1984-01-10T13:52:26Z"
+        activatedAt: "1994-07-17T17:03:17Z"
+        deactivatedAt: "1970-09-10T05:06:43Z"
+        createdAt: "1981-10-24T20:20:58Z"
+        updatedAt: "2021-09-11T06:08:34Z"
+        deletedAt: "2017-04-15T21:53:51Z"
     AssetDownTime:
       title: AssetDownTime
       properties:
@@ -11656,16 +15010,16 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000184955929"
-        assetKey: "03000743385047"
-        description: Deleniti consectetur mollitia facere ad.
-        startedAt: "1999-12-16T19:13:42Z"
-        endedAt: "1973-12-11T05:27:07Z"
+        key: "00000098739105"
+        assetKey: "08000235073502"
+        description: Ut provident eveniet aliquam asperiores.
+        startedAt: "1979-08-06T23:01:36Z"
+        endedAt: "1988-10-15T20:36:05Z"
         categoryName: string
         severity: string
         notes: string
-        createdAt: "2008-07-15T23:00:49Z"
-        updatedAt: "2015-04-28T11:16:55Z"
+        createdAt: "1975-04-01T21:33:09Z"
+        updatedAt: "1993-06-20T21:08:08Z"
     Model:
       title: Model
       properties:
@@ -11710,14 +15064,14 @@ components:
           nullable: false
           format: string
       example:
-        key: "04000587902449"
-        siteKey: "08000255837862"
+        key: "06000262801832"
+        siteKey: "07000218254223"
         documents: "[]"
         name: string
         manufacturerName: string
-        createdAt: "2008-08-11T20:40:55Z"
-        updatedAt: "2010-02-22T20:17:15Z"
-        deletedAt: "1996-10-19T02:23:55Z"
+        createdAt: "1989-01-03T04:52:14Z"
+        updatedAt: "1978-09-02T09:50:51Z"
+        deletedAt: "1998-03-25T17:02:41Z"
     Counter:
       title: Counter
       properties:
@@ -11772,16 +15126,16 @@ components:
           nullable: false
           format: string
       example:
-        key: "03000121165817"
-        siteKey: "06000155917513"
-        assetKey: "05000996219898"
+        key: "04000534098789"
+        siteKey: "05000623493792"
+        assetKey: "08000406296252"
         name: string
         uom: string
         lastReading: string
-        lastReadingAt: "1982-12-27T22:32:36Z"
-        createdAt: "1984-02-11T17:49:35Z"
-        updatedAt: "1995-01-15T03:42:56Z"
-        deletedAt: "1982-01-05T05:58:18Z"
+        lastReadingAt: "1975-07-30T01:11:11Z"
+        createdAt: "1974-06-18T05:27:01Z"
+        updatedAt: "1997-05-18T01:41:23Z"
+        deletedAt: "1983-10-20T23:37:43Z"
     CounterReading:
       title: CounterReading
       properties:
@@ -11811,11 +15165,11 @@ components:
           nullable: false
           format: string
       example:
-        key: "05000869402221"
-        assetKey: "08000841485439"
-        meterKey: "00000602252642"
+        key: "01000568512369"
+        assetKey: "05000827226762"
+        meterKey: "06000729066706"
         reading: string
-        createdAt: "2008-10-03T23:02:50Z"
+        createdAt: "1997-09-19T11:09:05Z"
     PreventiveMaintenance:
       title: PreventiveMaintenance
       properties:
@@ -11955,13 +15309,13 @@ components:
           nullable: false
           format: string
       example:
-        key: "09000238098101"
+        key: "07000535994831"
         siteKeys: "[]"
         assetKeys: "[]"
-        teamKey: "08000759270458"
-        accountKey: "08000581523567"
-        title: Tenetur aliquid perferendis et unde.
-        description: Debitis et rem nobis ullam dolore quod.
+        teamKey: "05000536639225"
+        accountKey: "06000007069959"
+        title: Quidem dolorem velit magni reprehenderit.
+        description: Omnis rerum quisquam voluptatum sunt.
         instructions: string
         status: string
         severity: string
@@ -11969,19 +15323,19 @@ components:
         roleName: string
         categoryName: string
         documents: "[]"
-        documentKey: "04000522525722"
+        documentKey: "09000483593881"
         documentPage: string
         notes: string
-        dueAt: "1971-07-30T02:46:20Z"
-        nextScheduledAt: "1975-08-14T10:17:24Z"
-        lastScheduledAt: "1998-08-12T12:03:18Z"
-        lastCompletedAt: "2003-10-16T17:00:35Z"
+        dueAt: "1999-05-19T15:30:58Z"
+        nextScheduledAt: "1992-03-04T03:21:02Z"
+        lastScheduledAt: "2002-06-17T03:37:25Z"
+        lastCompletedAt: "2014-05-13T23:13:38Z"
         lastCompletionRemarks: string
         materials: "[]"
         triggers: "[]"
-        createdAt: "2009-07-27T06:42:57Z"
-        updatedAt: "1974-04-13T22:50:24Z"
-        deletedAt: "2005-11-14T11:18:19Z"
+        createdAt: "1991-12-13T21:52:35Z"
+        updatedAt: "2014-03-12T17:55:14Z"
+        deletedAt: "2012-10-12T14:03:16Z"
     WorkOrderStatus:
       title: WorkOrderStatus
       properties:
@@ -12146,38 +15500,38 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000210742568"
-        siteKey: "00000405716730"
-        assetKey: "09000842807064"
-        accountKey: "07000843854894"
-        title: Ut in repellat repellat omnis.
-        description: Id inventore modi accusamus beatae.
-        workRequestKey: "09000970751634"
-        code: "50799343"
-        pmKey: "00000069691801"
-        teamKey: "07000171413640"
-        userAssignedKey: "09000859042065"
-        userCompletedKey: "06000024111834"
-        organizationKey: "02000713550323"
+        key: "05000064186060"
+        siteKey: "02000139478903"
+        assetKey: "07000406072310"
+        accountKey: "05000323560479"
+        title: Enim quis quis voluptatibus quia.
+        description: Repellat at et consequatur et autem et.
+        workRequestKey: "06000869181066"
+        code: "92867383"
+        pmKey: "06000263886908"
+        teamKey: "09000218990305"
+        userAssignedKey: "05000405027783"
+        userCompletedKey: "02000361872103"
+        organizationKey: "08000473590371"
         instructions: string
         status: string
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
-        documentKey: "07000405372799"
+        documentKey: "08000312880465"
         documentPage: string
         notes: string
-        approvedAt: "2004-11-11T22:36:55Z"
-        dueAt: "1970-10-26T03:30:49Z"
-        scheduledAt: "1974-11-09T02:40:26Z"
-        completedAt: "2003-01-05T00:51:36Z"
+        approvedAt: "1987-09-16T10:24:18Z"
+        dueAt: "1976-01-08T13:06:20Z"
+        scheduledAt: "1996-10-30T13:40:37Z"
+        completedAt: "1982-11-09T18:48:14Z"
         completionRemarks: string
         materials: string
         documents: "[]"
-        createdAt: "1972-12-20T01:33:24Z"
-        updatedAt: "1982-06-18T06:05:43Z"
-        deletedAt: "1978-11-15T05:04:42Z"
+        createdAt: "2016-06-14T16:28:15Z"
+        updatedAt: "1996-05-23T22:13:24Z"
+        deletedAt: "1979-05-21T20:26:45Z"
     WorkOrder:
       title: WorkOrder
       properties:
@@ -12342,38 +15696,38 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000710204803"
-        siteKey: "01000714942611"
-        assetKey: "01000463091279"
-        accountKey: "08000071979978"
-        title: Fugit ut in temporibus nam consequatur.
-        description: Eum porro qui doloribus ipsum.
-        workRequestKey: "08000133763510"
-        code: "43874842"
-        pmKey: "09000944240609"
-        teamKey: "00000909697178"
-        userAssignedKey: "06000112729934"
-        userCompletedKey: "01000145258592"
-        organizationKey: "03000033413097"
+        key: "01000818189769"
+        siteKey: "08000520857358"
+        assetKey: "01000729664283"
+        accountKey: "02000969209677"
+        title: Possimus temporibus tempora quod dolorum.
+        description: Qui pariatur esse nobis.
+        workRequestKey: "09000538297065"
+        code: "28209010"
+        pmKey: "05000781634873"
+        teamKey: "09000069290058"
+        userAssignedKey: "01000839733083"
+        userCompletedKey: "01000654777130"
+        organizationKey: "09000898199151"
         instructions: string
         status: string
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
-        documentKey: "09000570463989"
+        documentKey: "01000839614856"
         documentPage: string
         notes: string
-        approvedAt: "1993-03-18T15:01:14Z"
-        dueAt: "2001-05-18T07:02:13Z"
-        scheduledAt: "1988-01-14T00:58:12Z"
-        completedAt: "2020-09-29T19:37:02Z"
+        approvedAt: "1981-07-20T08:43:07Z"
+        dueAt: "1996-06-26T03:22:08Z"
+        scheduledAt: "2016-09-17T08:35:39Z"
+        completedAt: "2012-03-10T04:17:01Z"
         completionRemarks: string
         materials: string
         documents: "[]"
-        createdAt: "2021-03-30T07:23:33Z"
-        updatedAt: "2001-10-20T17:33:01Z"
-        deletedAt: "1979-03-01T21:19:02Z"
+        createdAt: "1989-03-03T14:00:29Z"
+        updatedAt: "1979-07-06T09:33:02Z"
+        deletedAt: "1987-08-14T01:22:59Z"
     WorkOrderCollection:
       type: array
       items:
@@ -12497,29 +15851,29 @@ components:
           nullable: false
           format: string
       example:
-        key: "01000899459196"
-        siteKey: "04000719565777"
-        locationKey: "06000415570755"
-        storeroomKey: "00000627994362"
-        assetKey: "05000425331350"
-        workOrderKey: "08000081558440"
-        teamKey: "08000907776816"
-        userRequestedKey: "03000373397237"
-        userApprovedKey: "09000002821647"
+        key: "01000170749855"
+        siteKey: "08000826576710"
+        locationKey: "09000602459782"
+        storeroomKey: "07000876609978"
+        assetKey: "02000310212962"
+        workOrderKey: "00000750434116"
+        teamKey: "08000806968845"
+        userRequestedKey: "08000701521614"
+        userApprovedKey: "08000031894529"
         documents: "[]"
-        title: Quia cumque quae eum odit sunt quo qui.
-        description: Corporis magnam nulla nisi quia.
-        statusKey: "03000929587626"
+        title: Eos blanditiis veniam minima tempora laboriosam.
+        description: Temporibus iste iure et vero totam rerum.
+        statusKey: "06000150049220"
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
         notes: string
-        approvedAt: "1981-01-31T04:15:52Z"
-        dueAt: "2006-10-13T03:33:00Z"
-        createdAt: "1983-10-29T01:29:19Z"
-        updatedAt: "2019-07-16T12:34:18Z"
-        deletedAt: "1976-12-22T10:34:58Z"
+        approvedAt: "2010-03-22T00:43:53Z"
+        dueAt: "2021-03-20T08:24:29Z"
+        createdAt: "1981-09-26T02:11:02Z"
+        updatedAt: "2009-07-21T16:27:34Z"
+        deletedAt: "1977-05-03T15:57:23Z"
     Document:
       title: Document
       properties:
@@ -12574,16 +15928,16 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000619950707"
+        key: "05000722498535"
         entityKeys: "[]"
         name: string
         url: string
         type: string
         contentType: string
-        description: Vero omnis iure possimus omnis.
+        description: At quas aut ut.
         notes: string
-        createdAt: "2014-10-03T06:28:54Z"
-        updatedAt: "1999-03-04T11:09:00Z"
+        createdAt: "1992-07-11T06:24:36Z"
+        updatedAt: "1996-11-19T11:28:53Z"
     Inventory:
       title: Inventory
       properties:
@@ -12618,12 +15972,12 @@ components:
           nullable: false
           format: string
       example:
-        code: "20189730"
+        code: "77470829"
         name: string
         quantity: 10
         unitCost: 10
-        locationKey: "09000049138220"
-        updatedAt: "1989-08-29T05:30:04Z"
+        locationKey: "07000314828064"
+        updatedAt: "1976-01-30T22:43:14Z"
     Status:
       title: Status
       properties:
@@ -12683,17 +16037,17 @@ components:
           nullable: false
           format: string
       example:
-        key: "00000540749351"
-        organizationKey: "01000623295928"
-        parentKey: "07000240048633"
+        key: "03000326200258"
+        organizationKey: "04000691350335"
+        parentKey: "00000600154841"
         name: string
-        code: "94113716"
+        code: "64933207"
         subCode: string
         scope: string
         isActive: string
-        createdAt: "1983-05-02T06:50:07Z"
-        updatedAt: "2002-09-04T05:23:39Z"
-        deletedAt: "2006-07-14T11:39:15Z"
+        createdAt: "2013-03-28T11:23:02Z"
+        updatedAt: "2023-07-24T08:39:08Z"
+        deletedAt: "1986-03-02T07:59:09Z"
     Tax:
       title: Tax
       properties:
@@ -12743,15 +16097,15 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000668671437"
-        organizationKey: "07000379386347"
+        key: "04000399843544"
+        organizationKey: "02000160465473"
         name: string
         type: string
         taxPercentage: string
         isActive: string
-        createdAt: "2008-07-02T01:54:17Z"
-        updatedAt: "1975-07-26T19:43:21Z"
-        deletedAt: "2020-01-06T07:18:45Z"
+        createdAt: "2017-08-21T02:32:45Z"
+        updatedAt: "2018-08-20T10:45:22Z"
+        deletedAt: "1972-04-03T12:45:43Z"
     Currency:
       title: Currency
       properties:
@@ -12796,14 +16150,14 @@ components:
           nullable: false
           format: string
       example:
-        key: "08000562006678"
+        key: "08000768955086"
         name: string
-        code: "63725018"
+        code: "95215198"
         isBase: string
         isActive: string
-        createdAt: "2022-09-23T19:40:34Z"
-        updatedAt: "1996-09-26T23:55:25Z"
-        deletedAt: "2020-12-12T10:10:23Z"
+        createdAt: "1974-11-23T02:42:53Z"
+        updatedAt: "1997-03-22T23:51:24Z"
+        deletedAt: "1972-05-07T23:39:23Z"
     ExchangeRate:
       title: ExchangeRate
       properties:
@@ -12833,11 +16187,11 @@ components:
           nullable: false
           format: string
       example:
-        key: "05000612257568"
-        currencyKey: "06000805521474"
-        baseCurrencyKey: "09000018814382"
+        key: "05000507918105"
+        currencyKey: "05000486664717"
+        baseCurrencyKey: "09000201836661"
         rate: string
-        createdAt: "2002-09-04T05:07:14Z"
+        createdAt: "1997-06-08T05:52:29Z"
     Product:
       title: Product
       properties:
@@ -12962,18 +16316,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000521926775"
-        groupKey: "03000748207877"
-        uomKey: "00000253802003"
-        code: "37115524"
+        key: "00000101213112"
+        groupKey: "02000376439506"
+        uomKey: "06000982112303"
+        code: "91315809"
         name: string
-        description: Dolorem blanditiis et id sapiente enim sit.
+        description: Beatae natus eum rerum explicabo et eius.
         type: string
         isTaxable: string
         taxKeys: "[]"
         status: string
         price: string
-        currencyKey: "05000993916763"
+        currencyKey: "09000530496206"
         quantity: string
         sku: string
         upc: string
@@ -12983,9 +16337,9 @@ components:
         reorderLevel: string
         dimensions: string
         supplyOptions: "[]"
-        createdAt: "1989-10-17T19:04:33Z"
-        updatedAt: "1971-07-31T09:39:31Z"
-        deletedAt: "1981-08-01T12:44:08Z"
+        createdAt: "1988-04-30T05:38:55Z"
+        updatedAt: "2004-06-05T11:04:13Z"
+        deletedAt: "1990-09-01T23:28:53Z"
     SalesOrder:
       title: SalesOrder
       properties:
@@ -13065,21 +16419,21 @@ components:
           nullable: false
           format: string
       example:
-        key: "04000114135807"
-        customerKey: "01000960574423"
-        userKey: "01000651820344"
-        code: "18025767"
+        key: "04000464813049"
+        customerKey: "03000596052639"
+        userKey: "07000303198767"
+        code: "39398925"
         orderNumber: string
         date: string
-        statusKey: "08000227519168"
-        shipmentDate: "2020-01-04T11:46:43Z"
+        statusKey: "01000508631393"
+        shipmentDate: "2017-06-15T12:54:28Z"
         contactPerson: string
         lines: "[]"
-        currencyKey: "07000033628505"
+        currencyKey: "08000920257355"
         currencyRate: string
-        createdAt: "2010-05-20T03:30:47Z"
-        updatedAt: "1973-12-25T11:11:10Z"
-        deletedAt: "1997-09-16T12:37:36Z"
+        createdAt: "2004-03-03T01:45:59Z"
+        updatedAt: "1980-06-23T21:21:41Z"
+        deletedAt: "1979-05-17T13:42:36Z"
     Project:
       title: Project
       properties:
@@ -13129,15 +16483,15 @@ components:
           nullable: false
           format: string
       example:
-        key: "06000268236009"
-        siteKey: "03000155427349"
+        key: "03000135817109"
+        siteKey: "00000422321857"
         name: string
-        accountKey: "00000108839280"
-        statusKey: "08000134998023"
+        accountKey: "03000905850939"
+        statusKey: "05000592453648"
         budget: string
-        createdAt: "2006-03-04T06:13:22Z"
-        updatedAt: "2001-03-24T09:02:23Z"
-        deletedAt: "1988-01-28T15:12:39Z"
+        createdAt: "1971-12-02T06:51:55Z"
+        updatedAt: "1983-06-01T10:21:52Z"
+        deletedAt: "1988-11-16T01:57:32Z"
     Invoice:
       title: Invoice
       properties:
@@ -13207,19 +16561,19 @@ components:
           nullable: false
           format: string
       example:
-        key: "00000224812715"
+        key: "03000221280971"
         invoiceNumber: string
-        vendorKey: "00000166705711"
-        poKey: "05000429013652"
-        statusKey: "01000200010748"
+        vendorKey: "05000775263301"
+        poKey: "00000545814108"
+        statusKey: "04000058948581"
         lineItems: "[]"
-        invoiceDate: "1993-06-05T00:00:32Z"
-        dueDate: "2005-02-21T12:33:20Z"
-        receivedDate: "1982-06-30T14:07:45Z"
-        currencyKey: "08000378601756"
-        createdAt: "1974-01-14T00:12:35Z"
-        updatedAt: "1993-01-12T08:35:30Z"
-        deletedAt: "1971-09-27T08:04:09Z"
+        invoiceDate: "2009-06-22T18:30:37Z"
+        dueDate: "2017-12-27T09:15:35Z"
+        receivedDate: "1974-10-01T08:40:17Z"
+        currencyKey: "00000016518162"
+        createdAt: "2015-06-16T00:31:59Z"
+        updatedAt: "2008-06-23T11:36:54Z"
+        deletedAt: "1990-06-16T17:30:39Z"
     Receipt:
       title: Receipt
       type: object
@@ -13328,25 +16682,25 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000816754402"
-        siteKey: "08000186604358"
-        vendorKey: "06000538503039"
-        poKey: "03000230398482"
-        code: "73453000"
+        key: "05000394319173"
+        siteKey: "06000189879293"
+        vendorKey: "05000094979084"
+        poKey: "02000936704459"
+        code: "85945197"
         orderNo: string
-        orderDate: "2002-03-02T16:03:03Z"
-        title: Modi ad ea et.
-        description: Corrupti commodi eum quos atque quod non.
-        completedAt: "2002-09-02T19:58:53Z"
+        orderDate: "2017-09-03T14:47:49Z"
+        title: Molestias ut quibusdam quia sapiente explicabo.
+        description: Mollitia animi eaque necessitatibus perferendis.
+        completedAt: "1982-06-17T01:02:09Z"
         shippingMethod: string
         notes: string
-        currencyKey: "06000912057513"
+        currencyKey: "05000401124437"
         totalNetValue: string
         totalTaxValue: string
         totalGrossValue: string
         lineItems: "[]"
-        createdAt: "2010-03-04T09:05:08Z"
-        updatedAt: "1979-10-06T22:20:20Z"
+        createdAt: "1985-03-14T04:11:11Z"
+        updatedAt: "2008-04-04T17:17:44Z"
     RequestForQuotation:
       title: RequestForQuotation
       type: object
@@ -13397,14 +16751,14 @@ components:
           nullable: false
           format: string
       example:
-        key: "00000881998545"
-        parentKey: "09000573946806"
-        code: "01241310"
+        key: "09000975618878"
+        parentKey: "07000370923482"
+        code: "95157801"
         name: string
-        description: Ab voluptates dolor natus soluta rerum.
-        updatedAt: "1998-07-17T05:09:02Z"
-        createdAt: "1996-09-17T02:50:29Z"
-        deletedAt: "1983-03-19T00:05:28Z"
+        description: Quo ea id ducimus.
+        updatedAt: "2017-04-13T02:32:14Z"
+        createdAt: "1971-06-18T01:11:48Z"
+        deletedAt: "1990-09-12T06:21:47Z"
     StockTransfer:
       title: StockTransfer
       properties:
@@ -13469,18 +16823,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "01000723370602"
-        fromLocationKey: "02000617165454"
-        toLocationKey: "01000898146803"
-        fromStoreroomKey: "09000904766839"
-        toStoreroomKey: "05000398870478"
-        code: "59375036"
+        key: "01000202130784"
+        fromLocationKey: "04000849725942"
+        toLocationKey: "04000842836932"
+        fromStoreroomKey: "00000499769278"
+        toStoreroomKey: "07000036704813"
+        code: "93256308"
         date: string
         lineItems: string
         orderNumber: string
-        createdAt: "1974-01-28T03:41:11Z"
-        updatedAt: "2010-12-16T01:43:18Z"
-        deletedAt: "2009-03-07T14:44:00Z"
+        createdAt: "1975-05-18T16:02:26Z"
+        updatedAt: "1992-11-29T23:06:28Z"
+        deletedAt: "2021-01-12T04:56:21Z"
     StockAdjustment:
       title: StockAdjustment
       properties:
@@ -13550,19 +16904,19 @@ components:
           nullable: false
           format: string
       example:
-        key: "01000850164358"
-        locationKey: "07000417390404"
-        storeroomKey: "07000708654862"
-        userKey: "03000619339373"
+        key: "02000493981798"
+        locationKey: "01000153051191"
+        storeroomKey: "06000835242474"
+        userKey: "07000425714573"
         date: string
         reason: string
         lineItems: "[]"
         adjustmentNumber: string
         total: string
         type: string
-        createdAt: "1979-02-04T16:01:14Z"
-        updatedAt: "2008-10-11T00:36:12Z"
-        deletedAt: "1994-08-26T05:53:30Z"
+        createdAt: "2022-11-23T00:02:57Z"
+        updatedAt: "2019-12-13T00:22:26Z"
+        deletedAt: "2003-10-01T18:29:22Z"
     ShipmentOrder:
       title: ShipmentOrder
       properties:
@@ -13647,22 +17001,22 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000063435868"
-        userKey: "05000224641658"
-        customerKey: "08000427546351"
-        vendorKey: "08000678209886"
+        key: "00000043137723"
+        userKey: "07000291005926"
+        customerKey: "04000892459064"
+        vendorKey: "00000707828318"
         orderNumber: string
         shipmentNumber: string
         date: string
-        statusKey: "03000890221317"
+        statusKey: "08000871934856"
         lineItems: "[]"
         destinationAddress: string
         carrierName: string
         shippingMethod: string
         notes: string
-        createdAt: "2008-07-31T21:47:02Z"
-        updatedAt: "1976-12-06T04:01:13Z"
-        deletedAt: "2005-08-25T09:35:54Z"
+        createdAt: "1991-05-08T13:32:22Z"
+        updatedAt: "2014-09-27T23:08:51Z"
+        deletedAt: "1988-01-12T03:06:21Z"
     ShipmentOrderDelivered: []
     Integration:
       title: Integration
