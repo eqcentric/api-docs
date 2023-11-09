@@ -2309,7 +2309,7 @@ paths:
                   nullable: true
                   format: string
                 cost:
-                  type: object
+                  type: number
                   nullable: true
                   format: object
                 currency:
@@ -2448,7 +2448,7 @@ paths:
                   nullable: true
                   format: string
                 cost:
-                  type: object
+                  type: number
                   nullable: true
                   format: object
                 currency:
@@ -8378,7 +8378,7 @@ paths:
                   nullable: true
                   format: string
                 cost:
-                  type: object
+                  type: number
                   nullable: true
                   format: object
                 currency:
@@ -8517,7 +8517,7 @@ paths:
                   nullable: true
                   format: string
                 cost:
-                  type: object
+                  type: number
                   nullable: true
                   format: object
                 currency:
@@ -11764,7 +11764,7 @@ paths:
                   nullable: true
                   format: string
                 cost:
-                  type: object
+                  type: number
                   nullable: true
                   format: object
                 currency:
@@ -11903,7 +11903,7 @@ paths:
                   nullable: true
                   format: string
                 cost:
-                  type: object
+                  type: number
                   nullable: true
                   format: object
                 currency:
