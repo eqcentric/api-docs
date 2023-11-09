@@ -4,8 +4,8 @@ info:
   title: Makini API Docs
   description: Makini API Docs
   license:
-    name: ''
-    url: ''
+    name: ""
+    url: ""
 servers:
   - url: https://www.makini.io
 paths:
@@ -62,7 +62,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -74,7 +74,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Organization'
+                        $ref: "#/components/schemas/Organization"
                   links:
                     type: object
                     properties:
@@ -107,7 +107,7 @@ paths:
                         type: number
   /api/eam/organizations/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an Organization
       parameters:
         - name: key
@@ -120,7 +120,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -128,7 +128,7 @@ paths:
                 type: object
   /api/eam/sites:
     get:
-      description: ''
+      description: ""
       summary: List Sites
       parameters:
         - name: filter
@@ -162,7 +162,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -174,7 +174,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Site'
+                        $ref: "#/components/schemas/Site"
                   links:
                     type: object
                     properties:
@@ -207,7 +207,7 @@ paths:
                         type: number
   /api/eam/sites/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Site
       parameters:
         - name: key
@@ -220,7 +220,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -279,7 +279,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -291,7 +291,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Location'
+                        $ref: "#/components/schemas/Location"
                   links:
                     type: object
                     properties:
@@ -324,7 +324,7 @@ paths:
                         type: number
   /api/eam/locations/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Location
       parameters:
         - name: key
@@ -337,7 +337,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -396,7 +396,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -408,7 +408,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Storeroom'
+                        $ref: "#/components/schemas/Storeroom"
                   links:
                     type: object
                     properties:
@@ -441,7 +441,7 @@ paths:
                         type: number
   /api/eam/storerooms/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Storeroom
       parameters:
         - name: key
@@ -454,7 +454,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -513,7 +513,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -525,7 +525,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Account'
+                        $ref: "#/components/schemas/Account"
                   links:
                     type: object
                     properties:
@@ -558,7 +558,7 @@ paths:
                         type: number
   /api/eam/accounts/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an Account
       parameters:
         - name: key
@@ -571,7 +571,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -630,7 +630,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -642,7 +642,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Team'
+                        $ref: "#/components/schemas/Team"
                   links:
                     type: object
                     properties:
@@ -675,7 +675,7 @@ paths:
                         type: number
   /api/eam/teams/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Team
       parameters:
         - name: key
@@ -688,7 +688,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -747,7 +747,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -759,7 +759,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Labor'
+                        $ref: "#/components/schemas/Labor"
                   links:
                     type: object
                     properties:
@@ -792,7 +792,7 @@ paths:
                         type: number
   /api/eam/labors/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Labor
       parameters:
         - name: key
@@ -805,7 +805,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -864,7 +864,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -876,7 +876,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/User'
+                        $ref: "#/components/schemas/User"
                   links:
                     type: object
                     properties:
@@ -909,7 +909,7 @@ paths:
                         type: number
   /api/eam/users/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an User
       parameters:
         - name: key
@@ -922,7 +922,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -981,7 +981,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -993,7 +993,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/UnitOfMeasure'
+                        $ref: "#/components/schemas/UnitOfMeasure"
                   links:
                     type: object
                     properties:
@@ -1026,7 +1026,7 @@ paths:
                         type: number
   /api/eam/uom/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an UnitOfMeasure
       parameters:
         - name: key
@@ -1039,7 +1039,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -1098,7 +1098,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -1110,7 +1110,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Company'
+                        $ref: "#/components/schemas/Company"
                   links:
                     type: object
                     properties:
@@ -1143,7 +1143,7 @@ paths:
                         type: number
   /api/eam/companies/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Company
       parameters:
         - name: key
@@ -1156,7 +1156,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -1215,7 +1215,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -1227,7 +1227,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Vendor'
+                        $ref: "#/components/schemas/Vendor"
                   links:
                     type: object
                     properties:
@@ -1260,7 +1260,7 @@ paths:
                         type: number
   /api/eam/vendors/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Vendor
       parameters:
         - name: key
@@ -1273,7 +1273,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -1332,7 +1332,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -1344,7 +1344,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Customer'
+                        $ref: "#/components/schemas/Customer"
                   links:
                     type: object
                     properties:
@@ -1377,7 +1377,7 @@ paths:
                         type: number
   /api/eam/customers/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Customer
       parameters:
         - name: key
@@ -1390,7 +1390,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -1449,7 +1449,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -1461,7 +1461,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Stock'
+                        $ref: "#/components/schemas/Stock"
                   links:
                     type: object
                     properties:
@@ -1494,7 +1494,7 @@ paths:
                         type: number
   /api/eam/stocks/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Stock
       parameters:
         - name: key
@@ -1507,7 +1507,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -1515,7 +1515,7 @@ paths:
                 type: object
   /api/eam/purchase-orders/{key}/status:
     put:
-      description: ''
+      description: ""
       summary: Get a Stock
       parameters:
         - name: key
@@ -1528,12 +1528,12 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PurchaseOrderStatus'
+                $ref: "#/components/schemas/PurchaseOrderStatus"
       requestBody:
         description: Request body
         content:
@@ -1600,7 +1600,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -1612,7 +1612,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/PurchaseOrder'
+                        $ref: "#/components/schemas/PurchaseOrder"
                   links:
                     type: object
                     properties:
@@ -1644,18 +1644,18 @@ paths:
                       total:
                         type: number
     post:
-      description: ''
+      description: ""
       summary: Get a PurchaseOrder
       parameters: []
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PurchaseOrder'
+                $ref: "#/components/schemas/PurchaseOrder"
       requestBody:
         description: Request body
         content:
@@ -1744,29 +1744,29 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: '03000995060837'
-                vendorKey: '01000597427264'
-                code: '75389352'
+                siteKey: "01000393437200"
+                vendorKey: "00000178473209"
+                code: "28251439"
                 orderNo: string
-                orderDate: '2016-09-10T13:40:52Z'
-                statusKey: '04000802706710'
-                title: Quia sit quas eos rerum quis sit.
-                description: Nesciunt fuga veritatis doloremque.
-                dueAt: '2013-07-30T15:28:47Z'
-                approvedAt: '1976-01-18T06:17:38Z'
-                completedAt: '1970-09-30T06:44:27Z'
+                orderDate: "2002-04-06T23:22:04Z"
+                statusKey: "00000884915975"
+                title: Sit minus et et sint.
+                description: Sed qui est qui aperiam adipisci vero.
+                dueAt: "2010-06-27T14:22:22Z"
+                approvedAt: "1973-05-17T16:49:34Z"
+                completedAt: "1986-05-13T19:05:25Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: '05000790482543'
+                currencyKey: "00000782326484"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: '1985-08-01T13:33:03Z'
-                updatedAt: '1994-04-03T16:29:53Z'
+                createdAt: "1989-01-18T00:43:32Z"
+                updatedAt: "1983-07-25T09:03:12Z"
   /api/eam/purchase-orders/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a PurchaseOrder
       parameters:
         - name: key
@@ -1779,14 +1779,14 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
                 type: object
     put:
-      description: ''
+      description: ""
       summary: Get a PurchaseOrder
       parameters:
         - name: key
@@ -1799,12 +1799,12 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PurchaseOrder'
+                $ref: "#/components/schemas/PurchaseOrder"
       requestBody:
         description: Request body
         content:
@@ -1893,26 +1893,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: '08000640122069'
-                vendorKey: '07000885222168'
-                code: '46782830'
+                siteKey: "03000003618676"
+                vendorKey: "00000532013315"
+                code: "50460571"
                 orderNo: string
-                orderDate: '2020-03-11T20:30:07Z'
-                statusKey: '08000737931619'
-                title: Est animi nemo earum.
-                description: Et quo ut voluptatem voluptatem.
-                dueAt: '1975-08-22T07:16:38Z'
-                approvedAt: '1998-08-27T18:30:36Z'
-                completedAt: '2008-02-15T04:16:40Z'
+                orderDate: "1988-12-04T20:42:32Z"
+                statusKey: "06000058371055"
+                title: Quia expedita iusto ea esse illum eius expedita.
+                description: Et quam pariatur adipisci.
+                dueAt: "1987-03-06T05:34:16Z"
+                approvedAt: "1972-11-02T04:52:54Z"
+                completedAt: "1978-12-29T22:33:30Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: '08000317116517'
+                currencyKey: "03000785731545"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: '1998-04-26T03:52:11Z'
-                updatedAt: '1976-11-10T23:59:35Z'
+                createdAt: "1975-11-17T21:11:11Z"
+                updatedAt: "2000-08-11T19:23:15Z"
   /api/eam/purchase-orders.line-items:
     get:
       description: |2+
@@ -1966,7 +1966,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -1978,7 +1978,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/LineItem'
+                        $ref: "#/components/schemas/LineItem"
                   links:
                     type: object
                     properties:
@@ -2011,7 +2011,7 @@ paths:
                         type: number
   /api/eam/purchase-orders.line-items/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a LineItem
       parameters:
         - name: key
@@ -2024,7 +2024,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -2032,7 +2032,7 @@ paths:
                 type: object
   /api/eam/materials/{partKey}/inventory:
     post:
-      description: ''
+      description: ""
       summary: Get a LineItem
       parameters:
         - name: partKey
@@ -2045,12 +2045,12 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Part'
+                $ref: "#/components/schemas/Material"
       requestBody:
         description: Request body
         content:
@@ -2075,13 +2075,13 @@ paths:
                   nullable: false
                   format: array
               example:
-                filter: '[]'
+                filter: "[]"
                 page: 10
                 per_page: 10
-                sort: '[]'
+                sort: "[]"
   /api/eam/materials/{key}/children:
     get:
-      description: ''
+      description: ""
       summary: Get MaterialItem
       parameters:
         - name: key
@@ -2122,7 +2122,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -2148,7 +2148,7 @@ paths:
          * sort[createdAt]=1 // DESC
          * sort[createdAt]=0 // ASC
 
-      summary: List Parts
+      summary: List Materials
       parameters:
         - name: filter
           description: array
@@ -2181,7 +2181,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -2193,7 +2193,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Part'
+                        $ref: "#/components/schemas/Material"
                   links:
                     type: object
                     properties:
@@ -2224,10 +2224,121 @@ paths:
                         type: number
                       total:
                         type: number
+    post:
+      description: ""
+      summary: Get a Material
+      parameters: []
+      tags:
+        - EAM/CMMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Material"
+      requestBody:
+        description: Request body
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                siteKeys:
+                  type: array
+                  nullable: true
+                  format: array
+                parentKeys:
+                  type: array
+                  nullable: true
+                  format: array
+                assetKeys:
+                  type: array
+                  nullable: true
+                  format: array
+                vendorKeys:
+                  type: string
+                  nullable: true
+                  format: string
+                documents:
+                  type: array
+                  nullable: true
+                  format: array
+                accountKey:
+                  type: string
+                  nullable: true
+                  format: string
+                code:
+                  type: string
+                  nullable: true
+                  format: string
+                isAssembly:
+                  type: boolean
+                  nullable: true
+                  format: boolean
+                partNumber:
+                  type: string
+                  nullable: true
+                  format: string
+                name:
+                  type: string
+                  nullable: true
+                  format: string
+                description:
+                  type: string
+                  nullable: true
+                  format: string
+                notes:
+                  type: string
+                  nullable: true
+                  format: string
+                criticality:
+                  type: string
+                  nullable: true
+                  format: string
+                isActive:
+                  type: boolean
+                  nullable: true
+                  format: boolean
+                manufacturerName:
+                  type: string
+                  nullable: true
+                  format: string
+                minimumQuantity:
+                  type: string
+                  nullable: true
+                  format: string
+                cost:
+                  type: object
+                  nullable: true
+                  format: object
+                currency:
+                  type: string
+                  nullable: true
+                  format: string
+              example:
+                siteKeys: "[]"
+                parentKeys: "[]"
+                assetKeys: "[]"
+                vendorKeys: string
+                documents: "[]"
+                accountKey: "08000673501793"
+                code: "58635841"
+                isAssembly: string
+                partNumber: string
+                name: string
+                description: Totam recusandae sapiente odio quam.
+                notes: string
+                criticality: string
+                isActive: true
+                manufacturerName: string
+                minimumQuantity: 10
+                cost: "99.99"
+                currency: string
   /api/eam/materials/{key}:
     get:
-      description: ''
-      summary: Get a Part
+      description: ""
+      summary: Get a Material
       parameters:
         - name: key
           description: string|required
@@ -2239,15 +2350,133 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
                 type: object
+    put:
+      description: ""
+      summary: Get a Material
+      parameters:
+        - name: key
+          description: string|required
+          in: path
+          style: simple
+          required: true
+          schema:
+            type: string
+      tags:
+        - EAM/CMMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Material"
+      requestBody:
+        description: Request body
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                siteKeys:
+                  type: array
+                  nullable: true
+                  format: array
+                parentKeys:
+                  type: array
+                  nullable: true
+                  format: array
+                assetKeys:
+                  type: array
+                  nullable: true
+                  format: array
+                vendorKeys:
+                  type: string
+                  nullable: true
+                  format: string
+                documents:
+                  type: array
+                  nullable: true
+                  format: array
+                accountKey:
+                  type: string
+                  nullable: true
+                  format: string
+                code:
+                  type: string
+                  nullable: true
+                  format: string
+                isAssembly:
+                  type: boolean
+                  nullable: true
+                  format: boolean
+                partNumber:
+                  type: string
+                  nullable: true
+                  format: string
+                name:
+                  type: string
+                  nullable: true
+                  format: string
+                description:
+                  type: string
+                  nullable: true
+                  format: string
+                notes:
+                  type: string
+                  nullable: true
+                  format: string
+                criticality:
+                  type: string
+                  nullable: true
+                  format: string
+                isActive:
+                  type: boolean
+                  nullable: true
+                  format: boolean
+                manufacturerName:
+                  type: string
+                  nullable: true
+                  format: string
+                minimumQuantity:
+                  type: string
+                  nullable: true
+                  format: string
+                cost:
+                  type: object
+                  nullable: true
+                  format: object
+                currency:
+                  type: string
+                  nullable: true
+                  format: string
+              example:
+                siteKeys: "[]"
+                parentKeys: "[]"
+                assetKeys: "[]"
+                vendorKeys: string
+                documents: "[]"
+                accountKey: "06000866458146"
+                code: "03523940"
+                isAssembly: string
+                partNumber: string
+                name: string
+                description: Sit dolorem mollitia eligendi est non.
+                notes: string
+                criticality: string
+                isActive: true
+                manufacturerName: string
+                minimumQuantity: 10
+                cost: "99.99"
+                currency: string
   /api/eam/assets/{key}/materials:
     get:
-      description: ''
+      description: ""
       summary: Get MaterialItem
       parameters:
         - name: key
@@ -2288,7 +2517,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -2347,7 +2576,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -2359,7 +2588,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Asset'
+                        $ref: "#/components/schemas/Asset"
                   links:
                     type: object
                     properties:
@@ -2392,7 +2621,7 @@ paths:
                         type: number
   /api/eam/assets/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an Asset
       parameters:
         - name: key
@@ -2405,14 +2634,14 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
                 type: object
     put:
-      description: ''
+      description: ""
       summary: Get an Asset
       parameters:
         - name: key
@@ -2425,12 +2654,12 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Asset'
+                $ref: "#/components/schemas/Asset"
       requestBody:
         description: Request body
         content:
@@ -2511,24 +2740,24 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: '04000762250519'
-                parentKey: '09000861412529'
-                vendorKey: '06000345808263'
-                modelKey: '03000993481946'
-                teamKey: '06000039223533'
-                locationKey: '04000434886602'
-                accountKey: '04000252802326'
+                siteKey: "01000668517465"
+                parentKey: "03000958949992"
+                vendorKey: "04000281382541"
+                modelKey: "05000981067186"
+                teamKey: "04000976503136"
+                locationKey: "04000500659195"
+                accountKey: "02000619118041"
                 name: string
-                description: Odit labore eius quia enim.
+                description: Dolorum quia facilis distinctio error dolorem.
                 notes: string
                 categoryName: string
                 criticality: string
-                isActive: string
+                isActive: true
                 manufacturerName: string
                 modelName: string
                 serialNumber: string
-                activatedAt: '2022-11-02T06:46:27Z'
-                deactivatedAt: '1999-06-29T17:48:16Z'
+                activatedAt: "1976-04-18T03:47:19Z"
+                deactivatedAt: "2017-05-11T00:32:39Z"
   /api/eam/assets-downtime:
     get:
       description: |2+
@@ -2582,7 +2811,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -2594,7 +2823,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/AssetDownTime'
+                        $ref: "#/components/schemas/AssetDownTime"
                   links:
                     type: object
                     properties:
@@ -2627,7 +2856,7 @@ paths:
                         type: number
   /api/eam/assets-downtime/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an AssetDownTime
       parameters:
         - name: key
@@ -2640,7 +2869,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -2648,7 +2877,7 @@ paths:
                 type: object
   /api/eam/asset-templates/{key}/materials:
     get:
-      description: ''
+      description: ""
       summary: Get MaterialItem
       parameters:
         - name: key
@@ -2689,7 +2918,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -2748,7 +2977,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -2760,7 +2989,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Model'
+                        $ref: "#/components/schemas/Model"
                   links:
                     type: object
                     properties:
@@ -2793,7 +3022,7 @@ paths:
                         type: number
   /api/eam/asset-templates/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Model
       parameters:
         - name: key
@@ -2806,7 +3035,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -2865,7 +3094,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -2877,7 +3106,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Counter'
+                        $ref: "#/components/schemas/Counter"
                   links:
                     type: object
                     properties:
@@ -2910,7 +3139,7 @@ paths:
                         type: number
   /api/eam/meters/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Counter
       parameters:
         - name: key
@@ -2923,7 +3152,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -2982,7 +3211,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -2994,7 +3223,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/CounterReading'
+                        $ref: "#/components/schemas/CounterReading"
                   links:
                     type: object
                     properties:
@@ -3027,7 +3256,7 @@ paths:
                         type: number
   /api/eam/meter-readings/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a CounterReading
       parameters:
         - name: key
@@ -3040,7 +3269,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -3048,7 +3277,7 @@ paths:
                 type: object
   /api/eam/pm/{key}/materials:
     get:
-      description: ''
+      description: ""
       summary: Get MaterialItem
       parameters:
         - name: key
@@ -3089,7 +3318,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -3148,7 +3377,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -3160,7 +3389,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/PreventiveMaintenance'
+                        $ref: "#/components/schemas/PreventiveMaintenance"
                   links:
                     type: object
                     properties:
@@ -3193,7 +3422,7 @@ paths:
                         type: number
   /api/eam/pm/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a PreventiveMaintenance
       parameters:
         - name: key
@@ -3206,7 +3435,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -3214,7 +3443,7 @@ paths:
                 type: object
   /api/eam/work-orders/{key}/materials:
     get:
-      description: ''
+      description: ""
       summary: Get MaterialItem
       parameters:
         - name: key
@@ -3255,7 +3484,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -3263,7 +3492,7 @@ paths:
                 type: object
   /api/eam/work-orders/{key}/status:
     put:
-      description: ''
+      description: ""
       summary: Get MaterialItem
       parameters:
         - name: key
@@ -3276,12 +3505,12 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/WorkOrderStatus'
+                $ref: "#/components/schemas/WorkOrderStatus"
       requestBody:
         description: Request body
         content:
@@ -3348,7 +3577,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -3360,7 +3589,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/WorkOrder'
+                        $ref: "#/components/schemas/WorkOrder"
                   links:
                     type: object
                     properties:
@@ -3392,18 +3621,18 @@ paths:
                       total:
                         type: number
     post:
-      description: ''
+      description: ""
       summary: Get a WorkOrder
       parameters: []
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/WorkOrder'
+                $ref: "#/components/schemas/WorkOrder"
       requestBody:
         description: Request body
         content:
@@ -3536,40 +3765,40 @@ paths:
                   nullable: true
                   format: string
               example:
-                title: Placeat eos ad ut vero voluptatem maiores dolor.
-                statusKey: '08000654353005'
-                scheduledAt: '1993-03-26T20:06:38Z'
-                siteKey: '00000287239735'
-                locationKey: '04000144412020'
-                storeroomKey: '02000742444504'
-                assetKey: '04000230936888'
-                assetDowntimeKey: '01000616309210'
-                serviceRequestKey: '08000392961729'
-                pmKey: '09000864870743'
-                teamKey: '01000084714573'
-                laborAssignedKey: '07000099219564'
-                accountKey: '08000170309919'
-                userApprovedKey: '08000068383118'
-                code: '22506641'
-                description: Molestiae quisquam occaecati quo eum.
+                title: Facere dolores neque alias nulla modi repellat.
+                statusKey: "04000639664925"
+                scheduledAt: "2010-03-10T17:25:53Z"
+                siteKey: "06000580035596"
+                locationKey: "01000526960379"
+                storeroomKey: "07000919599890"
+                assetKey: "07000300272667"
+                assetDowntimeKey: "05000970898942"
+                serviceRequestKey: "06000887305437"
+                pmKey: "06000791631937"
+                teamKey: "09000302825866"
+                laborAssignedKey: "03000921782361"
+                accountKey: "09000304135127"
+                userApprovedKey: "00000216079590"
+                code: "34990957"
+                description: Consectetur quo id sint.
                 instructions: string
                 severity: string
                 estimatedTime: 10
                 actualTime: 10
                 roleName: string
                 categoryName: string
-                documents: '[]'
+                documents: "[]"
                 notes: string
-                approvedAt: '1978-02-07T08:50:32Z'
-                dueAt: '1988-05-20T18:07:48Z'
-                completedAt: '2017-02-03T00:17:08Z'
+                approvedAt: "1989-12-22T00:13:17Z"
+                dueAt: "1992-07-28T00:05:44Z"
+                completedAt: "1972-09-19T15:33:42Z"
                 completionRemarks: string
-                createdAt: '1971-07-12T11:27:51Z'
-                updatedAt: '2023-03-15T03:50:31Z'
-                deletedAt: '1995-03-17T13:58:31Z'
+                createdAt: "1993-01-14T12:06:56Z"
+                updatedAt: "1984-11-12T13:31:45Z"
+                deletedAt: "1980-08-23T14:23:51Z"
   /api/eam/work-orders/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a WorkOrder
       parameters:
         - name: key
@@ -3582,14 +3811,14 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
                 type: object
     put:
-      description: ''
+      description: ""
       summary: Get a WorkOrder
       parameters:
         - name: key
@@ -3602,12 +3831,12 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/WorkOrder'
+                $ref: "#/components/schemas/WorkOrder"
       requestBody:
         description: Request body
         content:
@@ -3740,37 +3969,37 @@ paths:
                   nullable: true
                   format: string
               example:
-                title: Non eum mollitia et nesciunt.
-                statusKey: '08000259769074'
-                scheduledAt: '1993-04-16T18:13:25Z'
-                siteKey: '07000687280725'
-                locationKey: '03000481416237'
-                storeroomKey: '08000963877661'
-                assetKey: '02000900310787'
-                assetDowntimeKey: '03000663146742'
-                serviceRequestKey: '04000880665852'
-                pmKey: '01000840397489'
-                teamKey: '06000176585775'
-                laborAssignedKey: '02000716327215'
-                accountKey: '07000251235245'
-                userApprovedKey: '09000264679024'
-                code: '07853913'
-                description: Eius quia et occaecati ipsum.
+                title: Totam ut consequatur aut tempore eos enim unde.
+                statusKey: "05000459990367"
+                scheduledAt: "1977-01-27T05:55:10Z"
+                siteKey: "00000720016646"
+                locationKey: "04000657812220"
+                storeroomKey: "08000422844141"
+                assetKey: "09000599424264"
+                assetDowntimeKey: "01000341551372"
+                serviceRequestKey: "05000518467115"
+                pmKey: "09000113386876"
+                teamKey: "07000905967495"
+                laborAssignedKey: "03000061660873"
+                accountKey: "07000149202610"
+                userApprovedKey: "08000814678406"
+                code: "78869509"
+                description: Velit sit soluta molestias aut et velit.
                 instructions: string
                 severity: string
                 estimatedTime: 10
                 actualTime: 10
                 roleName: string
                 categoryName: string
-                documents: '[]'
+                documents: "[]"
                 notes: string
-                approvedAt: '1987-05-29T01:23:52Z'
-                dueAt: '1988-03-02T12:37:56Z'
-                completedAt: '1999-09-18T15:03:06Z'
+                approvedAt: "1988-03-13T03:27:17Z"
+                dueAt: "1978-05-12T16:12:41Z"
+                completedAt: "2000-03-20T00:55:42Z"
                 completionRemarks: string
-                createdAt: '1971-05-13T18:23:20Z'
-                updatedAt: '1998-09-24T16:26:23Z'
-                deletedAt: '1996-09-14T02:00:59Z'
+                createdAt: "1975-08-01T12:46:58Z"
+                updatedAt: "1986-03-15T15:52:47Z"
+                deletedAt: "1980-08-31T21:22:24Z"
   /api/eam/service-requests:
     get:
       description: |2+
@@ -3824,7 +4053,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -3836,7 +4065,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/ServiceRequest'
+                        $ref: "#/components/schemas/ServiceRequest"
                   links:
                     type: object
                     properties:
@@ -3869,7 +4098,7 @@ paths:
                         type: number
   /api/eam/service-requests/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a ServiceRequest
       parameters:
         - name: key
@@ -3882,7 +4111,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -3941,7 +4170,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -3953,7 +4182,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Document'
+                        $ref: "#/components/schemas/Document"
                   links:
                     type: object
                     properties:
@@ -3985,18 +4214,18 @@ paths:
                       total:
                         type: number
     post:
-      description: ''
+      description: ""
       summary: Get a Document
       parameters: []
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Document'
+                $ref: "#/components/schemas/Document"
       requestBody:
         description: Request body
         content:
@@ -4017,7 +4246,7 @@ paths:
                 name: string
   /api/eam/documents/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Document
       parameters:
         - name: key
@@ -4030,7 +4259,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -4089,7 +4318,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -4101,7 +4330,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Inventory'
+                        $ref: "#/components/schemas/Inventory"
                   links:
                     type: object
                     properties:
@@ -4134,7 +4363,7 @@ paths:
                         type: number
   /api/eam/inventories/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an Inventory
       parameters:
         - name: key
@@ -4147,7 +4376,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -4155,7 +4384,7 @@ paths:
                 type: object
   /api/eam/statuses/work-orders:
     get:
-      description: ''
+      description: ""
       summary: Get Status
       parameters:
         - name: filter
@@ -4189,7 +4418,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -4197,7 +4426,7 @@ paths:
                 type: object
   /api/eam/statuses/purchase-orders:
     get:
-      description: ''
+      description: ""
       summary: Get Status
       parameters:
         - name: filter
@@ -4231,7 +4460,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -4239,7 +4468,7 @@ paths:
                 type: object
   /api/eam/statuses/service-requests:
     get:
-      description: ''
+      description: ""
       summary: Get Status
       parameters:
         - name: filter
@@ -4273,7 +4502,7 @@ paths:
       tags:
         - EAM/CMMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -4281,7 +4510,7 @@ paths:
                 type: object
   /api/erp/sites:
     get:
-      description: ''
+      description: ""
       summary: List Sites
       parameters:
         - name: filter
@@ -4315,7 +4544,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -4327,7 +4556,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Site'
+                        $ref: "#/components/schemas/Site"
                   links:
                     type: object
                     properties:
@@ -4360,7 +4589,7 @@ paths:
                         type: number
   /api/erp/sites/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Site
       parameters:
         - name: key
@@ -4373,7 +4602,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -4432,7 +4661,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -4444,7 +4673,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Organization'
+                        $ref: "#/components/schemas/Organization"
                   links:
                     type: object
                     properties:
@@ -4477,7 +4706,7 @@ paths:
                         type: number
   /api/erp/organizations/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an Organization
       parameters:
         - name: key
@@ -4490,7 +4719,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -4549,7 +4778,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -4561,7 +4790,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Location'
+                        $ref: "#/components/schemas/Location"
                   links:
                     type: object
                     properties:
@@ -4594,7 +4823,7 @@ paths:
                         type: number
   /api/erp/locations/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Location
       parameters:
         - name: key
@@ -4607,7 +4836,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -4666,7 +4895,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -4678,7 +4907,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Storeroom'
+                        $ref: "#/components/schemas/Storeroom"
                   links:
                     type: object
                     properties:
@@ -4711,7 +4940,7 @@ paths:
                         type: number
   /api/erp/storerooms/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Storeroom
       parameters:
         - name: key
@@ -4724,7 +4953,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -4783,7 +5012,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -4795,7 +5024,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Account'
+                        $ref: "#/components/schemas/Account"
                   links:
                     type: object
                     properties:
@@ -4828,7 +5057,7 @@ paths:
                         type: number
   /api/erp/accounts/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an Account
       parameters:
         - name: key
@@ -4841,7 +5070,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -4900,7 +5129,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -4912,7 +5141,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Team'
+                        $ref: "#/components/schemas/Team"
                   links:
                     type: object
                     properties:
@@ -4945,7 +5174,7 @@ paths:
                         type: number
   /api/erp/teams/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Team
       parameters:
         - name: key
@@ -4958,7 +5187,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -5017,7 +5246,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -5029,7 +5258,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Labor'
+                        $ref: "#/components/schemas/Labor"
                   links:
                     type: object
                     properties:
@@ -5062,7 +5291,7 @@ paths:
                         type: number
   /api/erp/labors/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Labor
       parameters:
         - name: key
@@ -5075,7 +5304,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -5134,7 +5363,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -5146,7 +5375,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/User'
+                        $ref: "#/components/schemas/User"
                   links:
                     type: object
                     properties:
@@ -5179,7 +5408,7 @@ paths:
                         type: number
   /api/erp/users/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an User
       parameters:
         - name: key
@@ -5192,7 +5421,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -5251,7 +5480,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -5263,7 +5492,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Tax'
+                        $ref: "#/components/schemas/Tax"
                   links:
                     type: object
                     properties:
@@ -5296,7 +5525,7 @@ paths:
                         type: number
   /api/erp/taxes/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Tax
       parameters:
         - name: key
@@ -5309,7 +5538,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -5368,7 +5597,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -5380,7 +5609,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Currency'
+                        $ref: "#/components/schemas/Currency"
                   links:
                     type: object
                     properties:
@@ -5413,7 +5642,7 @@ paths:
                         type: number
   /api/erp/currencies/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Currency
       parameters:
         - name: key
@@ -5426,7 +5655,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -5485,7 +5714,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -5497,7 +5726,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/ExchangeRate'
+                        $ref: "#/components/schemas/ExchangeRate"
                   links:
                     type: object
                     properties:
@@ -5530,7 +5759,7 @@ paths:
                         type: number
   /api/erp/exchange-rates/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an ExchangeRate
       parameters:
         - name: key
@@ -5543,7 +5772,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -5602,7 +5831,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -5614,7 +5843,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/UnitOfMeasure'
+                        $ref: "#/components/schemas/UnitOfMeasure"
                   links:
                     type: object
                     properties:
@@ -5647,7 +5876,7 @@ paths:
                         type: number
   /api/erp/uom/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an UnitOfMeasure
       parameters:
         - name: key
@@ -5660,7 +5889,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -5719,7 +5948,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -5731,7 +5960,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Company'
+                        $ref: "#/components/schemas/Company"
                   links:
                     type: object
                     properties:
@@ -5764,7 +5993,7 @@ paths:
                         type: number
   /api/erp/companies/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Company
       parameters:
         - name: key
@@ -5777,7 +6006,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -5836,7 +6065,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -5848,7 +6077,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Vendor'
+                        $ref: "#/components/schemas/Vendor"
                   links:
                     type: object
                     properties:
@@ -5881,7 +6110,7 @@ paths:
                         type: number
   /api/erp/vendors/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Vendor
       parameters:
         - name: key
@@ -5894,7 +6123,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -5953,7 +6182,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -5965,7 +6194,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Customer'
+                        $ref: "#/components/schemas/Customer"
                   links:
                     type: object
                     properties:
@@ -5998,7 +6227,7 @@ paths:
                         type: number
   /api/erp/customers/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Customer
       parameters:
         - name: key
@@ -6011,7 +6240,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -6070,7 +6299,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -6082,7 +6311,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Product'
+                        $ref: "#/components/schemas/Product"
                   links:
                     type: object
                     properties:
@@ -6115,7 +6344,7 @@ paths:
                         type: number
   /api/erp/products/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Product
       parameters:
         - name: key
@@ -6128,7 +6357,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -6187,7 +6416,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -6199,7 +6428,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Stock'
+                        $ref: "#/components/schemas/Stock"
                   links:
                     type: object
                     properties:
@@ -6232,7 +6461,7 @@ paths:
                         type: number
   /api/erp/stocks/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Stock
       parameters:
         - name: key
@@ -6245,7 +6474,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -6304,7 +6533,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -6316,7 +6545,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/SalesOrder'
+                        $ref: "#/components/schemas/SalesOrder"
                   links:
                     type: object
                     properties:
@@ -6349,7 +6578,7 @@ paths:
                         type: number
   /api/erp/sales-orders/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a SalesOrder
       parameters:
         - name: key
@@ -6362,7 +6591,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -6421,7 +6650,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -6433,7 +6662,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Project'
+                        $ref: "#/components/schemas/Project"
                   links:
                     type: object
                     properties:
@@ -6466,7 +6695,7 @@ paths:
                         type: number
   /api/erp/projects/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Project
       parameters:
         - name: key
@@ -6479,7 +6708,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -6538,7 +6767,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -6550,7 +6779,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Invoice'
+                        $ref: "#/components/schemas/Invoice"
                   links:
                     type: object
                     properties:
@@ -6583,7 +6812,7 @@ paths:
                         type: number
   /api/erp/invoices/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an Invoice
       parameters:
         - name: key
@@ -6596,7 +6825,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -6655,7 +6884,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -6667,7 +6896,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Receipt'
+                        $ref: "#/components/schemas/Receipt"
                   links:
                     type: object
                     properties:
@@ -6700,7 +6929,7 @@ paths:
                         type: number
   /api/erp/receipts/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Receipt
       parameters:
         - name: key
@@ -6713,15 +6942,15 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Receipt'
+                $ref: "#/components/schemas/Receipt"
   /api/erp/purchase-orders/{key}/status:
     put:
-      description: ''
+      description: ""
       summary: Get a Receipt
       parameters:
         - name: key
@@ -6734,12 +6963,12 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PurchaseOrderStatus'
+                $ref: "#/components/schemas/PurchaseOrderStatus"
       requestBody:
         description: Request body
         content:
@@ -6806,7 +7035,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -6818,7 +7047,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/PurchaseOrder'
+                        $ref: "#/components/schemas/PurchaseOrder"
                   links:
                     type: object
                     properties:
@@ -6850,18 +7079,18 @@ paths:
                       total:
                         type: number
     post:
-      description: ''
+      description: ""
       summary: Get a PurchaseOrder
       parameters: []
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PurchaseOrder'
+                $ref: "#/components/schemas/PurchaseOrder"
       requestBody:
         description: Request body
         content:
@@ -6950,29 +7179,29 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: '04000629885354'
-                vendorKey: '00000749137619'
-                code: '82449872'
+                siteKey: "03000961650436"
+                vendorKey: "02000699543846"
+                code: "03298565"
                 orderNo: string
-                orderDate: '2013-08-19T10:50:59Z'
-                statusKey: '05000449380841'
-                title: Magnam omnis atque aspernatur ullam accusantium.
-                description: Cumque et dolorem odio quo nihil.
-                dueAt: '2008-08-12T00:04:08Z'
-                approvedAt: '1979-12-07T19:35:49Z'
-                completedAt: '2000-07-24T10:41:01Z'
+                orderDate: "1993-09-24T08:54:03Z"
+                statusKey: "06000437869390"
+                title: Magni provident unde odit.
+                description: Sapiente quos quis commodi sequi quaerat.
+                dueAt: "2013-12-19T05:57:32Z"
+                approvedAt: "1992-02-26T17:46:21Z"
+                completedAt: "2011-08-14T06:00:21Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: '09000003058619'
+                currencyKey: "08000466270386"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: '1975-08-10T02:44:30Z'
-                updatedAt: '2014-04-10T02:30:56Z'
+                createdAt: "1998-07-17T09:07:49Z"
+                updatedAt: "2017-09-04T21:53:46Z"
   /api/erp/purchase-orders/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a PurchaseOrder
       parameters:
         - name: key
@@ -6985,14 +7214,14 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
                 type: object
     put:
-      description: ''
+      description: ""
       summary: Get a PurchaseOrder
       parameters:
         - name: key
@@ -7005,12 +7234,12 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PurchaseOrder'
+                $ref: "#/components/schemas/PurchaseOrder"
       requestBody:
         description: Request body
         content:
@@ -7099,26 +7328,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: '07000004051376'
-                vendorKey: '00000995478714'
-                code: '40863382'
+                siteKey: "04000974778834"
+                vendorKey: "08000774888554"
+                code: "48901581"
                 orderNo: string
-                orderDate: '1994-07-26T14:54:37Z'
-                statusKey: '06000170312196'
-                title: Eaque mollitia dicta quo.
-                description: Quasi ut rerum ab blanditiis ad.
-                dueAt: '1975-08-15T11:57:16Z'
-                approvedAt: '2015-08-17T13:32:23Z'
-                completedAt: '1988-02-23T02:28:21Z'
+                orderDate: "1980-08-07T05:31:54Z"
+                statusKey: "08000841234468"
+                title: Beatae et adipisci est et tempora molestiae sed.
+                description: Saepe eveniet doloremque quisquam et.
+                dueAt: "2001-02-16T16:45:30Z"
+                approvedAt: "1982-07-03T13:05:23Z"
+                completedAt: "2018-06-23T03:36:20Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: '08000011952793'
+                currencyKey: "04000497125601"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: '2013-06-30T09:38:54Z'
-                updatedAt: '2011-12-20T13:54:54Z'
+                createdAt: "2003-07-06T00:38:43Z"
+                updatedAt: "1987-01-01T09:40:09Z"
   /api/erp/purchase-orders.line-items:
     get:
       description: |2+
@@ -7172,7 +7401,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -7184,7 +7413,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/LineItem'
+                        $ref: "#/components/schemas/LineItem"
                   links:
                     type: object
                     properties:
@@ -7217,7 +7446,7 @@ paths:
                         type: number
   /api/erp/purchase-orders.line-items/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a LineItem
       parameters:
         - name: key
@@ -7230,7 +7459,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -7289,7 +7518,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -7301,7 +7530,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/BillOfMaterial'
+                        $ref: "#/components/schemas/BillOfMaterial"
                   links:
                     type: object
                     properties:
@@ -7334,7 +7563,7 @@ paths:
                         type: number
   /api/erp/bom/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a BillOfMaterial
       parameters:
         - name: key
@@ -7347,15 +7576,15 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/BillOfMaterial'
+                $ref: "#/components/schemas/BillOfMaterial"
   /api/erp/production-orders/{key}/materials:
     get:
-      description: ''
+      description: ""
       summary: Get MaterialItem
       parameters:
         - name: key
@@ -7396,7 +7625,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -7455,7 +7684,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -7467,7 +7696,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/ProductionOrder'
+                        $ref: "#/components/schemas/ProductionOrder"
                   links:
                     type: object
                     properties:
@@ -7500,7 +7729,7 @@ paths:
                         type: number
   /api/erp/production-orders/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a ProductionOrder
       parameters:
         - name: key
@@ -7513,12 +7742,12 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ProductionOrder'
+                $ref: "#/components/schemas/ProductionOrder"
   /api/erp/receiving:
     get:
       description: |2+
@@ -7572,7 +7801,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -7584,7 +7813,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Receiving'
+                        $ref: "#/components/schemas/Receiving"
                   links:
                     type: object
                     properties:
@@ -7617,7 +7846,7 @@ paths:
                         type: number
   /api/erp/receiving/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Receiving
       parameters:
         - name: key
@@ -7630,7 +7859,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -7689,7 +7918,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -7701,7 +7930,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/RequestForQuotation'
+                        $ref: "#/components/schemas/RequestForQuotation"
                   links:
                     type: object
                     properties:
@@ -7734,7 +7963,7 @@ paths:
                         type: number
   /api/erp/rfq/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a RequestForQuotation
       parameters:
         - name: key
@@ -7747,12 +7976,12 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RequestForQuotation'
+                $ref: "#/components/schemas/RequestForQuotation"
   /api/erp/purchase-requisitions:
     get:
       description: |2+
@@ -7806,7 +8035,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -7818,7 +8047,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/PurchaseRequisition'
+                        $ref: "#/components/schemas/PurchaseRequisition"
                   links:
                     type: object
                     properties:
@@ -7851,7 +8080,7 @@ paths:
                         type: number
   /api/erp/purchase-requisitions/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a PurchaseRequisition
       parameters:
         - name: key
@@ -7864,15 +8093,15 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PurchaseRequisition'
+                $ref: "#/components/schemas/PurchaseRequisition"
   /api/erp/materials/{partKey}/inventory:
     post:
-      description: ''
+      description: ""
       summary: Get a PurchaseRequisition
       parameters:
         - name: partKey
@@ -7885,12 +8114,12 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Part'
+                $ref: "#/components/schemas/Material"
       requestBody:
         description: Request body
         content:
@@ -7915,13 +8144,13 @@ paths:
                   nullable: false
                   format: array
               example:
-                filter: '[]'
+                filter: "[]"
                 page: 10
                 per_page: 10
-                sort: '[]'
+                sort: "[]"
   /api/erp/materials/{key}/children:
     get:
-      description: ''
+      description: ""
       summary: Get MaterialItem
       parameters:
         - name: key
@@ -7962,7 +8191,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -7988,7 +8217,7 @@ paths:
          * sort[createdAt]=1 // DESC
          * sort[createdAt]=0 // ASC
 
-      summary: List Parts
+      summary: List Materials
       parameters:
         - name: filter
           description: array
@@ -8021,7 +8250,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -8033,7 +8262,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Part'
+                        $ref: "#/components/schemas/Material"
                   links:
                     type: object
                     properties:
@@ -8064,10 +8293,121 @@ paths:
                         type: number
                       total:
                         type: number
+    post:
+      description: ""
+      summary: Get a Material
+      parameters: []
+      tags:
+        - ERP
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Material"
+      requestBody:
+        description: Request body
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                siteKeys:
+                  type: array
+                  nullable: true
+                  format: array
+                parentKeys:
+                  type: array
+                  nullable: true
+                  format: array
+                assetKeys:
+                  type: array
+                  nullable: true
+                  format: array
+                vendorKeys:
+                  type: string
+                  nullable: true
+                  format: string
+                documents:
+                  type: array
+                  nullable: true
+                  format: array
+                accountKey:
+                  type: string
+                  nullable: true
+                  format: string
+                code:
+                  type: string
+                  nullable: true
+                  format: string
+                isAssembly:
+                  type: boolean
+                  nullable: true
+                  format: boolean
+                partNumber:
+                  type: string
+                  nullable: true
+                  format: string
+                name:
+                  type: string
+                  nullable: true
+                  format: string
+                description:
+                  type: string
+                  nullable: true
+                  format: string
+                notes:
+                  type: string
+                  nullable: true
+                  format: string
+                criticality:
+                  type: string
+                  nullable: true
+                  format: string
+                isActive:
+                  type: boolean
+                  nullable: true
+                  format: boolean
+                manufacturerName:
+                  type: string
+                  nullable: true
+                  format: string
+                minimumQuantity:
+                  type: string
+                  nullable: true
+                  format: string
+                cost:
+                  type: object
+                  nullable: true
+                  format: object
+                currency:
+                  type: string
+                  nullable: true
+                  format: string
+              example:
+                siteKeys: "[]"
+                parentKeys: "[]"
+                assetKeys: "[]"
+                vendorKeys: string
+                documents: "[]"
+                accountKey: "06000569778741"
+                code: "52527906"
+                isAssembly: string
+                partNumber: string
+                name: string
+                description: Quisquam nisi architecto amet vel laudantium.
+                notes: string
+                criticality: string
+                isActive: true
+                manufacturerName: string
+                minimumQuantity: 10
+                cost: "99.99"
+                currency: string
   /api/erp/materials/{key}:
     get:
-      description: ''
-      summary: Get a Part
+      description: ""
+      summary: Get a Material
       parameters:
         - name: key
           description: string|required
@@ -8079,12 +8419,130 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
                 type: object
+    put:
+      description: ""
+      summary: Get a Material
+      parameters:
+        - name: key
+          description: string|required
+          in: path
+          style: simple
+          required: true
+          schema:
+            type: string
+      tags:
+        - ERP
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Material"
+      requestBody:
+        description: Request body
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                siteKeys:
+                  type: array
+                  nullable: true
+                  format: array
+                parentKeys:
+                  type: array
+                  nullable: true
+                  format: array
+                assetKeys:
+                  type: array
+                  nullable: true
+                  format: array
+                vendorKeys:
+                  type: string
+                  nullable: true
+                  format: string
+                documents:
+                  type: array
+                  nullable: true
+                  format: array
+                accountKey:
+                  type: string
+                  nullable: true
+                  format: string
+                code:
+                  type: string
+                  nullable: true
+                  format: string
+                isAssembly:
+                  type: boolean
+                  nullable: true
+                  format: boolean
+                partNumber:
+                  type: string
+                  nullable: true
+                  format: string
+                name:
+                  type: string
+                  nullable: true
+                  format: string
+                description:
+                  type: string
+                  nullable: true
+                  format: string
+                notes:
+                  type: string
+                  nullable: true
+                  format: string
+                criticality:
+                  type: string
+                  nullable: true
+                  format: string
+                isActive:
+                  type: boolean
+                  nullable: true
+                  format: boolean
+                manufacturerName:
+                  type: string
+                  nullable: true
+                  format: string
+                minimumQuantity:
+                  type: string
+                  nullable: true
+                  format: string
+                cost:
+                  type: object
+                  nullable: true
+                  format: object
+                currency:
+                  type: string
+                  nullable: true
+                  format: string
+              example:
+                siteKeys: "[]"
+                parentKeys: "[]"
+                assetKeys: "[]"
+                vendorKeys: string
+                documents: "[]"
+                accountKey: "09000022088052"
+                code: "26568812"
+                isAssembly: string
+                partNumber: string
+                name: string
+                description: Aut et adipisci consequatur aut vitae sed.
+                notes: string
+                criticality: string
+                isActive: true
+                manufacturerName: string
+                minimumQuantity: 10
+                cost: "99.99"
+                currency: string
   /api/erp/inventories:
     get:
       description: |2+
@@ -8138,7 +8596,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -8150,7 +8608,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Inventory'
+                        $ref: "#/components/schemas/Inventory"
                   links:
                     type: object
                     properties:
@@ -8183,7 +8641,7 @@ paths:
                         type: number
   /api/erp/inventories/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an Inventory
       parameters:
         - name: key
@@ -8196,7 +8654,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -8204,7 +8662,7 @@ paths:
                 type: object
   /api/erp/statuses/purchase-orders:
     get:
-      description: ''
+      description: ""
       summary: Get Status
       parameters:
         - name: filter
@@ -8238,7 +8696,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -8246,7 +8704,7 @@ paths:
                 type: object
   /api/erp/statuses/purchase-requisitions:
     get:
-      description: ''
+      description: ""
       summary: Get Status
       parameters:
         - name: filter
@@ -8280,7 +8738,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -8288,7 +8746,7 @@ paths:
                 type: object
   /api/erp/statuses/sales-orders:
     get:
-      description: ''
+      description: ""
       summary: Get Status
       parameters:
         - name: filter
@@ -8322,7 +8780,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -8330,7 +8788,7 @@ paths:
                 type: object
   /api/erp/statuses/projects:
     get:
-      description: ''
+      description: ""
       summary: Get Status
       parameters:
         - name: filter
@@ -8364,7 +8822,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -8372,7 +8830,7 @@ paths:
                 type: object
   /api/erp/statuses/invoices:
     get:
-      description: ''
+      description: ""
       summary: Get Status
       parameters:
         - name: filter
@@ -8406,7 +8864,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -8414,7 +8872,7 @@ paths:
                 type: object
   /api/erp/statuses/production-orders:
     get:
-      description: ''
+      description: ""
       summary: Get Status
       parameters:
         - name: filter
@@ -8448,7 +8906,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -8456,7 +8914,7 @@ paths:
                 type: object
   /api/erp/statuses/rfq:
     get:
-      description: ''
+      description: ""
       summary: Get Status
       parameters:
         - name: filter
@@ -8490,7 +8948,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -8498,7 +8956,7 @@ paths:
                 type: object
   /api/erp/statuses/receiving:
     get:
-      description: ''
+      description: ""
       summary: Get Status
       parameters:
         - name: filter
@@ -8532,7 +8990,7 @@ paths:
       tags:
         - ERP
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -8591,7 +9049,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -8603,7 +9061,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Organization'
+                        $ref: "#/components/schemas/Organization"
                   links:
                     type: object
                     properties:
@@ -8636,7 +9094,7 @@ paths:
                         type: number
   /api/wms/organizations/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an Organization
       parameters:
         - name: key
@@ -8649,7 +9107,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -8657,7 +9115,7 @@ paths:
                 type: object
   /api/wms/sites:
     get:
-      description: ''
+      description: ""
       summary: List Sites
       parameters:
         - name: filter
@@ -8691,7 +9149,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -8703,7 +9161,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Site'
+                        $ref: "#/components/schemas/Site"
                   links:
                     type: object
                     properties:
@@ -8736,7 +9194,7 @@ paths:
                         type: number
   /api/wms/sites/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Site
       parameters:
         - name: key
@@ -8749,7 +9207,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -8808,7 +9266,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -8820,7 +9278,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Location'
+                        $ref: "#/components/schemas/Location"
                   links:
                     type: object
                     properties:
@@ -8853,7 +9311,7 @@ paths:
                         type: number
   /api/wms/locations/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Location
       parameters:
         - name: key
@@ -8866,7 +9324,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -8925,7 +9383,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -8937,7 +9395,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Storeroom'
+                        $ref: "#/components/schemas/Storeroom"
                   links:
                     type: object
                     properties:
@@ -8970,7 +9428,7 @@ paths:
                         type: number
   /api/wms/storerooms/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Storeroom
       parameters:
         - name: key
@@ -8983,7 +9441,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -9042,7 +9500,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -9054,7 +9512,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Account'
+                        $ref: "#/components/schemas/Account"
                   links:
                     type: object
                     properties:
@@ -9087,7 +9545,7 @@ paths:
                         type: number
   /api/wms/accounts/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an Account
       parameters:
         - name: key
@@ -9100,7 +9558,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -9159,7 +9617,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -9171,7 +9629,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Team'
+                        $ref: "#/components/schemas/Team"
                   links:
                     type: object
                     properties:
@@ -9204,7 +9662,7 @@ paths:
                         type: number
   /api/wms/teams/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Team
       parameters:
         - name: key
@@ -9217,7 +9675,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -9276,7 +9734,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -9288,7 +9746,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Labor'
+                        $ref: "#/components/schemas/Labor"
                   links:
                     type: object
                     properties:
@@ -9321,7 +9779,7 @@ paths:
                         type: number
   /api/wms/labors/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Labor
       parameters:
         - name: key
@@ -9334,7 +9792,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -9393,7 +9851,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -9405,7 +9863,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/User'
+                        $ref: "#/components/schemas/User"
                   links:
                     type: object
                     properties:
@@ -9438,7 +9896,7 @@ paths:
                         type: number
   /api/wms/users/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an User
       parameters:
         - name: key
@@ -9451,7 +9909,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -9510,7 +9968,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -9522,7 +9980,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Currency'
+                        $ref: "#/components/schemas/Currency"
                   links:
                     type: object
                     properties:
@@ -9555,7 +10013,7 @@ paths:
                         type: number
   /api/wms/currencies/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Currency
       parameters:
         - name: key
@@ -9568,7 +10026,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -9627,7 +10085,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -9639,7 +10097,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/UnitOfMeasure'
+                        $ref: "#/components/schemas/UnitOfMeasure"
                   links:
                     type: object
                     properties:
@@ -9672,7 +10130,7 @@ paths:
                         type: number
   /api/wms/uom/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an UnitOfMeasure
       parameters:
         - name: key
@@ -9685,7 +10143,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -9744,7 +10202,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -9756,7 +10214,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Company'
+                        $ref: "#/components/schemas/Company"
                   links:
                     type: object
                     properties:
@@ -9789,7 +10247,7 @@ paths:
                         type: number
   /api/wms/companies/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Company
       parameters:
         - name: key
@@ -9802,7 +10260,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -9861,7 +10319,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -9873,7 +10331,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Vendor'
+                        $ref: "#/components/schemas/Vendor"
                   links:
                     type: object
                     properties:
@@ -9906,7 +10364,7 @@ paths:
                         type: number
   /api/wms/vendors/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Vendor
       parameters:
         - name: key
@@ -9919,7 +10377,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -9978,7 +10436,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -9990,7 +10448,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Customer'
+                        $ref: "#/components/schemas/Customer"
                   links:
                     type: object
                     properties:
@@ -10023,7 +10481,7 @@ paths:
                         type: number
   /api/wms/customers/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Customer
       parameters:
         - name: key
@@ -10036,7 +10494,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -10095,7 +10553,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -10107,7 +10565,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/ProductGroup'
+                        $ref: "#/components/schemas/ProductGroup"
                   links:
                     type: object
                     properties:
@@ -10140,7 +10598,7 @@ paths:
                         type: number
   /api/wms/groups/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a ProductGroup
       parameters:
         - name: key
@@ -10153,7 +10611,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -10212,7 +10670,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -10224,7 +10682,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Product'
+                        $ref: "#/components/schemas/Product"
                   links:
                     type: object
                     properties:
@@ -10257,7 +10715,7 @@ paths:
                         type: number
   /api/wms/products/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Product
       parameters:
         - name: key
@@ -10270,7 +10728,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -10329,7 +10787,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -10341,7 +10799,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Stock'
+                        $ref: "#/components/schemas/Stock"
                   links:
                     type: object
                     properties:
@@ -10374,7 +10832,7 @@ paths:
                         type: number
   /api/wms/stocks/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a Stock
       parameters:
         - name: key
@@ -10387,7 +10845,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -10446,7 +10904,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -10458,7 +10916,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/SalesOrder'
+                        $ref: "#/components/schemas/SalesOrder"
                   links:
                     type: object
                     properties:
@@ -10491,7 +10949,7 @@ paths:
                         type: number
   /api/wms/sales-orders/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a SalesOrder
       parameters:
         - name: key
@@ -10504,7 +10962,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -10512,7 +10970,7 @@ paths:
                 type: object
   /api/wms/purchase-orders/{key}/status:
     put:
-      description: ''
+      description: ""
       summary: Get a SalesOrder
       parameters:
         - name: key
@@ -10525,12 +10983,12 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PurchaseOrderStatus'
+                $ref: "#/components/schemas/PurchaseOrderStatus"
       requestBody:
         description: Request body
         content:
@@ -10597,7 +11055,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -10609,7 +11067,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/PurchaseOrder'
+                        $ref: "#/components/schemas/PurchaseOrder"
                   links:
                     type: object
                     properties:
@@ -10641,18 +11099,18 @@ paths:
                       total:
                         type: number
     post:
-      description: ''
+      description: ""
       summary: Get a PurchaseOrder
       parameters: []
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PurchaseOrder'
+                $ref: "#/components/schemas/PurchaseOrder"
       requestBody:
         description: Request body
         content:
@@ -10741,29 +11199,29 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: '07000215667676'
-                vendorKey: '01000161942212'
-                code: '94077278'
+                siteKey: "09000884499615"
+                vendorKey: "02000380409271"
+                code: "39053220"
                 orderNo: string
-                orderDate: '2001-01-07T21:55:04Z'
-                statusKey: '09000317384526'
-                title: Voluptatem a nostrum eos sed.
-                description: Aut cupiditate quo sit omnis fugit quam.
-                dueAt: '1984-11-19T07:14:05Z'
-                approvedAt: '1977-07-25T06:18:39Z'
-                completedAt: '2023-10-31T23:12:26Z'
+                orderDate: "1990-03-03T14:37:29Z"
+                statusKey: "03000205584987"
+                title: Quaerat porro tempore ex voluptatem dolor.
+                description: In quis dolorum quaerat doloremque.
+                dueAt: "1981-01-18T10:08:19Z"
+                approvedAt: "2006-03-10T06:57:11Z"
+                completedAt: "2022-02-25T15:39:18Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: '07000467149513'
+                currencyKey: "06000778381910"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: '2013-10-02T02:37:19Z'
-                updatedAt: '2008-07-25T03:12:39Z'
+                createdAt: "1991-09-25T17:24:13Z"
+                updatedAt: "2004-01-10T02:24:20Z"
   /api/wms/purchase-orders/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a PurchaseOrder
       parameters:
         - name: key
@@ -10776,14 +11234,14 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
                 type: object
     put:
-      description: ''
+      description: ""
       summary: Get a PurchaseOrder
       parameters:
         - name: key
@@ -10796,12 +11254,12 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PurchaseOrder'
+                $ref: "#/components/schemas/PurchaseOrder"
       requestBody:
         description: Request body
         content:
@@ -10890,26 +11348,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: '08000851822849'
-                vendorKey: '08000998120853'
-                code: '32296358'
+                siteKey: "01000358462321"
+                vendorKey: "08000859659424"
+                code: "49959864"
                 orderNo: string
-                orderDate: '1989-06-05T02:15:54Z'
-                statusKey: '03000972983665'
-                title: Molestias adipisci quas numquam et rerum eum.
-                description: Eos qui quidem non labore.
-                dueAt: '1997-09-14T05:25:31Z'
-                approvedAt: '2013-04-17T19:43:33Z'
-                completedAt: '1999-12-01T12:56:33Z'
+                orderDate: "1980-09-29T13:56:50Z"
+                statusKey: "07000760409956"
+                title: Nam sunt labore reiciendis enim sit tempora.
+                description: Optio ab perspiciatis consequatur occaecati.
+                dueAt: "2021-04-19T04:49:17Z"
+                approvedAt: "1987-03-29T18:45:46Z"
+                completedAt: "1980-08-14T19:29:13Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: '01000719952866'
+                currencyKey: "03000426068914"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: '1993-02-04T17:02:29Z'
-                updatedAt: '1980-03-17T22:11:27Z'
+                createdAt: "1973-07-18T19:29:56Z"
+                updatedAt: "1996-10-14T23:42:10Z"
   /api/wms/purchase-orders.line-items:
     get:
       description: |2+
@@ -10963,7 +11421,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -10975,7 +11433,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/LineItem'
+                        $ref: "#/components/schemas/LineItem"
                   links:
                     type: object
                     properties:
@@ -11008,7 +11466,7 @@ paths:
                         type: number
   /api/wms/purchase-orders.line-items/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a LineItem
       parameters:
         - name: key
@@ -11021,7 +11479,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -11029,7 +11487,7 @@ paths:
                 type: object
   /api/wms/materials/{partKey}/inventory:
     post:
-      description: ''
+      description: ""
       summary: Get a LineItem
       parameters:
         - name: partKey
@@ -11042,12 +11500,12 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Part'
+                $ref: "#/components/schemas/Material"
       requestBody:
         description: Request body
         content:
@@ -11072,13 +11530,13 @@ paths:
                   nullable: false
                   format: array
               example:
-                filter: '[]'
+                filter: "[]"
                 page: 10
                 per_page: 10
-                sort: '[]'
+                sort: "[]"
   /api/wms/materials/{key}/children:
     get:
-      description: ''
+      description: ""
       summary: Get MaterialItem
       parameters:
         - name: key
@@ -11119,7 +11577,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -11145,7 +11603,7 @@ paths:
          * sort[createdAt]=1 // DESC
          * sort[createdAt]=0 // ASC
 
-      summary: List Parts
+      summary: List Materials
       parameters:
         - name: filter
           description: array
@@ -11178,7 +11636,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -11190,7 +11648,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Part'
+                        $ref: "#/components/schemas/Material"
                   links:
                     type: object
                     properties:
@@ -11221,10 +11679,121 @@ paths:
                         type: number
                       total:
                         type: number
+    post:
+      description: ""
+      summary: Get a Material
+      parameters: []
+      tags:
+        - WMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Material"
+      requestBody:
+        description: Request body
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                siteKeys:
+                  type: array
+                  nullable: true
+                  format: array
+                parentKeys:
+                  type: array
+                  nullable: true
+                  format: array
+                assetKeys:
+                  type: array
+                  nullable: true
+                  format: array
+                vendorKeys:
+                  type: string
+                  nullable: true
+                  format: string
+                documents:
+                  type: array
+                  nullable: true
+                  format: array
+                accountKey:
+                  type: string
+                  nullable: true
+                  format: string
+                code:
+                  type: string
+                  nullable: true
+                  format: string
+                isAssembly:
+                  type: boolean
+                  nullable: true
+                  format: boolean
+                partNumber:
+                  type: string
+                  nullable: true
+                  format: string
+                name:
+                  type: string
+                  nullable: true
+                  format: string
+                description:
+                  type: string
+                  nullable: true
+                  format: string
+                notes:
+                  type: string
+                  nullable: true
+                  format: string
+                criticality:
+                  type: string
+                  nullable: true
+                  format: string
+                isActive:
+                  type: boolean
+                  nullable: true
+                  format: boolean
+                manufacturerName:
+                  type: string
+                  nullable: true
+                  format: string
+                minimumQuantity:
+                  type: string
+                  nullable: true
+                  format: string
+                cost:
+                  type: object
+                  nullable: true
+                  format: object
+                currency:
+                  type: string
+                  nullable: true
+                  format: string
+              example:
+                siteKeys: "[]"
+                parentKeys: "[]"
+                assetKeys: "[]"
+                vendorKeys: string
+                documents: "[]"
+                accountKey: "05000766271322"
+                code: "11443209"
+                isAssembly: string
+                partNumber: string
+                name: string
+                description: Ex omnis natus earum quibusdam.
+                notes: string
+                criticality: string
+                isActive: true
+                manufacturerName: string
+                minimumQuantity: 10
+                cost: "99.99"
+                currency: string
   /api/wms/materials/{key}:
     get:
-      description: ''
-      summary: Get a Part
+      description: ""
+      summary: Get a Material
       parameters:
         - name: key
           description: string|required
@@ -11236,12 +11805,130 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
                 type: object
+    put:
+      description: ""
+      summary: Get a Material
+      parameters:
+        - name: key
+          description: string|required
+          in: path
+          style: simple
+          required: true
+          schema:
+            type: string
+      tags:
+        - WMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Material"
+      requestBody:
+        description: Request body
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                siteKeys:
+                  type: array
+                  nullable: true
+                  format: array
+                parentKeys:
+                  type: array
+                  nullable: true
+                  format: array
+                assetKeys:
+                  type: array
+                  nullable: true
+                  format: array
+                vendorKeys:
+                  type: string
+                  nullable: true
+                  format: string
+                documents:
+                  type: array
+                  nullable: true
+                  format: array
+                accountKey:
+                  type: string
+                  nullable: true
+                  format: string
+                code:
+                  type: string
+                  nullable: true
+                  format: string
+                isAssembly:
+                  type: boolean
+                  nullable: true
+                  format: boolean
+                partNumber:
+                  type: string
+                  nullable: true
+                  format: string
+                name:
+                  type: string
+                  nullable: true
+                  format: string
+                description:
+                  type: string
+                  nullable: true
+                  format: string
+                notes:
+                  type: string
+                  nullable: true
+                  format: string
+                criticality:
+                  type: string
+                  nullable: true
+                  format: string
+                isActive:
+                  type: boolean
+                  nullable: true
+                  format: boolean
+                manufacturerName:
+                  type: string
+                  nullable: true
+                  format: string
+                minimumQuantity:
+                  type: string
+                  nullable: true
+                  format: string
+                cost:
+                  type: object
+                  nullable: true
+                  format: object
+                currency:
+                  type: string
+                  nullable: true
+                  format: string
+              example:
+                siteKeys: "[]"
+                parentKeys: "[]"
+                assetKeys: "[]"
+                vendorKeys: string
+                documents: "[]"
+                accountKey: "00000599924724"
+                code: "56423402"
+                isAssembly: string
+                partNumber: string
+                name: string
+                description: Et qui quia molestias numquam quas modi aliquam.
+                notes: string
+                criticality: string
+                isActive: true
+                manufacturerName: string
+                minimumQuantity: 10
+                cost: "99.99"
+                currency: string
   /api/wms/stock-transfers:
     get:
       description: |2+
@@ -11295,7 +11982,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -11307,7 +11994,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/StockTransfer'
+                        $ref: "#/components/schemas/StockTransfer"
                   links:
                     type: object
                     properties:
@@ -11340,7 +12027,7 @@ paths:
                         type: number
   /api/wms/stock-transfers/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a StockTransfer
       parameters:
         - name: key
@@ -11353,7 +12040,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -11412,7 +12099,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -11424,7 +12111,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/StockAdjustment'
+                        $ref: "#/components/schemas/StockAdjustment"
                   links:
                     type: object
                     properties:
@@ -11457,7 +12144,7 @@ paths:
                         type: number
   /api/wms/stock-adjustments/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a StockAdjustment
       parameters:
         - name: key
@@ -11470,7 +12157,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -11529,7 +12216,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -11541,7 +12228,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/ShipmentOrder'
+                        $ref: "#/components/schemas/ShipmentOrder"
                   links:
                     type: object
                     properties:
@@ -11574,7 +12261,7 @@ paths:
                         type: number
   /api/wms/shipment-orders/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get a ShipmentOrder
       parameters:
         - name: key
@@ -11587,7 +12274,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -11595,7 +12282,7 @@ paths:
                 type: object
   /api/wms/shipment-orders/{key}/delivered:
     post:
-      description: ''
+      description: ""
       summary: Get a ShipmentOrder
       parameters:
         - name: key
@@ -11608,12 +12295,12 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ShipmentOrderDelivered'
+                $ref: "#/components/schemas/ShipmentOrderDelivered"
       requestBody:
         description: Request body
         content:
@@ -11674,7 +12361,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -11686,7 +12373,7 @@ paths:
                     items:
                       type: array
                       items:
-                        $ref: '#/components/schemas/Inventory'
+                        $ref: "#/components/schemas/Inventory"
                   links:
                     type: object
                     properties:
@@ -11719,7 +12406,7 @@ paths:
                         type: number
   /api/wms/inventories/{key}:
     get:
-      description: ''
+      description: ""
       summary: Get an Inventory
       parameters:
         - name: key
@@ -11732,7 +12419,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -11740,7 +12427,7 @@ paths:
                 type: object
   /api/wms/statuses/purchase-orders:
     get:
-      description: ''
+      description: ""
       summary: Get Status
       parameters:
         - name: filter
@@ -11774,7 +12461,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -11782,7 +12469,7 @@ paths:
                 type: object
   /api/wms/statuses/sales-orders:
     get:
-      description: ''
+      description: ""
       summary: Get Status
       parameters:
         - name: filter
@@ -11816,7 +12503,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -11824,7 +12511,7 @@ paths:
                 type: object
   /api/wms/statuses/stock-transfers:
     get:
-      description: ''
+      description: ""
       summary: Get Status
       parameters:
         - name: filter
@@ -11858,7 +12545,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -11866,7 +12553,7 @@ paths:
                 type: object
   /api/wms/statuses/shipment-orders:
     get:
-      description: ''
+      description: ""
       summary: Get Status
       parameters:
         - name: filter
@@ -11900,7 +12587,7 @@ paths:
       tags:
         - WMS
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -11908,26 +12595,26 @@ paths:
                 type: object
   /api/integrations/current:
     get:
-      description: ''
+      description: ""
       summary: Get Integration
       parameters: []
       tags:
         - System
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
                 type: object
     delete:
-      description: ''
+      description: ""
       summary: Get Integration
       parameters: []
       tags:
         - System
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -11994,17 +12681,17 @@ components:
           nullable: false
           format: string
       example:
-        key: '01000572839610'
-        currencyKey: '02000972670582'
+        key: "07000445736391"
+        currencyKey: "08000994431484"
         name: string
-        code: '91790132'
-        description: Id iusto quis minima est nostrum.
-        addresses: '[]'
+        code: "22741721"
+        description: Reiciendis voluptates unde est quo est et.
+        addresses: "[]"
         billingAddress: string
-        contacts: '[]'
-        createdAt: '2000-08-04T17:05:33Z'
-        updatedAt: '2019-08-21T09:14:00Z'
-        deletedAt: '2014-04-02T06:40:21Z'
+        contacts: "[]"
+        createdAt: "2020-06-13T06:49:45Z"
+        updatedAt: "2014-02-15T06:26:25Z"
+        deletedAt: "1997-08-14T11:54:24Z"
     Site:
       title: Site
       properties:
@@ -12069,18 +12756,18 @@ components:
           nullable: false
           format: string
       example:
-        key: '06000665344031'
-        organizationKey: '09000359600606'
-        customerKey: '09000090936292'
+        key: "02000168114169"
+        organizationKey: "03000863239874"
+        customerKey: "04000407316060"
         name: string
         lat: string
         lng: string
         address: string
         properties: string
         notes: string
-        createdAt: '2010-01-19T03:48:14Z'
-        updatedAt: '1982-01-19T03:27:38Z'
-        deletedAt: '1990-08-13T12:53:56Z'
+        createdAt: "2001-08-30T06:26:58Z"
+        updatedAt: "2006-05-25T07:11:18Z"
+        deletedAt: "1980-01-23T16:04:30Z"
     Location:
       title: Location
       properties:
@@ -12140,17 +12827,17 @@ components:
           nullable: false
           format: string
       example:
-        key: '00000983382809'
-        siteKey: '08000723300853'
-        parentKey: '01000888573595'
+        key: "04000719463972"
+        siteKey: "05000008312874"
+        parentKey: "01000554721626"
         name: string
-        description: Iste aliquam sit quisquam numquam cum laudantium.
-        code: '57315775'
+        description: Sed omnis quis eveniet aliquid ullam.
+        code: "12337125"
         type: string
         address: string
-        createdAt: '2002-12-05T06:23:20Z'
-        updatedAt: '1971-06-22T02:24:50Z'
-        deletedAt: '1970-06-01T20:00:24Z'
+        createdAt: "2016-05-24T18:36:04Z"
+        updatedAt: "1983-08-31T08:08:10Z"
+        deletedAt: "2020-05-09T23:57:09Z"
     Storeroom:
       title: Storeroom
       properties:
@@ -12220,19 +12907,19 @@ components:
           nullable: false
           format: string
       example:
-        key: '09000567464675'
-        parentKey: '03000655174228'
-        siteKey: '05000820577455'
-        locationKey: '04000818737919'
-        userManagerKey: '09000218234205'
-        code: '79630566'
+        key: "04000084745729"
+        parentKey: "03000881716789"
+        siteKey: "07000557138382"
+        locationKey: "00000263960001"
+        userManagerKey: "09000318196586"
+        code: "61916869"
         name: string
         type: string
-        description: Tenetur vel aut aut sint a aut.
+        description: Et perspiciatis qui ex sed.
         priority: string
-        createdAt: '1992-12-30T13:13:20Z'
-        updatedAt: '1997-01-15T03:35:15Z'
-        deletedAt: '2014-09-26T09:50:33Z'
+        createdAt: "1992-07-21T01:50:05Z"
+        updatedAt: "2000-01-29T02:24:24Z"
+        deletedAt: "2009-04-08T00:31:13Z"
     Account:
       title: Account
       properties:
@@ -12272,13 +12959,13 @@ components:
           nullable: false
           format: string
       example:
-        key: '01000128438226'
-        code: '54419582'
+        key: "00000483769969"
+        code: "26131085"
         name: string
-        description: Sed natus error nisi qui impedit.
-        createdAt: '1996-07-24T20:24:55Z'
-        updatedAt: '1980-02-19T04:25:10Z'
-        deletedAt: '2021-01-13T00:33:44Z'
+        description: Fuga qui vero debitis rerum dolorum illum ad.
+        createdAt: "1973-09-17T10:17:24Z"
+        updatedAt: "2013-01-15T04:32:55Z"
+        deletedAt: "1979-06-26T21:20:57Z"
     Team:
       title: Team
       properties:
@@ -12323,14 +13010,14 @@ components:
           nullable: false
           format: string
       example:
-        key: '03000170684720'
-        accountKey: '06000590901633'
-        code: '17629904'
+        key: "00000407109261"
+        accountKey: "07000760743057"
+        code: "09940017"
         name: string
-        description: Dolor voluptatibus illum architecto tenetur.
-        createdAt: '1988-02-26T05:53:56Z'
-        updatedAt: '1994-06-30T19:50:03Z'
-        deletedAt: '2003-11-08T00:07:42Z'
+        description: Dolorem eius eveniet eos autem.
+        createdAt: "1970-10-16T10:45:08Z"
+        updatedAt: "1977-12-12T08:39:55Z"
+        deletedAt: "2020-07-10T16:53:51Z"
     Labor:
       title: Labor
       properties:
@@ -12415,22 +13102,22 @@ components:
           nullable: false
           format: string
       example:
-        key: '01000302067258'
-        siteKeys: '[]'
-        locationKeys: '[]'
-        accountKey: '03000714562497'
-        teamKey: '07000413613330'
+        key: "01000708746383"
+        siteKeys: "[]"
+        locationKeys: "[]"
+        accountKey: "06000335865454"
+        teamKey: "04000534766049"
         userId: string
         name: string
         roleName: string
-        description: Quod minus quidem aut assumenda et sed rem.
+        description: Rem et eum quia nostrum dolorem.
         note: string
-        isActive: string
-        cost: string
+        isActive: true
+        cost: "99.99"
         currency: string
-        createdAt: '1973-03-24T18:28:48Z'
-        updatedAt: '2005-10-06T08:23:59Z'
-        deletedAt: '1976-05-02T01:58:26Z'
+        createdAt: "2007-04-30T04:47:58Z"
+        updatedAt: "1992-08-08T04:54:47Z"
+        deletedAt: "1998-09-12T03:18:02Z"
     User:
       title: User
       properties:
@@ -12495,18 +13182,18 @@ components:
           nullable: false
           format: string
       example:
-        key: '08000578372614'
-        organizationKey: '08000754186554'
-        siteKeys: '[]'
-        locationKeys: '[]'
+        key: "04000998157179"
+        organizationKey: "04000810228442"
+        siteKeys: "[]"
+        locationKeys: "[]"
         name: string
         roleName: string
-        description: Aut dolor laboriosam dolor.
+        description: Porro quod omnis qui repellendus molestiae.
         notes: string
-        isActive: string
-        createdAt: '1999-01-21T06:46:43Z'
-        updatedAt: '1970-07-21T16:27:51Z'
-        deletedAt: '1987-07-21T08:00:27Z'
+        isActive: true
+        createdAt: "2004-07-15T03:14:40Z"
+        updatedAt: "2007-10-29T15:13:30Z"
+        deletedAt: "1988-02-20T23:37:41Z"
     UnitOfMeasure:
       title: UnitOfMeasure
       properties:
@@ -12531,10 +13218,10 @@ components:
           nullable: false
           format: boolean
       example:
-        key: '03000809077578'
+        key: "00000064284679"
         name: string
-        code: '28532187'
-        isActive: string
+        code: "10439067"
+        isActive: true
     Company:
       title: Company
       properties:
@@ -12594,17 +13281,17 @@ components:
           nullable: false
           format: string
       example:
-        key: '07000464383166'
-        parentKey: '09000524782185'
+        key: "02000850198738"
+        parentKey: "09000989525482"
         name: string
-        code: '27258651'
-        addresses: '[]'
-        billingAddress: '[]'
-        currencyKey: '03000155761841'
+        code: "23117075"
+        addresses: "[]"
+        billingAddress: "[]"
+        currencyKey: "01000824935573"
         notes: string
-        createdAt: '2019-05-05T02:58:39Z'
-        updatedAt: '2022-12-29T11:20:13Z'
-        deletedAt: '2021-04-26T17:31:09Z'
+        createdAt: "1975-08-09T00:25:52Z"
+        updatedAt: "1999-04-27T17:06:17Z"
+        deletedAt: "1973-10-25T04:24:20Z"
     Vendor:
       title: Vendor
       properties:
@@ -12654,15 +13341,15 @@ components:
           nullable: false
           format: string
       example:
-        key: '04000299706917'
+        key: "01000608315993"
         name: string
-        code: '54297128'
+        code: "91856449"
         address: string
         currency: string
         notes: string
-        createdAt: '2017-12-11T17:21:06Z'
-        updatedAt: '1982-12-01T19:09:45Z'
-        deletedAt: '1987-03-14T01:24:23Z'
+        createdAt: "1973-07-22T02:46:03Z"
+        updatedAt: "2020-09-03T07:39:09Z"
+        deletedAt: "1993-03-22T11:22:56Z"
     Customer:
       title: Customer
       properties:
@@ -12727,18 +13414,18 @@ components:
           nullable: false
           format: string
       example:
-        key: '03000051173550'
+        key: "08000438152041"
         name: string
-        code: '45840449'
+        code: "90742897"
         address: string
         notes: string
-        isActive: string
+        isActive: true
         contactPerson: string
         paymentTerms: string
         currencyCode: string
-        createdAt: '2017-06-10T09:51:48Z'
-        updatedAt: '2004-10-24T18:34:02Z'
-        deletedAt: '2020-10-28T02:55:06Z'
+        createdAt: "1990-05-14T18:22:22Z"
+        updatedAt: "1994-03-06T14:03:11Z"
+        deletedAt: "1976-09-29T14:01:32Z"
     Stock:
       title: Stock
       properties:
@@ -12808,19 +13495,19 @@ components:
           nullable: false
           format: string
       example:
-        key: '04000592913469'
-        productKey: '06000347035438'
-        materialKey: '05000187023610'
-        locationKey: '09000046652653'
-        storeroomKey: '06000191902857'
-        assetKey: '07000346540143'
+        key: "03000475590983"
+        productKey: "02000821281058"
+        materialKey: "01000992721592"
+        locationKey: "05000450847267"
+        storeroomKey: "05000964724829"
+        assetKey: "04000312953245"
         position: string
-        uomKey: '06000003548426'
+        uomKey: "01000887748686"
         quantity: string
-        expiresAt: '2022-12-07T09:48:21Z'
-        createdAt: '2007-06-30T20:21:04Z'
-        updatedAt: '2005-06-18T23:06:30Z'
-        deletedAt: '2007-07-29T06:01:30Z'
+        expiresAt: "2011-05-29T21:37:06Z"
+        createdAt: "1989-09-29T15:07:29Z"
+        updatedAt: "1979-06-25T21:38:00Z"
+        deletedAt: "1980-03-02T11:38:37Z"
     PurchaseOrderStatus:
       title: PurchaseOrderStatus
       properties:
@@ -12930,18 +13617,18 @@ components:
           nullable: false
           format: array
       example:
-        key: '00000781706212'
-        siteKey: '01000120212580'
-        orderDate: '2007-03-21T13:24:12Z'
-        vendorKey: '00000815375649'
+        key: "09000178226369"
+        siteKey: "08000307933074"
+        orderDate: "1976-05-24T12:16:29Z"
+        vendorKey: "01000740177879"
         orderNo: string
         status: string
         warehouseName: string
-        title: Pariatur minima sint iusto ipsa dolorem est non.
-        description: Ipsa quas ut nisi corrupti quod.
-        dueAt: '2003-08-25T00:27:33Z'
-        approvedAt: '1993-05-14T23:24:25Z'
-        completedAt: '2005-02-13T07:42:01Z'
+        title: Harum sit aut quis qui.
+        description: Ea dolor rerum facere sapiente.
+        dueAt: "2011-11-17T10:00:47Z"
+        approvedAt: "1976-08-17T06:18:31Z"
+        completedAt: "2010-03-26T05:11:32Z"
         shippingMethod: string
         terms: string
         notes: string
@@ -12949,8 +13636,8 @@ components:
         currency: string
         totalNetValue: string
         totalGrossValue: string
-        updatedAt: '2006-11-22T01:59:58Z'
-        lines: '[]'
+        updatedAt: "2012-09-22T19:03:13Z"
+        lines: "[]"
     PurchaseOrder:
       title: PurchaseOrder
       properties:
@@ -13060,18 +13747,18 @@ components:
           nullable: false
           format: array
       example:
-        key: '02000984817914'
-        siteKey: '03000524306657'
-        orderDate: '1995-05-30T13:58:55Z'
-        vendorKey: '03000568722725'
+        key: "03000395121199"
+        siteKey: "05000182748083"
+        orderDate: "1984-03-21T18:13:38Z"
+        vendorKey: "00000246074521"
         orderNo: string
         status: string
         warehouseName: string
-        title: Dolores nam ipsam nam vero nulla qui laboriosam.
-        description: Aperiam nisi quia sit rerum aspernatur odit qui.
-        dueAt: '1988-06-12T00:30:51Z'
-        approvedAt: '2011-07-09T12:23:36Z'
-        completedAt: '2010-11-29T16:39:30Z'
+        title: Reiciendis recusandae sunt ex suscipit ut.
+        description: Esse dolorem quia ex ducimus est expedita est.
+        dueAt: "2006-03-09T22:32:43Z"
+        approvedAt: "1986-02-17T16:19:21Z"
+        completedAt: "1975-09-21T13:23:53Z"
         shippingMethod: string
         terms: string
         notes: string
@@ -13079,12 +13766,12 @@ components:
         currency: string
         totalNetValue: string
         totalGrossValue: string
-        updatedAt: '1996-01-07T08:15:14Z'
-        lines: '[]'
+        updatedAt: "1998-03-22T22:54:41Z"
+        lines: "[]"
     PurchaseOrderCollection:
       type: array
       items:
-        $ref: '#/components/schemas/PurchaseOrder'
+        $ref: "#/components/schemas/PurchaseOrder"
     LineItem:
       title: LineItem
       properties:
@@ -13209,32 +13896,32 @@ components:
           nullable: false
           format: string
       example:
-        key: '00000381787860'
-        locationKey: '02000958260064'
-        assetKey: '07000227832801'
-        partKey: '06000050285027'
-        vendorKey: '04000350083115'
+        key: "05000198045085"
+        locationKey: "08000740496641"
+        assetKey: "05000705231539"
+        partKey: "03000888949270"
+        vendorKey: "00000257742903"
         lineNo: string
         warehouseName: string
-        code: '07914270'
-        title: Unde asperiores cum ut ut est.
-        description: Veritatis ratione aut ipsam voluptas.
+        code: "46289445"
+        title: Aliquam beatae id tempora ut maxime eveniet.
+        description: Quia consequatur et repellendus sit ut.
         lineRef: string
         quantity: string
         receivedQuantity: string
         type: string
         status: string
         uom: string
-        cost: string
+        cost: "99.99"
         currency: string
         lineTotalValue: string
         lineTaxValue: string
         notes: string
-        dueAt: '1978-08-16T10:39:06Z'
-        createdAt: '1996-08-07T21:10:20Z'
-        updatedAt: '2019-12-21T17:15:21Z'
-    Part:
-      title: Part
+        dueAt: "2007-05-02T21:25:29Z"
+        createdAt: "1993-03-24T19:12:09Z"
+        updatedAt: "1989-06-16T17:43:04Z"
+    Material:
+      title: Material
       properties:
         key:
           type: string
@@ -13327,10 +14014,10 @@ components:
           nullable: false
           format: object
         cost:
-          type: string
+          type: object
           description: Description
           nullable: false
-          format: string
+          format: object
         currency:
           type: string
           description: Description
@@ -13362,31 +14049,31 @@ components:
           nullable: false
           format: array
       example:
-        key: '05000312546607'
-        siteKeys: '[]'
-        parentKeys: '[]'
-        assetKeys: '[]'
+        key: "07000756130257"
+        siteKeys: "[]"
+        parentKeys: "[]"
+        assetKeys: "[]"
         vendorKeys: string
-        documents: '[]'
-        accountKey: '08000117885514'
-        code: '67802944'
+        documents: "[]"
+        accountKey: "08000955879012"
+        code: "28287773"
         isAssembly: string
         partNumber: string
         name: string
-        description: Vitae non error sint sed.
+        description: Deserunt rerum sed laborum assumenda ab itaque.
         notes: string
         criticality: string
-        isActive: string
+        isActive: true
         manufacturerName: string
-        minimumQuantity: string
+        minimumQuantity: 10
         uom: string
-        cost: string
+        cost: "99.99"
         currency: string
-        createdAt: '1977-01-23T04:35:36Z'
-        updatedAt: '1985-05-04T10:49:05Z'
-        deletedAt: '2016-05-15T10:12:03Z'
-        inventory: '[]'
-        drawings: '[]'
+        createdAt: "1994-11-29T00:11:43Z"
+        updatedAt: "1979-11-30T06:13:26Z"
+        deletedAt: "2016-11-03T06:54:48Z"
+        inventory: "[]"
+        drawings: "[]"
     MaterialItem:
       title: MaterialItem
       properties:
@@ -13486,25 +14173,29 @@ components:
           nullable: false
           format: string
       example:
-        key: '08000934097586'
-        materialKey: '01000855872588'
-        assemblyKey: '03000534990529'
-        assetKey: '00000487259231'
-        assetTemplateKey: '00000116032559'
-        workOrderKey: '07000666948789'
-        pmKey: '06000416938900'
-        productionOrderKey: '00000113195159'
+        key: "01000793811329"
+        materialKey: "01000448171088"
+        assemblyKey: "04000783580561"
+        assetKey: "02000453845832"
+        assetTemplateKey: "04000884622722"
+        workOrderKey: "01000243350414"
+        pmKey: "01000622109138"
+        productionOrderKey: "04000198757911"
         partNumber: string
         drawingNumber: string
         positionNumber: string
-        documentKey: '09000465147044'
+        documentKey: "08000395047514"
         name: string
-        uomKey: '05000150884065'
+        uomKey: "03000048582209"
         quantity: string
         requiredQuantity: string
-        createdAt: '2013-10-16T20:04:42Z'
-        updatedAt: '1983-07-22T01:46:24Z'
-        deletedAt: '2009-01-14T06:26:20Z'
+        createdAt: "1976-08-28T04:22:06Z"
+        updatedAt: "1989-08-02T10:51:15Z"
+        deletedAt: "2003-07-31T07:31:34Z"
+    MaterialCollection:
+      type: array
+      items:
+        $ref: "#/components/schemas/Material"
     Asset:
       title: Asset
       properties:
@@ -13624,29 +14315,29 @@ components:
           nullable: false
           format: string
       example:
-        key: '05000437614101'
-        siteKey: '01000373383574'
-        parentKey: '05000560077623'
-        vendorKey: '07000068226963'
-        modelKey: '05000485102620'
-        teamKey: '08000624108763'
-        documents: '[]'
-        locationKey: '05000863408543'
-        accountKey: '08000538605339'
+        key: "05000268899580"
+        siteKey: "03000581751550"
+        parentKey: "03000741513265"
+        vendorKey: "00000701734186"
+        modelKey: "06000441980475"
+        teamKey: "00000495169163"
+        documents: "[]"
+        locationKey: "05000395314285"
+        accountKey: "00000699974816"
         name: string
-        description: Qui modi rerum consequuntur sed animi.
+        description: Ipsam sint earum quidem sed et alias.
         notes: string
         categoryName: string
         criticality: string
-        isActive: string
+        isActive: true
         manufacturerName: string
         modelName: string
         serialNumber: string
-        activatedAt: '1975-09-10T02:59:09Z'
-        deactivatedAt: '2009-01-19T13:56:42Z'
-        createdAt: '2010-04-30T04:53:47Z'
-        updatedAt: '2022-10-02T15:48:08Z'
-        deletedAt: '1995-01-28T19:15:16Z'
+        activatedAt: "1996-02-22T07:49:11Z"
+        deactivatedAt: "1985-03-07T02:48:40Z"
+        createdAt: "1981-07-13T07:15:34Z"
+        updatedAt: "1983-11-08T22:40:23Z"
+        deletedAt: "2008-08-16T04:27:43Z"
     AssetDownTime:
       title: AssetDownTime
       properties:
@@ -13701,16 +14392,16 @@ components:
           nullable: false
           format: string
       example:
-        key: '05000744043927'
-        assetKey: '04000337557562'
-        description: Sunt aut delectus dolorem.
-        startedAt: '2011-12-17T17:21:47Z'
-        endedAt: '2009-09-10T15:18:41Z'
+        key: "01000330080977"
+        assetKey: "05000552714123"
+        description: Amet velit est a adipisci qui et eos.
+        startedAt: "1994-09-10T18:01:09Z"
+        endedAt: "2011-09-15T13:51:30Z"
         categoryName: string
         severity: string
         notes: string
-        createdAt: '2015-11-27T11:22:53Z'
-        updatedAt: '2020-12-15T15:46:39Z'
+        createdAt: "1986-11-17T05:52:41Z"
+        updatedAt: "2004-02-02T17:36:33Z"
     Model:
       title: Model
       properties:
@@ -13755,14 +14446,14 @@ components:
           nullable: false
           format: string
       example:
-        key: '07000238807515'
-        siteKey: '02000140417235'
-        documents: '[]'
+        key: "06000307122937"
+        siteKey: "02000629677368"
+        documents: "[]"
         name: string
         manufacturerName: string
-        createdAt: '2006-12-12T14:49:46Z'
-        updatedAt: '2004-04-24T06:13:24Z'
-        deletedAt: '2022-01-15T02:42:24Z'
+        createdAt: "2017-06-18T08:23:10Z"
+        updatedAt: "2014-01-15T04:54:31Z"
+        deletedAt: "2014-03-16T20:29:25Z"
     Counter:
       title: Counter
       properties:
@@ -13817,16 +14508,16 @@ components:
           nullable: false
           format: string
       example:
-        key: '06000074610836'
-        siteKey: '07000462488580'
-        assetKey: '03000070487702'
+        key: "03000748112439"
+        siteKey: "06000635669693"
+        assetKey: "00000798697436"
         name: string
         uom: string
         lastReading: string
-        lastReadingAt: '2017-12-28T06:22:35Z'
-        createdAt: '2021-02-12T02:21:48Z'
-        updatedAt: '2014-09-30T18:48:26Z'
-        deletedAt: '1997-06-24T16:13:18Z'
+        lastReadingAt: "2006-05-13T10:42:26Z"
+        createdAt: "2009-06-22T01:30:57Z"
+        updatedAt: "2004-09-25T03:11:33Z"
+        deletedAt: "1986-10-15T05:17:27Z"
     CounterReading:
       title: CounterReading
       properties:
@@ -13856,11 +14547,11 @@ components:
           nullable: false
           format: string
       example:
-        key: '07000419352510'
-        assetKey: '04000455193808'
-        meterKey: '04000686120314'
+        key: "02000726864385"
+        assetKey: "00000017587815"
+        meterKey: "06000111647224"
         reading: string
-        createdAt: '1977-08-18T12:02:02Z'
+        createdAt: "2014-04-09T02:35:29Z"
     PreventiveMaintenance:
       title: PreventiveMaintenance
       properties:
@@ -14000,33 +14691,33 @@ components:
           nullable: false
           format: string
       example:
-        key: '04000776770673'
-        siteKeys: '[]'
-        assetKeys: '[]'
-        teamKey: '00000888588754'
-        accountKey: '08000954743559'
-        title: Sint molestiae voluptatem vel minus ipsam sed.
-        description: Deleniti nesciunt tempora quod adipisci.
+        key: "01000384772672"
+        siteKeys: "[]"
+        assetKeys: "[]"
+        teamKey: "01000758714891"
+        accountKey: "04000648620830"
+        title: Nesciunt maxime id odit eum sint.
+        description: Voluptatem velit nihil ex vel cum ut temporibus.
         instructions: string
         status: string
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
-        documents: '[]'
-        documentKey: '08000234707367'
+        documents: "[]"
+        documentKey: "05000276772909"
         documentPage: string
         notes: string
-        dueAt: '2014-04-24T12:24:40Z'
-        nextScheduledAt: '2010-01-19T15:30:24Z'
-        lastScheduledAt: '2021-05-26T03:16:17Z'
-        lastCompletedAt: '2013-12-02T07:47:17Z'
+        dueAt: "1998-02-13T15:18:51Z"
+        nextScheduledAt: "1973-11-03T00:05:02Z"
+        lastScheduledAt: "2020-11-21T19:43:03Z"
+        lastCompletedAt: "1978-04-04T22:45:20Z"
         lastCompletionRemarks: string
-        materials: '[]'
-        triggers: '[]'
-        createdAt: '1986-05-06T06:52:49Z'
-        updatedAt: '2003-02-09T08:03:23Z'
-        deletedAt: '1987-07-10T04:56:53Z'
+        materials: "[]"
+        triggers: "[]"
+        createdAt: "2023-05-09T20:43:42Z"
+        updatedAt: "1978-12-26T19:41:24Z"
+        deletedAt: "2001-08-01T15:10:51Z"
     WorkOrderStatus:
       title: WorkOrderStatus
       properties:
@@ -14191,38 +14882,38 @@ components:
           nullable: false
           format: string
       example:
-        key: '07000487139993'
-        siteKey: '02000843100871'
-        assetKey: '08000708577346'
-        accountKey: '04000564226432'
-        title: Et deleniti aut tempore aut itaque minus.
-        description: Est molestias ut nobis occaecati accusantium.
-        workRequestKey: '03000561288588'
-        code: '97645078'
-        pmKey: '01000621993141'
-        teamKey: '02000644651889'
-        userAssignedKey: '00000224320111'
-        userCompletedKey: '01000271222458'
-        organizationKey: '04000161144831'
+        key: "08000493260404"
+        siteKey: "08000677134591"
+        assetKey: "02000884646677"
+        accountKey: "05000124214076"
+        title: Dolor magni dolorum harum minima et eum nostrum.
+        description: Voluptate eius velit iusto sed qui dolores.
+        workRequestKey: "07000037525109"
+        code: "47392342"
+        pmKey: "01000323630986"
+        teamKey: "04000487925820"
+        userAssignedKey: "07000195778266"
+        userCompletedKey: "00000450552930"
+        organizationKey: "01000603932329"
         instructions: string
         status: string
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
-        documentKey: '03000570173119'
+        documentKey: "03000254378976"
         documentPage: string
         notes: string
-        approvedAt: '1995-07-31T02:16:07Z'
-        dueAt: '2011-12-24T03:15:07Z'
-        scheduledAt: '2022-10-31T08:38:49Z'
-        completedAt: '1979-09-04T18:21:19Z'
+        approvedAt: "1985-09-18T20:30:05Z"
+        dueAt: "2011-03-08T14:50:07Z"
+        scheduledAt: "1979-08-04T11:47:36Z"
+        completedAt: "1988-12-11T20:24:54Z"
         completionRemarks: string
         materials: string
-        documents: '[]'
-        createdAt: '1973-03-04T01:11:43Z'
-        updatedAt: '2015-12-15T03:19:55Z'
-        deletedAt: '2018-09-09T03:51:48Z'
+        documents: "[]"
+        createdAt: "1983-07-01T06:40:51Z"
+        updatedAt: "2010-12-15T14:22:27Z"
+        deletedAt: "2017-02-19T07:39:56Z"
     WorkOrder:
       title: WorkOrder
       properties:
@@ -14387,42 +15078,42 @@ components:
           nullable: false
           format: string
       example:
-        key: '07000849259000'
-        siteKey: '03000050463235'
-        assetKey: '03000594471765'
-        accountKey: '09000485837789'
-        title: Deserunt molestias ut vel rerum.
-        description: Et sunt sequi ut repellendus.
-        workRequestKey: '04000395961222'
-        code: '06480486'
-        pmKey: '04000558957731'
-        teamKey: '02000991653445'
-        userAssignedKey: '02000505406285'
-        userCompletedKey: '08000425320536'
-        organizationKey: '00000506243045'
+        key: "02000261658537"
+        siteKey: "00000200014703"
+        assetKey: "02000815697697"
+        accountKey: "08000283645882"
+        title: Quia aut tenetur tempora consequatur tempore.
+        description: Nisi tempora rerum debitis est voluptate enim ex.
+        workRequestKey: "08000449163785"
+        code: "54459496"
+        pmKey: "08000612003894"
+        teamKey: "05000786609661"
+        userAssignedKey: "09000943257182"
+        userCompletedKey: "08000596385168"
+        organizationKey: "02000284180991"
         instructions: string
         status: string
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
-        documentKey: '01000620041856'
+        documentKey: "01000746161090"
         documentPage: string
         notes: string
-        approvedAt: '1974-06-24T11:16:24Z'
-        dueAt: '1989-05-03T09:39:39Z'
-        scheduledAt: '1971-03-25T02:23:45Z'
-        completedAt: '2009-11-09T11:32:49Z'
+        approvedAt: "2010-03-19T05:05:19Z"
+        dueAt: "2014-04-10T20:23:56Z"
+        scheduledAt: "2011-01-02T10:22:56Z"
+        completedAt: "2022-04-11T23:54:48Z"
         completionRemarks: string
         materials: string
-        documents: '[]'
-        createdAt: '1976-09-05T16:34:31Z'
-        updatedAt: '2018-05-18T08:32:09Z'
-        deletedAt: '1986-04-14T06:05:35Z'
+        documents: "[]"
+        createdAt: "2019-08-09T02:40:45Z"
+        updatedAt: "2002-11-21T00:21:36Z"
+        deletedAt: "1979-10-02T14:43:48Z"
     WorkOrderCollection:
       type: array
       items:
-        $ref: '#/components/schemas/WorkOrder'
+        $ref: "#/components/schemas/WorkOrder"
     ServiceRequest:
       title: ServiceRequest
       properties:
@@ -14542,29 +15233,29 @@ components:
           nullable: false
           format: string
       example:
-        key: '01000738361964'
-        siteKey: '04000156832122'
-        locationKey: '04000017614496'
-        storeroomKey: '07000229421680'
-        assetKey: '04000298657082'
-        workOrderKey: '07000854883220'
-        teamKey: '04000754036454'
-        userRequestedKey: '03000288609929'
-        userApprovedKey: '01000351372900'
-        documents: '[]'
-        title: Optio libero illo quo.
-        description: Cumque atque qui doloribus eos.
-        statusKey: '02000562128665'
+        key: "02000565284667"
+        siteKey: "07000585311022"
+        locationKey: "00000927587833"
+        storeroomKey: "01000504384871"
+        assetKey: "08000053346039"
+        workOrderKey: "03000733616069"
+        teamKey: "09000066106510"
+        userRequestedKey: "04000150762240"
+        userApprovedKey: "07000624719592"
+        documents: "[]"
+        title: Non odio totam itaque.
+        description: Omnis quia animi reprehenderit ipsum tenetur.
+        statusKey: "05000182706136"
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
         notes: string
-        approvedAt: '1977-10-25T11:06:30Z'
-        dueAt: '1974-11-10T02:16:58Z'
-        createdAt: '2014-01-19T14:31:07Z'
-        updatedAt: '1989-06-30T20:28:04Z'
-        deletedAt: '1979-05-01T20:37:20Z'
+        approvedAt: "1998-04-27T01:23:52Z"
+        dueAt: "1985-02-25T10:10:24Z"
+        createdAt: "2001-09-20T20:02:48Z"
+        updatedAt: "1990-03-20T20:13:53Z"
+        deletedAt: "2018-06-19T21:58:09Z"
     Document:
       title: Document
       properties:
@@ -14619,16 +15310,16 @@ components:
           nullable: false
           format: string
       example:
-        key: '06000276257969'
-        entityKeys: '[]'
+        key: "05000749492135"
+        entityKeys: "[]"
         name: string
         url: string
         type: string
         contentType: string
-        description: Vel enim illo illo enim repudiandae.
+        description: Ex assumenda neque sequi id.
         notes: string
-        createdAt: '1988-03-01T02:42:52Z'
-        updatedAt: '1999-10-05T15:16:22Z'
+        createdAt: "2022-05-10T11:52:25Z"
+        updatedAt: "1991-03-05T17:13:33Z"
     Inventory:
       title: Inventory
       properties:
@@ -14663,12 +15354,12 @@ components:
           nullable: false
           format: string
       example:
-        code: '18943498'
+        code: "61759114"
         name: string
         quantity: 10
         unitCost: 10
-        locationKey: '09000664747742'
-        updatedAt: '1989-05-22T13:46:33Z'
+        locationKey: "03000221797146"
+        updatedAt: "1992-01-04T13:27:07Z"
     Status:
       title: Status
       properties:
@@ -14728,17 +15419,17 @@ components:
           nullable: false
           format: string
       example:
-        key: '03000295170043'
-        organizationKey: '04000398528855'
-        parentKey: '03000293962714'
+        key: "07000224041520"
+        organizationKey: "01000157999552"
+        parentKey: "08000714976997"
         name: string
-        code: '03311769'
+        code: "03192641"
         subCode: string
         scope: string
-        isActive: string
-        createdAt: '2016-12-19T21:59:42Z'
-        updatedAt: '1975-06-18T19:05:00Z'
-        deletedAt: '1975-06-09T18:50:45Z'
+        isActive: true
+        createdAt: "2018-02-11T15:41:42Z"
+        updatedAt: "1977-02-16T23:00:57Z"
+        deletedAt: "1982-10-23T22:57:29Z"
     Tax:
       title: Tax
       properties:
@@ -14788,15 +15479,15 @@ components:
           nullable: false
           format: string
       example:
-        key: '04000355421547'
-        organizationKey: '06000005848317'
+        key: "06000925866123"
+        organizationKey: "02000546472521"
         name: string
         type: string
         taxPercentage: string
-        isActive: string
-        createdAt: '1976-07-23T10:41:31Z'
-        updatedAt: '2011-06-02T16:18:30Z'
-        deletedAt: '2008-05-02T10:02:52Z'
+        isActive: true
+        createdAt: "2004-01-24T18:29:03Z"
+        updatedAt: "2009-03-04T06:01:35Z"
+        deletedAt: "2001-07-30T22:37:30Z"
     Currency:
       title: Currency
       properties:
@@ -14841,14 +15532,14 @@ components:
           nullable: false
           format: string
       example:
-        key: '00000201260671'
+        key: "08000972966421"
         name: string
-        code: '73863045'
+        code: "51013608"
         isBase: string
-        isActive: string
-        createdAt: '1972-01-03T07:13:33Z'
-        updatedAt: '2016-02-15T17:42:06Z'
-        deletedAt: '1973-05-25T15:46:43Z'
+        isActive: true
+        createdAt: "2004-10-18T07:27:42Z"
+        updatedAt: "1988-08-23T06:58:36Z"
+        deletedAt: "2011-09-23T04:25:23Z"
     ExchangeRate:
       title: ExchangeRate
       properties:
@@ -14878,11 +15569,11 @@ components:
           nullable: false
           format: string
       example:
-        key: '07000769360767'
-        currencyKey: '00000850410627'
-        baseCurrencyKey: '04000653594562'
+        key: "06000027184714"
+        currencyKey: "08000110126874"
+        baseCurrencyKey: "09000571131248"
         rate: string
-        createdAt: '2011-01-10T07:03:25Z'
+        createdAt: "1972-01-07T11:00:31Z"
     Product:
       title: Product
       properties:
@@ -15007,18 +15698,18 @@ components:
           nullable: false
           format: string
       example:
-        key: '09000468782367'
-        groupKey: '06000969012081'
-        uomKey: '07000831446186'
-        code: '70734522'
+        key: "01000959427130"
+        groupKey: "08000909951290"
+        uomKey: "08000107803022"
+        code: "96471227"
         name: string
-        description: Qui corporis est est amet in ea.
+        description: Et saepe et quibusdam assumenda exercitationem.
         type: string
         isTaxable: string
-        taxKeys: '[]'
+        taxKeys: "[]"
         status: string
         price: string
-        currencyKey: '09000941927971'
+        currencyKey: "00000375858025"
         quantity: string
         sku: string
         upc: string
@@ -15027,10 +15718,10 @@ components:
         partNumber: string
         reorderLevel: string
         dimensions: string
-        supplyOptions: '[]'
-        createdAt: '1994-07-10T02:05:13Z'
-        updatedAt: '2006-10-02T11:24:52Z'
-        deletedAt: '1987-02-25T09:11:52Z'
+        supplyOptions: "[]"
+        createdAt: "1997-07-12T14:36:54Z"
+        updatedAt: "2012-07-29T09:38:33Z"
+        deletedAt: "1996-06-06T10:07:07Z"
     SalesOrder:
       title: SalesOrder
       properties:
@@ -15110,21 +15801,21 @@ components:
           nullable: false
           format: string
       example:
-        key: '06000303980409'
-        customerKey: '02000457316910'
-        userKey: '05000656242777'
-        code: '36948208'
+        key: "07000871256896"
+        customerKey: "07000345777283"
+        userKey: "07000031098736"
+        code: "90232657"
         orderNumber: string
         date: string
-        statusKey: '06000547667874'
-        shipmentDate: '1997-03-27T06:41:08Z'
+        statusKey: "09000695616114"
+        shipmentDate: "1976-11-25T03:57:07Z"
         contactPerson: string
-        lines: '[]'
-        currencyKey: '04000665064608'
+        lines: "[]"
+        currencyKey: "07000346839069"
         currencyRate: string
-        createdAt: '2011-07-23T09:45:19Z'
-        updatedAt: '1990-05-19T21:03:54Z'
-        deletedAt: '1992-12-31T15:24:01Z'
+        createdAt: "1984-04-14T21:54:46Z"
+        updatedAt: "2002-09-29T01:52:59Z"
+        deletedAt: "1994-02-16T05:19:11Z"
     Project:
       title: Project
       properties:
@@ -15174,15 +15865,15 @@ components:
           nullable: false
           format: string
       example:
-        key: '03000419435604'
-        siteKey: '04000677799927'
+        key: "03000606254173"
+        siteKey: "09000818399304"
         name: string
-        accountKey: '09000348420851'
-        statusKey: '03000931682464'
+        accountKey: "07000620824061"
+        statusKey: "09000859268587"
         budget: string
-        createdAt: '2009-05-13T06:50:22Z'
-        updatedAt: '1989-06-22T02:17:37Z'
-        deletedAt: '2005-04-19T06:13:45Z'
+        createdAt: "1983-05-07T10:04:33Z"
+        updatedAt: "2010-12-20T01:45:04Z"
+        deletedAt: "1976-01-02T19:31:30Z"
     Invoice:
       title: Invoice
       properties:
@@ -15252,19 +15943,19 @@ components:
           nullable: false
           format: string
       example:
-        key: '05000807140924'
+        key: "00000491082363"
         invoiceNumber: string
-        vendorKey: '02000496838941'
-        poKey: '08000030782890'
-        statusKey: '05000111764507'
-        lineItems: '[]'
-        invoiceDate: '2003-01-25T18:17:20Z'
-        dueDate: '1979-07-07T21:40:31Z'
-        receivedDate: '2012-07-08T12:54:31Z'
-        currencyKey: '04000050226180'
-        createdAt: '1975-08-04T09:17:52Z'
-        updatedAt: '2005-05-14T03:58:53Z'
-        deletedAt: '2015-11-17T11:38:42Z'
+        vendorKey: "06000623474710"
+        poKey: "08000196064813"
+        statusKey: "02000402324768"
+        lineItems: "[]"
+        invoiceDate: "2018-01-02T19:43:53Z"
+        dueDate: "2015-05-02T04:02:11Z"
+        receivedDate: "1994-03-17T07:22:10Z"
+        currencyKey: "07000537737444"
+        createdAt: "2017-03-27T15:38:38Z"
+        updatedAt: "1999-05-21T05:03:32Z"
+        deletedAt: "1992-10-20T14:50:22Z"
     Receipt:
       title: Receipt
       type: object
@@ -15373,25 +16064,25 @@ components:
           nullable: false
           format: string
       example:
-        key: '09000940731807'
-        siteKey: '01000929507668'
-        vendorKey: '01000510840009'
-        poKey: '05000286158719'
-        code: '40695198'
+        key: "01000434572895"
+        siteKey: "08000466966220"
+        vendorKey: "03000653775266"
+        poKey: "00000811414162"
+        code: "98477760"
         orderNo: string
-        orderDate: '2009-03-12T09:03:13Z'
-        title: Earum neque eos error eius sunt fugit minima.
-        description: Libero natus ratione omnis eos quae minus.
-        completedAt: '2009-09-23T19:36:10Z'
+        orderDate: "2017-04-24T06:40:24Z"
+        title: Ipsa adipisci enim repellat qui non.
+        description: Aperiam repudiandae fuga rerum corporis.
+        completedAt: "2018-09-27T21:09:14Z"
         shippingMethod: string
         notes: string
-        currencyKey: '08000281505935'
+        currencyKey: "09000828020928"
         totalNetValue: string
         totalTaxValue: string
         totalGrossValue: string
-        lineItems: '[]'
-        createdAt: '2016-10-11T08:24:18Z'
-        updatedAt: '2013-10-27T03:09:58Z'
+        lineItems: "[]"
+        createdAt: "1990-05-13T08:15:46Z"
+        updatedAt: "2016-12-03T18:29:20Z"
     RequestForQuotation:
       title: RequestForQuotation
       type: object
@@ -15442,14 +16133,14 @@ components:
           nullable: false
           format: string
       example:
-        key: '04000633995972'
-        parentKey: '01000590861995'
-        code: '15998705'
+        key: "02000621392676"
+        parentKey: "02000542286874"
+        code: "20488864"
         name: string
-        description: Est natus molestiae minima ducimus dolore cum.
-        updatedAt: '2002-07-15T03:03:50Z'
-        createdAt: '2022-02-04T19:48:45Z'
-        deletedAt: '2014-09-12T11:58:00Z'
+        description: Pariatur ab rerum vel illo.
+        updatedAt: "1998-01-20T18:09:17Z"
+        createdAt: "1997-09-22T22:29:45Z"
+        deletedAt: "2007-02-18T22:19:24Z"
     StockTransfer:
       title: StockTransfer
       properties:
@@ -15514,18 +16205,18 @@ components:
           nullable: false
           format: string
       example:
-        key: '05000808331042'
-        fromLocationKey: '05000529546053'
-        toLocationKey: '09000423964390'
-        fromStoreroomKey: '01000836029626'
-        toStoreroomKey: '07000626029227'
-        code: '14866883'
+        key: "08000424594327"
+        fromLocationKey: "08000972850243"
+        toLocationKey: "06000531719942"
+        fromStoreroomKey: "08000895210604"
+        toStoreroomKey: "00000810795112"
+        code: "31447805"
         date: string
         lineItems: string
         orderNumber: string
-        createdAt: '1974-08-08T17:56:54Z'
-        updatedAt: '1993-10-03T11:13:47Z'
-        deletedAt: '2000-10-25T10:57:41Z'
+        createdAt: "1996-08-29T14:36:11Z"
+        updatedAt: "2018-10-08T16:53:45Z"
+        deletedAt: "1986-09-10T00:40:45Z"
     StockAdjustment:
       title: StockAdjustment
       properties:
@@ -15595,19 +16286,19 @@ components:
           nullable: false
           format: string
       example:
-        key: '02000541674272'
-        locationKey: '09000937983929'
-        storeroomKey: '04000224750865'
-        userKey: '05000327643547'
+        key: "01000720455403"
+        locationKey: "03000040466274"
+        storeroomKey: "06000199711248"
+        userKey: "02000226267402"
         date: string
         reason: string
-        lineItems: '[]'
+        lineItems: "[]"
         adjustmentNumber: string
         total: string
         type: string
-        createdAt: '2016-07-07T08:09:29Z'
-        updatedAt: '1981-07-15T06:02:25Z'
-        deletedAt: '1991-03-15T19:52:05Z'
+        createdAt: "1989-08-27T03:35:16Z"
+        updatedAt: "1993-05-19T12:37:15Z"
+        deletedAt: "2022-04-09T09:07:17Z"
     ShipmentOrder:
       title: ShipmentOrder
       properties:
@@ -15692,22 +16383,22 @@ components:
           nullable: false
           format: string
       example:
-        key: '02000767958128'
-        userKey: '05000729814247'
-        customerKey: '09000712025502'
-        vendorKey: '06000199396019'
+        key: "09000778285550"
+        userKey: "07000106750574"
+        customerKey: "02000937503056"
+        vendorKey: "09000538984267"
         orderNumber: string
         shipmentNumber: string
         date: string
-        statusKey: '03000768227452'
-        lineItems: '[]'
+        statusKey: "03000082287976"
+        lineItems: "[]"
         destinationAddress: string
         carrierName: string
         shippingMethod: string
         notes: string
-        createdAt: '2017-07-22T11:59:08Z'
-        updatedAt: '2019-05-26T09:45:39Z'
-        deletedAt: '1972-03-24T19:13:36Z'
+        createdAt: "2006-02-04T16:34:29Z"
+        updatedAt: "2002-11-13T11:01:10Z"
+        deletedAt: "1999-02-18T13:51:20Z"
     ShipmentOrderDelivered: []
     Integration:
       title: Integration
