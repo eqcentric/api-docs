@@ -2226,7 +2226,7 @@ paths:
                         type: number
     post:
       description: ""
-      summary: Get a Material
+      summary: Create a Material
       parameters: []
       tags:
         - EAM/CMMS
@@ -2358,7 +2358,7 @@ paths:
                 type: object
     put:
       description: ""
-      summary: Get a Material
+      summary: Update a Material
       parameters:
         - name: key
           description: string|required
@@ -8295,7 +8295,7 @@ paths:
                         type: number
     post:
       description: ""
-      summary: Get a Material
+      summary: Create a Material
       parameters: []
       tags:
         - ERP
@@ -8427,7 +8427,7 @@ paths:
                 type: object
     put:
       description: ""
-      summary: Get a Material
+      summary: Update a Material
       parameters:
         - name: key
           description: string|required
@@ -11681,7 +11681,7 @@ paths:
                         type: number
     post:
       description: ""
-      summary: Get a Material
+      summary: Create a Material
       parameters: []
       tags:
         - WMS
@@ -11813,7 +11813,7 @@ paths:
                 type: object
     put:
       description: ""
-      summary: Get a Material
+      summary: Update a Material
       parameters:
         - name: key
           description: string|required
