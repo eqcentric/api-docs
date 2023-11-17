@@ -15,7 +15,7 @@ Once access is provided, Makini Link will redirect user to specified Redirect UR
 In your backend you can exchange the code to access token by issuing following HTTP request:
 
 ```
-POST https://api.makini.io/link/oauth/token
+POST https://api.makini.io/link/token
 Content-Type: application/x-www-form-urlencoded
 
 grant_type=authorization_code
