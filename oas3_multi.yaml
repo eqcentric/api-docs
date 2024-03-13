@@ -11,24 +11,11 @@ servers:
 paths:
   /api/eam/organizations:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        Organization endpoint provides access to information about
+        organizations, including their names, contact information, and
+        structures. It is a top-level entity in the system, available for
+        systems that support a multi-organizational structure.
       summary: List Organizations
       parameters:
         - name: filter
@@ -45,13 +32,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -59,6 +39,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -128,7 +115,10 @@ paths:
                 type: object
   /api/eam/sites:
     get:
-      description: ""
+      description: >-
+        Site represents a physical location or facility where equipment is
+        installed, or operations are conducted. This can include manufacturing
+        plants or offices.
       summary: List Sites
       parameters:
         - name: filter
@@ -139,13 +129,6 @@ paths:
           schema:
             type: array
         - name: page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
-        - name: per_page
           description: integer
           in: query
           style: form
@@ -228,24 +211,11 @@ paths:
                 type: object
   /api/eam/locations:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        Location is a specific subdivision within a site where equipment or
+        material stock is located. For example, a particular machine may be
+        situated in a specific area within a manufacturing plant, or materials
+        can be stored in a specific warehouse.
       summary: List Locations
       parameters:
         - name: filter
@@ -262,13 +232,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -276,6 +239,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -345,24 +315,9 @@ paths:
                 type: object
   /api/eam/storerooms:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        is a designated space within a location used for the storage and
+        management of inventory, supplies, or equipment.
       summary: List Storerooms
       parameters:
         - name: filter
@@ -379,13 +334,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -393,6 +341,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -462,24 +417,10 @@ paths:
                 type: object
   /api/eam/accounts:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        is a financial record in the general ledger, tracking debit and credit
+        transactions to reflect a business's financial transactions and
+        positions.
       summary: List Accounts
       parameters:
         - name: filter
@@ -496,13 +437,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -510,6 +444,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -579,24 +520,9 @@ paths:
                 type: object
   /api/eam/teams:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        a division responsible for conducting asset maintenance. It can be
+        assigned to execute work orders.
       summary: List Teams
       parameters:
         - name: filter
@@ -613,13 +539,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -627,6 +546,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -696,24 +622,9 @@ paths:
                 type: object
   /api/eam/labors:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        refers to internal or external human resources involved in the execution
+        of work orders. It is used to track cost and time for planning purposes.
       summary: List Labors
       parameters:
         - name: filter
@@ -730,13 +641,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -744,6 +648,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -813,24 +724,7 @@ paths:
                 type: object
   /api/eam/users:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: User account in the system
       summary: List Users
       parameters:
         - name: filter
@@ -847,13 +741,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -861,6 +748,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -964,13 +858,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -978,6 +865,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -1047,24 +941,7 @@ paths:
                 type: object
   /api/eam/companies:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: Contact information for a third-party entity.
       summary: List Companies
       parameters:
         - name: filter
@@ -1081,13 +958,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -1095,6 +965,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -1164,24 +1041,9 @@ paths:
                 type: object
   /api/eam/vendors:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        An external entity that provides services or supplies. Subdivision of
+        Company
       summary: List Vendors
       parameters:
         - name: filter
@@ -1198,13 +1060,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -1212,6 +1067,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -1281,24 +1143,9 @@ paths:
                 type: object
   /api/eam/customers:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        An external entity that can consume products or services, used as a
+        target in sales and shipment orders. Subdivision of Company
       summary: List Customers
       parameters:
         - name: filter
@@ -1315,13 +1162,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -1329,6 +1169,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -1398,24 +1245,7 @@ paths:
                 type: object
   /api/eam/stocks:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: The quantity of materials per location and storeroom
       summary: List Stocks
       parameters:
         - name: filter
@@ -1432,13 +1262,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -1446,6 +1269,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -1549,24 +1379,9 @@ paths:
                 status: string
   /api/eam/purchase-orders:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        A purchase order is a document for ordering goods or services,
+        specifying the details, conditions of the purchase and line items
       summary: List PurchaseOrders
       parameters:
         - name: filter
@@ -1583,13 +1398,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -1597,6 +1405,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -1744,26 +1559,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "01000721457580"
-                vendorKey: "00000261905900"
-                code: "23480551"
+                siteKey: "01000547108297"
+                vendorKey: "09000198971877"
+                code: "19622330"
                 orderNo: string
-                orderDate: "1996-06-21T11:25:47Z"
-                statusKey: "07000114501685"
-                title: Quis aut suscipit repellat reprehenderit et.
-                description: Sed laborum qui ducimus culpa saepe explicabo.
-                dueAt: "2023-03-27T21:50:25Z"
-                approvedAt: "2001-12-03T21:35:48Z"
-                completedAt: "1978-04-22T20:12:26Z"
+                orderDate: "1984-09-13T23:27:46Z"
+                statusKey: "04000056689120"
+                title: Qui ipsam consectetur amet nemo cum natus.
+                description: Fugit dignissimos consequatur velit cumque.
+                dueAt: "2008-12-31T10:01:50Z"
+                approvedAt: "2012-08-15T22:07:51Z"
+                completedAt: "1974-11-16T06:39:21Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "05000001755494"
+                currencyKey: "08000598399112"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "1991-11-23T18:38:19Z"
-                updatedAt: "1989-05-22T14:22:26Z"
+                createdAt: "2000-03-11T16:35:35Z"
+                updatedAt: "2024-01-13T07:31:04Z"
   /api/eam/purchase-orders/{key}:
     get:
       description: ""
@@ -1893,26 +1708,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "02000476683689"
-                vendorKey: "03000603702426"
-                code: "25663204"
+                siteKey: "03000478396905"
+                vendorKey: "05000253840121"
+                code: "78082861"
                 orderNo: string
-                orderDate: "1974-10-22T16:49:17Z"
-                statusKey: "00000459112562"
-                title: Ea numquam quia tempora voluptate vitae ut est.
-                description: Et dolorem ipsam cumque blanditiis et qui.
-                dueAt: "1980-04-05T09:08:05Z"
-                approvedAt: "1998-05-01T07:25:03Z"
-                completedAt: "1971-07-18T16:39:20Z"
+                orderDate: "1980-05-03T19:41:46Z"
+                statusKey: "00000169596311"
+                title: Alias deserunt et eaque voluptates enim.
+                description: Error vel nam veritatis.
+                dueAt: "1988-08-27T17:20:47Z"
+                approvedAt: "1974-08-09T15:14:20Z"
+                completedAt: "1984-11-12T13:37:55Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "08000923362542"
+                currencyKey: "02000909823696"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "1984-06-10T15:48:42Z"
-                updatedAt: "1989-12-11T00:36:16Z"
+                createdAt: "1970-04-19T08:32:34Z"
+                updatedAt: "2007-07-05T10:48:13Z"
   /api/eam/purchase-orders.line-items:
     get:
       description: |2+
@@ -1949,13 +1764,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -1963,6 +1771,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -2030,12 +1845,12 @@ paths:
             application/json:
               schema:
                 type: object
-  /api/eam/materials/{partKey}/inventory:
-    post:
+  /api/eam/materials/{key}/inventory:
+    put:
       description: ""
-      summary: Create a Material
+      summary: Update a MaterialInventory
       parameters:
-        - name: partKey
+        - name: key
           description: string|required
           in: path
           style: simple
@@ -2050,7 +1865,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Material"
+                $ref: "#/components/schemas/MaterialInventory"
       requestBody:
         description: Request body
         content:
@@ -2058,27 +1873,32 @@ paths:
             schema:
               type: object
               properties:
-                filter:
-                  type: array
-                  nullable: false
-                  format: array
-                page:
+                code:
+                  type: string
+                  nullable: true
+                  format: string
+                name:
+                  type: string
+                  nullable: true
+                  format: string
+                quantity:
                   type: integer
-                  nullable: false
+                  nullable: true
                   format: integer
-                per_page:
+                unitCost:
                   type: integer
-                  nullable: false
+                  nullable: true
                   format: integer
-                sort:
-                  type: array
-                  nullable: false
-                  format: array
+                locationKey:
+                  type: string
+                  nullable: true
+                  format: string
               example:
-                filter: "[]"
-                page: 10
-                per_page: 10
-                sort: "[]"
+                code: "14675065"
+                name: string
+                quantity: 10
+                unitCost: 10
+                locationKey: "09000706020507"
   /api/eam/materials/{key}/children:
     get:
       description: ""
@@ -2105,13 +1925,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -2130,24 +1943,9 @@ paths:
                 type: object
   /api/eam/materials:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        Material refers to consumables, spare parts and tools used in
+        maintenance and production chains.
       summary: List Materials
       parameters:
         - name: filter
@@ -2164,13 +1962,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -2178,6 +1969,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -2322,12 +2120,12 @@ paths:
                 assetKeys: "[]"
                 vendorKeys: string
                 documents: "[]"
-                accountKey: "01000139645665"
-                code: "88716732"
+                accountKey: "09000949013528"
+                code: "86006552"
                 isAssembly: string
                 partNumber: string
                 name: string
-                description: Quo et fugiat nostrum tenetur ex.
+                description: Qui maxime et quisquam quae delectus.
                 notes: string
                 criticality: string
                 isActive: string
@@ -2355,7 +2153,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Material"
+                type: object
     put:
       description: ""
       summary: Update a Material
@@ -2461,12 +2259,12 @@ paths:
                 assetKeys: "[]"
                 vendorKeys: string
                 documents: "[]"
-                accountKey: "09000380057150"
-                code: "60111128"
+                accountKey: "00000689513994"
+                code: "82248895"
                 isAssembly: string
                 partNumber: string
                 name: string
-                description: Placeat omnis dolor odio beatae et id corrupti.
+                description: Maiores maxime soluta eveniet voluptatem.
                 notes: string
                 criticality: string
                 isActive: string
@@ -2500,13 +2298,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -2525,24 +2316,10 @@ paths:
                 type: object
   /api/eam/assets:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        A physical entity in the facility's hierarchy structure. It can be
+        either equipment available for maintenance or system of assets in site
+        hierarchy.
       summary: List Assets
       parameters:
         - name: filter
@@ -2559,13 +2336,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -2573,6 +2343,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -2740,15 +2517,15 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "09000042690139"
-                parentKey: "04000459986532"
-                vendorKey: "08000771043828"
-                modelKey: "07000685629103"
-                teamKey: "06000312513121"
-                locationKey: "00000575293463"
-                accountKey: "01000158529331"
+                siteKey: "02000395913164"
+                parentKey: "03000818073005"
+                vendorKey: "08000023541524"
+                modelKey: "05000093276651"
+                teamKey: "09000603997521"
+                locationKey: "09000152979957"
+                accountKey: "05000835065647"
                 name: string
-                description: Modi fugiat a nesciunt ipsa eveniet suscipit.
+                description: Mollitia itaque modi aliquid aut.
                 notes: string
                 categoryName: string
                 criticality: string
@@ -2756,28 +2533,11 @@ paths:
                 manufacturerName: string
                 modelName: string
                 serialNumber: string
-                activatedAt: "2012-01-09T12:09:42Z"
-                deactivatedAt: "2017-05-05T22:44:09Z"
+                activatedAt: "1973-01-02T10:25:22Z"
+                deactivatedAt: "2010-03-30T05:23:29Z"
   /api/eam/assets-downtime:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: Information on planned or unplanned downtime periods for assets.
       summary: List AssetDownTimes
       parameters:
         - name: filter
@@ -2794,13 +2554,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -2808,6 +2561,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -2901,13 +2661,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -2960,13 +2713,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -2974,6 +2720,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -3043,24 +2796,10 @@ paths:
                 type: object
   /api/eam/meters:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        is a tool for tracking the number of specific events or operations, used
+        for analyzing performance and other parameters, as well as scheduling
+        condition-based maintenance
       summary: List Counters
       parameters:
         - name: filter
@@ -3077,13 +2816,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -3091,6 +2823,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -3194,13 +2933,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -3208,6 +2940,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -3301,13 +3040,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -3326,24 +3058,9 @@ paths:
                 type: object
   /api/eam/pm:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        Templates for time-based or counter-based maintenance, used as a basis
+        for creating new work orders
       summary: List PreventiveMaintenances
       parameters:
         - name: filter
@@ -3360,13 +3077,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -3374,6 +3084,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -3467,13 +3184,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -3526,24 +3236,9 @@ paths:
                 status: string
   /api/eam/work-orders:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        A work order is a document for organizing the execution of work or
+        service, describing the task, location, resources, and deadlines
       summary: List WorkOrders
       parameters:
         - name: filter
@@ -3560,13 +3255,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -3574,6 +3262,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -3765,22 +3460,22 @@ paths:
                   nullable: true
                   format: string
               example:
-                title: Nulla ea enim eum et velit occaecati.
-                statusKey: "05000613467854"
-                scheduledAt: "1986-08-24T16:44:05Z"
-                siteKey: "07000125753023"
-                locationKey: "05000705041134"
-                storeroomKey: "02000024373546"
-                assetKey: "04000405987855"
-                assetDowntimeKey: "03000371978755"
-                serviceRequestKey: "07000047097303"
-                pmKey: "07000530617177"
-                teamKey: "02000915525577"
-                laborAssignedKey: "01000613807901"
-                accountKey: "03000501077211"
-                userApprovedKey: "09000293880684"
-                code: "33172361"
-                description: Quas sunt quis debitis tenetur omnis.
+                title: Et ab error autem cupiditate.
+                statusKey: "05000722896579"
+                scheduledAt: "2015-06-10T01:38:25Z"
+                siteKey: "07000719358830"
+                locationKey: "03000776223252"
+                storeroomKey: "09000417055770"
+                assetKey: "05000366168217"
+                assetDowntimeKey: "00000835204669"
+                serviceRequestKey: "07000692074512"
+                pmKey: "03000708420178"
+                teamKey: "06000244107123"
+                laborAssignedKey: "03000713824733"
+                accountKey: "02000201862993"
+                userApprovedKey: "07000154655489"
+                code: "85313262"
+                description: Quisquam eaque aliquid ipsam hic et et quam.
                 instructions: string
                 severity: string
                 estimatedTime: 10
@@ -3789,13 +3484,13 @@ paths:
                 categoryName: string
                 documents: "[]"
                 notes: string
-                approvedAt: "1992-07-11T10:55:38Z"
-                dueAt: "1997-03-09T17:17:34Z"
-                completedAt: "1978-03-31T05:14:25Z"
+                approvedAt: "1981-07-15T16:25:56Z"
+                dueAt: "2018-06-11T17:47:53Z"
+                completedAt: "1979-04-23T18:26:05Z"
                 completionRemarks: string
-                createdAt: "2018-05-01T13:32:41Z"
-                updatedAt: "2016-12-15T20:25:51Z"
-                deletedAt: "2017-03-07T20:09:52Z"
+                createdAt: "1991-12-14T23:31:41Z"
+                updatedAt: "2020-02-29T21:41:11Z"
+                deletedAt: "1973-04-02T06:11:06Z"
   /api/eam/work-orders/{key}:
     get:
       description: ""
@@ -3969,22 +3664,22 @@ paths:
                   nullable: true
                   format: string
               example:
-                title: Tempora magnam velit ratione dolorem et omnis.
-                statusKey: "07000562169620"
-                scheduledAt: "1972-01-21T07:58:20Z"
-                siteKey: "08000831030028"
-                locationKey: "00000408303888"
-                storeroomKey: "09000285824243"
-                assetKey: "05000108200894"
-                assetDowntimeKey: "09000693874921"
-                serviceRequestKey: "00000742360561"
-                pmKey: "00000584884597"
-                teamKey: "09000305390339"
-                laborAssignedKey: "01000199247419"
-                accountKey: "09000926627546"
-                userApprovedKey: "02000647562256"
-                code: "70867954"
-                description: Ex eligendi quidem pariatur tenetur.
+                title: Repellendus qui sed unde perferendis.
+                statusKey: "01000936968195"
+                scheduledAt: "1980-05-01T02:26:48Z"
+                siteKey: "03000024516006"
+                locationKey: "01000257022690"
+                storeroomKey: "07000279693907"
+                assetKey: "03000365709267"
+                assetDowntimeKey: "03000369648726"
+                serviceRequestKey: "06000043339576"
+                pmKey: "06000748442584"
+                teamKey: "07000534219281"
+                laborAssignedKey: "00000617398303"
+                accountKey: "03000366961842"
+                userApprovedKey: "01000484367098"
+                code: "13107383"
+                description: Non alias unde provident dicta quasi veniam.
                 instructions: string
                 severity: string
                 estimatedTime: 10
@@ -3993,33 +3688,19 @@ paths:
                 categoryName: string
                 documents: "[]"
                 notes: string
-                approvedAt: "1991-10-15T03:30:45Z"
-                dueAt: "2012-04-19T18:27:12Z"
-                completedAt: "1981-06-26T03:45:04Z"
+                approvedAt: "2011-09-03T19:28:49Z"
+                dueAt: "1977-10-20T03:06:55Z"
+                completedAt: "1981-04-25T15:26:34Z"
                 completionRemarks: string
-                createdAt: "2013-06-08T07:33:49Z"
-                updatedAt: "2009-09-18T18:33:41Z"
-                deletedAt: "2013-12-27T10:09:19Z"
+                createdAt: "1997-10-15T18:28:45Z"
+                updatedAt: "2002-05-04T01:08:21Z"
+                deletedAt: "1994-06-27T08:03:32Z"
   /api/eam/service-requests:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        internal or external request for services or support, aimed at
+        maintaining operational activities made by employees or customer and
+        partners
       summary: List ServiceRequests
       parameters:
         - name: filter
@@ -4036,13 +3717,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -4050,6 +3724,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -4119,24 +3800,9 @@ paths:
                 type: object
   /api/eam/documents:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        Refers to any file containing details on maintenance, operation, and
+        asset management, including manuals, records, and reports.
       summary: List Documents
       parameters:
         - name: filter
@@ -4153,13 +3819,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -4167,6 +3826,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -4301,13 +3967,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -4315,6 +3974,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - EAM/CMMS
       responses:
@@ -4430,11 +4096,11 @@ paths:
                   nullable: true
                   format: string
               example:
-                code: "34942352"
+                code: "17919630"
                 name: string
                 quantity: 10
                 unitCost: 10
-                locationKey: "06000837329759"
+                locationKey: "04000035037154"
   /api/eam/statuses/work-orders:
     get:
       description: ""
@@ -4448,13 +4114,6 @@ paths:
           schema:
             type: array
         - name: page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
-        - name: per_page
           description: integer
           in: query
           style: form
@@ -4496,13 +4155,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -4538,7 +4190,35 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
+        - name: sort
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+      tags:
+        - EAM/CMMS
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/eam/statuses/pm:
+    get:
+      description: ""
+      summary: Get a Status
+      parameters:
+        - name: filter
+          description: array
+          in: query
+          style: form
+          required: false
+          schema:
+            type: array
+        - name: page
           description: integer
           in: query
           style: form
@@ -4563,7 +4243,10 @@ paths:
                 type: object
   /api/erp/sites:
     get:
-      description: ""
+      description: >-
+        Site represents a physical location or facility where equipment is
+        installed, or operations are conducted. This can include manufacturing
+        plants or offices.
       summary: List Sites
       parameters:
         - name: filter
@@ -4574,13 +4257,6 @@ paths:
           schema:
             type: array
         - name: page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
-        - name: per_page
           description: integer
           in: query
           style: form
@@ -4663,24 +4339,11 @@ paths:
                 type: object
   /api/erp/organizations:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        Organization endpoint provides access to information about
+        organizations, including their names, contact information, and
+        structures. It is a top-level entity in the system, available for
+        systems that support a multi-organizational structure.
       summary: List Organizations
       parameters:
         - name: filter
@@ -4697,13 +4360,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -4711,6 +4367,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -4780,24 +4443,11 @@ paths:
                 type: object
   /api/erp/locations:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        Location is a specific subdivision within a site where equipment or
+        material stock is located. For example, a particular machine may be
+        situated in a specific area within a manufacturing plant, or materials
+        can be stored in a specific warehouse.
       summary: List Locations
       parameters:
         - name: filter
@@ -4814,13 +4464,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -4828,6 +4471,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -4897,24 +4547,9 @@ paths:
                 type: object
   /api/erp/storerooms:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        is a designated space within a location used for the storage and
+        management of inventory, supplies, or equipment.
       summary: List Storerooms
       parameters:
         - name: filter
@@ -4931,13 +4566,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -4945,6 +4573,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -5014,24 +4649,10 @@ paths:
                 type: object
   /api/erp/accounts:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        is a financial record in the general ledger, tracking debit and credit
+        transactions to reflect a business's financial transactions and
+        positions.
       summary: List Accounts
       parameters:
         - name: filter
@@ -5048,13 +4669,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -5062,6 +4676,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -5131,24 +4752,9 @@ paths:
                 type: object
   /api/erp/teams:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        a division responsible for conducting asset maintenance. It can be
+        assigned to execute work orders.
       summary: List Teams
       parameters:
         - name: filter
@@ -5165,13 +4771,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -5179,6 +4778,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -5248,24 +4854,9 @@ paths:
                 type: object
   /api/erp/labors:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        refers to internal or external human resources involved in the execution
+        of work orders. It is used to track cost and time for planning purposes.
       summary: List Labors
       parameters:
         - name: filter
@@ -5282,13 +4873,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -5296,6 +4880,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -5365,24 +4956,7 @@ paths:
                 type: object
   /api/erp/users:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: User account in the system
       summary: List Users
       parameters:
         - name: filter
@@ -5399,13 +4973,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -5413,6 +4980,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -5482,24 +5056,7 @@ paths:
                 type: object
   /api/erp/taxes:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: Tax applicable on sales orders and purchase orders
       summary: List Taxes
       parameters:
         - name: filter
@@ -5516,13 +5073,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -5530,6 +5080,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -5599,24 +5156,10 @@ paths:
                 type: object
   /api/erp/currencies:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        Currency represents a monetary unit used for multi-currency
+        transactions, financial accounting, and dealings with counterparts,
+        integrated with international exchange rates.
       summary: List Currencies
       parameters:
         - name: filter
@@ -5633,13 +5176,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -5647,6 +5183,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -5716,24 +5259,10 @@ paths:
                 type: object
   /api/erp/exchange-rates:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        An exchange rate refers to the value assigned to convert one currency
+        into another for the purpose of financial transactions, accounting, and
+        reporting within the system.
       summary: List ExchangeRates
       parameters:
         - name: filter
@@ -5750,13 +5279,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -5764,6 +5286,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -5867,13 +5396,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -5881,6 +5403,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -5950,24 +5479,7 @@ paths:
                 type: object
   /api/erp/companies:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: Contact information for a third-party entity.
       summary: List Companies
       parameters:
         - name: filter
@@ -5984,13 +5496,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -5998,6 +5503,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -6067,24 +5579,9 @@ paths:
                 type: object
   /api/erp/vendors:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        An external entity that provides services or supplies. Subdivision of
+        Company
       summary: List Vendors
       parameters:
         - name: filter
@@ -6101,13 +5598,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -6115,6 +5605,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -6184,24 +5681,9 @@ paths:
                 type: object
   /api/erp/customers:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        An external entity that can consume products or services, used as a
+        target in sales and shipment orders. Subdivision of Company
       summary: List Customers
       parameters:
         - name: filter
@@ -6218,13 +5700,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -6232,6 +5707,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -6301,24 +5783,13 @@ paths:
                 type: object
   /api/erp/products:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        The item available for sale could be either physical or digital, offered
+        either at a fixed price or as a subscription service. Depending on the
+        type of business, one may offer one or more products, each with separate
+        pricing or add-ons. The description encompasses details such as
+        features, pricing, availability, supplier, manufacturing, and sales
+        information.
       summary: List Products
       parameters:
         - name: filter
@@ -6335,13 +5806,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -6349,6 +5813,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -6418,24 +5889,7 @@ paths:
                 type: object
   /api/erp/stocks:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: The quantity of materials per location and storeroom
       summary: List Stocks
       parameters:
         - name: filter
@@ -6452,13 +5906,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -6466,6 +5913,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -6535,24 +5989,9 @@ paths:
                 type: object
   /api/erp/sales-orders:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        A sales order is a document where customers specify what they want to
+        buy
       summary: List SalesOrders
       parameters:
         - name: filter
@@ -6569,13 +6008,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -6583,6 +6015,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -6652,24 +6091,7 @@ paths:
                 type: object
   /api/erp/projects:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: Skip
       summary: List Projects
       parameters:
         - name: filter
@@ -6686,13 +6108,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -6700,6 +6115,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -6769,24 +6191,12 @@ paths:
                 type: object
   /api/erp/invoices:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        refers to a document issued by a company to a customer, confirming the
+        completion of services rendered or goods delivered and requesting
+        payment. It typically includes details of the products or services
+        provided, their prices, the total amount due, as well as payment terms
+        and methods.
       summary: List Invoices
       parameters:
         - name: filter
@@ -6803,13 +6213,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -6817,6 +6220,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -6886,24 +6296,9 @@ paths:
                 type: object
   /api/erp/receipts:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        a 'receipt' is a document confirming payment received from a customer
+        for goods or services.
       summary: List Receipts
       parameters:
         - name: filter
@@ -6920,13 +6315,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -6934,6 +6322,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -7037,24 +6432,9 @@ paths:
                 status: string
   /api/erp/purchase-orders:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        A purchase order is a document for ordering goods or services,
+        specifying the details, conditions of the purchase and line items
       summary: List PurchaseOrders
       parameters:
         - name: filter
@@ -7071,13 +6451,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -7085,6 +6458,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -7232,26 +6612,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "04000022148439"
-                vendorKey: "09000937013186"
-                code: "70763669"
+                siteKey: "09000801414781"
+                vendorKey: "06000374633133"
+                code: "73193142"
                 orderNo: string
-                orderDate: "1985-06-25T15:26:34Z"
-                statusKey: "08000847968950"
-                title: Velit debitis nostrum quis laborum nisi.
-                description: Qui ipsum facilis aut sequi.
-                dueAt: "1979-12-23T23:48:01Z"
-                approvedAt: "1996-04-14T00:00:15Z"
-                completedAt: "2021-01-02T14:51:49Z"
+                orderDate: "2016-10-14T11:51:08Z"
+                statusKey: "08000831726467"
+                title: Quia rerum sit omnis quia.
+                description: Eaque beatae velit tenetur minima.
+                dueAt: "2005-09-27T02:53:41Z"
+                approvedAt: "1992-09-29T21:34:24Z"
+                completedAt: "2012-11-09T02:22:25Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "05000279671831"
+                currencyKey: "00000516854865"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "1978-09-14T03:39:52Z"
-                updatedAt: "1995-11-03T04:43:57Z"
+                createdAt: "2001-09-25T21:16:07Z"
+                updatedAt: "1970-04-16T05:55:27Z"
   /api/erp/purchase-orders/{key}:
     get:
       description: ""
@@ -7381,26 +6761,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "00000999501055"
-                vendorKey: "07000667958903"
-                code: "01152616"
+                siteKey: "04000166575546"
+                vendorKey: "05000422774852"
+                code: "60366641"
                 orderNo: string
-                orderDate: "1982-08-26T23:55:04Z"
-                statusKey: "04000039068373"
-                title: Aut quasi dolorem vel.
-                description: Velit aut delectus ut quia ut sapiente unde.
-                dueAt: "2021-06-01T05:55:05Z"
-                approvedAt: "2012-11-23T06:56:35Z"
-                completedAt: "1991-11-23T19:53:19Z"
+                orderDate: "1984-05-04T11:45:29Z"
+                statusKey: "04000416969628"
+                title: Omnis et quae architecto.
+                description: Dolorem autem quod quos corrupti.
+                dueAt: "2015-06-11T12:14:23Z"
+                approvedAt: "1974-11-06T10:16:41Z"
+                completedAt: "2022-02-27T23:53:51Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "03000585745332"
+                currencyKey: "07000222099169"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "2017-04-27T07:34:31Z"
-                updatedAt: "1989-07-29T23:30:20Z"
+                createdAt: "1973-07-09T13:45:10Z"
+                updatedAt: "2004-05-08T03:17:51Z"
   /api/erp/purchase-orders.line-items:
     get:
       description: |2+
@@ -7437,13 +6817,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -7451,6 +6824,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -7554,13 +6934,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -7568,6 +6941,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -7661,13 +7041,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -7686,24 +7059,10 @@ paths:
                 type: object
   /api/erp/production-orders:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        An order to produce a specific quantity of products within a pre-defined
+        time. It contains all the information required for the actual execution
+        of the production process.
       summary: List ProductionOrders
       parameters:
         - name: filter
@@ -7720,13 +7079,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -7734,6 +7086,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -7803,24 +7162,10 @@ paths:
                 $ref: "#/components/schemas/ProductionOrder"
   /api/erp/receiving:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        "Receiving" is the process of accepting inbound products from external
+        entities such as vendors or stores/distribution centers into the
+        warehouse facility.
       summary: List Receivings
       parameters:
         - name: filter
@@ -7837,13 +7182,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -7851,6 +7189,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -7920,24 +7265,9 @@ paths:
                 type: object
   /api/erp/rfq:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        A Request for Quotation is a document that an organization sends to one
+        or more suppliers asking a quotation for items.
       summary: List RequestForQuotations
       parameters:
         - name: filter
@@ -7954,13 +7284,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -7968,6 +7291,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -8037,24 +7367,10 @@ paths:
                 $ref: "#/components/schemas/RequestForQuotation"
   /api/erp/purchase-requisitions:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        A Purchase Requisition is an internal request for goods or services
+        within a company, undergoing approval before being used to generate a
+        purchase order for vendors.
       summary: List PurchaseRequisitions
       parameters:
         - name: filter
@@ -8071,13 +7387,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -8085,6 +7394,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -8152,12 +7468,12 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/PurchaseRequisition"
-  /api/erp/materials/{partKey}/inventory:
-    post:
+  /api/erp/materials/{key}/inventory:
+    put:
       description: ""
-      summary: Create a Material
+      summary: Update a MaterialInventory
       parameters:
-        - name: partKey
+        - name: key
           description: string|required
           in: path
           style: simple
@@ -8172,7 +7488,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Material"
+                $ref: "#/components/schemas/MaterialInventory"
       requestBody:
         description: Request body
         content:
@@ -8180,27 +7496,32 @@ paths:
             schema:
               type: object
               properties:
-                filter:
-                  type: array
-                  nullable: false
-                  format: array
-                page:
+                code:
+                  type: string
+                  nullable: true
+                  format: string
+                name:
+                  type: string
+                  nullable: true
+                  format: string
+                quantity:
                   type: integer
-                  nullable: false
+                  nullable: true
                   format: integer
-                per_page:
+                unitCost:
                   type: integer
-                  nullable: false
+                  nullable: true
                   format: integer
-                sort:
-                  type: array
-                  nullable: false
-                  format: array
+                locationKey:
+                  type: string
+                  nullable: true
+                  format: string
               example:
-                filter: "[]"
-                page: 10
-                per_page: 10
-                sort: "[]"
+                code: "42027324"
+                name: string
+                quantity: 10
+                unitCost: 10
+                locationKey: "03000824740737"
   /api/erp/materials/{key}/children:
     get:
       description: ""
@@ -8227,13 +7548,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -8252,24 +7566,9 @@ paths:
                 type: object
   /api/erp/materials:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        Material refers to consumables, spare parts and tools used in
+        maintenance and production chains.
       summary: List Materials
       parameters:
         - name: filter
@@ -8286,13 +7585,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -8300,6 +7592,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -8444,12 +7743,12 @@ paths:
                 assetKeys: "[]"
                 vendorKeys: string
                 documents: "[]"
-                accountKey: "08000729084526"
-                code: "75851521"
+                accountKey: "08000250970870"
+                code: "75496661"
                 isAssembly: string
                 partNumber: string
                 name: string
-                description: Sint sit sed fuga aut consequatur.
+                description: Ut sequi minima reprehenderit et vero.
                 notes: string
                 criticality: string
                 isActive: string
@@ -8477,7 +7776,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Material"
+                type: object
     put:
       description: ""
       summary: Update a Material
@@ -8583,12 +7882,12 @@ paths:
                 assetKeys: "[]"
                 vendorKeys: string
                 documents: "[]"
-                accountKey: "05000332868933"
-                code: "54611641"
+                accountKey: "05000788094305"
+                code: "28341406"
                 isAssembly: string
                 partNumber: string
                 name: string
-                description: Dolorum sit vero fugit blanditiis alias.
+                description: Iste modi ut impedit minima voluptatem.
                 notes: string
                 criticality: string
                 isActive: string
@@ -8632,13 +7931,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -8646,6 +7938,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - ERP
       responses:
@@ -8761,11 +8060,11 @@ paths:
                   nullable: true
                   format: string
               example:
-                code: "59524069"
+                code: "54456204"
                 name: string
                 quantity: 10
                 unitCost: 10
-                locationKey: "00000116943059"
+                locationKey: "00000700091148"
   /api/erp/statuses/purchase-orders:
     get:
       description: ""
@@ -8779,13 +8078,6 @@ paths:
           schema:
             type: array
         - name: page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
-        - name: per_page
           description: integer
           in: query
           style: form
@@ -8827,13 +8119,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -8863,13 +8148,6 @@ paths:
           schema:
             type: array
         - name: page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
-        - name: per_page
           description: integer
           in: query
           style: form
@@ -8911,13 +8189,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -8947,13 +8218,6 @@ paths:
           schema:
             type: array
         - name: page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
-        - name: per_page
           description: integer
           in: query
           style: form
@@ -8995,13 +8259,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -9031,13 +8288,6 @@ paths:
           schema:
             type: array
         - name: page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
-        - name: per_page
           description: integer
           in: query
           style: form
@@ -9079,13 +8329,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -9104,24 +8347,11 @@ paths:
                 type: object
   /api/wms/organizations:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        Organization endpoint provides access to information about
+        organizations, including their names, contact information, and
+        structures. It is a top-level entity in the system, available for
+        systems that support a multi-organizational structure.
       summary: List Organizations
       parameters:
         - name: filter
@@ -9138,13 +8368,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -9152,6 +8375,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -9221,7 +8451,10 @@ paths:
                 type: object
   /api/wms/sites:
     get:
-      description: ""
+      description: >-
+        Site represents a physical location or facility where equipment is
+        installed, or operations are conducted. This can include manufacturing
+        plants or offices.
       summary: List Sites
       parameters:
         - name: filter
@@ -9232,13 +8465,6 @@ paths:
           schema:
             type: array
         - name: page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
-        - name: per_page
           description: integer
           in: query
           style: form
@@ -9321,24 +8547,11 @@ paths:
                 type: object
   /api/wms/locations:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        Location is a specific subdivision within a site where equipment or
+        material stock is located. For example, a particular machine may be
+        situated in a specific area within a manufacturing plant, or materials
+        can be stored in a specific warehouse.
       summary: List Locations
       parameters:
         - name: filter
@@ -9355,13 +8568,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -9369,6 +8575,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -9438,24 +8651,9 @@ paths:
                 type: object
   /api/wms/storerooms:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        is a designated space within a location used for the storage and
+        management of inventory, supplies, or equipment.
       summary: List Storerooms
       parameters:
         - name: filter
@@ -9472,13 +8670,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -9486,6 +8677,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -9555,24 +8753,10 @@ paths:
                 type: object
   /api/wms/accounts:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        is a financial record in the general ledger, tracking debit and credit
+        transactions to reflect a business's financial transactions and
+        positions.
       summary: List Accounts
       parameters:
         - name: filter
@@ -9589,13 +8773,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -9603,6 +8780,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -9672,24 +8856,9 @@ paths:
                 type: object
   /api/wms/teams:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        a division responsible for conducting asset maintenance. It can be
+        assigned to execute work orders.
       summary: List Teams
       parameters:
         - name: filter
@@ -9706,13 +8875,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -9720,6 +8882,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -9789,24 +8958,9 @@ paths:
                 type: object
   /api/wms/labors:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        refers to internal or external human resources involved in the execution
+        of work orders. It is used to track cost and time for planning purposes.
       summary: List Labors
       parameters:
         - name: filter
@@ -9823,13 +8977,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -9837,6 +8984,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -9906,24 +9060,7 @@ paths:
                 type: object
   /api/wms/users:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: User account in the system
       summary: List Users
       parameters:
         - name: filter
@@ -9940,13 +9077,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -9954,6 +9084,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -10023,24 +9160,10 @@ paths:
                 type: object
   /api/wms/currencies:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        Currency represents a monetary unit used for multi-currency
+        transactions, financial accounting, and dealings with counterparts,
+        integrated with international exchange rates.
       summary: List Currencies
       parameters:
         - name: filter
@@ -10057,13 +9180,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -10071,6 +9187,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -10174,13 +9297,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -10188,6 +9304,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -10257,24 +9380,7 @@ paths:
                 type: object
   /api/wms/companies:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: Contact information for a third-party entity.
       summary: List Companies
       parameters:
         - name: filter
@@ -10291,13 +9397,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -10305,6 +9404,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -10374,24 +9480,9 @@ paths:
                 type: object
   /api/wms/vendors:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        An external entity that provides services or supplies. Subdivision of
+        Company
       summary: List Vendors
       parameters:
         - name: filter
@@ -10408,13 +9499,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -10422,6 +9506,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -10491,24 +9582,9 @@ paths:
                 type: object
   /api/wms/customers:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        An external entity that can consume products or services, used as a
+        target in sales and shipment orders. Subdivision of Company
       summary: List Customers
       parameters:
         - name: filter
@@ -10525,13 +9601,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -10539,6 +9608,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -10608,24 +9684,9 @@ paths:
                 type: object
   /api/wms/groups:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        A Product Group categorizes similar items or products together for
+        streamlined inventory management and analysis.
       summary: List ProductGroups
       parameters:
         - name: filter
@@ -10642,13 +9703,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -10656,6 +9710,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -10725,24 +9786,13 @@ paths:
                 type: object
   /api/wms/products:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        The item available for sale could be either physical or digital, offered
+        either at a fixed price or as a subscription service. Depending on the
+        type of business, one may offer one or more products, each with separate
+        pricing or add-ons. The description encompasses details such as
+        features, pricing, availability, supplier, manufacturing, and sales
+        information.
       summary: List Products
       parameters:
         - name: filter
@@ -10759,13 +9809,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -10773,6 +9816,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -10842,24 +9892,7 @@ paths:
                 type: object
   /api/wms/stocks:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: The quantity of materials per location and storeroom
       summary: List Stocks
       parameters:
         - name: filter
@@ -10876,13 +9909,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -10890,6 +9916,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -10959,24 +9992,9 @@ paths:
                 type: object
   /api/wms/sales-orders:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        A sales order is a document where customers specify what they want to
+        buy
       summary: List SalesOrders
       parameters:
         - name: filter
@@ -10993,13 +10011,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -11007,6 +10018,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -11110,24 +10128,9 @@ paths:
                 status: string
   /api/wms/purchase-orders:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        A purchase order is a document for ordering goods or services,
+        specifying the details, conditions of the purchase and line items
       summary: List PurchaseOrders
       parameters:
         - name: filter
@@ -11144,13 +10147,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -11158,6 +10154,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -11305,26 +10308,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "04000091357617"
-                vendorKey: "00000017655349"
-                code: "54175433"
+                siteKey: "04000278708041"
+                vendorKey: "02000797164335"
+                code: "80750154"
                 orderNo: string
-                orderDate: "2002-03-27T21:59:59Z"
-                statusKey: "05000154523450"
-                title: Est animi odit velit velit.
-                description: Laboriosam corrupti optio eligendi excepturi.
-                dueAt: "1999-10-21T08:23:36Z"
-                approvedAt: "1999-12-13T08:48:29Z"
-                completedAt: "1992-04-19T05:28:48Z"
+                orderDate: "2016-02-18T08:22:37Z"
+                statusKey: "07000301777422"
+                title: Quo aspernatur sint natus modi itaque aut.
+                description: Nihil laboriosam et culpa ut quia.
+                dueAt: "1977-07-30T22:22:11Z"
+                approvedAt: "2021-04-29T21:07:00Z"
+                completedAt: "1971-03-25T19:11:01Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "03000466280831"
+                currencyKey: "05000269835055"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "1984-09-10T12:34:28Z"
-                updatedAt: "1994-10-28T05:49:12Z"
+                createdAt: "2023-08-20T03:42:08Z"
+                updatedAt: "1988-02-23T19:40:03Z"
   /api/wms/purchase-orders/{key}:
     get:
       description: ""
@@ -11454,26 +10457,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: "06000907950338"
-                vendorKey: "08000025620682"
-                code: "91240163"
+                siteKey: "02000595243054"
+                vendorKey: "00000068915208"
+                code: "07227837"
                 orderNo: string
-                orderDate: "1986-01-21T08:10:54Z"
-                statusKey: "08000487025438"
-                title: Vitae ut quam aut porro excepturi.
-                description: Quidem distinctio est possimus suscipit natus.
-                dueAt: "2007-12-15T07:48:50Z"
-                approvedAt: "1992-09-09T07:32:44Z"
-                completedAt: "2006-11-26T07:21:47Z"
+                orderDate: "1988-12-29T04:03:10Z"
+                statusKey: "03000515761138"
+                title: Eos ut occaecati sit qui aut.
+                description: Ratione esse alias aut et.
+                dueAt: "1992-12-14T10:14:30Z"
+                approvedAt: "2017-05-07T14:43:39Z"
+                completedAt: "2017-05-17T13:14:54Z"
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: "01000682371458"
+                currencyKey: "00000490575317"
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: "2019-03-06T12:19:22Z"
-                updatedAt: "2006-06-16T14:51:07Z"
+                createdAt: "1978-10-13T00:56:30Z"
+                updatedAt: "2015-03-15T05:47:59Z"
   /api/wms/purchase-orders.line-items:
     get:
       description: |2+
@@ -11510,13 +10513,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -11524,6 +10520,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -11591,12 +10594,12 @@ paths:
             application/json:
               schema:
                 type: object
-  /api/wms/materials/{partKey}/inventory:
-    post:
+  /api/wms/materials/{key}/inventory:
+    put:
       description: ""
-      summary: Create a Material
+      summary: Update a MaterialInventory
       parameters:
-        - name: partKey
+        - name: key
           description: string|required
           in: path
           style: simple
@@ -11611,7 +10614,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Material"
+                $ref: "#/components/schemas/MaterialInventory"
       requestBody:
         description: Request body
         content:
@@ -11619,27 +10622,32 @@ paths:
             schema:
               type: object
               properties:
-                filter:
-                  type: array
-                  nullable: false
-                  format: array
-                page:
+                code:
+                  type: string
+                  nullable: true
+                  format: string
+                name:
+                  type: string
+                  nullable: true
+                  format: string
+                quantity:
                   type: integer
-                  nullable: false
+                  nullable: true
                   format: integer
-                per_page:
+                unitCost:
                   type: integer
-                  nullable: false
+                  nullable: true
                   format: integer
-                sort:
-                  type: array
-                  nullable: false
-                  format: array
+                locationKey:
+                  type: string
+                  nullable: true
+                  format: string
               example:
-                filter: "[]"
-                page: 10
-                per_page: 10
-                sort: "[]"
+                code: "13610340"
+                name: string
+                quantity: 10
+                unitCost: 10
+                locationKey: "01000701405141"
   /api/wms/materials/{key}/children:
     get:
       description: ""
@@ -11666,13 +10674,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -11691,24 +10692,9 @@ paths:
                 type: object
   /api/wms/materials:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        Material refers to consumables, spare parts and tools used in
+        maintenance and production chains.
       summary: List Materials
       parameters:
         - name: filter
@@ -11725,13 +10711,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -11739,6 +10718,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -11883,12 +10869,12 @@ paths:
                 assetKeys: "[]"
                 vendorKeys: string
                 documents: "[]"
-                accountKey: "08000991866247"
-                code: "73038368"
+                accountKey: "01000913323901"
+                code: "84103352"
                 isAssembly: string
                 partNumber: string
                 name: string
-                description: Occaecati ratione aspernatur modi voluptatem.
+                description: Eius eos dolorem qui vel.
                 notes: string
                 criticality: string
                 isActive: string
@@ -11916,7 +10902,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Material"
+                type: object
     put:
       description: ""
       summary: Update a Material
@@ -12022,12 +11008,12 @@ paths:
                 assetKeys: "[]"
                 vendorKeys: string
                 documents: "[]"
-                accountKey: "08000444124911"
-                code: "43335220"
+                accountKey: "08000257349133"
+                code: "94654493"
                 isAssembly: string
                 partNumber: string
                 name: string
-                description: Quis voluptas et excepturi unde et.
+                description: Placeat ad voluptas ut exercitationem nam.
                 notes: string
                 criticality: string
                 isActive: string
@@ -12037,24 +11023,10 @@ paths:
                 currency: string
   /api/wms/stock-transfers:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        "Stock Transfer" is a record of the movement of goods between warehouse
+        locations, containing location and warehouse keys, status, code, date,
+        line item information, and timestamps.
       summary: List StockTransfers
       parameters:
         - name: filter
@@ -12071,13 +11043,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -12085,6 +11050,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -12154,24 +11126,10 @@ paths:
                 type: object
   /api/wms/stock-adjustments:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        is a record of inventory changes within a location or storeroom,
+        detailing the user, date, reason, line items, adjustment number, total
+        quantity adjusted, type, and timestamps.
       summary: List StockAdjustments
       parameters:
         - name: filter
@@ -12188,13 +11146,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -12202,6 +11153,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -12271,24 +11229,11 @@ paths:
                 type: object
   /api/wms/shipment-orders:
     get:
-      description: |2+
-         Get list of entities
-
-         Filtering:
-
-         * filter[name]=HelloFromMakiniAPI
-         * filter[name:contains]=Makini
-         * filter[name:startsWith]=Hello
-         * filter[name:startsWith]=API
-         * filter[createdAt:gt]=2023-11-07
-         * filter[createdAt:gteq]=2023-11-07
-         * filter[createdAt:lt]=2023-11-07
-         * filter[createdAt:lted]=2023-11-07
-
-         Sorting
-         * sort[createdAt]=1 // DESC
-         * sort[createdAt]=0 // ASC
-
+      description: >-
+        A shipment order is a document used by organizations to specify what
+        items are being transferred from a storage location to a person at a new
+        destination. It accompanies the shipment so the recipient can confirm
+        they received the correct items.
       summary: List ShipmentOrders
       parameters:
         - name: filter
@@ -12305,13 +11250,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -12319,6 +11257,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -12450,13 +11395,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -12464,6 +11402,13 @@ paths:
           required: false
           schema:
             type: array
+        - name: per_page
+          description: integer
+          in: query
+          style: form
+          required: false
+          schema:
+            type: integer
       tags:
         - WMS
       responses:
@@ -12579,11 +11524,11 @@ paths:
                   nullable: true
                   format: string
               example:
-                code: "00143929"
+                code: "63462722"
                 name: string
                 quantity: 10
                 unitCost: 10
-                locationKey: "06000959243780"
+                locationKey: "07000664023689"
   /api/wms/statuses/purchase-orders:
     get:
       description: ""
@@ -12597,13 +11542,6 @@ paths:
           schema:
             type: array
         - name: page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
-        - name: per_page
           description: integer
           in: query
           style: form
@@ -12645,13 +11583,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -12687,13 +11618,6 @@ paths:
           required: false
           schema:
             type: integer
-        - name: per_page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
         - name: sort
           description: array
           in: query
@@ -12723,13 +11647,6 @@ paths:
           schema:
             type: array
         - name: page
-          description: integer
-          in: query
-          style: form
-          required: false
-          schema:
-            type: integer
-        - name: per_page
           description: integer
           in: query
           style: form
@@ -12840,17 +11757,17 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000684976127"
-        currencyKey: "03000461166905"
+        key: "03000802650005"
+        currencyKey: "00000274142371"
         name: string
-        code: "56098846"
-        description: Nihil rerum quod cupiditate aliquam et.
+        code: "20719135"
+        description: Tempore dolores labore saepe ab ut nemo tempora.
         addresses: "[]"
         billingAddress: string
         contacts: "[]"
-        createdAt: "1986-12-02T10:34:46Z"
-        updatedAt: "2014-10-03T01:50:40Z"
-        deletedAt: "2016-11-07T09:43:08Z"
+        createdAt: "2016-04-19T10:01:07Z"
+        updatedAt: "2016-05-14T10:05:05Z"
+        deletedAt: "1980-04-08T12:49:48Z"
     Site:
       title: Site
       properties:
@@ -12925,20 +11842,20 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000721336623"
-        code: "01165012"
+        key: "05000579052372"
+        code: "31742726"
         contact: string
-        organizationKey: "05000692751464"
-        customerKey: "08000028939861"
+        organizationKey: "05000444033130"
+        customerKey: "08000092183609"
         name: string
         lat: string
         lng: string
         address: string
         properties: string
         notes: string
-        createdAt: "1992-10-08T13:54:27Z"
-        updatedAt: "2000-07-15T10:58:57Z"
-        deletedAt: "1975-12-30T01:41:50Z"
+        createdAt: "1978-11-10T10:04:16Z"
+        updatedAt: "2010-05-13T04:02:29Z"
+        deletedAt: "1979-03-23T01:20:14Z"
     Location:
       title: Location
       properties:
@@ -12998,17 +11915,17 @@ components:
           nullable: false
           format: string
       example:
-        key: "04000729124779"
-        siteKey: "07000196418152"
-        parentKey: "07000356557033"
+        key: "05000193989022"
+        siteKey: "01000140086922"
+        parentKey: "03000475444372"
         name: string
-        description: Ut quibusdam est sed officiis non.
-        code: "20260200"
+        description: Sequi facilis ullam amet et.
+        code: "32046786"
         type: string
         address: string
-        createdAt: "2013-07-02T18:20:44Z"
-        updatedAt: "2019-06-04T16:37:45Z"
-        deletedAt: "1997-06-25T02:08:48Z"
+        createdAt: "1999-07-21T13:18:52Z"
+        updatedAt: "1982-05-15T12:35:29Z"
+        deletedAt: "2015-03-31T22:59:59Z"
     Storeroom:
       title: Storeroom
       properties:
@@ -13078,19 +11995,19 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000826912007"
-        parentKey: "06000678374827"
-        siteKey: "02000601551833"
-        locationKey: "02000368881643"
-        userManagerKey: "07000836788702"
-        code: "43457809"
+        key: "03000508862113"
+        parentKey: "03000962868927"
+        siteKey: "00000393591483"
+        locationKey: "01000132401272"
+        userManagerKey: "03000043374164"
+        code: "88268590"
         name: string
         type: string
-        description: Voluptatem maxime qui et molestiae.
+        description: Nam asperiores officiis vel.
         priority: string
-        createdAt: "2012-03-19T12:40:18Z"
-        updatedAt: "1984-07-22T23:54:35Z"
-        deletedAt: "1975-04-01T21:40:27Z"
+        createdAt: "2011-06-29T06:41:09Z"
+        updatedAt: "1991-10-20T10:09:46Z"
+        deletedAt: "2002-12-15T21:05:14Z"
     Account:
       title: Account
       properties:
@@ -13130,13 +12047,13 @@ components:
           nullable: false
           format: string
       example:
-        key: "01000711866936"
-        code: "13522032"
+        key: "09000927663417"
+        code: "69468421"
         name: string
-        description: Est qui cum neque deserunt ullam.
-        createdAt: "1977-05-04T14:52:27Z"
-        updatedAt: "2023-07-12T20:14:23Z"
-        deletedAt: "2018-04-26T01:58:10Z"
+        description: Et velit delectus sed est tempore.
+        createdAt: "2011-12-10T13:32:46Z"
+        updatedAt: "1999-04-13T09:48:30Z"
+        deletedAt: "2012-08-25T17:32:48Z"
     Team:
       title: Team
       properties:
@@ -13181,14 +12098,14 @@ components:
           nullable: false
           format: string
       example:
-        key: "08000080728274"
-        accountKey: "01000549043418"
-        code: "67810154"
+        key: "02000169310753"
+        accountKey: "09000336815894"
+        code: "14759666"
         name: string
-        description: Non assumenda sint soluta quo molestiae facere.
-        createdAt: "2001-09-04T08:33:48Z"
-        updatedAt: "1973-03-26T11:22:59Z"
-        deletedAt: "2014-10-24T11:21:44Z"
+        description: Animi ut dolor deserunt aut.
+        createdAt: "2000-12-02T02:55:53Z"
+        updatedAt: "1981-06-01T19:54:19Z"
+        deletedAt: "1973-03-04T19:58:39Z"
     Labor:
       title: Labor
       properties:
@@ -13273,22 +12190,22 @@ components:
           nullable: false
           format: string
       example:
-        key: "01000544070271"
+        key: "06000225780395"
         siteKeys: "[]"
         locationKeys: "[]"
-        accountKey: "00000203601847"
-        teamKey: "02000969647909"
+        accountKey: "03000179383486"
+        teamKey: "04000805628969"
         userId: string
         name: string
         roleName: string
-        description: Nemo laborum est molestiae.
+        description: Ipsa nemo natus et dicta quam voluptatem.
         note: string
         isActive: string
         cost: string
         currency: string
-        createdAt: "1976-02-13T14:00:42Z"
-        updatedAt: "2017-08-27T09:00:49Z"
-        deletedAt: "1981-02-22T10:25:41Z"
+        createdAt: "2007-01-02T10:07:44Z"
+        updatedAt: "2016-01-10T08:27:20Z"
+        deletedAt: "2008-05-06T14:50:31Z"
     User:
       title: User
       properties:
@@ -13353,18 +12270,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000095945431"
-        organizationKey: "03000913572971"
+        key: "01000206628107"
+        organizationKey: "07000071809193"
         siteKeys: "[]"
         locationKeys: "[]"
         name: string
         roleName: string
-        description: Laudantium itaque voluptatem qui et.
+        description: Occaecati atque porro repellendus.
         notes: string
         isActive: string
-        createdAt: "1985-03-11T19:36:29Z"
-        updatedAt: "1977-05-18T03:13:35Z"
-        deletedAt: "1979-03-26T10:25:40Z"
+        createdAt: "1972-11-15T05:38:12Z"
+        updatedAt: "1971-11-07T14:26:14Z"
+        deletedAt: "1978-06-25T09:18:56Z"
     UnitOfMeasure:
       title: UnitOfMeasure
       properties:
@@ -13389,9 +12306,9 @@ components:
           nullable: false
           format: boolean
       example:
-        key: "05000459925581"
+        key: "07000985685731"
         name: string
-        code: "72088630"
+        code: "33704890"
         isActive: string
     Company:
       title: Company
@@ -13452,17 +12369,17 @@ components:
           nullable: false
           format: string
       example:
-        key: "08000986882959"
-        parentKey: "05000502872178"
+        key: "01000702576777"
+        parentKey: "00000140523485"
         name: string
-        code: "76718366"
+        code: "64536354"
         addresses: "[]"
         billingAddress: "[]"
-        currencyKey: "02000902747046"
+        currencyKey: "09000925345017"
         notes: string
-        createdAt: "1973-04-01T22:06:51Z"
-        updatedAt: "2008-12-15T03:55:56Z"
-        deletedAt: "1971-04-11T14:51:40Z"
+        createdAt: "2007-08-18T13:14:10Z"
+        updatedAt: "2017-06-29T10:17:36Z"
+        deletedAt: "1991-06-27T16:38:47Z"
     Vendor:
       title: Vendor
       properties:
@@ -13512,15 +12429,15 @@ components:
           nullable: false
           format: string
       example:
-        key: "03000143683144"
+        key: "02000997553070"
         name: string
-        code: "42668220"
+        code: "57378275"
         address: string
         currency: string
         notes: string
-        createdAt: "1986-06-15T10:27:44Z"
-        updatedAt: "2018-01-05T19:39:50Z"
-        deletedAt: "2015-03-16T06:22:20Z"
+        createdAt: "1981-08-30T02:24:48Z"
+        updatedAt: "2019-03-31T13:45:20Z"
+        deletedAt: "1972-01-26T20:38:54Z"
     Customer:
       title: Customer
       properties:
@@ -13585,18 +12502,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000259251502"
+        key: "08000005231415"
         name: string
-        code: "93741170"
+        code: "13355814"
         address: string
         notes: string
         isActive: string
         contactPerson: string
         paymentTerms: string
         currencyCode: string
-        createdAt: "1996-08-30T09:17:28Z"
-        updatedAt: "1977-12-18T01:06:18Z"
-        deletedAt: "1983-12-06T10:58:40Z"
+        createdAt: "1987-03-24T08:05:48Z"
+        updatedAt: "2010-05-18T01:33:22Z"
+        deletedAt: "1976-10-17T15:41:35Z"
     Stock:
       title: Stock
       properties:
@@ -13666,19 +12583,19 @@ components:
           nullable: false
           format: string
       example:
-        key: "05000915321957"
-        productKey: "04000400392954"
-        materialKey: "02000421490766"
-        locationKey: "08000006313229"
-        storeroomKey: "05000991364967"
-        assetKey: "06000047037090"
+        key: "02000744092824"
+        productKey: "03000162471178"
+        materialKey: "06000501692213"
+        locationKey: "05000806178601"
+        storeroomKey: "06000726598696"
+        assetKey: "05000441258507"
         position: string
-        uomKey: "06000667784616"
+        uomKey: "06000648264870"
         quantity: string
-        expiresAt: "1970-10-05T07:04:51Z"
-        createdAt: "1986-11-18T20:09:54Z"
-        updatedAt: "1982-07-05T01:10:32Z"
-        deletedAt: "1980-04-24T20:23:20Z"
+        expiresAt: "2007-03-02T15:07:06Z"
+        createdAt: "1994-01-23T15:42:13Z"
+        updatedAt: "1988-07-10T16:22:07Z"
+        deletedAt: "2023-08-03T06:52:50Z"
     PurchaseOrderStatus:
       title: PurchaseOrderStatus
       properties:
@@ -13788,18 +12705,18 @@ components:
           nullable: false
           format: array
       example:
-        key: "00000612677951"
-        siteKey: "00000146615434"
-        orderDate: "2020-08-17T12:55:46Z"
-        vendorKey: "05000020258702"
+        key: "00000236137527"
+        siteKey: "09000970823835"
+        orderDate: "1997-05-20T17:05:25Z"
+        vendorKey: "00000227046120"
         orderNo: string
         status: string
         warehouseName: string
-        title: Eveniet ducimus velit dolorem et aperiam.
-        description: Iure est quis ab nihil sed.
-        dueAt: "1988-10-08T20:10:05Z"
-        approvedAt: "1971-06-20T00:51:38Z"
-        completedAt: "1979-06-04T12:18:40Z"
+        title: Architecto voluptatem aspernatur alias ipsum.
+        description: Id ut omnis fuga doloribus officiis quia.
+        dueAt: "1977-06-14T06:34:00Z"
+        approvedAt: "1984-05-12T06:31:52Z"
+        completedAt: "1970-03-01T02:02:09Z"
         shippingMethod: string
         terms: string
         notes: string
@@ -13807,7 +12724,7 @@ components:
         currency: string
         totalNetValue: string
         totalGrossValue: string
-        updatedAt: "2001-12-04T22:22:00Z"
+        updatedAt: "1984-12-09T02:46:01Z"
         lines: "[]"
     PurchaseOrder:
       title: PurchaseOrder
@@ -13918,18 +12835,18 @@ components:
           nullable: false
           format: array
       example:
-        key: "00000085049254"
-        siteKey: "02000135873094"
-        orderDate: "1989-04-21T11:02:30Z"
-        vendorKey: "09000445598050"
+        key: "05000589895144"
+        siteKey: "05000453474413"
+        orderDate: "1982-02-17T13:44:29Z"
+        vendorKey: "06000291265810"
         orderNo: string
         status: string
         warehouseName: string
-        title: Pariatur saepe facilis id ad beatae et.
-        description: Repellat possimus temporibus tempora officia et.
-        dueAt: "1985-06-19T17:04:53Z"
-        approvedAt: "2023-02-18T04:49:30Z"
-        completedAt: "2013-06-14T22:37:36Z"
+        title: Magni tempora accusantium ea molestiae.
+        description: Ut laborum voluptatem earum aperiam dolorum.
+        dueAt: "1995-04-25T14:40:07Z"
+        approvedAt: "1977-12-06T15:35:56Z"
+        completedAt: "2024-01-17T19:48:02Z"
         shippingMethod: string
         terms: string
         notes: string
@@ -13937,7 +12854,7 @@ components:
         currency: string
         totalNetValue: string
         totalGrossValue: string
-        updatedAt: "2023-11-19T11:15:35Z"
+        updatedAt: "2006-12-25T11:15:14Z"
         lines: "[]"
     PurchaseOrderCollection:
       type: array
@@ -14067,16 +12984,16 @@ components:
           nullable: false
           format: string
       example:
-        key: "06000672892757"
-        locationKey: "05000871938527"
-        assetKey: "05000373149631"
-        partKey: "03000737568382"
-        vendorKey: "01000564075243"
+        key: "07000089957509"
+        locationKey: "02000464057354"
+        assetKey: "01000324568539"
+        partKey: "02000739329775"
+        vendorKey: "06000497515114"
         lineNo: string
         warehouseName: string
-        code: "68254254"
-        title: Saepe consequuntur dignissimos voluptatibus.
-        description: Tempore cumque maxime animi beatae unde.
+        code: "10504130"
+        title: Quos quia facilis adipisci eum eos fuga.
+        description: Ratione non id illo rem.
         lineRef: string
         quantity: string
         receivedQuantity: string
@@ -14088,10 +13005,10 @@ components:
         lineTotalValue: string
         lineTaxValue: string
         notes: string
-        dueAt: "1991-02-24T05:46:31Z"
-        createdAt: "1972-08-27T05:33:27Z"
-        updatedAt: "2021-01-09T23:18:54Z"
-    Material: []
+        dueAt: "2015-08-29T01:20:41Z"
+        createdAt: "2000-10-19T02:58:52Z"
+        updatedAt: "1977-12-18T01:47:49Z"
+    MaterialInventory: []
     MaterialItem:
       title: MaterialItem
       properties:
@@ -14191,25 +13108,179 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000487000205"
-        materialKey: "07000695519318"
-        assemblyKey: "09000179603859"
-        assetKey: "05000656309668"
-        assetTemplateKey: "06000799267435"
-        workOrderKey: "09000501622057"
-        pmKey: "00000241489329"
-        productionOrderKey: "05000144821907"
+        key: "00000378787924"
+        materialKey: "09000391295523"
+        assemblyKey: "01000075606497"
+        assetKey: "05000450297210"
+        assetTemplateKey: "04000918646119"
+        workOrderKey: "04000507861649"
+        pmKey: "04000946853714"
+        productionOrderKey: "06000380318987"
         partNumber: string
         drawingNumber: string
         positionNumber: string
-        documentKey: "02000777140910"
+        documentKey: "08000982746897"
         name: string
-        uomKey: "05000085637929"
+        uomKey: "05000788531317"
         quantity: string
         requiredQuantity: string
-        createdAt: "2023-08-17T15:01:17Z"
-        updatedAt: "1984-01-01T02:35:13Z"
-        deletedAt: "2020-04-28T11:23:35Z"
+        createdAt: "2010-12-15T02:36:18Z"
+        updatedAt: "1995-07-19T22:29:52Z"
+        deletedAt: "2013-02-19T21:13:05Z"
+    Material:
+      title: Material
+      properties:
+        key:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        siteKeys:
+          type: array
+          description: Description
+          nullable: false
+          format: array
+        parentKeys:
+          type: array
+          description: Description
+          nullable: false
+          format: array
+        assetKeys:
+          type: array
+          description: Description
+          nullable: false
+          format: array
+        vendorKeys:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        documents:
+          type: array
+          description: Description
+          nullable: false
+          format: array
+        accountKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        code:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        isAssembly:
+          type: boolean
+          description: Description
+          nullable: false
+          format: boolean
+        partNumber:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        name:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        description:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        notes:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        criticality:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        isActive:
+          type: boolean
+          description: Description
+          nullable: false
+          format: boolean
+        manufacturerName:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        minimumQuantity:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        uom:
+          type: object
+          description: Description
+          nullable: false
+          format: object
+        cost:
+          type: object
+          description: Description
+          nullable: false
+          format: object
+        currency:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        createdAt:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        updatedAt:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        deletedAt:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        inventory:
+          type: array
+          description: Description
+          nullable: false
+          format: array
+        drawings:
+          type: array
+          description: Description
+          nullable: false
+          format: array
+      example:
+        key: "09000927915730"
+        siteKeys: "[]"
+        parentKeys: "[]"
+        assetKeys: "[]"
+        vendorKeys: string
+        documents: "[]"
+        accountKey: "07000027596043"
+        code: "88160429"
+        isAssembly: string
+        partNumber: string
+        name: string
+        description: Doloremque non alias minima.
+        notes: string
+        criticality: string
+        isActive: string
+        manufacturerName: string
+        minimumQuantity: string
+        uom: string
+        cost: string
+        currency: string
+        createdAt: "1984-01-11T18:33:20Z"
+        updatedAt: "1994-12-24T06:33:01Z"
+        deletedAt: "2015-07-08T20:23:05Z"
+        inventory: "[]"
+        drawings: "[]"
     MaterialCollection:
       type: array
       items:
@@ -14338,18 +13409,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "05000796147447"
-        siteKey: "02000280028444"
-        parentKey: "01000626854529"
-        vendorKey: "01000736468395"
-        modelKey: "05000272706497"
-        teamKey: "07000950510276"
+        key: "09000483390726"
+        siteKey: "05000837092323"
+        parentKey: "08000010302696"
+        vendorKey: "08000896622531"
+        modelKey: "03000702163992"
+        teamKey: "03000442781001"
         documents: "[]"
-        locationKey: "09000731015971"
-        customerKey: "05000889951926"
-        accountKey: "00000223850507"
+        locationKey: "08000909215196"
+        customerKey: "05000825669036"
+        accountKey: "01000461453093"
         name: string
-        description: Ad aliquid eum sunt sed odit voluptatem.
+        description: Non qui et quidem alias.
         notes: string
         categoryName: string
         criticality: string
@@ -14357,11 +13428,11 @@ components:
         manufacturerName: string
         modelName: string
         serialNumber: string
-        activatedAt: "2018-08-10T14:31:27Z"
-        deactivatedAt: "2006-02-11T19:51:02Z"
-        createdAt: "2021-01-25T16:16:56Z"
-        updatedAt: "1988-01-24T23:09:49Z"
-        deletedAt: "1980-02-21T18:00:07Z"
+        activatedAt: "1998-07-16T04:37:30Z"
+        deactivatedAt: "1987-04-05T14:32:58Z"
+        createdAt: "1980-08-01T07:19:17Z"
+        updatedAt: "2007-12-10T21:39:14Z"
+        deletedAt: "2022-12-24T12:51:40Z"
     AssetDownTime:
       title: AssetDownTime
       properties:
@@ -14416,16 +13487,16 @@ components:
           nullable: false
           format: string
       example:
-        key: "03000542805189"
-        assetKey: "04000264222828"
-        description: Qui placeat architecto sequi.
-        startedAt: "2012-05-23T11:15:18Z"
-        endedAt: "2002-12-22T23:19:12Z"
+        key: "07000918250570"
+        assetKey: "06000772346977"
+        description: Qui quis possimus in non.
+        startedAt: "1979-02-21T17:12:58Z"
+        endedAt: "2001-06-26T15:52:53Z"
         categoryName: string
         severity: string
         notes: string
-        createdAt: "1976-02-11T13:16:40Z"
-        updatedAt: "1986-10-05T06:49:16Z"
+        createdAt: "2016-08-20T13:55:24Z"
+        updatedAt: "1983-10-08T06:46:05Z"
     Model:
       title: Model
       properties:
@@ -14470,14 +13541,14 @@ components:
           nullable: false
           format: string
       example:
-        key: "01000499982827"
-        siteKey: "07000949313763"
+        key: "01000102964209"
+        siteKey: "09000364415689"
         documents: "[]"
         name: string
         manufacturerName: string
-        createdAt: "2003-11-04T18:50:53Z"
-        updatedAt: "1997-06-30T09:19:56Z"
-        deletedAt: "1980-08-02T00:53:55Z"
+        createdAt: "2001-05-15T03:53:13Z"
+        updatedAt: "1993-01-30T21:41:54Z"
+        deletedAt: "1979-10-10T13:42:18Z"
     Counter:
       title: Counter
       properties:
@@ -14532,16 +13603,16 @@ components:
           nullable: false
           format: string
       example:
-        key: "06000295513111"
-        siteKey: "07000333976008"
-        assetKey: "07000416863232"
+        key: "09000243223443"
+        siteKey: "03000906439822"
+        assetKey: "02000579775510"
         name: string
         uom: string
         lastReading: string
-        lastReadingAt: "2001-10-21T01:18:02Z"
-        createdAt: "2002-11-22T15:51:32Z"
-        updatedAt: "2013-08-03T10:24:21Z"
-        deletedAt: "1980-06-21T05:48:37Z"
+        lastReadingAt: "1977-09-04T08:21:02Z"
+        createdAt: "2000-05-21T17:37:53Z"
+        updatedAt: "2011-04-15T02:36:26Z"
+        deletedAt: "2003-02-24T11:43:36Z"
     CounterReading:
       title: CounterReading
       properties:
@@ -14571,11 +13642,11 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000536738939"
-        assetKey: "07000019762092"
-        meterKey: "03000286879869"
+        key: "03000139545259"
+        assetKey: "05000688083983"
+        meterKey: "01000709807476"
         reading: string
-        createdAt: "2007-12-15T16:33:23Z"
+        createdAt: "2023-12-15T04:22:05Z"
     PreventiveMaintenance:
       title: PreventiveMaintenance
       properties:
@@ -14699,6 +13770,11 @@ components:
           description: Description
           nullable: false
           format: array
+        tasks:
+          type: array
+          description: Description
+          nullable: false
+          format: array
         createdAt:
           type: string
           description: Description
@@ -14715,13 +13791,13 @@ components:
           nullable: false
           format: string
       example:
-        key: "03000838631835"
+        key: "08000666944638"
         siteKeys: "[]"
         assetKeys: "[]"
-        teamKey: "08000321607470"
-        accountKey: "04000283320572"
-        title: Iure mollitia nostrum rerum numquam eos.
-        description: Ipsa et harum odio similique est vero nobis.
+        teamKey: "04000242994690"
+        accountKey: "02000279209895"
+        title: Ipsa natus suscipit aut.
+        description: Nostrum et est tempore rerum sit.
         instructions: string
         status: string
         severity: string
@@ -14729,19 +13805,20 @@ components:
         roleName: string
         categoryName: string
         documents: "[]"
-        documentKey: "02000381966889"
+        documentKey: "03000831921167"
         documentPage: string
         notes: string
-        dueAt: "2013-08-09T09:35:37Z"
-        nextScheduledAt: "1977-11-24T02:41:58Z"
-        lastScheduledAt: "2018-05-21T23:37:57Z"
-        lastCompletedAt: "1999-10-17T16:09:15Z"
+        dueAt: "2001-02-25T20:39:10Z"
+        nextScheduledAt: "1975-09-09T00:55:16Z"
+        lastScheduledAt: "1991-06-05T04:41:53Z"
+        lastCompletedAt: "2008-05-25T05:21:14Z"
         lastCompletionRemarks: string
         materials: "[]"
         triggers: "[]"
-        createdAt: "2018-07-02T00:19:47Z"
-        updatedAt: "1999-06-13T21:15:06Z"
-        deletedAt: "1973-02-01T14:19:53Z"
+        tasks: "[]"
+        createdAt: "1980-05-09T19:36:03Z"
+        updatedAt: "1997-02-27T16:50:54Z"
+        deletedAt: "1981-07-05T15:20:13Z"
     WorkOrderStatus:
       title: WorkOrderStatus
       properties:
@@ -14906,38 +13983,38 @@ components:
           nullable: false
           format: string
       example:
-        key: "01000629166738"
-        siteKey: "00000282234588"
-        assetKey: "02000304152564"
-        accountKey: "08000350824641"
-        title: Fugit exercitationem a quas alias eos et est.
-        description: Excepturi omnis minus et explicabo dolorem.
-        workRequestKey: "09000494939888"
-        code: "71880457"
-        pmKey: "08000579798429"
-        teamKey: "05000128968289"
-        userAssignedKey: "04000393162035"
-        userCompletedKey: "05000289766866"
-        organizationKey: "08000477943794"
+        key: "03000562220420"
+        siteKey: "01000292439959"
+        assetKey: "09000517531261"
+        accountKey: "09000458118566"
+        title: Minima omnis optio ea aut.
+        description: Dicta explicabo et quo quos ipsum exercitationem.
+        workRequestKey: "01000229923613"
+        code: "99538804"
+        pmKey: "07000171974929"
+        teamKey: "05000022136597"
+        userAssignedKey: "06000900756048"
+        userCompletedKey: "07000752792232"
+        organizationKey: "08000026149341"
         instructions: string
         status: string
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
-        documentKey: "07000478067522"
+        documentKey: "08000579615891"
         documentPage: string
         notes: string
-        approvedAt: "1981-04-26T02:17:29Z"
-        dueAt: "2016-10-01T17:38:53Z"
-        scheduledAt: "1991-03-13T10:07:03Z"
-        completedAt: "1999-02-01T13:36:06Z"
+        approvedAt: "1979-09-01T00:34:30Z"
+        dueAt: "1982-11-07T22:53:17Z"
+        scheduledAt: "1999-01-09T06:20:31Z"
+        completedAt: "2016-05-30T02:35:03Z"
         completionRemarks: string
         materials: string
         documents: "[]"
-        createdAt: "2022-02-19T19:08:46Z"
-        updatedAt: "1976-06-02T00:27:36Z"
-        deletedAt: "2021-02-04T14:54:46Z"
+        createdAt: "2006-09-12T22:11:15Z"
+        updatedAt: "2015-06-18T16:37:20Z"
+        deletedAt: "1997-08-08T13:29:38Z"
     WorkOrder:
       title: WorkOrder
       properties:
@@ -15107,39 +14184,39 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000239561610"
-        siteKey: "06000950662505"
-        assetKey: "08000913643031"
-        accountKey: "00000140154662"
-        title: Incidunt numquam recusandae qui et.
-        description: At hic et minima vel.
-        workRequestKey: "05000833791994"
-        code: "66400936"
-        pmKey: "01000945882128"
-        teamKey: "04000719393895"
-        userAssignedKey: "02000375323916"
-        userCompletedKey: "05000926145681"
-        organizationKey: "09000047539929"
+        key: "08000974749424"
+        siteKey: "04000203764135"
+        assetKey: "06000655383696"
+        accountKey: "06000343103704"
+        title: Impedit repudiandae tempore eaque aut vel.
+        description: Id debitis fugiat ut iure eum.
+        workRequestKey: "02000878667090"
+        code: "42003656"
+        pmKey: "04000061466018"
+        teamKey: "08000940511559"
+        userAssignedKey: "06000484940574"
+        userCompletedKey: "02000007688839"
+        organizationKey: "08000839044219"
         instructions: string
         status: string
-        statusKey: "02000448563297"
+        statusKey: "05000089465478"
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
-        documentKey: "03000305322784"
+        documentKey: "02000711377397"
         documentPage: string
         notes: string
-        approvedAt: "1988-06-25T13:39:04Z"
-        dueAt: "2012-05-14T07:54:03Z"
-        scheduledAt: "2021-05-27T13:54:45Z"
-        completedAt: "1971-05-18T16:25:16Z"
+        approvedAt: "1979-05-25T16:32:58Z"
+        dueAt: "1973-12-26T17:22:24Z"
+        scheduledAt: "2009-07-06T02:49:01Z"
+        completedAt: "1979-05-18T07:27:27Z"
         completionRemarks: string
         materials: string
         documents: "[]"
-        createdAt: "1998-10-08T01:50:11Z"
-        updatedAt: "1981-08-06T06:54:28Z"
-        deletedAt: "1984-06-23T19:53:44Z"
+        createdAt: "1999-02-22T00:41:13Z"
+        updatedAt: "2020-10-30T11:20:18Z"
+        deletedAt: "1994-04-29T02:55:06Z"
     WorkOrderCollection:
       type: array
       items:
@@ -15263,29 +14340,29 @@ components:
           nullable: false
           format: string
       example:
-        key: "06000213822439"
-        siteKey: "00000451883317"
-        locationKey: "04000062186055"
-        storeroomKey: "07000761511334"
-        assetKey: "04000266828573"
-        workOrderKey: "07000064703255"
-        teamKey: "04000545431675"
-        userRequestedKey: "06000757343675"
-        userApprovedKey: "01000101726427"
+        key: "02000616558752"
+        siteKey: "09000481773179"
+        locationKey: "01000857152747"
+        storeroomKey: "08000218150120"
+        assetKey: "09000462472883"
+        workOrderKey: "02000459170358"
+        teamKey: "08000021853476"
+        userRequestedKey: "05000349161934"
+        userApprovedKey: "02000817104013"
         documents: "[]"
-        title: Non magni similique non.
-        description: Quo maxime voluptas nulla ullam.
-        statusKey: "01000710643592"
+        title: Non est autem rerum alias est.
+        description: Nostrum aut corporis asperiores.
+        statusKey: "00000130213867"
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
         notes: string
-        approvedAt: "1973-10-11T18:42:28Z"
-        dueAt: "1995-02-13T10:21:15Z"
-        createdAt: "1991-06-08T08:08:59Z"
-        updatedAt: "1983-11-05T04:34:23Z"
-        deletedAt: "1998-10-05T17:31:14Z"
+        approvedAt: "1986-11-20T10:09:29Z"
+        dueAt: "1974-04-27T23:50:48Z"
+        createdAt: "2004-09-17T19:16:12Z"
+        updatedAt: "2006-06-08T01:29:45Z"
+        deletedAt: "2013-08-07T21:40:37Z"
     Document:
       title: Document
       properties:
@@ -15340,16 +14417,16 @@ components:
           nullable: false
           format: string
       example:
-        key: "09000378234294"
+        key: "05000042284689"
         entityKeys: "[]"
         name: string
         url: string
         type: string
         contentType: string
-        description: Deserunt esse laborum accusamus et deserunt.
+        description: Sed qui autem laudantium non enim est nulla.
         notes: string
-        createdAt: "1990-10-20T17:00:27Z"
-        updatedAt: "2022-02-02T20:47:36Z"
+        createdAt: "1999-05-14T05:26:29Z"
+        updatedAt: "2019-01-02T01:25:03Z"
     Inventory:
       title: Inventory
       properties:
@@ -15384,12 +14461,12 @@ components:
           nullable: false
           format: string
       example:
-        code: "57900476"
+        code: "26229355"
         name: string
         quantity: 10
         unitCost: 10
-        locationKey: "07000197784977"
-        updatedAt: "1985-05-09T17:25:26Z"
+        locationKey: "06000124891329"
+        updatedAt: "2007-01-28T13:46:35Z"
     Status:
       title: Status
       properties:
@@ -15449,17 +14526,17 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000839186757"
-        organizationKey: "09000147437114"
-        parentKey: "02000684679857"
+        key: "06000639499352"
+        organizationKey: "09000108740124"
+        parentKey: "07000346514523"
         name: string
-        code: "79751650"
+        code: "67093311"
         subCode: string
         scope: string
         isActive: string
-        createdAt: "1982-04-05T05:44:58Z"
-        updatedAt: "1990-09-28T14:32:50Z"
-        deletedAt: "2015-05-14T01:42:23Z"
+        createdAt: "2024-01-09T23:19:27Z"
+        updatedAt: "2021-04-23T09:41:10Z"
+        deletedAt: "2004-04-19T10:59:09Z"
     Tax:
       title: Tax
       properties:
@@ -15509,15 +14586,15 @@ components:
           nullable: false
           format: string
       example:
-        key: "03000861351954"
-        organizationKey: "09000501841948"
+        key: "03000130027712"
+        organizationKey: "05000593401593"
         name: string
         type: string
         taxPercentage: string
         isActive: string
-        createdAt: "1977-12-05T08:29:15Z"
-        updatedAt: "1985-11-02T05:29:32Z"
-        deletedAt: "1974-04-16T19:38:35Z"
+        createdAt: "2012-05-10T16:45:55Z"
+        updatedAt: "1990-11-26T02:05:55Z"
+        deletedAt: "2017-07-24T08:34:19Z"
     Currency:
       title: Currency
       properties:
@@ -15562,14 +14639,14 @@ components:
           nullable: false
           format: string
       example:
-        key: "08000397862225"
+        key: "09000750782862"
         name: string
-        code: "97253594"
+        code: "58069516"
         isBase: string
         isActive: string
-        createdAt: "1982-04-25T16:50:25Z"
-        updatedAt: "1976-11-10T19:09:22Z"
-        deletedAt: "1993-11-18T00:55:05Z"
+        createdAt: "1971-07-08T16:55:21Z"
+        updatedAt: "2002-01-19T19:36:12Z"
+        deletedAt: "2015-08-14T14:37:36Z"
     ExchangeRate:
       title: ExchangeRate
       properties:
@@ -15599,11 +14676,11 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000170396479"
-        currencyKey: "07000058029340"
-        baseCurrencyKey: "07000497164268"
+        key: "01000006260413"
+        currencyKey: "08000477683171"
+        baseCurrencyKey: "01000274102133"
         rate: string
-        createdAt: "1984-12-17T17:29:08Z"
+        createdAt: "1999-05-05T00:52:30Z"
     Product:
       title: Product
       properties:
@@ -15728,18 +14805,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "03000023179038"
-        groupKey: "09000259813096"
-        uomKey: "00000729035050"
-        code: "69222962"
+        key: "04000243155107"
+        groupKey: "01000807159255"
+        uomKey: "08000653168291"
+        code: "53004284"
         name: string
-        description: Porro minima alias reiciendis non.
+        description: Omnis consequatur aut at tempora.
         type: string
         isTaxable: string
         taxKeys: "[]"
         status: string
         price: string
-        currencyKey: "05000401135224"
+        currencyKey: "00000455576631"
         quantity: string
         sku: string
         upc: string
@@ -15749,9 +14826,9 @@ components:
         reorderLevel: string
         dimensions: string
         supplyOptions: "[]"
-        createdAt: "1993-06-02T10:23:48Z"
-        updatedAt: "2008-12-27T04:08:18Z"
-        deletedAt: "2006-11-21T22:28:50Z"
+        createdAt: "2007-01-12T23:13:53Z"
+        updatedAt: "1977-07-07T13:31:19Z"
+        deletedAt: "2017-03-15T10:34:59Z"
     SalesOrder:
       title: SalesOrder
       properties:
@@ -15831,21 +14908,21 @@ components:
           nullable: false
           format: string
       example:
-        key: "08000651417894"
-        customerKey: "08000702724736"
-        userKey: "08000307434966"
-        code: "48201889"
+        key: "07000800459840"
+        customerKey: "07000657507721"
+        userKey: "06000704010129"
+        code: "15382146"
         orderNumber: string
         date: string
-        statusKey: "03000837892991"
-        shipmentDate: "1980-11-12T21:25:05Z"
+        statusKey: "08000561330249"
+        shipmentDate: "2003-02-26T13:18:20Z"
         contactPerson: string
         lines: "[]"
-        currencyKey: "03000842077000"
+        currencyKey: "01000095011488"
         currencyRate: string
-        createdAt: "1991-01-17T23:29:00Z"
-        updatedAt: "2001-09-02T20:42:30Z"
-        deletedAt: "2016-09-21T13:34:03Z"
+        createdAt: "2015-03-22T22:35:33Z"
+        updatedAt: "1985-08-09T02:17:48Z"
+        deletedAt: "1973-04-04T20:45:51Z"
     Project:
       title: Project
       properties:
@@ -15895,15 +14972,15 @@ components:
           nullable: false
           format: string
       example:
-        key: "00000041567678"
-        siteKey: "06000144786390"
+        key: "01000196946709"
+        siteKey: "08000023381080"
         name: string
-        accountKey: "01000872910631"
-        statusKey: "03000623505984"
+        accountKey: "09000209464817"
+        statusKey: "07000230469975"
         budget: string
-        createdAt: "1989-08-28T19:09:30Z"
-        updatedAt: "1975-08-10T12:29:24Z"
-        deletedAt: "1972-04-09T15:03:46Z"
+        createdAt: "1981-12-27T12:19:41Z"
+        updatedAt: "2021-04-14T18:09:55Z"
+        deletedAt: "2017-10-08T16:31:21Z"
     Invoice:
       title: Invoice
       properties:
@@ -15973,19 +15050,19 @@ components:
           nullable: false
           format: string
       example:
-        key: "05000287217616"
+        key: "08000591666111"
         invoiceNumber: string
-        vendorKey: "08000178128188"
-        poKey: "07000689513559"
-        statusKey: "03000107413121"
+        vendorKey: "01000636749172"
+        poKey: "01000445512880"
+        statusKey: "04000455224852"
         lineItems: "[]"
-        invoiceDate: "1978-11-18T00:03:40Z"
-        dueDate: "2023-02-06T02:48:39Z"
-        receivedDate: "1977-06-27T08:00:03Z"
-        currencyKey: "03000226488788"
-        createdAt: "2006-05-24T14:00:44Z"
-        updatedAt: "1980-07-01T08:49:52Z"
-        deletedAt: "1996-10-08T16:47:04Z"
+        invoiceDate: "2023-07-12T05:35:27Z"
+        dueDate: "1972-04-17T19:18:00Z"
+        receivedDate: "1985-05-14T09:16:14Z"
+        currencyKey: "02000086878812"
+        createdAt: "1999-04-02T12:10:44Z"
+        updatedAt: "2015-10-17T14:25:18Z"
+        deletedAt: "1976-11-04T10:08:27Z"
     Receipt:
       title: Receipt
       type: object
@@ -16094,25 +15171,25 @@ components:
           nullable: false
           format: string
       example:
-        key: "05000146534594"
-        siteKey: "01000289164750"
-        vendorKey: "04000192495747"
-        poKey: "08000579259344"
-        code: "32201529"
+        key: "06000375947500"
+        siteKey: "03000937971226"
+        vendorKey: "08000135140071"
+        poKey: "06000523563711"
+        code: "61488366"
         orderNo: string
-        orderDate: "1983-07-24T08:55:14Z"
-        title: Magnam modi et accusamus repellat impedit sit.
-        description: Aut quos perspiciatis aperiam quasi totam quia.
-        completedAt: "2012-03-28T08:31:42Z"
+        orderDate: "2005-04-30T00:37:42Z"
+        title: Repudiandae harum repudiandae dolor ab.
+        description: Inventore non rerum fugiat voluptas nulla.
+        completedAt: "2018-01-11T01:35:31Z"
         shippingMethod: string
         notes: string
-        currencyKey: "09000174212308"
+        currencyKey: "09000235623274"
         totalNetValue: string
         totalTaxValue: string
         totalGrossValue: string
         lineItems: "[]"
-        createdAt: "1994-12-19T10:21:55Z"
-        updatedAt: "2017-01-08T17:55:43Z"
+        createdAt: "1985-09-23T10:40:45Z"
+        updatedAt: "1981-03-11T06:31:55Z"
     RequestForQuotation:
       title: RequestForQuotation
       type: object
@@ -16163,14 +15240,14 @@ components:
           nullable: false
           format: string
       example:
-        key: "07000384502592"
-        parentKey: "04000914035371"
-        code: "09826847"
+        key: "03000588294754"
+        parentKey: "06000049136593"
+        code: "81498703"
         name: string
-        description: Velit non qui enim saepe voluptas est cumque.
-        updatedAt: "2015-02-16T08:48:49Z"
-        createdAt: "1972-11-22T20:36:11Z"
-        deletedAt: "2016-08-29T03:00:08Z"
+        description: Autem sapiente voluptatem similique quo.
+        updatedAt: "1979-12-28T10:39:51Z"
+        createdAt: "1997-08-18T22:49:41Z"
+        deletedAt: "1990-04-28T12:06:38Z"
     StockTransfer:
       title: StockTransfer
       properties:
@@ -16235,18 +15312,18 @@ components:
           nullable: false
           format: string
       example:
-        key: "01000749715104"
-        fromLocationKey: "02000198030437"
-        toLocationKey: "01000939117514"
-        fromStoreroomKey: "06000034597343"
-        toStoreroomKey: "09000754962008"
-        code: "53824622"
+        key: "00000361405181"
+        fromLocationKey: "04000803106978"
+        toLocationKey: "07000231374146"
+        fromStoreroomKey: "07000464778983"
+        toStoreroomKey: "05000670592288"
+        code: "91143587"
         date: string
         lineItems: string
         orderNumber: string
-        createdAt: "2017-01-14T18:38:56Z"
-        updatedAt: "1983-07-20T10:54:19Z"
-        deletedAt: "1990-08-26T03:15:57Z"
+        createdAt: "2007-12-30T04:09:55Z"
+        updatedAt: "1989-12-30T09:30:42Z"
+        deletedAt: "1973-01-03T21:03:08Z"
     StockAdjustment:
       title: StockAdjustment
       properties:
@@ -16316,19 +15393,19 @@ components:
           nullable: false
           format: string
       example:
-        key: "08000487962804"
-        locationKey: "01000080327235"
-        storeroomKey: "07000961413078"
-        userKey: "02000940689943"
+        key: "04000573565637"
+        locationKey: "04000367246263"
+        storeroomKey: "09000583939481"
+        userKey: "01000104051013"
         date: string
         reason: string
         lineItems: "[]"
         adjustmentNumber: string
         total: string
         type: string
-        createdAt: "1990-04-25T02:29:48Z"
-        updatedAt: "2016-09-12T03:33:02Z"
-        deletedAt: "2003-09-22T08:53:35Z"
+        createdAt: "1984-12-15T03:04:55Z"
+        updatedAt: "1988-11-28T02:31:26Z"
+        deletedAt: "2023-05-22T14:54:55Z"
     ShipmentOrder:
       title: ShipmentOrder
       properties:
@@ -16413,22 +15490,22 @@ components:
           nullable: false
           format: string
       example:
-        key: "02000169087188"
-        userKey: "09000945280083"
-        customerKey: "09000842459928"
-        vendorKey: "02000328519047"
+        key: "04000088145838"
+        userKey: "02000508376289"
+        customerKey: "06000344756914"
+        vendorKey: "04000389886599"
         orderNumber: string
         shipmentNumber: string
         date: string
-        statusKey: "05000680510916"
+        statusKey: "05000199100685"
         lineItems: "[]"
         destinationAddress: string
         carrierName: string
         shippingMethod: string
         notes: string
-        createdAt: "2006-03-30T23:31:32Z"
-        updatedAt: "2018-01-03T05:54:14Z"
-        deletedAt: "2002-07-18T04:20:05Z"
+        createdAt: "1979-10-31T20:09:21Z"
+        updatedAt: "2011-07-01T23:09:37Z"
+        deletedAt: "2007-11-04T18:46:27Z"
     ShipmentOrderDelivered: []
     Integration:
       title: Integration
