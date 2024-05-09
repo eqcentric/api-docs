@@ -7,7 +7,7 @@ Makini uses OAuth 2.0 protocol to issue authentication tokens. In short, protoco
 **1.** Initiate authentication consent screen for your app users.
 
 For this step you need to place a button or a link in your app with URL pointing to Makini Link.
-The URL is constructed using following format: `https://api.makini.io/link/oauth/authorize?response_type=code&client_id={{CLIENT_ID}}&redirect_uri={{REDIRECT_URI}}`
+The URL is constructed using following format: `https://link.makini.io/oauth/authorize?response_type=code&client_id={{CLIENT_ID}}&redirect_uri={{REDIRECT_URI}}`
 
 **2.** Exchange authentication code to access token
 
@@ -49,5 +49,3 @@ GET https://api.makini.io/sites
 Accept: application/json
 Authorization: Bearer {{ACCESS_TOKEN}}
 ```
-
-
