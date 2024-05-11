@@ -1628,7 +1628,7 @@ paths:
   /api/eam/purchase-orders/{key}/status:
     put:
       description: ''
-      summary: Update a PurchaseOrderStatus
+      summary: Update a PurchaseOrder
       parameters:
         - name: key
           description: string|required
@@ -1648,7 +1648,7 @@ paths:
                 type: object
                 properties:
                   data:
-                    $ref: '#/components/schemas/PurchaseOrderStatus'
+                    $ref: '#/components/schemas/PurchaseOrder'
       requestBody:
         description: Request body
         content:
@@ -1866,26 +1866,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: '09000692216036'
-                vendorKey: '05000118057986'
-                code: '69282690'
+                siteKey: '05000741928565'
+                vendorKey: '02000336830746'
+                code: '08036001'
                 orderNo: string
-                orderDate: '1987-06-27T18:15:36Z'
-                statusKey: '01000564481111'
-                title: Est eaque cum impedit.
-                description: Est omnis maxime consequuntur officia.
-                dueAt: '1979-11-22T16:37:43Z'
-                approvedAt: '2014-11-27T16:13:14Z'
-                completedAt: '2019-07-24T23:12:20Z'
+                orderDate: '1988-05-19T00:37:11Z'
+                statusKey: '05000302785919'
+                title: Quia accusamus ab dolores pariatur eos.
+                description: Amet porro amet nostrum aut est velit vel.
+                dueAt: '1981-01-30T18:41:33Z'
+                approvedAt: '1995-06-18T17:32:56Z'
+                completedAt: '1983-06-29T12:15:23Z'
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: '02000060903977'
+                currencyKey: '04000471176020'
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: '1971-07-13T15:30:41Z'
-                updatedAt: '2014-01-07T00:23:32Z'
+                createdAt: '1983-08-12T17:39:30Z'
+                updatedAt: '2014-04-30T01:55:30Z'
   /api/eam/purchase-orders/{key}:
     get:
       description: >
@@ -2023,26 +2023,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: '03000176328255'
-                vendorKey: '06000689955467'
-                code: '43029600'
+                siteKey: '01000277355000'
+                vendorKey: '05000368400203'
+                code: '03232262'
                 orderNo: string
-                orderDate: '2023-08-08T12:51:20Z'
-                statusKey: '05000973035029'
-                title: Id totam ad ratione.
-                description: Ut dolores eos id et.
-                dueAt: '2018-01-13T10:38:51Z'
-                approvedAt: '1992-03-02T11:04:27Z'
-                completedAt: '1974-08-08T01:04:28Z'
+                orderDate: '1995-08-26T12:00:11Z'
+                statusKey: '00000807692294'
+                title: Fuga eaque vero facilis a sit consequatur qui et.
+                description: Fuga voluptatem qui dolor reprehenderit eveniet.
+                dueAt: '1989-06-21T17:53:51Z'
+                approvedAt: '2002-06-12T20:23:51Z'
+                completedAt: '2000-11-26T02:33:27Z'
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: '03000221483347'
+                currencyKey: '04000639691655'
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: '1994-08-29T04:18:51Z'
-                updatedAt: '1973-08-04T11:18:58Z'
+                createdAt: '2003-12-20T17:03:12Z'
+                updatedAt: '1990-12-17T21:15:25Z'
   /api/eam/purchase-orders.line-items:
     get:
       description: |2+
@@ -2168,7 +2168,7 @@ paths:
   /api/eam/materials/{key}/inventory:
     put:
       description: ''
-      summary: Update a MaterialInventory
+      summary: Update a Material
       parameters:
         - name: key
           description: string|required
@@ -2188,7 +2188,7 @@ paths:
                 type: object
                 properties:
                   data:
-                    $ref: '#/components/schemas/MaterialInventory'
+                    $ref: '#/components/schemas/Material'
       requestBody:
         description: Request body
         content:
@@ -2217,15 +2217,15 @@ paths:
                   nullable: true
                   format: string
               example:
-                code: '19762029'
+                code: '26885216'
                 name: string
                 quantity: 10
                 unitCost: 10
-                locationKey: '01000793880893'
+                locationKey: '05000083111076'
   /api/eam/materials/{key}/children:
     get:
       description: ''
-      summary: Get a MaterialItem
+      summary: List MaterialItems
       parameters:
         - name: key
           description: string|required
@@ -2264,11 +2264,44 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/MaterialItem'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/eam/materials:
     get:
-      description: >+
-        Material refers to consumables, spare parts and tools used in
-        maintenance and production chains.
+      description: |2+
 
          Filtering:
 
@@ -2290,7 +2323,7 @@ paths:
          * sort[createdAt]=1 // DESC
          * sort[createdAt]=0 // ASC
 
-      summary: List Materials
+      summary: List Parts
       parameters:
         - name: filter
           description: array
@@ -2333,7 +2366,7 @@ paths:
                   data:
                     type: array
                     items:
-                      $ref: '#/components/schemas/Material'
+                      $ref: '#/components/schemas/Part'
                   links:
                     type: object
                     properties:
@@ -2366,7 +2399,7 @@ paths:
                         type: number
     post:
       description: ''
-      summary: Create a Material
+      summary: Create a Part
       parameters: []
       tags:
         - EAM/CMMS
@@ -2379,7 +2412,7 @@ paths:
                 type: object
                 properties:
                   data:
-                    $ref: '#/components/schemas/Material'
+                    $ref: '#/components/schemas/Part'
       requestBody:
         description: Request body
         content:
@@ -2465,12 +2498,12 @@ paths:
                 assetKeys: '[]'
                 vendorKeys: string
                 documents: '[]'
-                accountKey: '06000140836826'
-                code: '49551402'
+                accountKey: '08000910018643'
+                code: '87645309'
                 isAssembly: 'true'
                 partNumber: string
                 name: string
-                description: Et et aliquam cupiditate aliquam natus.
+                description: Incidunt error maxime quos aut quam.
                 notes: string
                 criticality: string
                 isActive: 'false'
@@ -2480,10 +2513,8 @@ paths:
                 currency: string
   /api/eam/materials/{key}:
     get:
-      description: >
-        Material refers to consumables, spare parts and tools used in
-        maintenance and production chains.
-      summary: Get a Material
+      description: ''
+      summary: Get a Part
       parameters:
         - name: key
           description: string|required
@@ -2503,10 +2534,10 @@ paths:
                 type: object
                 properties:
                   data:
-                    $ref: '#/components/schemas/Material'
+                    $ref: '#/components/schemas/Part'
     put:
       description: ''
-      summary: Update a Material
+      summary: Update a Part
       parameters:
         - name: key
           description: string|required
@@ -2526,7 +2557,7 @@ paths:
                 type: object
                 properties:
                   data:
-                    $ref: '#/components/schemas/Material'
+                    $ref: '#/components/schemas/Part'
       requestBody:
         description: Request body
         content:
@@ -2612,15 +2643,15 @@ paths:
                 assetKeys: '[]'
                 vendorKeys: string
                 documents: '[]'
-                accountKey: '03000987141107'
-                code: '15474889'
+                accountKey: '06000071707111'
+                code: '31575164'
                 isAssembly: 'false'
                 partNumber: string
                 name: string
-                description: Enim tempore molestias voluptas.
+                description: Iste ut ad error sint accusantium.
                 notes: string
                 criticality: string
-                isActive: 'true'
+                isActive: 'false'
                 manufacturerName: string
                 minimumQuantity: string
                 cost: string
@@ -2628,7 +2659,7 @@ paths:
   /api/eam/assets/{key}/materials:
     get:
       description: ''
-      summary: Get a MaterialItem
+      summary: List MaterialItems
       parameters:
         - name: key
           description: string|required
@@ -2667,6 +2698,41 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/MaterialItem'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/eam/assets:
     get:
       description: >+
@@ -2898,24 +2964,24 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: '08000689966852'
-                parentKey: '00000890037183'
-                vendorKey: '04000918655523'
-                modelKey: '08000440172467'
-                teamKey: '01000937963912'
-                locationKey: '02000799312684'
-                accountKey: '01000386779258'
+                siteKey: '01000584531019'
+                parentKey: '08000856184080'
+                vendorKey: '06000504606434'
+                modelKey: '06000739554939'
+                teamKey: '01000515327972'
+                locationKey: '05000696142650'
+                accountKey: '01000565519797'
                 name: string
-                description: Fugit dolores minima voluptas fugit odit.
+                description: Voluptatem quo sint ab laboriosam eius.
                 notes: string
                 categoryName: string
                 criticality: string
-                isActive: 'true'
+                isActive: 'false'
                 manufacturerName: string
                 modelName: string
                 serialNumber: string
-                activatedAt: '1977-12-20T12:42:35Z'
-                deactivatedAt: '1982-06-09T05:33:17Z'
+                activatedAt: '2023-09-01T20:51:56Z'
+                deactivatedAt: '1973-04-20T08:20:32Z'
   /api/eam/assets-downtime:
     get:
       description: |+
@@ -2941,7 +3007,7 @@ paths:
          * sort[createdAt]=1 // DESC
          * sort[createdAt]=0 // ASC
 
-      summary: List AssetDownTimes
+      summary: List AssetDowntimes
       parameters:
         - name: filter
           description: array
@@ -2984,7 +3050,7 @@ paths:
                   data:
                     type: array
                     items:
-                      $ref: '#/components/schemas/AssetDownTime'
+                      $ref: '#/components/schemas/AssetDowntime'
                   links:
                     type: object
                     properties:
@@ -3019,7 +3085,7 @@ paths:
     get:
       description: |
         Information on planned or unplanned downtime periods for assets.
-      summary: Get an AssetDownTime
+      summary: Get an AssetDowntime
       parameters:
         - name: key
           description: string|required
@@ -3039,11 +3105,11 @@ paths:
                 type: object
                 properties:
                   data:
-                    $ref: '#/components/schemas/AssetDownTime'
+                    $ref: '#/components/schemas/AssetDowntime'
   /api/eam/asset-templates/{key}/materials:
     get:
       description: ''
-      summary: Get a MaterialItem
+      summary: List MaterialItems
       parameters:
         - name: key
           description: string|required
@@ -3082,6 +3148,41 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/MaterialItem'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/eam/asset-templates:
     get:
       description: |2+
@@ -3457,7 +3558,7 @@ paths:
   /api/eam/pm/{key}/materials:
     get:
       description: ''
-      summary: Get a MaterialItem
+      summary: List MaterialItems
       parameters:
         - name: key
           description: string|required
@@ -3496,6 +3597,41 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/MaterialItem'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/eam/pm:
     get:
       description: >+
@@ -3625,7 +3761,7 @@ paths:
   /api/eam/work-orders/{key}/materials:
     get:
       description: ''
-      summary: Get a MaterialItem
+      summary: List MaterialItems
       parameters:
         - name: key
           description: string|required
@@ -3664,10 +3800,45 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/MaterialItem'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/eam/work-orders/{key}/status:
     put:
       description: ''
-      summary: Update a WorkOrderStatus
+      summary: Update a WorkOrder
       parameters:
         - name: key
           description: string|required
@@ -3687,7 +3858,7 @@ paths:
                 type: object
                 properties:
                   data:
-                    $ref: '#/components/schemas/WorkOrderStatus'
+                    $ref: '#/components/schemas/WorkOrder'
       requestBody:
         description: Request body
         content:
@@ -3949,22 +4120,22 @@ paths:
                   nullable: true
                   format: string
               example:
-                title: Rerum tenetur labore qui.
-                statusKey: '02000883852961'
-                scheduledAt: '2011-05-04T13:41:21Z'
-                siteKey: '09000216096208'
-                locationKey: '00000223184128'
-                storeroomKey: '04000469060267'
-                assetKey: '09000117356729'
-                assetDowntimeKey: '06000090070516'
-                serviceRequestKey: '01000146868050'
-                pmKey: '08000261723791'
-                teamKey: '02000825900201'
-                laborAssignedKey: '02000217583118'
-                accountKey: '09000347556628'
-                userApprovedKey: '01000985553617'
-                code: '09992047'
-                description: Soluta iusto ut est voluptas.
+                title: Voluptas corrupti aut natus.
+                statusKey: '09000277474112'
+                scheduledAt: '1971-09-19T20:37:32Z'
+                siteKey: '07000892794311'
+                locationKey: '03000694815088'
+                storeroomKey: '03000664354822'
+                assetKey: '06000475402632'
+                assetDowntimeKey: '04000558370719'
+                serviceRequestKey: '03000976772526'
+                pmKey: '04000359133638'
+                teamKey: '08000951495128'
+                laborAssignedKey: '07000475606594'
+                accountKey: '02000966826567'
+                userApprovedKey: '03000336282897'
+                code: '28758839'
+                description: Cupiditate voluptas animi ex eos exercitationem.
                 instructions: string
                 severity: string
                 estimatedTime: 10
@@ -3973,13 +4144,13 @@ paths:
                 categoryName: string
                 documents: '[]'
                 notes: string
-                approvedAt: '1999-05-28T09:17:01Z'
-                dueAt: '1994-02-07T02:57:19Z'
-                completedAt: '1989-05-04T07:40:00Z'
+                approvedAt: '2006-04-18T03:19:09Z'
+                dueAt: '2014-09-28T04:50:47Z'
+                completedAt: '2006-12-18T09:27:23Z'
                 completionRemarks: string
-                createdAt: '2003-08-27T20:39:03Z'
-                updatedAt: '1989-09-27T00:02:01Z'
-                deletedAt: '2021-10-22T14:19:18Z'
+                createdAt: '1970-12-04T17:09:20Z'
+                updatedAt: '2009-04-02T18:02:46Z'
+                deletedAt: '1974-05-28T12:23:08Z'
   /api/eam/work-orders/{key}:
     get:
       description: >
@@ -4161,22 +4332,22 @@ paths:
                   nullable: true
                   format: string
               example:
-                title: Enim explicabo esse perferendis earum.
-                statusKey: '08000894282156'
-                scheduledAt: '1977-09-04T00:09:42Z'
-                siteKey: '07000746821173'
-                locationKey: '06000447881399'
-                storeroomKey: '05000780658489'
-                assetKey: '03000279539566'
-                assetDowntimeKey: '06000553480622'
-                serviceRequestKey: '07000618143216'
-                pmKey: '08000271218351'
-                teamKey: '00000905629849'
-                laborAssignedKey: '06000077057410'
-                accountKey: '00000561503774'
-                userApprovedKey: '09000862228549'
-                code: '98257676'
-                description: Voluptatem aliquam sit eos voluptas sapiente et.
+                title: Voluptatem ut ducimus corporis vero qui et.
+                statusKey: '07000672235123'
+                scheduledAt: '1972-05-22T10:21:31Z'
+                siteKey: '03000472436818'
+                locationKey: '02000906746056'
+                storeroomKey: '03000202237030'
+                assetKey: '03000220515144'
+                assetDowntimeKey: '02000319280004'
+                serviceRequestKey: '05000097274279'
+                pmKey: '06000988824939'
+                teamKey: '06000573307593'
+                laborAssignedKey: '07000476131046'
+                accountKey: '05000372233312'
+                userApprovedKey: '08000355901746'
+                code: '89477908'
+                description: Ea placeat est rerum nisi quod.
                 instructions: string
                 severity: string
                 estimatedTime: 10
@@ -4185,13 +4356,13 @@ paths:
                 categoryName: string
                 documents: '[]'
                 notes: string
-                approvedAt: '2000-01-21T17:50:09Z'
-                dueAt: '2018-09-14T16:45:45Z'
-                completedAt: '2021-12-21T06:57:38Z'
+                approvedAt: '2004-06-26T11:09:18Z'
+                dueAt: '2006-11-23T23:24:20Z'
+                completedAt: '1972-03-21T15:06:40Z'
                 completionRemarks: string
-                createdAt: '1980-02-11T13:01:03Z'
-                updatedAt: '1988-08-05T14:42:15Z'
-                deletedAt: '1978-02-16T19:41:02Z'
+                createdAt: '2018-08-08T15:17:09Z'
+                updatedAt: '1997-11-03T13:58:38Z'
+                deletedAt: '1973-09-24T23:44:45Z'
   /api/eam/service-requests:
     get:
       description: >+
@@ -4653,18 +4824,18 @@ paths:
                   nullable: true
                   format: string
               example:
-                code: '59772835'
+                code: '02028712'
                 name: string
                 quantity: 10
                 unitCost: 10
-                locationKey: '09000496890118'
+                locationKey: '01000812817562'
   /api/eam/statuses/work-orders:
     get:
       description: >
         Indicates the current condition or state of a process, object, or
         situation, highlighting its progress, position, or quality at any
         specific moment.
-      summary: Get a Status
+      summary: List Statuses
       parameters:
         - name: filter
           description: array
@@ -4696,13 +4867,48 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Status'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/eam/statuses/purchase-orders:
     get:
       description: >
         Indicates the current condition or state of a process, object, or
         situation, highlighting its progress, position, or quality at any
         specific moment.
-      summary: Get a Status
+      summary: List Statuses
       parameters:
         - name: filter
           description: array
@@ -4734,13 +4940,48 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Status'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/eam/statuses/service-requests:
     get:
       description: >
         Indicates the current condition or state of a process, object, or
         situation, highlighting its progress, position, or quality at any
         specific moment.
-      summary: Get a Status
+      summary: List Statuses
       parameters:
         - name: filter
           description: array
@@ -4772,6 +5013,41 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Status'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/erp/sites:
     get:
       description: >
@@ -7411,7 +7687,7 @@ paths:
   /api/erp/purchase-orders/{key}/status:
     put:
       description: ''
-      summary: Update a PurchaseOrderStatus
+      summary: Update a PurchaseOrder
       parameters:
         - name: key
           description: string|required
@@ -7431,7 +7707,7 @@ paths:
                 type: object
                 properties:
                   data:
-                    $ref: '#/components/schemas/PurchaseOrderStatus'
+                    $ref: '#/components/schemas/PurchaseOrder'
       requestBody:
         description: Request body
         content:
@@ -7649,26 +7925,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: '04000694673399'
-                vendorKey: '02000602327638'
-                code: '36909803'
+                siteKey: '07000069749076'
+                vendorKey: '02000230753124'
+                code: '23308756'
                 orderNo: string
-                orderDate: '1987-12-12T22:29:06Z'
-                statusKey: '01000221006572'
-                title: Beatae quod unde quos rerum.
-                description: Quo et tempore omnis et placeat perferendis.
-                dueAt: '1972-11-03T23:23:48Z'
-                approvedAt: '1995-12-20T23:05:00Z'
-                completedAt: '1980-08-16T00:01:52Z'
+                orderDate: '1995-04-25T15:46:15Z'
+                statusKey: '01000976129398'
+                title: Tenetur magni ea sed id.
+                description: Architecto harum non recusandae fugiat.
+                dueAt: '2011-05-25T08:40:04Z'
+                approvedAt: '2015-10-25T16:37:17Z'
+                completedAt: '2017-11-22T08:30:24Z'
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: '01000208673586'
+                currencyKey: '09000762746380'
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: '1982-04-24T17:19:13Z'
-                updatedAt: '1981-07-19T07:30:04Z'
+                createdAt: '1976-10-12T21:41:42Z'
+                updatedAt: '1980-08-08T16:26:38Z'
   /api/erp/purchase-orders/{key}:
     get:
       description: >
@@ -7806,26 +8082,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: '08000640366781'
-                vendorKey: '08000530058428'
-                code: '38933905'
+                siteKey: '09000087151953'
+                vendorKey: '09000782783926'
+                code: '78159143'
                 orderNo: string
-                orderDate: '1999-09-02T20:32:20Z'
-                statusKey: '04000882159496'
-                title: Qui asperiores aut iste vel unde in odit.
-                description: Eum rerum ullam accusamus.
-                dueAt: '1991-08-16T18:20:49Z'
-                approvedAt: '1987-06-26T00:33:38Z'
-                completedAt: '2019-06-04T02:25:43Z'
+                orderDate: '1989-06-02T23:10:04Z'
+                statusKey: '01000326101042'
+                title: Illum dolores architecto et rerum.
+                description: Aliquam commodi iste in debitis.
+                dueAt: '1985-03-30T05:41:51Z'
+                approvedAt: '2014-12-04T16:35:43Z'
+                completedAt: '1988-04-07T17:21:19Z'
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: '01000045788326'
+                currencyKey: '02000435758629'
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: '2010-09-04T10:42:32Z'
-                updatedAt: '1990-10-09T09:21:07Z'
+                createdAt: '2015-12-01T23:28:32Z'
+                updatedAt: '1985-07-09T01:36:59Z'
   /api/erp/purchase-orders.line-items:
     get:
       description: |2+
@@ -8081,7 +8357,7 @@ paths:
   /api/erp/production-orders/{key}/materials:
     get:
       description: ''
-      summary: Get a MaterialItem
+      summary: List MaterialItems
       parameters:
         - name: key
           description: string|required
@@ -8120,6 +8396,41 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/MaterialItem'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/erp/production-orders:
     get:
       description: >+
@@ -8633,7 +8944,7 @@ paths:
   /api/erp/materials/{key}/inventory:
     put:
       description: ''
-      summary: Update a MaterialInventory
+      summary: Update a Material
       parameters:
         - name: key
           description: string|required
@@ -8653,7 +8964,7 @@ paths:
                 type: object
                 properties:
                   data:
-                    $ref: '#/components/schemas/MaterialInventory'
+                    $ref: '#/components/schemas/Material'
       requestBody:
         description: Request body
         content:
@@ -8682,15 +8993,15 @@ paths:
                   nullable: true
                   format: string
               example:
-                code: '49200348'
+                code: '86275170'
                 name: string
                 quantity: 10
                 unitCost: 10
-                locationKey: '00000367661843'
+                locationKey: '02000171327124'
   /api/erp/materials/{key}/children:
     get:
       description: ''
-      summary: Get a MaterialItem
+      summary: List MaterialItems
       parameters:
         - name: key
           description: string|required
@@ -8729,11 +9040,44 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/MaterialItem'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/erp/materials:
     get:
-      description: >+
-        Material refers to consumables, spare parts and tools used in
-        maintenance and production chains.
+      description: |2+
 
          Filtering:
 
@@ -8755,7 +9099,7 @@ paths:
          * sort[createdAt]=1 // DESC
          * sort[createdAt]=0 // ASC
 
-      summary: List Materials
+      summary: List Parts
       parameters:
         - name: filter
           description: array
@@ -8798,7 +9142,7 @@ paths:
                   data:
                     type: array
                     items:
-                      $ref: '#/components/schemas/Material'
+                      $ref: '#/components/schemas/Part'
                   links:
                     type: object
                     properties:
@@ -8831,7 +9175,7 @@ paths:
                         type: number
     post:
       description: ''
-      summary: Create a Material
+      summary: Create a Part
       parameters: []
       tags:
         - ERP
@@ -8844,7 +9188,7 @@ paths:
                 type: object
                 properties:
                   data:
-                    $ref: '#/components/schemas/Material'
+                    $ref: '#/components/schemas/Part'
       requestBody:
         description: Request body
         content:
@@ -8930,12 +9274,12 @@ paths:
                 assetKeys: '[]'
                 vendorKeys: string
                 documents: '[]'
-                accountKey: '09000700761835'
-                code: '56264845'
+                accountKey: '09000920934244'
+                code: '56494938'
                 isAssembly: 'true'
                 partNumber: string
                 name: string
-                description: Et aperiam ut quia sed quaerat.
+                description: Minus odit est esse exercitationem et.
                 notes: string
                 criticality: string
                 isActive: 'false'
@@ -8945,10 +9289,8 @@ paths:
                 currency: string
   /api/erp/materials/{key}:
     get:
-      description: >
-        Material refers to consumables, spare parts and tools used in
-        maintenance and production chains.
-      summary: Get a Material
+      description: ''
+      summary: Get a Part
       parameters:
         - name: key
           description: string|required
@@ -8968,10 +9310,10 @@ paths:
                 type: object
                 properties:
                   data:
-                    $ref: '#/components/schemas/Material'
+                    $ref: '#/components/schemas/Part'
     put:
       description: ''
-      summary: Update a Material
+      summary: Update a Part
       parameters:
         - name: key
           description: string|required
@@ -8991,7 +9333,7 @@ paths:
                 type: object
                 properties:
                   data:
-                    $ref: '#/components/schemas/Material'
+                    $ref: '#/components/schemas/Part'
       requestBody:
         description: Request body
         content:
@@ -9077,15 +9419,15 @@ paths:
                 assetKeys: '[]'
                 vendorKeys: string
                 documents: '[]'
-                accountKey: '08000728342832'
-                code: '84882486'
-                isAssembly: 'true'
+                accountKey: '00000982404591'
+                code: '01314250'
+                isAssembly: 'false'
                 partNumber: string
                 name: string
-                description: Et rerum quidem excepturi a.
+                description: Rem illo dolorem maxime.
                 notes: string
                 criticality: string
-                isActive: 'false'
+                isActive: 'true'
                 manufacturerName: string
                 minimumQuantity: string
                 cost: string
@@ -9263,18 +9605,18 @@ paths:
                   nullable: true
                   format: string
               example:
-                code: '60682161'
+                code: '17005418'
                 name: string
                 quantity: 10
                 unitCost: 10
-                locationKey: '07000128566086'
+                locationKey: '05000822773476'
   /api/erp/statuses/purchase-orders:
     get:
       description: >
         Indicates the current condition or state of a process, object, or
         situation, highlighting its progress, position, or quality at any
         specific moment.
-      summary: Get a Status
+      summary: List Statuses
       parameters:
         - name: filter
           description: array
@@ -9306,13 +9648,48 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Status'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/erp/statuses/purchase-requisitions:
     get:
       description: >
         Indicates the current condition or state of a process, object, or
         situation, highlighting its progress, position, or quality at any
         specific moment.
-      summary: Get a Status
+      summary: List Statuses
       parameters:
         - name: filter
           description: array
@@ -9344,13 +9721,48 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Status'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/erp/statuses/sales-orders:
     get:
       description: >
         Indicates the current condition or state of a process, object, or
         situation, highlighting its progress, position, or quality at any
         specific moment.
-      summary: Get a Status
+      summary: List Statuses
       parameters:
         - name: filter
           description: array
@@ -9382,13 +9794,48 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Status'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/erp/statuses/projects:
     get:
       description: >
         Indicates the current condition or state of a process, object, or
         situation, highlighting its progress, position, or quality at any
         specific moment.
-      summary: Get a Status
+      summary: List Statuses
       parameters:
         - name: filter
           description: array
@@ -9420,13 +9867,48 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Status'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/erp/statuses/invoices:
     get:
       description: >
         Indicates the current condition or state of a process, object, or
         situation, highlighting its progress, position, or quality at any
         specific moment.
-      summary: Get a Status
+      summary: List Statuses
       parameters:
         - name: filter
           description: array
@@ -9458,13 +9940,48 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Status'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/erp/statuses/production-orders:
     get:
       description: >
         Indicates the current condition or state of a process, object, or
         situation, highlighting its progress, position, or quality at any
         specific moment.
-      summary: Get a Status
+      summary: List Statuses
       parameters:
         - name: filter
           description: array
@@ -9496,13 +10013,48 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Status'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/erp/statuses/rfq:
     get:
       description: >
         Indicates the current condition or state of a process, object, or
         situation, highlighting its progress, position, or quality at any
         specific moment.
-      summary: Get a Status
+      summary: List Statuses
       parameters:
         - name: filter
           description: array
@@ -9534,13 +10086,48 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Status'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/erp/statuses/receiving:
     get:
       description: >
         Indicates the current condition or state of a process, object, or
         situation, highlighting its progress, position, or quality at any
         specific moment.
-      summary: Get a Status
+      summary: List Statuses
       parameters:
         - name: filter
           description: array
@@ -9572,6 +10159,41 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Status'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/wms/organizations:
     get:
       description: >+
@@ -11705,7 +12327,7 @@ paths:
   /api/wms/purchase-orders/{key}/status:
     put:
       description: ''
-      summary: Update a PurchaseOrderStatus
+      summary: Update a PurchaseOrder
       parameters:
         - name: key
           description: string|required
@@ -11725,7 +12347,7 @@ paths:
                 type: object
                 properties:
                   data:
-                    $ref: '#/components/schemas/PurchaseOrderStatus'
+                    $ref: '#/components/schemas/PurchaseOrder'
       requestBody:
         description: Request body
         content:
@@ -11943,26 +12565,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: '03000233201366'
-                vendorKey: '07000304128723'
-                code: '02171616'
+                siteKey: '00000565232401'
+                vendorKey: '06000255174714'
+                code: '15954367'
                 orderNo: string
-                orderDate: '2006-05-18T06:23:48Z'
-                statusKey: '06000714691103'
-                title: Ipsa odit voluptatibus autem.
-                description: Similique mollitia exercitationem maxime quas ad.
-                dueAt: '1990-07-18T23:23:52Z'
-                approvedAt: '1987-08-30T00:43:35Z'
-                completedAt: '1971-12-13T17:26:56Z'
+                orderDate: '2000-12-07T17:56:42Z'
+                statusKey: '05000374908074'
+                title: Velit nulla ea soluta vitae cum dicta vel.
+                description: Nobis eos omnis fugit incidunt ullam.
+                dueAt: '1972-08-13T10:28:48Z'
+                approvedAt: '2011-01-16T11:04:31Z'
+                completedAt: '1982-07-01T02:17:55Z'
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: '00000760812414'
+                currencyKey: '05000297220254'
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: '1971-10-21T14:49:03Z'
-                updatedAt: '1988-07-16T04:48:18Z'
+                createdAt: '2020-06-04T06:18:34Z'
+                updatedAt: '2001-09-17T09:13:47Z'
   /api/wms/purchase-orders/{key}:
     get:
       description: >
@@ -12100,26 +12722,26 @@ paths:
                   nullable: true
                   format: string
               example:
-                siteKey: '07000227489287'
-                vendorKey: '05000551654406'
-                code: '91507631'
+                siteKey: '01000122396696'
+                vendorKey: '03000121567490'
+                code: '31539067'
                 orderNo: string
-                orderDate: '1980-02-26T16:48:54Z'
-                statusKey: '08000881865349'
-                title: Dolore et deserunt doloremque modi.
-                description: Deleniti nihil harum omnis.
-                dueAt: '2018-07-12T08:49:46Z'
-                approvedAt: '1970-09-07T04:45:05Z'
-                completedAt: '1978-07-21T03:52:57Z'
+                orderDate: '1970-03-28T14:42:25Z'
+                statusKey: '06000974811260'
+                title: Quia illum ut numquam reprehenderit.
+                description: Neque nulla enim accusantium et.
+                dueAt: '1997-11-15T06:20:31Z'
+                approvedAt: '2003-11-01T00:53:56Z'
+                completedAt: '2019-10-12T03:34:23Z'
                 shippingMethod: string
                 terms: string
                 notes: string
-                currencyKey: '03000951243598'
+                currencyKey: '03000005524891'
                 totalNetValue: string
                 totalTaxValue: string
                 totalGrossValue: string
-                createdAt: '1992-12-14T15:15:16Z'
-                updatedAt: '1998-08-11T15:35:30Z'
+                createdAt: '2011-04-10T04:59:50Z'
+                updatedAt: '1980-03-24T11:43:18Z'
   /api/wms/purchase-orders.line-items:
     get:
       description: |2+
@@ -12245,7 +12867,7 @@ paths:
   /api/wms/materials/{key}/inventory:
     put:
       description: ''
-      summary: Update a MaterialInventory
+      summary: Update a Material
       parameters:
         - name: key
           description: string|required
@@ -12265,7 +12887,7 @@ paths:
                 type: object
                 properties:
                   data:
-                    $ref: '#/components/schemas/MaterialInventory'
+                    $ref: '#/components/schemas/Material'
       requestBody:
         description: Request body
         content:
@@ -12294,15 +12916,15 @@ paths:
                   nullable: true
                   format: string
               example:
-                code: '28384229'
+                code: '98228256'
                 name: string
                 quantity: 10
                 unitCost: 10
-                locationKey: '00000972834074'
+                locationKey: '00000421592563'
   /api/wms/materials/{key}/children:
     get:
       description: ''
-      summary: Get a MaterialItem
+      summary: List MaterialItems
       parameters:
         - name: key
           description: string|required
@@ -12341,11 +12963,44 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/MaterialItem'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/wms/materials:
     get:
-      description: >+
-        Material refers to consumables, spare parts and tools used in
-        maintenance and production chains.
+      description: |2+
 
          Filtering:
 
@@ -12367,7 +13022,7 @@ paths:
          * sort[createdAt]=1 // DESC
          * sort[createdAt]=0 // ASC
 
-      summary: List Materials
+      summary: List Parts
       parameters:
         - name: filter
           description: array
@@ -12410,7 +13065,7 @@ paths:
                   data:
                     type: array
                     items:
-                      $ref: '#/components/schemas/Material'
+                      $ref: '#/components/schemas/Part'
                   links:
                     type: object
                     properties:
@@ -12443,7 +13098,7 @@ paths:
                         type: number
     post:
       description: ''
-      summary: Create a Material
+      summary: Create a Part
       parameters: []
       tags:
         - WMS
@@ -12456,7 +13111,7 @@ paths:
                 type: object
                 properties:
                   data:
-                    $ref: '#/components/schemas/Material'
+                    $ref: '#/components/schemas/Part'
       requestBody:
         description: Request body
         content:
@@ -12542,25 +13197,23 @@ paths:
                 assetKeys: '[]'
                 vendorKeys: string
                 documents: '[]'
-                accountKey: '02000695942019'
-                code: '80511939'
+                accountKey: '07000735925460'
+                code: '59796312'
                 isAssembly: 'true'
                 partNumber: string
                 name: string
-                description: Minima ullam sint ab ad.
+                description: Ratione quidem soluta consequatur ex ea.
                 notes: string
                 criticality: string
-                isActive: 'false'
+                isActive: 'true'
                 manufacturerName: string
                 minimumQuantity: string
                 cost: string
                 currency: string
   /api/wms/materials/{key}:
     get:
-      description: >
-        Material refers to consumables, spare parts and tools used in
-        maintenance and production chains.
-      summary: Get a Material
+      description: ''
+      summary: Get a Part
       parameters:
         - name: key
           description: string|required
@@ -12580,10 +13233,10 @@ paths:
                 type: object
                 properties:
                   data:
-                    $ref: '#/components/schemas/Material'
+                    $ref: '#/components/schemas/Part'
     put:
       description: ''
-      summary: Update a Material
+      summary: Update a Part
       parameters:
         - name: key
           description: string|required
@@ -12603,7 +13256,7 @@ paths:
                 type: object
                 properties:
                   data:
-                    $ref: '#/components/schemas/Material'
+                    $ref: '#/components/schemas/Part'
       requestBody:
         description: Request body
         content:
@@ -12689,12 +13342,12 @@ paths:
                 assetKeys: '[]'
                 vendorKeys: string
                 documents: '[]'
-                accountKey: '04000721514274'
-                code: '14783739'
-                isAssembly: 'true'
+                accountKey: '06000420815513'
+                code: '00996563'
+                isAssembly: 'false'
                 partNumber: string
                 name: string
-                description: Et aut est quo ea similique omnis ducimus.
+                description: Quo quis aut quaerat et neque aut.
                 notes: string
                 criticality: string
                 isActive: 'true'
@@ -13091,7 +13744,7 @@ paths:
   /api/wms/shipment-orders/{key}/delivered:
     post:
       description: ''
-      summary: Create a ShipmentOrderDelivered
+      summary: Create a ShipmentOrder
       parameters:
         - name: key
           description: string|required
@@ -13111,7 +13764,7 @@ paths:
                 type: object
                 properties:
                   data:
-                    $ref: '#/components/schemas/ShipmentOrderDelivered'
+                    $ref: '#/components/schemas/ShipmentOrder'
       requestBody:
         description: Request body
         content:
@@ -13292,18 +13945,18 @@ paths:
                   nullable: true
                   format: string
               example:
-                code: '25368178'
+                code: '40335407'
                 name: string
                 quantity: 10
                 unitCost: 10
-                locationKey: '04000515885181'
+                locationKey: '06000601756184'
   /api/wms/statuses/purchase-orders:
     get:
       description: >
         Indicates the current condition or state of a process, object, or
         situation, highlighting its progress, position, or quality at any
         specific moment.
-      summary: Get a Status
+      summary: List Statuses
       parameters:
         - name: filter
           description: array
@@ -13335,13 +13988,48 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Status'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/wms/statuses/sales-orders:
     get:
       description: >
         Indicates the current condition or state of a process, object, or
         situation, highlighting its progress, position, or quality at any
         specific moment.
-      summary: Get a Status
+      summary: List Statuses
       parameters:
         - name: filter
           description: array
@@ -13373,13 +14061,48 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Status'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/wms/statuses/stock-transfers:
     get:
       description: >
         Indicates the current condition or state of a process, object, or
         situation, highlighting its progress, position, or quality at any
         specific moment.
-      summary: Get a Status
+      summary: List Statuses
       parameters:
         - name: filter
           description: array
@@ -13411,13 +14134,48 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Status'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/wms/statuses/shipment-orders:
     get:
       description: >
         Indicates the current condition or state of a process, object, or
         situation, highlighting its progress, position, or quality at any
         specific moment.
-      summary: Get a Status
+      summary: List Statuses
       parameters:
         - name: filter
           description: array
@@ -13449,6 +14207,41 @@ paths:
             application/json:
               schema:
                 type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Status'
+                  links:
+                    type: object
+                    properties:
+                      first:
+                        type: string
+                      last:
+                        type: string
+                      prev:
+                        type: string
+                        format: nullable
+                      next:
+                        type: string
+                        format: nullable
+                  meta:
+                    type: object
+                    properties:
+                      current_page:
+                        type: number
+                      from:
+                        type: number
+                      last_page:
+                        type: number
+                      path:
+                        type: string
+                      per_page:
+                        type: number
+                      to:
+                        type: number
+                      total:
+                        type: number
   /api/integrations/current:
     get:
       description: ''
@@ -13534,8 +14327,8 @@ components:
         phone: string
         email: string
         notes: string
-        createdAt: '1994-04-23T02:40:22Z'
-        updatedAt: '1995-02-21T15:50:16Z'
+        createdAt: '2020-11-02T00:48:49Z'
+        updatedAt: '1989-04-23T22:37:56Z'
     Contact:
       title: Contact
       properties:
@@ -13574,8 +14367,8 @@ components:
         position: string
         phones: string
         emails: string
-        isActive: 'false'
-        isDefault: 'false'
+        isActive: 'true'
+        isDefault: 'true'
     Organization:
       title: Organization
       properties:
@@ -13631,11 +14424,11 @@ components:
           nullable: false
           format: string
       example:
-        key: '02000854549613'
-        currencyKey: '00000814559882'
+        key: '06000890530428'
+        currencyKey: '03000650788258'
         name: string
-        code: '27969144'
-        description: Cupiditate beatae est iste.
+        code: '81761692'
+        description: Repellendus dolor sequi et commodi commodi.
         addresses:
           - countryName: string
             addressLines: string
@@ -13644,8 +14437,8 @@ components:
             phone: string
             email: string
             notes: string
-            createdAt: '2022-01-04T03:08:41Z'
-            updatedAt: '2021-02-01T16:06:17Z'
+            createdAt: '1995-11-22T11:45:50Z'
+            updatedAt: '2002-04-23T06:06:41Z'
         billingAddress:
           countryName: string
           addressLines: string
@@ -13654,18 +14447,18 @@ components:
           phone: string
           email: string
           notes: string
-          createdAt: '1997-01-16T07:24:52Z'
-          updatedAt: '1981-10-20T15:29:54Z'
+          createdAt: '1983-03-03T19:57:05Z'
+          updatedAt: '2005-02-11T01:37:14Z'
         contacts:
           - name: string
             position: string
             phones: string
             emails: string
-            isActive: 'false'
-            isDefault: 'true'
-        createdAt: '1980-08-31T18:00:01Z'
-        updatedAt: '2008-08-15T11:23:32Z'
-        deletedAt: '2003-05-09T01:30:49Z'
+            isActive: 'true'
+            isDefault: 'false'
+        createdAt: '2009-02-24T01:40:15Z'
+        updatedAt: '2000-07-03T23:43:53Z'
+        deletedAt: '1971-02-16T10:50:47Z'
     Site:
       title: Site
       properties:
@@ -13744,11 +14537,11 @@ components:
           nullable: false
           format: string
       example:
-        key: '06000783375096'
-        organizationKey: '06000520168445'
+        key: '02000902695633'
+        organizationKey: '02000578473213'
         name: string
-        code: '30849518'
-        description: Voluptatum eligendi non ut ea quia.
+        code: '17752916'
+        description: Iusto sequi ut sed dignissimos.
         contact:
           name: string
           position: string
@@ -13756,7 +14549,7 @@ components:
           emails: string
           isActive: 'false'
           isDefault: 'false'
-        customerKey: '06000263294967'
+        customerKey: '06000627309719'
         lat: string
         lng: string
         address:
@@ -13767,8 +14560,8 @@ components:
           phone: string
           email: string
           notes: string
-          createdAt: '1992-09-30T21:41:02Z'
-          updatedAt: '1981-10-05T09:27:04Z'
+          createdAt: '2008-02-22T22:23:12Z'
+          updatedAt: '2007-01-26T03:25:04Z'
         billingAddress:
           countryName: string
           addressLines: string
@@ -13777,13 +14570,13 @@ components:
           phone: string
           email: string
           notes: string
-          createdAt: '2008-10-25T01:32:30Z'
-          updatedAt: '1999-05-22T03:02:50Z'
+          createdAt: '1975-09-16T23:59:19Z'
+          updatedAt: '1975-12-21T09:11:43Z'
         properties: string
         notes: string
-        createdAt: '2002-01-06T10:29:46Z'
-        updatedAt: '2001-12-11T00:41:53Z'
-        deletedAt: '1978-06-02T19:59:17Z'
+        createdAt: '1991-05-01T04:42:25Z'
+        updatedAt: '1979-07-28T21:25:05Z'
+        deletedAt: '2005-06-05T09:08:47Z'
     Location:
       title: Location
       properties:
@@ -13807,6 +14600,11 @@ components:
           description: Description
           nullable: false
           format: string
+        userManagerKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
         description:
           type: string
           description: Description
@@ -13823,10 +14621,23 @@ components:
           nullable: false
           format: string
         address:
+          type: object
+          $ref: '#/components/schemas/Address'
+        isActive:
+          type: boolean
+          description: Description
+          nullable: false
+          format: boolean
+        contact:
           type: string
           description: Description
           nullable: false
           format: string
+        isDefault:
+          type: boolean
+          description: Description
+          nullable: false
+          format: boolean
         createdAt:
           type: string
           description: Description
@@ -13843,17 +14654,30 @@ components:
           nullable: false
           format: string
       example:
-        key: '02000055457608'
-        siteKey: '02000720107937'
-        parentKey: '04000887764768'
+        key: '04000136696345'
+        siteKey: '03000348019346'
+        parentKey: '07000090805841'
         name: string
-        description: Rerum aut rerum maiores voluptatibus quia cum.
-        code: '60614612'
+        userManagerKey: '01000078615072'
+        description: Et expedita omnis et dolorum voluptatem et dicta.
+        code: '12782338'
         type: string
-        address: string
-        createdAt: '1979-12-08T06:59:55Z'
-        updatedAt: '2006-07-01T07:08:34Z'
-        deletedAt: '1989-07-13T09:31:27Z'
+        address:
+          countryName: string
+          addressLines: string
+          city: string
+          postCode: string
+          phone: string
+          email: string
+          notes: string
+          createdAt: '1989-09-09T13:22:23Z'
+          updatedAt: '2021-03-08T15:08:14Z'
+        isActive: 'false'
+        contact: string
+        isDefault: 'true'
+        createdAt: '1991-06-08T11:34:49Z'
+        updatedAt: '2006-10-14T21:09:07Z'
+        deletedAt: '1986-02-14T21:25:12Z'
     Storeroom:
       title: Storeroom
       properties:
@@ -13923,19 +14747,19 @@ components:
           nullable: false
           format: string
       example:
-        key: '01000985471199'
-        parentKey: '01000773445404'
-        siteKey: '05000673039390'
-        locationKey: '07000246633493'
-        userManagerKey: '05000011789924'
-        code: '79551502'
+        key: '03000461696639'
+        parentKey: '02000970683093'
+        siteKey: '02000525954012'
+        locationKey: '06000186243495'
+        userManagerKey: '04000933631943'
+        code: '12798438'
         name: string
         type: string
-        description: Nulla voluptas tenetur sunt incidunt dolorem.
+        description: Ipsam sed qui dolores culpa.
         priority: string
-        createdAt: '1971-01-16T02:16:48Z'
-        updatedAt: '2019-03-21T15:18:13Z'
-        deletedAt: '2012-04-23T07:35:52Z'
+        createdAt: '2000-11-30T04:46:43Z'
+        updatedAt: '2020-06-02T14:15:16Z'
+        deletedAt: '1982-08-20T04:24:48Z'
     Account:
       title: Account
       properties:
@@ -13959,6 +14783,16 @@ components:
           description: Description
           nullable: false
           format: string
+        activatedAt:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        expiresAt:
+          type: string
+          description: Description
+          nullable: false
+          format: string
         createdAt:
           type: string
           description: Description
@@ -13975,13 +14809,15 @@ components:
           nullable: false
           format: string
       example:
-        key: '07000885883442'
-        code: '49108132'
+        key: '04000916682292'
+        code: '19156583'
         name: string
-        description: Saepe neque quis omnis sint.
-        createdAt: '1992-09-01T05:46:34Z'
-        updatedAt: '2000-06-14T06:34:09Z'
-        deletedAt: '1992-01-28T17:09:19Z'
+        description: Iusto voluptatem modi earum ex fuga.
+        activatedAt: '1995-12-02T09:55:00Z'
+        expiresAt: '2020-12-15T21:45:27Z'
+        createdAt: '1972-07-21T01:02:46Z'
+        updatedAt: '1971-07-10T18:44:48Z'
+        deletedAt: '2010-01-11T21:28:26Z'
     Team:
       title: Team
       properties:
@@ -14025,19 +14861,30 @@ components:
           description: Description
           nullable: false
           format: string
+        organizationKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
       example:
-        key: '03000730492859'
-        accountKey: '04000989148438'
-        code: '37596750'
+        key: '07000823569955'
+        accountKey: '04000506398563'
+        code: '47282414'
         name: string
-        description: Ut blanditiis impedit sed et.
-        createdAt: '1974-06-02T06:32:31Z'
-        updatedAt: '2002-04-15T08:51:24Z'
-        deletedAt: '2006-06-30T04:46:21Z'
+        description: Porro et id cumque qui.
+        createdAt: '1990-01-01T21:20:02Z'
+        updatedAt: '1989-05-08T09:13:55Z'
+        deletedAt: '2002-04-11T18:16:49Z'
+        organizationKey: '06000879310855'
     Labor:
       title: Labor
       properties:
         key:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        organizationKey:
           type: string
           description: Description
           nullable: false
@@ -14053,6 +14900,16 @@ components:
           nullable: false
           format: array
         accountKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        vendorKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        userKey:
           type: string
           description: Description
           nullable: false
@@ -14082,7 +14939,7 @@ components:
           description: Description
           nullable: false
           format: string
-        note:
+        notes:
           type: string
           description: Description
           nullable: false
@@ -14092,12 +14949,12 @@ components:
           description: Description
           nullable: false
           format: boolean
-        cost:
+        costUomKey:
           type: string
           description: Description
           nullable: false
           format: string
-        currency:
+        currencyKey:
           type: string
           description: Description
           nullable: false
@@ -14118,22 +14975,25 @@ components:
           nullable: false
           format: string
       example:
-        key: '03000036643031'
+        key: '05000289479377'
+        organizationKey: '06000936325780'
         siteKeys: '[]'
         locationKeys: '[]'
-        accountKey: '06000437903460'
-        teamKey: '03000004155122'
+        accountKey: '08000825452523'
+        vendorKey: '00000744690987'
+        userKey: '02000618063429'
+        teamKey: '00000425489551'
         userId: string
         name: string
         roleName: string
-        description: Recusandae odit nulla iusto voluptas et est.
-        note: string
+        description: Quis qui minus ut a harum cupiditate consequatur.
+        notes: string
         isActive: 'false'
-        cost: string
-        currency: string
-        createdAt: '2010-11-24T08:59:42Z'
-        updatedAt: '1970-08-17T04:29:42Z'
-        deletedAt: '1970-09-01T01:38:23Z'
+        costUomKey: '03000339510343'
+        currencyKey: '09000611434388'
+        createdAt: '1984-07-10T03:48:12Z'
+        updatedAt: '2003-07-05T18:01:43Z'
+        deletedAt: '1977-02-22T06:23:13Z'
     User:
       title: User
       properties:
@@ -14198,18 +15058,18 @@ components:
           nullable: false
           format: string
       example:
-        key: '04000608061249'
-        organizationKey: '02000184622714'
+        key: '04000144419643'
+        organizationKey: '02000794737383'
         siteKeys: '[]'
         locationKeys: '[]'
         name: string
         roleName: string
-        description: Maxime eos et rerum aspernatur ut.
+        description: Quasi qui corrupti dolorem blanditiis.
         notes: string
         isActive: string
-        createdAt: '1986-07-31T07:23:34Z'
-        updatedAt: '2022-11-22T02:41:16Z'
-        deletedAt: '1993-03-19T11:53:54Z'
+        createdAt: '2020-08-14T18:58:16Z'
+        updatedAt: '1997-08-23T23:30:53Z'
+        deletedAt: '1992-05-03T04:32:32Z'
     UnitOfMeasure:
       title: UnitOfMeasure
       properties:
@@ -14234,9 +15094,9 @@ components:
           nullable: false
           format: boolean
       example:
-        key: '06000137844208'
+        key: '01000114593275'
         name: string
-        code: '52654619'
+        code: '26450810'
         isActive: 'false'
     Company:
       title: Company
@@ -14263,14 +15123,12 @@ components:
           format: string
         addresses:
           type: array
-          description: Description
-          nullable: false
-          format: array
+          items:
+            $ref: '#/components/schemas/Address'
         billingAddress:
           type: array
-          description: Description
-          nullable: false
-          format: array
+          items:
+            $ref: '#/components/schemas/Address'
         currencyKey:
           type: string
           description: Description
@@ -14297,17 +15155,35 @@ components:
           nullable: false
           format: string
       example:
-        key: '03000442462006'
-        parentKey: '06000533763377'
+        key: '09000049423430'
+        parentKey: '07000035319477'
         name: string
-        code: '60737885'
-        addresses: '[]'
-        billingAddress: '[]'
-        currencyKey: '08000694576447'
+        code: '20767679'
+        addresses:
+          - countryName: string
+            addressLines: string
+            city: string
+            postCode: string
+            phone: string
+            email: string
+            notes: string
+            createdAt: '2016-09-30T09:08:17Z'
+            updatedAt: '2014-05-30T20:50:18Z'
+        billingAddress:
+          - countryName: string
+            addressLines: string
+            city: string
+            postCode: string
+            phone: string
+            email: string
+            notes: string
+            createdAt: '2013-05-30T21:48:07Z'
+            updatedAt: '2006-09-09T21:06:59Z'
+        currencyKey: '04000100211339'
         notes: string
-        createdAt: '2009-04-17T21:11:15Z'
-        updatedAt: '1983-07-27T01:15:55Z'
-        deletedAt: '1987-01-15T10:00:58Z'
+        createdAt: '2013-10-29T05:54:49Z'
+        updatedAt: '2001-10-10T07:08:02Z'
+        deletedAt: '2021-02-22T03:17:02Z'
     Vendor:
       title: Vendor
       properties:
@@ -14326,17 +15202,7 @@ components:
           description: Description
           nullable: false
           format: string
-        address:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        currency:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        notes:
+        companyKey:
           type: string
           description: Description
           nullable: false
@@ -14357,15 +15223,13 @@ components:
           nullable: false
           format: string
       example:
-        key: '01000158196759'
+        key: '07000630044977'
         name: string
-        code: '41111666'
-        address: string
-        currency: string
-        notes: string
-        createdAt: '2020-01-14T17:25:19Z'
-        updatedAt: '1973-03-11T13:56:11Z'
-        deletedAt: '2008-08-26T19:23:57Z'
+        code: '62908177'
+        companyKey: '01000791405293'
+        createdAt: '1999-04-03T09:57:51Z'
+        updatedAt: '1982-10-22T13:05:51Z'
+        deletedAt: '2010-12-12T11:17:13Z'
     Customer:
       title: Customer
       properties:
@@ -14384,32 +15248,7 @@ components:
           description: Description
           nullable: false
           format: string
-        address:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        notes:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        isActive:
-          type: boolean
-          description: Description
-          nullable: false
-          format: boolean
-        contactPerson:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        paymentTerms:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        currencyCode:
+        companyKey:
           type: string
           description: Description
           nullable: false
@@ -14430,18 +15269,13 @@ components:
           nullable: false
           format: string
       example:
-        key: '08000750749675'
+        key: '03000437665316'
         name: string
-        code: '16565142'
-        address: string
-        notes: string
-        isActive: 'false'
-        contactPerson: string
-        paymentTerms: string
-        currencyCode: string
-        createdAt: '2014-11-17T13:53:45Z'
-        updatedAt: '2006-11-28T21:32:32Z'
-        deletedAt: '1982-03-11T13:37:16Z'
+        code: '96819111'
+        companyKey: '07000871284548'
+        createdAt: '1999-08-19T08:32:29Z'
+        updatedAt: '1980-10-18T18:27:05Z'
+        deletedAt: '2003-10-21T12:28:05Z'
     Stock:
       title: Stock
       properties:
@@ -14511,149 +15345,19 @@ components:
           nullable: false
           format: string
       example:
-        key: '07000024746476'
-        productKey: '01000925191676'
-        materialKey: '07000666993894'
-        locationKey: '05000681313546'
-        storeroomKey: '00000720470723'
-        assetKey: '09000896975198'
+        key: '08000480227942'
+        productKey: '08000455777822'
+        materialKey: '02000804762122'
+        locationKey: '05000623366357'
+        storeroomKey: '01000466021053'
+        assetKey: '04000453356583'
         position: string
-        uomKey: '02000537689397'
+        uomKey: '01000894022288'
         quantity: string
-        expiresAt: '1997-11-29T03:38:23Z'
-        createdAt: '2002-05-16T00:52:14Z'
-        updatedAt: '2018-05-01T05:29:47Z'
-        deletedAt: '2002-05-11T23:46:45Z'
-    PurchaseOrderStatus:
-      title: PurchaseOrderStatus
-      properties:
-        key:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        siteKey:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        orderDate:
-          type: object
-          description: Description
-          nullable: false
-          format: object
-        vendorKey:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        orderNo:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        status:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        warehouseName:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        title:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        description:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        dueAt:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        approvedAt:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        completedAt:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        shippingMethod:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        terms:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        notes:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        deliveryAddress:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        currency:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        totalNetValue:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        totalGrossValue:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        updatedAt:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        lines:
-          type: array
-          description: Description
-          nullable: false
-          format: array
-      example:
-        key: '01000780265295'
-        siteKey: '05000805656407'
-        orderDate: '2000-08-11T09:40:58Z'
-        vendorKey: '08000380096528'
-        orderNo: string
-        status: string
-        warehouseName: string
-        title: Architecto unde aut a quia accusamus a.
-        description: Corrupti asperiores iure sed animi et iusto qui.
-        dueAt: '1987-03-10T01:38:43Z'
-        approvedAt: '1993-08-04T23:07:20Z'
-        completedAt: '1979-01-14T02:42:33Z'
-        shippingMethod: string
-        terms: string
-        notes: string
-        deliveryAddress: string
-        currency: string
-        totalNetValue: string
-        totalGrossValue: string
-        updatedAt: '1982-02-19T17:27:44Z'
-        lines: '[]'
+        expiresAt: '2020-07-05T06:04:38Z'
+        createdAt: '2000-06-13T16:54:49Z'
+        updatedAt: '1994-11-27T20:40:43Z'
+        deletedAt: '1986-12-21T02:30:56Z'
     LineItem:
       title: LineItem
       properties:
@@ -14672,7 +15376,17 @@ components:
           description: Description
           nullable: false
           format: string
-        partKey:
+        statusKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        materialKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        storeroomKey:
           type: string
           description: Description
           nullable: false
@@ -14682,12 +15396,27 @@ components:
           description: Description
           nullable: false
           format: string
-        lineNo:
+        productKey:
           type: string
           description: Description
           nullable: false
           format: string
-        warehouseName:
+        price:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        discount:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        deliveryAt:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        lineNo:
           type: string
           description: Description
           nullable: false
@@ -14697,7 +15426,7 @@ components:
           description: Description
           nullable: false
           format: string
-        title:
+        name:
           type: string
           description: Description
           nullable: false
@@ -14727,12 +15456,7 @@ components:
           description: Description
           nullable: false
           format: string
-        status:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        uom:
+        uomKey:
           type: object
           description: Description
           nullable: false
@@ -14742,7 +15466,7 @@ components:
           description: Description
           nullable: false
           format: string
-        currency:
+        currencyKey:
           type: string
           description: Description
           nullable: false
@@ -14778,30 +15502,34 @@ components:
           nullable: false
           format: string
       example:
-        key: '05000231342433'
-        locationKey: '09000156003554'
-        assetKey: '05000158168580'
-        partKey: '03000624087664'
-        vendorKey: '05000505866247'
+        key: '02000132987692'
+        locationKey: '00000830101418'
+        assetKey: '06000874257808'
+        statusKey: '06000801567829'
+        materialKey: '08000277818769'
+        storeroomKey: '04000582919937'
+        vendorKey: '09000821627348'
+        productKey: '04000392713437'
+        price: string
+        discount: string
+        deliveryAt: '1984-11-19T17:32:44Z'
         lineNo: string
-        warehouseName: string
-        code: '18340730'
-        title: Quibusdam distinctio modi vero ea.
-        description: Nihil autem nostrum omnis dolorem aliquam iusto.
+        code: '27632901'
+        name: string
+        description: Ab deleniti non repellendus iste totam.
         lineRef: string
         quantity: string
         receivedQuantity: string
         type: string
-        status: string
-        uom: string
+        uomKey: '02000043626457'
         cost: string
-        currency: string
+        currencyKey: '09000667995273'
         lineTotalValue: string
         lineTaxValue: string
         notes: string
-        dueAt: '1983-06-30T02:23:08Z'
-        createdAt: '1994-04-02T02:39:09Z'
-        updatedAt: '2021-08-23T00:11:29Z'
+        dueAt: '2002-06-05T04:54:35Z'
+        createdAt: '2021-05-15T06:57:57Z'
+        updatedAt: '1995-01-21T14:07:21Z'
     PurchaseOrder:
       title: PurchaseOrder
       properties:
@@ -14830,12 +15558,7 @@ components:
           description: Description
           nullable: false
           format: string
-        status:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        warehouseName:
+        statusKey:
           type: string
           description: Description
           nullable: false
@@ -14885,7 +15608,7 @@ components:
           description: Description
           nullable: false
           format: string
-        currency:
+        currencyKey:
           type: string
           description: Description
           nullable: false
@@ -14905,61 +15628,187 @@ components:
           description: Description
           nullable: false
           format: string
-        lines:
+        lineItems:
           type: array
           items:
             $ref: '#/components/schemas/LineItem'
       example:
-        key: '02000064096827'
-        siteKey: '08000599408413'
-        orderDate: '1971-08-26T18:46:42Z'
-        vendorKey: '05000123637989'
+        key: '01000513626755'
+        siteKey: '02000391710045'
+        orderDate: '1991-03-12T22:58:09Z'
+        vendorKey: '04000061748454'
         orderNo: string
-        status: string
-        warehouseName: string
-        title: Voluptatem unde qui doloremque molestias quia id.
-        description: Rem nemo vel facere in sunt voluptatem officiis.
-        dueAt: '2015-11-04T01:23:57Z'
-        approvedAt: '1987-10-14T19:50:21Z'
-        completedAt: '1989-07-23T22:03:41Z'
+        statusKey: '08000238056946'
+        title: Dolores iusto laudantium aut rem non.
+        description: Quis quia nostrum quos expedita laborum est.
+        dueAt: '1976-09-18T08:14:31Z'
+        approvedAt: '2000-02-17T10:02:12Z'
+        completedAt: '1992-01-20T01:03:10Z'
         shippingMethod: string
         terms: string
         notes: string
         deliveryAddress: string
-        currency: string
+        currencyKey: '02000591276748'
         totalNetValue: string
         totalGrossValue: string
-        updatedAt: '2011-07-03T08:35:35Z'
-        lines:
-          - key: '03000472237947'
-            locationKey: '03000285503188'
-            assetKey: '06000958848677'
-            partKey: '04000480509612'
-            vendorKey: '07000435633456'
+        updatedAt: '1973-10-03T22:49:35Z'
+        lineItems:
+          - key: '08000371181347'
+            locationKey: '09000613930986'
+            assetKey: '06000566387111'
+            statusKey: '01000868056508'
+            materialKey: '01000080415398'
+            storeroomKey: '09000345752914'
+            vendorKey: '01000131110548'
+            productKey: '04000267991154'
+            price: string
+            discount: string
+            deliveryAt: '2010-06-23T00:31:29Z'
             lineNo: string
-            warehouseName: string
-            code: '00789073'
-            title: Dolorum laborum eum totam nobis quam.
-            description: Excepturi iusto sed sit assumenda.
+            code: '69444845'
+            name: string
+            description: Facilis assumenda quo aperiam aut sit.
             lineRef: string
             quantity: string
             receivedQuantity: string
             type: string
-            status: string
-            uom: string
+            uomKey: '00000056261108'
             cost: string
-            currency: string
+            currencyKey: '08000034295589'
             lineTotalValue: string
             lineTaxValue: string
             notes: string
-            dueAt: '1991-09-26T19:19:04Z'
-            createdAt: '1979-11-01T18:36:02Z'
-            updatedAt: '1988-06-24T00:33:53Z'
+            dueAt: '2006-05-14T19:48:19Z'
+            createdAt: '1989-12-18T21:23:50Z'
+            updatedAt: '2007-03-07T09:11:36Z'
     PurchaseOrderCollection:
       type: array
       items:
         $ref: '#/components/schemas/PurchaseOrder'
-    MaterialInventory: []
+    Material:
+      title: Material
+      properties:
+        key:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        organizationKeys:
+          type: array
+          description: Description
+          nullable: false
+          format: array
+        parentKeys:
+          type: array
+          description: Description
+          nullable: false
+          format: array
+        assetKeys:
+          type: array
+          description: Description
+          nullable: false
+          format: array
+        code:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        isAssembly:
+          type: boolean
+          description: Description
+          nullable: false
+          format: boolean
+        partNumber:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        name:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        description:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        notes:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        criticality:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        isActive:
+          type: boolean
+          description: Description
+          nullable: false
+          format: boolean
+        manufacturerName:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        uomKey:
+          type: object
+          description: Description
+          nullable: false
+          format: object
+        supplyOptions:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        createdAt:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        updatedAt:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        deletedAt:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        inventories:
+          type: array
+          description: Description
+          nullable: false
+          format: array
+        dimensions:
+          type: array
+          description: Description
+          nullable: false
+          format: array
+      example:
+        key: '00000635841066'
+        organizationKeys: '[]'
+        parentKeys: '[]'
+        assetKeys: '[]'
+        code: '54250079'
+        isAssembly: 'true'
+        partNumber: string
+        name: string
+        description: Sunt dolores inventore rerum inventore ullam.
+        notes: string
+        criticality: string
+        isActive: 'true'
+        manufacturerName: string
+        uomKey: '01000585681433'
+        supplyOptions: string
+        createdAt: '1971-08-02T08:22:39Z'
+        updatedAt: '2014-12-15T12:02:06Z'
+        deletedAt: '1974-12-14T19:31:27Z'
+        inventories: '[]'
+        dimensions: '[]'
     MaterialItem:
       title: MaterialItem
       properties:
@@ -15059,27 +15908,27 @@ components:
           nullable: false
           format: string
       example:
-        key: '00000523621756'
-        materialKey: '08000378812993'
-        assemblyKey: '09000897990172'
-        assetKey: '08000231340609'
-        assetTemplateKey: '00000663266424'
-        workOrderKey: '01000034087557'
-        pmKey: '08000624506613'
-        productionOrderKey: '03000619533018'
+        key: '04000263574373'
+        materialKey: '03000174977158'
+        assemblyKey: '06000125773550'
+        assetKey: '03000688877432'
+        assetTemplateKey: '01000247499064'
+        workOrderKey: '07000302298378'
+        pmKey: '09000914157886'
+        productionOrderKey: '01000312805474'
         partNumber: string
         drawingNumber: string
         positionNumber: string
-        documentKey: '00000310243778'
+        documentKey: '00000410385223'
         name: string
-        uomKey: '09000160745015'
+        uomKey: '01000569969061'
         quantity: string
         requiredQuantity: string
-        createdAt: '2010-03-12T10:23:38Z'
-        updatedAt: '1978-05-05T10:04:36Z'
-        deletedAt: '1973-09-08T15:44:57Z'
-    Material:
-      title: Material
+        createdAt: '2006-05-21T20:53:28Z'
+        updatedAt: '1998-05-18T19:36:45Z'
+        deletedAt: '1994-09-13T23:20:06Z'
+    Part:
+      title: Part
       properties:
         key:
           type: string
@@ -15207,18 +16056,18 @@ components:
           nullable: false
           format: array
       example:
-        key: '04000924385770'
+        key: '07000659508382'
         siteKeys: '[]'
         parentKeys: '[]'
         assetKeys: '[]'
         vendorKeys: string
         documents: '[]'
-        accountKey: '02000479741387'
-        code: '75233297'
-        isAssembly: 'false'
+        accountKey: '07000279152161'
+        code: '47831384'
+        isAssembly: 'true'
         partNumber: string
         name: string
-        description: Nesciunt aut optio eveniet placeat.
+        description: Earum fugit provident laboriosam.
         notes: string
         criticality: string
         isActive: 'false'
@@ -15227,15 +16076,15 @@ components:
         uom: string
         cost: string
         currency: string
-        createdAt: '2022-07-08T12:01:43Z'
-        updatedAt: '1976-03-06T14:57:44Z'
-        deletedAt: '1999-09-21T23:23:48Z'
+        createdAt: '2002-01-03T19:29:22Z'
+        updatedAt: '1998-03-26T18:40:20Z'
+        deletedAt: '1976-09-16T09:03:53Z'
         inventory: '[]'
         drawings: '[]'
-    MaterialCollection:
+    PartCollection:
       type: array
       items:
-        $ref: '#/components/schemas/Material'
+        $ref: '#/components/schemas/Part'
     Document:
       title: Document
       properties:
@@ -15290,16 +16139,16 @@ components:
           nullable: false
           format: string
       example:
-        key: '06000055478019'
+        key: '05000746357275'
         entityKeys: '[]'
         name: string
         url: string
         type: string
         contentType: string
-        description: Ad temporibus ea rerum nam.
+        description: Eos aut delectus ab quia laboriosam maiores.
         notes: string
-        createdAt: '1985-08-09T17:10:05Z'
-        updatedAt: '1971-08-24T03:05:48Z'
+        createdAt: '1980-02-11T15:40:30Z'
+        updatedAt: '1980-09-13T08:26:45Z'
     Asset:
       title: Asset
       properties:
@@ -15323,11 +16172,6 @@ components:
           description: Description
           nullable: false
           format: string
-        modelKey:
-          type: string
-          description: Description
-          nullable: false
-          format: string
         teamKey:
           type: string
           description: Description
@@ -15347,7 +16191,7 @@ components:
           description: Description
           nullable: false
           format: string
-        accountKey:
+        accountKeys:
           type: string
           description: Description
           nullable: false
@@ -15362,6 +16206,21 @@ components:
           description: Description
           nullable: false
           format: string
+        makeCompanyKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        assetTemplateKey:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        isPhysical:
+          type: boolean
+          description: Description
+          nullable: false
+          format: boolean
         notes:
           type: string
           description: Description
@@ -15382,7 +16241,7 @@ components:
           description: Description
           nullable: false
           format: boolean
-        manufacturerName:
+        makeName:
           type: string
           description: Description
           nullable: false
@@ -15423,42 +16282,44 @@ components:
           nullable: false
           format: string
       example:
-        key: '09000035500479'
-        siteKey: '07000333398871'
-        parentKey: '07000674618996'
-        vendorKey: '06000626009893'
-        modelKey: '03000082352511'
-        teamKey: '03000922364624'
+        key: '09000402943326'
+        siteKey: '00000415860696'
+        parentKey: '04000958343681'
+        vendorKey: '07000718225401'
+        teamKey: '09000416366223'
         documents:
-          - key: '08000833266579'
+          - key: '07000326435610'
             entityKeys: '[]'
             name: string
             url: string
             type: string
             contentType: string
-            description: Quod nesciunt animi rem debitis est.
+            description: Reiciendis atque et tempora magni.
             notes: string
-            createdAt: '1992-09-25T18:33:40Z'
-            updatedAt: '1993-07-10T00:14:33Z'
-        locationKey: '02000288060490'
-        customerKey: '09000257482251'
-        accountKey: '08000388353654'
+            createdAt: '2018-05-04T01:49:45Z'
+            updatedAt: '2023-11-15T04:34:57Z'
+        locationKey: '02000405232865'
+        customerKey: '03000666044844'
+        accountKeys: string
         name: string
-        description: Ut nobis nulla doloribus sit voluptates nihil.
+        description: Harum eaque laudantium expedita ut et aut rerum.
+        makeCompanyKey: '04000556958396'
+        assetTemplateKey: '03000905012697'
+        isPhysical: 'true'
         notes: string
         categoryName: string
         criticality: string
-        isActive: 'false'
-        manufacturerName: string
+        isActive: 'true'
+        makeName: string
         modelName: string
         serialNumber: string
-        activatedAt: '1981-07-17T19:06:52Z'
-        deactivatedAt: '2003-04-14T19:27:11Z'
-        createdAt: '1980-01-28T17:11:15Z'
-        updatedAt: '2017-12-14T17:05:01Z'
-        deletedAt: '1992-12-21T02:10:15Z'
-    AssetDownTime:
-      title: AssetDownTime
+        activatedAt: '2001-09-06T16:24:40Z'
+        deactivatedAt: '1971-11-20T05:00:21Z'
+        createdAt: '1998-05-05T22:57:19Z'
+        updatedAt: '1971-06-27T21:06:27Z'
+        deletedAt: '1976-01-15T09:33:22Z'
+    AssetDowntime:
+      title: AssetDowntime
       properties:
         key:
           type: string
@@ -15511,16 +16372,16 @@ components:
           nullable: false
           format: string
       example:
-        key: '06000333420165'
-        assetKey: '05000684742744'
-        description: Hic ut adipisci quae voluptatem sed doloremque.
-        startedAt: '1984-09-28T10:58:39Z'
-        endedAt: '2003-01-29T07:16:15Z'
+        key: '07000998474205'
+        assetKey: '09000245159343'
+        description: Necessitatibus odit libero cum doloremque.
+        startedAt: '2008-08-14T10:31:27Z'
+        endedAt: '2021-08-19T18:34:18Z'
         categoryName: string
         severity: string
         notes: string
-        createdAt: '1988-11-15T01:27:46Z'
-        updatedAt: '2011-07-01T03:13:17Z'
+        createdAt: '2014-06-21T08:24:58Z'
+        updatedAt: '1996-04-06T12:38:07Z'
     Model:
       title: Model
       properties:
@@ -15565,14 +16426,14 @@ components:
           nullable: false
           format: string
       example:
-        key: '07000523509523'
-        siteKey: '05000960388323'
+        key: '04000284321210'
+        siteKey: '09000634378383'
         documents: '[]'
         name: string
         manufacturerName: string
-        createdAt: '2009-10-29T09:27:51Z'
-        updatedAt: '2002-05-31T10:46:29Z'
-        deletedAt: '1989-07-29T09:34:42Z'
+        createdAt: '1980-09-27T02:30:42Z'
+        updatedAt: '2015-12-17T18:45:29Z'
+        deletedAt: '1986-03-11T21:47:25Z'
     Counter:
       title: Counter
       properties:
@@ -15586,21 +16447,21 @@ components:
           description: Description
           nullable: false
           format: string
-        assetKey:
+        assetKeys:
           type: string
           description: Description
           nullable: false
           format: string
-        name:
+        uomName:
           type: string
           description: Description
           nullable: false
           format: string
-        uom:
-          type: object
+        uomKey:
+          type: string
           description: Description
           nullable: false
-          format: object
+          format: string
         lastReading:
           type: object
           description: Description
@@ -15627,16 +16488,16 @@ components:
           nullable: false
           format: string
       example:
-        key: '05000184408776'
-        siteKey: '06000470031970'
-        assetKey: '01000780855174'
-        name: string
-        uom: string
+        key: '05000843239415'
+        siteKey: '07000708793298'
+        assetKeys: string
+        uomName: string
+        uomKey: '08000295467234'
         lastReading: string
-        lastReadingAt: '1999-04-21T07:05:09Z'
-        createdAt: '1978-09-23T23:15:11Z'
-        updatedAt: '2001-08-24T18:14:45Z'
-        deletedAt: '1988-02-04T17:13:40Z'
+        lastReadingAt: '2016-08-07T22:44:36Z'
+        createdAt: '1971-03-15T13:16:39Z'
+        updatedAt: '2013-04-06T01:49:46Z'
+        deletedAt: '1978-02-18T01:43:38Z'
     CounterReading:
       title: CounterReading
       properties:
@@ -15666,11 +16527,11 @@ components:
           nullable: false
           format: string
       example:
-        key: '05000528077961'
-        assetKey: '01000920660573'
-        meterKey: '04000254131424'
+        key: '03000874798992'
+        assetKey: '04000761376333'
+        meterKey: '09000415889000'
         reading: string
-        createdAt: '1982-04-26T19:07:24Z'
+        createdAt: '1988-12-09T03:30:13Z'
     PreventiveMaintenance:
       title: PreventiveMaintenance
       properties:
@@ -15709,11 +16570,6 @@ components:
           description: Description
           nullable: false
           format: string
-        instructions:
-          type: string
-          description: Description
-          nullable: false
-          format: string
         status:
           type: string
           description: Description
@@ -15744,12 +16600,12 @@ components:
           description: Description
           nullable: false
           format: array
-        documentKey:
+        assetTemplateKeys:
           type: string
           description: Description
           nullable: false
           format: string
-        documentPage:
+        statusKey:
           type: string
           description: Description
           nullable: false
@@ -15764,31 +16620,16 @@ components:
           description: Description
           nullable: false
           format: string
-        nextScheduledAt:
+        categoryCode:
           type: string
           description: Description
           nullable: false
           format: string
-        lastScheduledAt:
-          type: string
+        requiresMaterials:
+          type: boolean
           description: Description
           nullable: false
-          format: string
-        lastCompletedAt:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        lastCompletionRemarks:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        materials:
-          type: array
-          description: Description
-          nullable: false
-          format: array
+          format: boolean
         triggers:
           type: array
           description: Description
@@ -15815,270 +16656,30 @@ components:
           nullable: false
           format: string
       example:
-        key: '09000385305709'
+        key: '00000317136562'
         siteKeys: '[]'
         assetKeys: '[]'
-        teamKey: '08000381547221'
-        accountKey: '05000256346762'
-        title: Vero sequi assumenda adipisci placeat.
-        description: Nesciunt quisquam ut rerum illum exercitationem.
-        instructions: string
+        teamKey: '02000616860399'
+        accountKey: '07000362220665'
+        title: Ullam porro porro aut facere perspiciatis fuga.
+        description: Vel et error quos velit veritatis.
         status: string
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
         documents: '[]'
-        documentKey: '02000484547827'
-        documentPage: string
+        assetTemplateKeys: string
+        statusKey: '00000273600363'
         notes: string
-        dueAt: '2018-10-28T20:37:56Z'
-        nextScheduledAt: '2022-09-06T20:00:34Z'
-        lastScheduledAt: '1987-08-05T03:00:12Z'
-        lastCompletedAt: '1978-09-14T09:30:02Z'
-        lastCompletionRemarks: string
-        materials: '[]'
+        dueAt: '1975-04-07T16:33:14Z'
+        categoryCode: string
+        requiresMaterials: 'false'
         triggers: '[]'
         tasks: '[]'
-        createdAt: '1977-02-10T14:52:55Z'
-        updatedAt: '1974-07-12T12:42:14Z'
-        deletedAt: '1998-09-22T15:04:48Z'
-    WorkOrderStatus:
-      title: WorkOrderStatus
-      properties:
-        key:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        siteKey:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        assetKey:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        accountKey:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        title:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        description:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        workRequestKey:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        code:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        pmKey:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        teamKey:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        userAssignedKey:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        userCompletedKey:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        organizationKey:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        instructions:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        status:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        severity:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        estimatedTime:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        roleName:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        categoryName:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        documentKey:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        documentPage:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        notes:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        approvedAt:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        dueAt:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        scheduledAt:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        completedAt:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        completionRemarks:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        materials:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        documents:
-          type: array
-          description: Description
-          nullable: false
-          format: array
-        createdAt:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        updatedAt:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        deletedAt:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-      example:
-        key: '07000585707075'
-        siteKey: '03000085073406'
-        assetKey: '01000622821390'
-        accountKey: '00000056272463'
-        title: Aut odio voluptatem repellendus delectus non.
-        description: Veniam minima enim in qui ut.
-        workRequestKey: '08000412530319'
-        code: '95338934'
-        pmKey: '04000731097643'
-        teamKey: '03000570236141'
-        userAssignedKey: '02000523447396'
-        userCompletedKey: '08000120127022'
-        organizationKey: '04000121661750'
-        instructions: string
-        status: string
-        severity: string
-        estimatedTime: string
-        roleName: string
-        categoryName: string
-        documentKey: '01000011792118'
-        documentPage: string
-        notes: string
-        approvedAt: '1971-11-05T16:39:32Z'
-        dueAt: '2003-08-12T04:25:15Z'
-        scheduledAt: '1994-10-21T05:51:20Z'
-        completedAt: '2020-02-02T00:42:51Z'
-        completionRemarks: string
-        materials: string
-        documents: '[]'
-        createdAt: '1998-04-30T01:12:52Z'
-        updatedAt: '2020-06-11T02:35:24Z'
-        deletedAt: '1975-08-06T23:38:28Z'
-    Task:
-      title: Task
-      properties:
-        key:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        parentKey:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        title:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        description:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        priority:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        checkList:
-          type: array
-          description: Description
-          nullable: false
-          format: array
-      example:
-        key: '08000691274973'
-        parentKey: '03000657498246'
-        title: Sit dolores fugiat provident sit.
-        description: Molestiae et et et veniam in vel excepturi saepe.
-        priority: string
-        checkList: '[]'
+        createdAt: '1993-11-15T06:00:59Z'
+        updatedAt: '2018-10-13T08:26:34Z'
+        deletedAt: '1973-01-27T17:49:46Z'
     WorkOrder:
       title: WorkOrder
       properties:
@@ -16112,7 +16713,7 @@ components:
           description: Description
           nullable: false
           format: string
-        workRequestKey:
+        serviceRequestKey:
           type: string
           description: Description
           nullable: false
@@ -16132,12 +16733,12 @@ components:
           description: Description
           nullable: false
           format: string
-        userAssignedKey:
+        userApprovedKey:
           type: string
           description: Description
           nullable: false
           format: string
-        userCompletedKey:
+        assetDowntimeKey:
           type: string
           description: Description
           nullable: false
@@ -16153,11 +16754,6 @@ components:
           nullable: false
           format: string
         status:
-          type: string
-          description: Description
-          nullable: false
-          format: string
-        statusKey:
           type: string
           description: Description
           nullable: false
@@ -16182,12 +16778,12 @@ components:
           description: Description
           nullable: false
           format: string
-        documentKey:
+        statusKey:
           type: string
           description: Description
           nullable: false
           format: string
-        documentPage:
+        storeroomKey:
           type: string
           description: Description
           nullable: false
@@ -16212,6 +16808,11 @@ components:
           description: Description
           nullable: false
           format: string
+        actualTime:
+          type: string
+          description: Description
+          nullable: false
+          format: string
         completedAt:
           type: string
           description: Description
@@ -16222,19 +16823,16 @@ components:
           description: Description
           nullable: false
           format: string
-        materials:
+        tasks:
+          type: string
+          description: Description
+          nullable: false
+          format: string
+        documents:
           type: array
           description: Description
           nullable: false
           format: array
-        documents:
-          type: array
-          items:
-            $ref: '#/components/schemas/Document'
-        tasks:
-          type: array
-          items:
-            $ref: '#/components/schemas/Task'
         createdAt:
           type: string
           description: Description
@@ -16251,56 +16849,39 @@ components:
           nullable: false
           format: string
       example:
-        key: '03000760122275'
-        siteKey: '09000169020525'
-        assetKey: '06000779082930'
-        accountKey: '06000616864377'
-        title: Aut sed et illo officiis ut eos.
-        description: Sint et laborum omnis nisi pariatur ut voluptas.
-        workRequestKey: '01000473074771'
-        code: '72990377'
-        pmKey: '08000517970937'
-        teamKey: '08000376769948'
-        userAssignedKey: '01000175413368'
-        userCompletedKey: '04000416218303'
-        organizationKey: '07000205670129'
+        key: '07000787011135'
+        siteKey: '05000502893371'
+        assetKey: '03000344125037'
+        accountKey: '05000595773042'
+        title: Ratione illum rerum aut ea.
+        description: Dolores ut itaque amet quia aliquid et quia.
+        serviceRequestKey: '02000402047789'
+        code: '65879122'
+        pmKey: '06000312001149'
+        teamKey: '04000229709361'
+        userApprovedKey: '01000507935449'
+        assetDowntimeKey: '07000871887243'
+        organizationKey: '02000493606540'
         instructions: string
         status: string
-        statusKey: '05000831150689'
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
-        documentKey: '04000827653742'
-        documentPage: string
+        statusKey: '03000823454464'
+        storeroomKey: '05000314145357'
         notes: string
-        approvedAt: '1981-10-10T12:27:35Z'
-        dueAt: '2003-11-24T06:37:48Z'
-        scheduledAt: '2017-11-24T15:25:10Z'
-        completedAt: '2018-02-20T14:04:53Z'
+        approvedAt: '2016-01-29T07:16:02Z'
+        dueAt: '2004-08-25T13:59:55Z'
+        scheduledAt: '2007-06-23T14:34:00Z'
+        actualTime: string
+        completedAt: '2020-06-12T07:49:39Z'
         completionRemarks: string
-        materials: '[]'
-        documents:
-          - key: '00000329295322'
-            entityKeys: '[]'
-            name: string
-            url: string
-            type: string
-            contentType: string
-            description: Rerum ducimus dolorum ex temporibus.
-            notes: string
-            createdAt: '2005-11-20T19:56:11Z'
-            updatedAt: '1973-04-25T20:26:00Z'
-        tasks:
-          - key: '09000501190749'
-            parentKey: '03000445884304'
-            title: Est ipsam officia sunt vero animi.
-            description: Consequatur voluptates ut vel et deleniti quo.
-            priority: string
-            checkList: '[]'
-        createdAt: '2003-01-28T10:30:18Z'
-        updatedAt: '1981-08-01T08:40:45Z'
-        deletedAt: '1977-01-03T09:02:00Z'
+        tasks: string
+        documents: '[]'
+        createdAt: '1978-03-10T17:05:52Z'
+        updatedAt: '1984-05-29T03:15:38Z'
+        deletedAt: '2014-01-09T16:32:31Z'
     WorkOrderCollection:
       type: array
       items:
@@ -16355,9 +16936,8 @@ components:
           format: string
         documents:
           type: array
-          description: Description
-          nullable: false
-          format: array
+          items:
+            $ref: '#/components/schemas/Document'
         title:
           type: string
           description: Description
@@ -16424,29 +17004,39 @@ components:
           nullable: false
           format: string
       example:
-        key: '07000330631454'
-        siteKey: '03000513874651'
-        locationKey: '05000167967697'
-        storeroomKey: '02000026297176'
-        assetKey: '07000491625180'
-        workOrderKey: '03000028157876'
-        teamKey: '06000143643708'
-        userRequestedKey: '02000236383359'
-        userApprovedKey: '00000151833271'
-        documents: '[]'
-        title: Ea at vitae placeat nihil.
-        description: Aut laborum est odio quis debitis deleniti.
-        statusKey: '09000083904656'
+        key: '02000095249686'
+        siteKey: '05000378123313'
+        locationKey: '01000175392459'
+        storeroomKey: '01000676555551'
+        assetKey: '04000482211473'
+        workOrderKey: '00000602414525'
+        teamKey: '07000831519861'
+        userRequestedKey: '09000441520701'
+        userApprovedKey: '07000757049873'
+        documents:
+          - key: '04000553665494'
+            entityKeys: '[]'
+            name: string
+            url: string
+            type: string
+            contentType: string
+            description: Ducimus saepe distinctio id aliquid vero velit.
+            notes: string
+            createdAt: '1990-12-29T09:34:57Z'
+            updatedAt: '1990-05-14T03:23:02Z'
+        title: Accusamus quis quibusdam accusantium a in.
+        description: Cumque perferendis delectus voluptatem eos unde.
+        statusKey: '06000517245648'
         severity: string
         estimatedTime: string
         roleName: string
         categoryName: string
         notes: string
-        approvedAt: '2011-03-04T05:15:01Z'
-        dueAt: '2016-11-11T08:45:29Z'
-        createdAt: '1982-02-28T00:05:35Z'
-        updatedAt: '1986-04-17T19:22:30Z'
-        deletedAt: '1980-02-12T07:05:35Z'
+        approvedAt: '1998-10-21T18:47:49Z'
+        dueAt: '1978-11-17T16:38:27Z'
+        createdAt: '1996-07-14T12:14:06Z'
+        updatedAt: '2004-02-07T02:10:38Z'
+        deletedAt: '2001-10-20T21:28:34Z'
     Inventory:
       title: Inventory
       properties:
@@ -16481,12 +17071,12 @@ components:
           nullable: false
           format: string
       example:
-        code: '41333167'
+        code: '45644917'
         name: string
         quantity: 10
         unitCost: 10
-        locationKey: '02000312545863'
-        updatedAt: '2006-08-18T13:29:27Z'
+        locationKey: '07000442913083'
+        updatedAt: '2024-04-17T08:34:24Z'
     Status:
       title: Status
       properties:
@@ -16546,17 +17136,17 @@ components:
           nullable: false
           format: string
       example:
-        key: '07000578653927'
-        organizationKey: '08000191011101'
-        parentKey: '05000400629304'
+        key: '04000192007893'
+        organizationKey: '03000053457965'
+        parentKey: '06000690552085'
         name: string
-        code: '16369733'
+        code: '55441063'
         subCode: string
         scope: string
         isActive: 'false'
-        createdAt: '1972-09-27T19:38:21Z'
-        updatedAt: '1978-12-11T09:26:47Z'
-        deletedAt: '1986-04-11T05:50:53Z'
+        createdAt: '1986-10-12T18:53:07Z'
+        updatedAt: '2004-09-01T11:55:31Z'
+        deletedAt: '2000-11-03T14:17:58Z'
     Tax:
       title: Tax
       properties:
@@ -16606,15 +17196,15 @@ components:
           nullable: false
           format: string
       example:
-        key: '04000098688920'
-        organizationKey: '06000090818126'
+        key: '06000837302800'
+        organizationKey: '07000125923622'
         name: string
         type: string
         taxPercentage: string
-        isActive: 'true'
-        createdAt: '2016-07-12T01:00:31Z'
-        updatedAt: '1984-12-07T03:19:09Z'
-        deletedAt: '1974-05-26T07:18:42Z'
+        isActive: 'false'
+        createdAt: '1972-12-02T15:58:26Z'
+        updatedAt: '1983-02-15T13:35:50Z'
+        deletedAt: '2011-05-27T03:20:12Z'
     Currency:
       title: Currency
       properties:
@@ -16659,14 +17249,14 @@ components:
           nullable: false
           format: string
       example:
-        key: '07000639318441'
+        key: '02000607439433'
         name: string
-        code: '53917447'
+        code: '68790967'
         isBase: string
         isActive: string
-        createdAt: '1979-05-30T13:23:21Z'
-        updatedAt: '1993-07-13T14:56:23Z'
-        deletedAt: '1970-05-01T02:46:28Z'
+        createdAt: '1996-11-28T08:31:12Z'
+        updatedAt: '2011-03-30T19:08:13Z'
+        deletedAt: '2009-10-01T02:16:52Z'
     ExchangeRate:
       title: ExchangeRate
       properties:
@@ -16696,11 +17286,11 @@ components:
           nullable: false
           format: string
       example:
-        key: '05000798038456'
-        currencyKey: '05000543126363'
-        baseCurrencyKey: '08000254752155'
+        key: '08000079606094'
+        currencyKey: '04000567154742'
+        baseCurrencyKey: '03000946151927'
         rate: string
-        createdAt: '2004-10-26T07:45:39Z'
+        createdAt: '1975-03-20T10:10:30Z'
     Product:
       title: Product
       properties:
@@ -16825,18 +17415,18 @@ components:
           nullable: false
           format: string
       example:
-        key: '00000002572228'
-        groupKey: '07000728818207'
-        uomKey: '08000363647786'
-        code: '32054736'
+        key: '02000302657755'
+        groupKey: '06000519773165'
+        uomKey: '02000868100779'
+        code: '56785883'
         name: string
-        description: Et facilis saepe consectetur quis quasi esse.
+        description: Nihil et tempora recusandae.
         type: string
-        isTaxable: 'false'
+        isTaxable: 'true'
         taxKeys: '[]'
         status: string
         price: string
-        currencyKey: '08000419473082'
+        currencyKey: '09000759456838'
         quantity: string
         sku: string
         upc: string
@@ -16846,9 +17436,9 @@ components:
         reorderLevel: string
         dimensions: string
         supplyOptions: '[]'
-        createdAt: '2021-07-27T07:27:32Z'
-        updatedAt: '2000-07-18T19:40:34Z'
-        deletedAt: '1991-09-09T00:15:40Z'
+        createdAt: '1985-02-24T18:33:05Z'
+        updatedAt: '1994-11-23T10:44:04Z'
+        deletedAt: '2008-03-22T23:16:00Z'
     SalesOrder:
       title: SalesOrder
       properties:
@@ -16928,21 +17518,21 @@ components:
           nullable: false
           format: string
       example:
-        key: '05000422042611'
-        customerKey: '03000040835314'
-        userKey: '03000338981261'
-        code: '10921968'
+        key: '09000564187527'
+        customerKey: '03000783117786'
+        userKey: '09000680214854'
+        code: '37123161'
         orderNumber: string
         date: string
-        statusKey: '04000559551369'
-        shipmentDate: '1985-05-13T10:25:39Z'
+        statusKey: '08000939863653'
+        shipmentDate: '2014-11-17T12:24:29Z'
         contactPerson: string
         lines: '[]'
-        currencyKey: '09000266753216'
+        currencyKey: '01000414397035'
         currencyRate: string
-        createdAt: '2006-10-07T08:10:35Z'
-        updatedAt: '1973-01-10T09:51:52Z'
-        deletedAt: '2008-08-15T01:06:05Z'
+        createdAt: '1994-03-13T10:05:35Z'
+        updatedAt: '2016-11-08T18:46:19Z'
+        deletedAt: '1997-08-31T08:59:23Z'
     Project:
       title: Project
       properties:
@@ -16992,15 +17582,15 @@ components:
           nullable: false
           format: string
       example:
-        key: '09000798434615'
-        siteKey: '09000601937965'
+        key: '01000431895608'
+        siteKey: '07000128455890'
         name: string
-        accountKey: '08000145111443'
-        statusKey: '01000862589578'
+        accountKey: '02000821617116'
+        statusKey: '02000543009255'
         budget: string
-        createdAt: '1984-11-20T23:22:24Z'
-        updatedAt: '1990-07-31T13:34:47Z'
-        deletedAt: '1986-05-18T02:01:01Z'
+        createdAt: '1984-06-15T09:09:22Z'
+        updatedAt: '2017-01-13T16:46:45Z'
+        deletedAt: '2003-12-17T17:55:18Z'
     Invoice:
       title: Invoice
       properties:
@@ -17070,19 +17660,19 @@ components:
           nullable: false
           format: string
       example:
-        key: '01000965080881'
+        key: '03000907462617'
         invoiceNumber: string
-        vendorKey: '07000052293851'
-        poKey: '03000530032084'
-        statusKey: '00000436713254'
+        vendorKey: '07000924135333'
+        poKey: '05000086023463'
+        statusKey: '04000314687386'
         lineItems: '[]'
-        invoiceDate: '2020-08-25T08:06:41Z'
-        dueDate: '1974-01-04T07:35:16Z'
-        receivedDate: '2022-10-22T22:32:13Z'
-        currencyKey: '03000287942213'
-        createdAt: '2005-02-09T05:53:53Z'
-        updatedAt: '1984-12-28T00:03:27Z'
-        deletedAt: '1982-11-05T23:46:19Z'
+        invoiceDate: '1970-07-17T05:27:44Z'
+        dueDate: '2020-07-18T06:44:48Z'
+        receivedDate: '2020-10-24T13:01:19Z'
+        currencyKey: '01000732607396'
+        createdAt: '2000-12-17T00:17:34Z'
+        updatedAt: '1971-07-01T09:17:41Z'
+        deletedAt: '2008-09-29T11:13:15Z'
     Receipt:
       title: Receipt
       type: object
@@ -17191,25 +17781,25 @@ components:
           nullable: false
           format: string
       example:
-        key: '09000347863108'
-        siteKey: '02000846221063'
-        vendorKey: '04000133867785'
-        poKey: '07000470547655'
-        code: '37774707'
+        key: '00000347709282'
+        siteKey: '08000851972714'
+        vendorKey: '05000789929616'
+        poKey: '00000576033384'
+        code: '64740539'
         orderNo: string
-        orderDate: '1993-06-22T04:23:16Z'
-        title: Rem rem assumenda aut reiciendis.
-        description: Aut deserunt expedita illo.
-        completedAt: '1987-05-04T00:02:22Z'
+        orderDate: '1991-03-10T23:59:47Z'
+        title: Quo nostrum qui iusto at cumque consequatur qui.
+        description: Incidunt quis sapiente dolor laborum.
+        completedAt: '1996-12-02T07:22:48Z'
         shippingMethod: string
         notes: string
-        currencyKey: '07000424197202'
+        currencyKey: '01000517424750'
         totalNetValue: string
         totalTaxValue: string
         totalGrossValue: string
         lineItems: '[]'
-        createdAt: '1990-08-04T12:39:09Z'
-        updatedAt: '2010-01-16T07:38:53Z'
+        createdAt: '2004-12-20T14:07:29Z'
+        updatedAt: '2000-07-13T16:02:11Z'
     RequestForQuotation:
       title: RequestForQuotation
       type: object
@@ -17260,14 +17850,14 @@ components:
           nullable: false
           format: string
       example:
-        key: '04000233514558'
-        parentKey: '07000260261492'
-        code: '92485877'
+        key: '00000711507465'
+        parentKey: '09000582307408'
+        code: '48473491'
         name: string
-        description: Facere unde voluptates placeat quis.
-        updatedAt: '2004-01-11T07:52:35Z'
-        createdAt: '2014-09-22T01:50:18Z'
-        deletedAt: '2021-04-05T20:31:39Z'
+        description: Ipsam nulla aut tempora eum ab officiis.
+        updatedAt: '1979-05-07T02:50:32Z'
+        createdAt: '2022-03-22T22:27:19Z'
+        deletedAt: '2022-02-11T07:31:22Z'
     StockTransfer:
       title: StockTransfer
       properties:
@@ -17307,10 +17897,9 @@ components:
           nullable: false
           format: string
         lineItems:
-          type: string
-          description: Description
-          nullable: false
-          format: string
+          type: array
+          items:
+            $ref: '#/components/schemas/LineItem'
         orderNumber:
           type: string
           description: Description
@@ -17332,18 +17921,46 @@ components:
           nullable: false
           format: string
       example:
-        key: '09000202697632'
-        fromLocationKey: '03000165217294'
-        toLocationKey: '08000260747791'
-        fromStoreroomKey: '01000923429501'
-        toStoreroomKey: '02000266658370'
-        code: '30735347'
+        key: '09000787882075'
+        fromLocationKey: '08000186410003'
+        toLocationKey: '03000694402577'
+        fromStoreroomKey: '01000618279908'
+        toStoreroomKey: '06000369317602'
+        code: '89039625'
         date: string
-        lineItems: string
+        lineItems:
+          - key: '02000562207394'
+            locationKey: '07000237142123'
+            assetKey: '00000408597286'
+            statusKey: '07000280088539'
+            materialKey: '07000605267424'
+            storeroomKey: '09000236749841'
+            vendorKey: '07000635982121'
+            productKey: '07000687827881'
+            price: string
+            discount: string
+            deliveryAt: '1971-08-06T04:27:30Z'
+            lineNo: string
+            code: '45728105'
+            name: string
+            description: Dolorem voluptatem reiciendis qui libero quo.
+            lineRef: string
+            quantity: string
+            receivedQuantity: string
+            type: string
+            uomKey: '08000729012069'
+            cost: string
+            currencyKey: '07000235534401'
+            lineTotalValue: string
+            lineTaxValue: string
+            notes: string
+            dueAt: '1976-07-11T06:50:00Z'
+            createdAt: '1998-03-21T14:47:27Z'
+            updatedAt: '2010-06-18T20:22:58Z'
         orderNumber: string
-        createdAt: '1972-08-02T17:28:25Z'
-        updatedAt: '2012-01-27T00:53:33Z'
-        deletedAt: '1973-02-20T17:11:07Z'
+        createdAt: '1992-10-26T09:06:01Z'
+        updatedAt: '2005-09-22T04:50:13Z'
+        deletedAt: '2011-06-15T10:34:27Z'
     StockAdjustment:
       title: StockAdjustment
       properties:
@@ -17379,9 +17996,8 @@ components:
           format: string
         lineItems:
           type: array
-          description: Description
-          nullable: false
-          format: array
+          items:
+            $ref: '#/components/schemas/LineItem'
         adjustmentNumber:
           type: string
           description: Description
@@ -17413,19 +18029,47 @@ components:
           nullable: false
           format: string
       example:
-        key: '02000863581095'
-        locationKey: '08000531815994'
-        storeroomKey: '06000205832689'
-        userKey: '08000218040179'
+        key: '01000305007253'
+        locationKey: '00000429334349'
+        storeroomKey: '02000362689802'
+        userKey: '04000898472892'
         date: string
         reason: string
-        lineItems: '[]'
+        lineItems:
+          - key: '06000441267431'
+            locationKey: '01000376818210'
+            assetKey: '03000586356901'
+            statusKey: '06000410532371'
+            materialKey: '06000505551732'
+            storeroomKey: '09000393325878'
+            vendorKey: '05000215651189'
+            productKey: '07000101624515'
+            price: string
+            discount: string
+            deliveryAt: '2010-07-16T10:03:52Z'
+            lineNo: string
+            code: '78362987'
+            name: string
+            description: In inventore et rerum aut.
+            lineRef: string
+            quantity: string
+            receivedQuantity: string
+            type: string
+            uomKey: '01000004566842'
+            cost: string
+            currencyKey: '09000845115112'
+            lineTotalValue: string
+            lineTaxValue: string
+            notes: string
+            dueAt: '1999-11-23T17:34:46Z'
+            createdAt: '2004-03-05T02:32:45Z'
+            updatedAt: '1986-04-09T03:53:17Z'
         adjustmentNumber: string
         total: string
         type: string
-        createdAt: '1982-05-10T02:31:41Z'
-        updatedAt: '1985-11-02T12:39:42Z'
-        deletedAt: '2010-06-13T00:13:23Z'
+        createdAt: '1973-10-05T19:38:52Z'
+        updatedAt: '2002-03-04T16:44:25Z'
+        deletedAt: '1991-02-23T18:43:03Z'
     ShipmentOrder:
       title: ShipmentOrder
       properties:
@@ -17510,23 +18154,22 @@ components:
           nullable: false
           format: string
       example:
-        key: '04000001192317'
-        userKey: '05000642827293'
-        customerKey: '04000453753703'
-        vendorKey: '06000539909213'
+        key: '08000259311271'
+        userKey: '03000800086095'
+        customerKey: '01000189229438'
+        vendorKey: '04000306852427'
         orderNumber: string
         shipmentNumber: string
         date: string
-        statusKey: '03000215817364'
+        statusKey: '09000606955608'
         lineItems: '[]'
         destinationAddress: string
         carrierName: string
         shippingMethod: string
         notes: string
-        createdAt: '2019-03-01T02:26:05Z'
-        updatedAt: '1970-03-01T16:13:39Z'
-        deletedAt: '1983-07-21T21:46:57Z'
-    ShipmentOrderDelivered: []
+        createdAt: '2007-03-03T15:52:24Z'
+        updatedAt: '2019-02-11T17:07:54Z'
+        deletedAt: '2017-04-20T05:14:07Z'
     Integration:
       title: Integration
       properties:
