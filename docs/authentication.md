@@ -25,7 +25,7 @@ grant_type=authorization_code
 &client_secret={{CLIENT_SECRET}}
 ```
 
-In the response you will receive an access token, and a refresh token
+In the response, you will receive an access token (expires in 30 days), and a refresh token (expires in 31 days)
 
 ```
 Content-Type: application/json
@@ -33,10 +33,10 @@ Cache-Control: no-store
 Pragma: no-cache
 
 {
-"access_token":"{{ACCESS_TOKEN}}",
-"refresh_token":"{{REFRESH_TOKEN}}",
-"token_type":"bearer",
-"expires_in":3600
+    "access_token": "{{ACCESS_TOKEN}}",
+    "refresh_token": "{{REFRESH_TOKEN}}",
+    "token_type": "bearer",
+    "expires_in": "1715674414"
 }
 ```
 
@@ -45,7 +45,7 @@ Pragma: no-cache
 Now you can use the token in `Authorization` header and make requests to API
 
 ```
-GET https://api.makini.io/sites
+GET https://api.makini.io/api/sites
 Accept: application/json
 Authorization: Bearer {{ACCESS_TOKEN}}
 ```
