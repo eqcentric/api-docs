@@ -25,7 +25,7 @@ grant_type=authorization_code
 &client_secret={{CLIENT_SECRET}}
 ```
 
-In the response, you will receive an access token (expires in 30 days), and a refresh token (expires in 31 days)
+In the response, you will receive an access token (expires in 30 days) and a refresh token (expires in 31 days).
 
 ```
 Content-Type: application/json
