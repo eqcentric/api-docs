@@ -1,6 +1,6 @@
 {
   "items": [
-        {
+    {
       "type": "item",
       "title": "Getting started",
       "uri": "docs/getting-started.md"
@@ -18,7 +18,7 @@
     {
       "type": "item",
       "title": "Makini API",
-      "uri": "oas3_multi.yaml"
+      "uri": "oas3.json"
     }
     // {
     //   "type": "item",
