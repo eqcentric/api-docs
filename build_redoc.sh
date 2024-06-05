@@ -1,1 +1,2 @@
-npx @redocly/cli build-docs ./oas3_multi.yaml
+
+redocly build-docs http://makini-api.test/request-docs/api?openapi=true
