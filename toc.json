@@ -17,18 +17,23 @@
     },
     {
       "type": "item",
-      "title": "Makini API",
-      "uri": "oas3.json"
+      "title": "EAM/CMMS",
+      "uri": "oas3_eam.json"
+    },
+    {
+      "type": "item",
+      "title": "ERP",
+      "uri": "oas3_erp.json"
+    },
+    {
+      "type": "item",
+      "title": "WMS",
+      "uri": "oas3_wms.json"
+    },
+    {
+      "type": "item",
+      "title": "System",
+      "uri": "oas3_system.json"
     }
-    // {
-    //   "type": "item",
-    //   "title": "EAM",
-    //   "uri": "oas3.yaml"
-    // },
-    // {
-    //   "type": "item",
-    //   "title": "ERP",
-    //   "uri": "oas3_erp.yaml"
-    // }
   ]
 }
