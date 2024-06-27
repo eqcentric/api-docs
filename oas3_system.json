@@ -13,9 +13,6 @@
     "servers": [
         {
             "url": "https://api.makini.io"
-        },
-        {
-            "url": "https://api-stg.makini.io"
         }
     ],
     "paths": {
@@ -682,7 +679,7 @@
                     }
                 },
                 "example": {
-                    "key": "06000959457771",
+                    "key": "09000428944549",
                     "name": "string",
                     "email": "string",
                     "status": "string",
@@ -807,7 +804,7 @@
                     }
                 },
                 "example": {
-                    "key": "06000655313480",
+                    "key": "06000214243224",
                     "name": "string",
                     "email": "string",
                     "status": "string",
