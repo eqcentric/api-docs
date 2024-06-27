@@ -432,7 +432,7 @@
         },
         "/api/passthrough": {
             "post": {
-                "description": "\nSample payload:\n```json\n {\n     \"path\": \"dataservice\",\n     \"method\": \"post\",\n     \"headers\": {\n         \"Content-Type\": \"appication/json\"\n     },\n     \"body\": {\n         \"targetName\": \"F4801\",\n         \"targetType\": \"table\",\n         \"dataServiceType\": \"BROWSE\",\n         \"maxPageSize\": 10,\n         \"query\": {\n             \"autoFind\": true,\n             \"condition\": [\n                 {\n                     \"controlId\": \"F4801.DOCO\",\n                     \"operator\": \"STR_NOT_BLANK\"\n                 }\n             ]\n         }\n     }\n }\n\n```",
+                "description": "\n Connect to your system's API directly with Makini API (no system's credentials needed)\n\n * path: Path of system endpoint\n * method: 'get' | 'post' | 'put' | 'delete'\n * headers: Headers of system endpoint\n * body: Body of system endpoint (Optional)\n\nSample payload:\n```json\n {\n     \"path\": \"dataservice\",\n     \"method\": \"post\",\n     \"headers\": {\n         \"Content-Type\": \"appication/json\"\n     },\n     \"body\": {\n         \"targetName\": \"F4801\",\n         \"targetType\": \"table\",\n         \"dataServiceType\": \"BROWSE\",\n         \"maxPageSize\": 10,\n         \"query\": {\n             \"autoFind\": true,\n             \"condition\": [\n                 {\n                     \"controlId\": \"F4801.DOCO\",\n                     \"operator\": \"STR_NOT_BLANK\"\n                 }\n             ]\n         }\n     }\n }\n\n```",
                 "summary": "Create a Passthrough",
                 "parameters": [],
                 "tags": [
@@ -679,7 +679,7 @@
                     }
                 },
                 "example": {
-                    "key": "09000428944549",
+                    "key": "07000649227415",
                     "name": "string",
                     "email": "string",
                     "status": "string",
@@ -804,7 +804,7 @@
                     }
                 },
                 "example": {
-                    "key": "06000214243224",
+                    "key": "04000273176868",
                     "name": "string",
                     "email": "string",
                     "status": "string",
