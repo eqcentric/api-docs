@@ -18,7 +18,528 @@
             "url": "https://api-stg.makini.io"
         }
     ],
-    "paths": [],
+    "paths": {
+        "/api/integrations/current": {
+            "get": {
+                "description": " Get current integration data.\n `sync_status` is status of our synchronization.\n   * inprogress\n   * done\n   * fulldone\n   * error\n\n   * fail (Authentication error: Invalid platform credentials)\n",
+                "summary": "Get an Integration",
+                "parameters": [],
+                "tags": [
+                    "Integration"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "$ref": "#/components/schemas/Integration"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "description": "",
+                "summary": "Delete an Integration",
+                "parameters": [],
+                "tags": [
+                    "Integration"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/system/connections": {
+            "get": {
+                "description": "",
+                "summary": "List Connections",
+                "parameters": [],
+                "tags": [
+                    "Connection"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/Connection"
+                                            }
+                                        },
+                                        "links": {
+                                            "type": "object",
+                                            "properties": {
+                                                "first": {
+                                                    "type": "string"
+                                                },
+                                                "last": {
+                                                    "type": "string"
+                                                },
+                                                "prev": {
+                                                    "type": "string",
+                                                    "format": "nullable"
+                                                },
+                                                "next": {
+                                                    "type": "string",
+                                                    "format": "nullable"
+                                                }
+                                            }
+                                        },
+                                        "meta": {
+                                            "type": "object",
+                                            "properties": {
+                                                "current_page": {
+                                                    "type": "number"
+                                                },
+                                                "from": {
+                                                    "type": "number"
+                                                },
+                                                "last_page": {
+                                                    "type": "number"
+                                                },
+                                                "path": {
+                                                    "type": "string"
+                                                },
+                                                "per_page": {
+                                                    "type": "number"
+                                                },
+                                                "to": {
+                                                    "type": "number"
+                                                },
+                                                "total": {
+                                                    "type": "number"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "description": "\n[Detail validations](docs/platform-validation.md)\n\nSample payload:\n```json\n {\n     \"name\": \"Inextia\",\n     \"email\": \"hey@makini.io\",\n     \"provider\": \"inextia\",\n     \"credentials\": {\n         \"api\": \"https://sample.inextia.dk\",\n         \"login\": \"login\",\n         \"password\": \"password\"\n     }\n }\n\n```",
+                "summary": "Create a Connection",
+                "parameters": [],
+                "tags": [
+                    "Connection"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "$ref": "#/components/schemas/ConnectionStore"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "description": "Request body",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "nullable": false,
+                                        "format": "string"
+                                    },
+                                    "email": {
+                                        "type": "required|email",
+                                        "nullable": false,
+                                        "format": "required|email"
+                                    },
+                                    "provider": {
+                                        "type": "string",
+                                        "nullable": false,
+                                        "format": "string"
+                                    },
+                                    "credentials": {
+                                        "type": "array",
+                                        "nullable": false,
+                                        "format": "array"
+                                    }
+                                },
+                                "example": {
+                                    "name": "Inextia",
+                                    "email": "hey@makini.io",
+                                    "provider": "inextia",
+                                    "credentials": {
+                                        "api": "https://sample.inextia.dk",
+                                        "login": "login",
+                                        "password": "password"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/system/connections/{id}": {
+            "delete": {
+                "description": "",
+                "summary": "Delete a Connection",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "string|required",
+                        "in": "path",
+                        "style": "simple",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Connection"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/system/connections/{id}/metadata": {
+            "get": {
+                "description": "",
+                "summary": "List ConnectionMetadatas",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "string|required",
+                        "in": "path",
+                        "style": "simple",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "tags": [
+                    "ConnectionMetadata"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/ConnectionMetadata"
+                                            }
+                                        },
+                                        "links": {
+                                            "type": "object",
+                                            "properties": {
+                                                "first": {
+                                                    "type": "string"
+                                                },
+                                                "last": {
+                                                    "type": "string"
+                                                },
+                                                "prev": {
+                                                    "type": "string",
+                                                    "format": "nullable"
+                                                },
+                                                "next": {
+                                                    "type": "string",
+                                                    "format": "nullable"
+                                                }
+                                            }
+                                        },
+                                        "meta": {
+                                            "type": "object",
+                                            "properties": {
+                                                "current_page": {
+                                                    "type": "number"
+                                                },
+                                                "from": {
+                                                    "type": "number"
+                                                },
+                                                "last_page": {
+                                                    "type": "number"
+                                                },
+                                                "path": {
+                                                    "type": "string"
+                                                },
+                                                "per_page": {
+                                                    "type": "number"
+                                                },
+                                                "to": {
+                                                    "type": "number"
+                                                },
+                                                "total": {
+                                                    "type": "number"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "description": "\n[Detail validations](docs/platform-validation.md)\n\nSample payload:\n```json\n [\n     {\n         \"key\": \"uc_first\",\n         \"value\": \"UC Value\"\n     },\n     {\n         \"key\": \"uc_last\",\n         \"value\": \"Other uc value\"\n     }\n ]\n\n```",
+                "summary": "Create a ConnectionMetadata",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "description": "string|required",
+                        "in": "path",
+                        "style": "simple",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "tags": [
+                    "ConnectionMetadata"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "$ref": "#/components/schemas/ConnectionMetadata"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "description": "Request body",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "key": {
+                                            "type": "string",
+                                            "nullable": false,
+                                            "format": "string"
+                                        },
+                                        "value": {
+                                            "type": "string",
+                                            "nullable": false,
+                                            "format": "string"
+                                        }
+                                    }
+                                },
+                                "example": [
+                                    {
+                                        "key": "uc_first",
+                                        "value": "UC Value"
+                                    },
+                                    {
+                                        "key": "uc_last",
+                                        "value": "Other uc value"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/passthrough": {
+            "post": {
+                "description": "\nSample payload:\n```json\n {\n     \"path\": \"dataservice\",\n     \"method\": \"post\",\n     \"headers\": {\n         \"Content-Type\": \"appication/json\"\n     },\n     \"body\": {\n         \"targetName\": \"F4801\",\n         \"targetType\": \"table\",\n         \"dataServiceType\": \"BROWSE\",\n         \"maxPageSize\": 10,\n         \"query\": {\n             \"autoFind\": true,\n             \"condition\": [\n                 {\n                     \"controlId\": \"F4801.DOCO\",\n                     \"operator\": \"STR_NOT_BLANK\"\n                 }\n             ]\n         }\n     }\n }\n\n```",
+                "summary": "Create a Passthrough",
+                "parameters": [],
+                "tags": [
+                    "Passthrough"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "$ref": "#/components/schemas/Passthrough"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "description": "Request body",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "path": {
+                                        "type": "string",
+                                        "nullable": true,
+                                        "format": "string"
+                                    },
+                                    "method": {
+                                        "type": "string",
+                                        "nullable": false,
+                                        "format": "string"
+                                    },
+                                    "headers": {
+                                        "type": "nullable",
+                                        "nullable": true,
+                                        "format": "nullable"
+                                    },
+                                    "query": {
+                                        "type": "nullable",
+                                        "nullable": true,
+                                        "format": "nullable"
+                                    },
+                                    "base64encoded": {
+                                        "type": "boolean",
+                                        "nullable": true,
+                                        "format": "boolean"
+                                    },
+                                    "body": {
+                                        "type": "nullable",
+                                        "nullable": true,
+                                        "format": "nullable"
+                                    },
+                                    "sql": {
+                                        "type": "string",
+                                        "nullable": true,
+                                        "format": "string"
+                                    },
+                                    "parameters": {
+                                        "type": "nullable",
+                                        "nullable": true,
+                                        "format": "nullable"
+                                    }
+                                },
+                                "example": {
+                                    "path": "dataservice",
+                                    "method": "post",
+                                    "headers": {
+                                        "Content-Type": "appication/json"
+                                    },
+                                    "body": {
+                                        "targetName": "F4801",
+                                        "targetType": "table",
+                                        "dataServiceType": "BROWSE",
+                                        "maxPageSize": 10,
+                                        "query": {
+                                            "autoFind": true,
+                                            "condition": [
+                                                {
+                                                    "controlId": "F4801.DOCO",
+                                                    "operator": "STR_NOT_BLANK"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        }
+    },
     "components": {
         "securitySchemes": {
             "bearerAuth": {
@@ -26,6 +547,287 @@
                 "scheme": "bearer",
                 "bearerFormat": "JWT"
             }
+        },
+        "schemas": {
+            "Integration": {
+                "title": "Integration",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "company_name": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "email": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "provider": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "sync_status": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "sync_updated_at": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    }
+                },
+                "example": {
+                    "id": "string",
+                    "company_name": "string",
+                    "email": "string",
+                    "provider": "string",
+                    "updated_at": "string",
+                    "sync_status": "string",
+                    "sync_updated_at": "string"
+                }
+            },
+            "Connection": {
+                "title": "Connection",
+                "properties": {
+                    "key": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "email": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "status": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "integration_name": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "redirect": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "scopes": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "user_metadata": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "client_id": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "connected_at": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    }
+                },
+                "example": {
+                    "key": "06000959457771",
+                    "name": "string",
+                    "email": "string",
+                    "status": "string",
+                    "integration_name": "string",
+                    "redirect": "string",
+                    "scopes": "string",
+                    "user_metadata": "string",
+                    "client_id": "string",
+                    "updated_at": "string",
+                    "created_at": "string",
+                    "connected_at": "string"
+                }
+            },
+            "ConnectionStoreCollection": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/ConnectionStore"
+                }
+            },
+            "ConnectionStore": {
+                "title": "ConnectionStore",
+                "properties": {
+                    "access_token": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "refresh_token": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "expires_in": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    }
+                },
+                "example": {
+                    "access_token": "string",
+                    "refresh_token": "string",
+                    "expires_in": "string"
+                }
+            },
+            "ConnectionMetadata": {
+                "title": "ConnectionMetadata",
+                "properties": {
+                    "key": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "email": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "status": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "integration_name": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "redirect": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "scopes": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "user_metadata": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "client_id": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "updated_at": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    },
+                    "connected_at": {
+                        "type": "string",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "string"
+                    }
+                },
+                "example": {
+                    "key": "06000655313480",
+                    "name": "string",
+                    "email": "string",
+                    "status": "string",
+                    "integration_name": "string",
+                    "redirect": "string",
+                    "scopes": "string",
+                    "user_metadata": "string",
+                    "client_id": "string",
+                    "updated_at": "string",
+                    "created_at": "string",
+                    "connected_at": "string"
+                }
+            },
+            "ConnectionMetadataCollection": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/ConnectionMetadata"
+                }
+            },
+            "Passthrough": []
         }
     }
 }
