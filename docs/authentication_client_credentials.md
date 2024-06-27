@@ -2,7 +2,7 @@
 
 ## Basic process
 
-Makini uses OAuth 2.0 protocol to issue authentication tokens. In short, protocol consists of 3 actions:
+Makini uses OAuth 2.0 protocol to issue authentication tokens.
 
 **1.** Requesting a Token
 
