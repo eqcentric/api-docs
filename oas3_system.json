@@ -18,7 +18,7 @@
   "paths": {
     "/api/integrations/current": {
       "get": {
-        "description": "Get current integration data.\n `sync_status` is status of our synchronization.\n   * in_progress: Sync prrocess is currently underway and has not yet been completed\n   * full_done: Sync process has been completed with authentication and base data.\n   * error: An error or unexpected issue occurred during the task or process.\n   * fail: Invalid platform credentials\n   * done: Sync process has been completed according to the defined criteria.",
+        "description": "Get current integration data.\n `sync_status` is status of our synchronization.\n   * pending: The connection has not been established to any platform. \n   * in_progress: Sync prrocess is currently underway and has not yet been completed\n   * full_done: Sync process has been completed with authentication and base data.\n   * error: An error or unexpected issue occurred during the task or process.\n   * fail: Invalid platform credentials\n   * done: Sync process has been completed according to the defined criteria.",
         "summary": "Get an Integration",
         "parameters": [],
         "tags": ["Integration"],
