@@ -10,4 +10,4 @@ using one simple unified API.
 3. [Authentication protocol](authentication.md)
 4. [Authentication protocol (Client credential)](authentication_client_credentials.md)
 5. [Upload documents](upload-documents.md)
-6. [IP whitelisting](api_whitelist.md)
+6. [IP whitelisting](ip_whitelisting.md)
