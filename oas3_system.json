@@ -19,7 +19,7 @@
         "/api/integrations/current": {
             "get": {
                 "description": " Get current integration data.\n `sync_status` is status of our synchronization.\n   * inprogress\n   * done\n   * fulldone\n   * error\n\n   * fail (Authentication error: Invalid platform credentials)\n",
-                "summary": "Get an Integration",
+                "summary": "Get an Integration Current",
                 "parameters": [],
                 "tags": [
                     "Integration"
@@ -49,7 +49,7 @@
             },
             "delete": {
                 "description": "",
-                "summary": "Delete an Integration",
+                "summary": "Delete an Integration ",
                 "parameters": [],
                 "tags": [
                     "Integration"
@@ -76,7 +76,7 @@
         "/api/system/platforms": {
             "get": {
                 "description": "",
-                "summary": "List Platforms",
+                "summary": "List ",
                 "parameters": [],
                 "tags": [
                     "Platform"
@@ -156,7 +156,7 @@
         "/api/system/connections": {
             "get": {
                 "description": "",
-                "summary": "List Connections",
+                "summary": "List ",
                 "parameters": [],
                 "tags": [
                     "Connection"
@@ -234,7 +234,7 @@
             },
             "post": {
                 "description": "\n[Detail validations](docs/platform-validation.md)\n\nSample payload:\n```json\n {\n     \"name\": \"Inextia\",\n     \"email\": \"hey@makini.io\",\n     \"provider\": \"inextia\",\n     \"credentials\": {\n         \"api\": \"https://sample.inextia.dk\",\n         \"login\": \"login\",\n         \"password\": \"password\"\n     }\n }\n\n```",
-                "summary": "Create a Connection",
+                "summary": "Create a ",
                 "parameters": [],
                 "tags": [
                     "Connection"
@@ -308,7 +308,7 @@
         "/api/system/connections/{id}": {
             "delete": {
                 "description": "",
-                "summary": "Delete a Connection",
+                "summary": "Delete a ",
                 "parameters": [
                     {
                         "name": "id",
@@ -346,7 +346,7 @@
         "/api/system/connections/{id}/metadata": {
             "get": {
                 "description": "",
-                "summary": "List ConnectionMetadatas",
+                "summary": "List ",
                 "parameters": [
                     {
                         "name": "id",
@@ -435,7 +435,7 @@
             },
             "post": {
                 "description": "\n[Detail validations](docs/platform-validation.md)\n\nSample payload:\n```json\n [\n     {\n         \"key\": \"uc_first\",\n         \"value\": \"UC Value\"\n     },\n     {\n         \"key\": \"uc_last\",\n         \"value\": \"Other uc value\"\n     }\n ]\n\n```",
-                "summary": "Create a ConnectionMetadata",
+                "summary": "Create a ",
                 "parameters": [
                     {
                         "name": "id",
@@ -513,7 +513,7 @@
         "/api/passthrough": {
             "post": {
                 "description": "\n Connect to your system's API directly with Makini API (no system's credentials needed)\n\n * path: Path of system endpoint\n * method: 'get' | 'post' | 'put' | 'delete'\n * headers: Headers of system endpoint\n * body: Body of system endpoint (Optional)\n\nSample payload:\n```json\n {\n     \"path\": \"dataservice\",\n     \"method\": \"post\",\n     \"headers\": {\n         \"Content-Type\": \"appication/json\"\n     },\n     \"body\": {\n         \"targetName\": \"F4801\",\n         \"targetType\": \"table\",\n         \"dataServiceType\": \"BROWSE\",\n         \"maxPageSize\": 10,\n         \"query\": {\n             \"autoFind\": true,\n             \"condition\": [\n                 {\n                     \"controlId\": \"F4801.DOCO\",\n                     \"operator\": \"STR_NOT_BLANK\"\n                 }\n             ]\n         }\n     }\n }\n\n```",
-                "summary": "Create a Passthrough",
+                "summary": "Create a ",
                 "parameters": [],
                 "tags": [
                     "Passthrough"
@@ -731,6 +731,12 @@
                         "nullable": false,
                         "format": "string"
                     },
+                    "tags": {
+                        "type": "array",
+                        "description": "Description",
+                        "nullable": false,
+                        "format": "array"
+                    },
                     "user_metadata": {
                         "type": "string",
                         "description": "Description",
@@ -763,13 +769,14 @@
                     }
                 },
                 "example": {
-                    "key": "06000052692669",
+                    "key": "07000572417173",
                     "name": "string",
                     "email": "string",
                     "status": "string",
                     "integration_name": "string",
                     "redirect": "string",
                     "scopes": "string",
+                    "tags": "[]",
                     "user_metadata": "string",
                     "client_id": "string",
                     "updated_at": "string",
@@ -888,7 +895,7 @@
                     }
                 },
                 "example": {
-                    "key": "05000431383262",
+                    "key": "05000388010440",
                     "name": "string",
                     "email": "string",
                     "status": "string",
