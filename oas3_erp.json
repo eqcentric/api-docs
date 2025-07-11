@@ -2471,8 +2471,8 @@
                                 },
                                 "example": {
                                     "name": "string",
-                                    "code": "10002919",
-                                    "companyKey": "04000256281243"
+                                    "code": "03163344",
+                                    "companyKey": "09000281140745"
                                 }
                             }
                         }
@@ -2587,8 +2587,8 @@
                                 },
                                 "example": {
                                     "name": "string",
-                                    "code": "01455663",
-                                    "companyKey": "05000519991085"
+                                    "code": "23776401",
+                                    "companyKey": "07000255434314"
                                 }
                             }
                         }
@@ -2844,17 +2844,17 @@
                                     }
                                 },
                                 "example": {
-                                    "groupKey": "05000178182837",
-                                    "uomKey": "05000203128193",
-                                    "code": "17297547",
+                                    "groupKey": "00000232176362",
+                                    "uomKey": "02000950795048",
+                                    "code": "46184146",
                                     "name": "string",
-                                    "description": "Possimus pariatur libero hic est ea tenetur.",
+                                    "description": "Cum ex hic earum minima quisquam.",
                                     "type": "string",
-                                    "isTaxable": "true",
+                                    "isTaxable": "false",
                                     "taxKeys": "[]",
                                     "status": "string",
                                     "price": "string",
-                                    "currencyKey": "02000481169923",
+                                    "currencyKey": "00000672714225",
                                     "quantity": "string",
                                     "sku": "string",
                                     "upc": "string",
@@ -3050,17 +3050,17 @@
                                     }
                                 },
                                 "example": {
-                                    "groupKey": "08000954770581",
-                                    "uomKey": "02000831548673",
-                                    "code": "37302955",
+                                    "groupKey": "04000310493304",
+                                    "uomKey": "05000116588408",
+                                    "code": "19065076",
                                     "name": "string",
-                                    "description": "Distinctio neque autem fuga explicabo dolorem.",
+                                    "description": "Vel aspernatur ad tempora sint animi accusantium.",
                                     "type": "string",
                                     "isTaxable": "true",
                                     "taxKeys": "[]",
                                     "status": "string",
                                     "price": "string",
-                                    "currencyKey": "02000782420427",
+                                    "currencyKey": "03000298484881",
                                     "quantity": "string",
                                     "sku": "string",
                                     "upc": "string",
@@ -3278,15 +3278,15 @@
                                     }
                                 },
                                 "example": {
-                                    "productKey": "01000642543436",
-                                    "materialKey": "08000904409283",
-                                    "locationKey": "00000186566420",
-                                    "storeroomKey": "08000608895364",
-                                    "assetKey": "06000365511518",
+                                    "productKey": "07000931259872",
+                                    "materialKey": "00000194179745",
+                                    "locationKey": "04000023557295",
+                                    "storeroomKey": "06000493350415",
+                                    "assetKey": "07000434544799",
                                     "position": "string",
-                                    "uomKey": "01000780529061",
+                                    "uomKey": "03000407616121",
                                     "quantity": "string",
-                                    "expiresAt": "1983-08-23T16:48:56Z"
+                                    "expiresAt": "1982-08-07T08:08:55Z"
                                 }
                             }
                         }
@@ -3430,15 +3430,15 @@
                                     }
                                 },
                                 "example": {
-                                    "productKey": "05000118039321",
-                                    "materialKey": "07000389782929",
-                                    "locationKey": "02000025182713",
-                                    "storeroomKey": "05000174760098",
-                                    "assetKey": "06000889662681",
+                                    "productKey": "06000098453786",
+                                    "materialKey": "01000364115548",
+                                    "locationKey": "06000603358252",
+                                    "storeroomKey": "01000694108463",
+                                    "assetKey": "03000992499890",
                                     "position": "string",
-                                    "uomKey": "02000950774721",
+                                    "uomKey": "04000096326704",
                                     "quantity": "string",
-                                    "expiresAt": "1970-11-25T09:08:09Z"
+                                    "expiresAt": "1974-03-24T22:02:13Z"
                                 }
                             }
                         }
@@ -3694,24 +3694,24 @@
                                     }
                                 },
                                 "example": {
-                                    "organizationKey": "09000676694392",
-                                    "customerKey": "09000658742017",
-                                    "userKey": "09000141300665",
-                                    "code": "09203198",
+                                    "organizationKey": "07000692385939",
+                                    "customerKey": "03000356077124",
+                                    "userKey": "01000629619251",
+                                    "code": "95383958",
                                     "orderNumber": "string",
                                     "date": "string",
-                                    "statusKey": "07000969940496",
-                                    "shipmentDate": "2012-12-21T16:36:47Z",
+                                    "statusKey": "07000365247729",
+                                    "shipmentDate": "1988-01-06T08:14:11Z",
                                     "contactPerson": "string",
                                     "lines": "[]",
-                                    "currencyKey": "08000004457767",
+                                    "currencyKey": "09000742646537",
                                     "currencyRate": "string",
-                                    "shipmentOrderKey": "05000307109180",
+                                    "shipmentOrderKey": "05000541849807",
                                     "shipmentAddress": "string",
                                     "billingAddress": "string",
-                                    "createdAt": "2003-04-07T06:08:31Z",
-                                    "updatedAt": "1992-10-16T08:25:09Z",
-                                    "deletedAt": "2019-09-19T21:32:00Z"
+                                    "createdAt": "2004-09-16T16:17:38Z",
+                                    "updatedAt": "1980-06-30T03:43:14Z",
+                                    "deletedAt": "2006-09-30T14:57:49Z"
                                 }
                             }
                         }
@@ -4167,7 +4167,7 @@
                 ]
             },
             "post": {
-                "description": "\n[Detail validations](docs/platform-validation.md)\n",
+                "description": "This endpoint creates a new invoice, which can be either an outgoing invoice (sales) or incoming invoice (bill). The required fields depend on the type of invoice being created.\n\n### Invoice Types and Required Fields:\n\n**Outgoing Invoices (Sales Invoices):**\n- **Required:** `customerKey` and/or `salesOrderKey`\n- Used when creating invoices for customers who purchased goods or services\n- Represents revenue transactions for your organization\n\n**Incoming Invoices (Bills):**\n- **Required:** `vendorKey` and/or `poKey` (Purchase Order Key)\n- Used when recording invoices received from vendors for purchases\n- Represents expense transactions for your organization\n\n### Important Notes:\n\n- **Invoice Type Determination:** The system determines the invoice type based on which keys are provided\n- **Field Requirements:** Include the appropriate key(s) based on the invoice type you're creating\n- **Data Integrity:** Ensure the referenced keys (customer, vendor, sales order, or purchase order) exist in the system before creating the invoice\n\nThis distinction ensures proper categorization and financial tracking of your receivables and payables.\n",
                 "summary": "Create an Invoice ",
                 "parameters": [],
                 "tags": [
@@ -4265,15 +4265,15 @@
                                 },
                                 "example": {
                                     "invoiceNumber": "string",
-                                    "vendorKey": "05000428825657",
-                                    "poKey": "07000753294678",
-                                    "statusKey": "07000260022787",
+                                    "vendorKey": "07000971445657",
+                                    "poKey": "07000514159718",
+                                    "statusKey": "01000517306504",
                                     "lineItem": "[]",
-                                    "invoiceDate": "1996-05-04T05:22:47Z",
-                                    "dueDate": "1991-04-25T23:34:24Z",
-                                    "receivedDate": "1999-11-01T02:23:42Z",
-                                    "currencyKey": "09000180848028",
-                                    "customerKey": "07000344729860",
+                                    "invoiceDate": "2016-06-18T15:38:40Z",
+                                    "dueDate": "2014-10-07T13:34:32Z",
+                                    "receivedDate": "1976-01-05T16:44:00Z",
+                                    "currencyKey": "01000178688142",
+                                    "customerKey": "08000925751801",
                                     "totalNetValue": "string",
                                     "totalTaxValue": "string",
                                     "totalGrossValue": "string"
@@ -4436,17 +4436,17 @@
                                 },
                                 "example": {
                                     "invoiceNumber": "string",
-                                    "vendorKey": "06000820245102",
-                                    "poKey": "07000306699589",
-                                    "statusKey": "06000320702106",
+                                    "vendorKey": "01000589779921",
+                                    "poKey": "07000746417943",
+                                    "statusKey": "08000298859319",
                                     "lineItem": "[]",
-                                    "invoiceDate": "2018-01-03T15:59:22Z",
-                                    "dueDate": "2024-03-12T00:19:14Z",
-                                    "receivedDate": "1996-07-08T08:53:51Z",
-                                    "currencyKey": "07000789351145",
-                                    "createdAt": "1998-03-01T12:31:28Z",
-                                    "updatedAt": "2015-08-28T21:45:00Z",
-                                    "deletedAt": "1983-09-25T11:09:16Z"
+                                    "invoiceDate": "1995-10-25T20:41:41Z",
+                                    "dueDate": "1974-08-07T07:56:04Z",
+                                    "receivedDate": "1984-06-08T15:45:09Z",
+                                    "currencyKey": "08000041598113",
+                                    "createdAt": "2006-08-12T23:15:22Z",
+                                    "updatedAt": "1973-08-08T17:51:47Z",
+                                    "deletedAt": "1996-03-13T00:12:38Z"
                                 }
                             }
                         }
@@ -4939,26 +4939,26 @@
                                     }
                                 },
                                 "example": {
-                                    "siteKey": "01000181066794",
-                                    "vendorKey": "01000004671129",
-                                    "code": "65452462",
+                                    "siteKey": "01000495335816",
+                                    "vendorKey": "08000627660230",
+                                    "code": "13891930",
                                     "orderNo": "string",
-                                    "orderDate": "2009-12-13T21:28:38Z",
-                                    "statusKey": "09000002763637",
-                                    "title": "Quis tempora excepturi sunt labore.",
-                                    "description": "Velit ipsum sit est aut.",
-                                    "dueAt": "1970-08-24T07:53:08Z",
-                                    "approvedAt": "1989-10-21T20:30:55Z",
-                                    "completedAt": "2002-05-02T14:27:39Z",
+                                    "orderDate": "2015-11-23T08:13:12Z",
+                                    "statusKey": "05000766216433",
+                                    "title": "Non enim animi quaerat aliquid officia et.",
+                                    "description": "Culpa ut illum soluta commodi neque.",
+                                    "dueAt": "2020-10-22T20:12:50Z",
+                                    "approvedAt": "2010-04-21T10:55:53Z",
+                                    "completedAt": "2014-09-12T15:14:13Z",
                                     "shippingMethod": "string",
                                     "terms": "string",
                                     "notes": "string",
-                                    "currencyKey": "06000771874448",
+                                    "currencyKey": "02000966932457",
                                     "totalNetValue": "string",
                                     "totalTaxValue": "string",
                                     "totalGrossValue": "string",
-                                    "createdAt": "2018-02-28T17:45:26Z",
-                                    "updatedAt": "2000-09-30T05:24:12Z"
+                                    "createdAt": "1972-05-08T17:40:01Z",
+                                    "updatedAt": "2006-09-08T15:44:26Z"
                                 }
                             }
                         }
@@ -5157,26 +5157,26 @@
                                     }
                                 },
                                 "example": {
-                                    "siteKey": "01000780606712",
-                                    "vendorKey": "09000845352978",
-                                    "code": "87612646",
+                                    "siteKey": "09000714182855",
+                                    "vendorKey": "03000817436174",
+                                    "code": "12407132",
                                     "orderNo": "string",
-                                    "orderDate": "1970-07-24T09:46:16Z",
-                                    "statusKey": "09000570701308",
-                                    "title": "Nemo harum nulla praesentium et.",
-                                    "description": "Et esse voluptatum excepturi quas quo.",
-                                    "dueAt": "1993-10-24T12:43:53Z",
-                                    "approvedAt": "2004-04-25T00:20:36Z",
-                                    "completedAt": "2022-11-30T05:10:53Z",
+                                    "orderDate": "2008-01-02T10:46:13Z",
+                                    "statusKey": "08000210143936",
+                                    "title": "Aliquam dicta optio aperiam et.",
+                                    "description": "Est aut nisi rem rem in.",
+                                    "dueAt": "1981-03-19T22:42:09Z",
+                                    "approvedAt": "2012-10-06T02:49:42Z",
+                                    "completedAt": "1980-04-05T09:31:45Z",
                                     "shippingMethod": "string",
                                     "terms": "string",
                                     "notes": "string",
-                                    "currencyKey": "06000966848016",
+                                    "currencyKey": "01000502841107",
                                     "totalNetValue": "string",
                                     "totalTaxValue": "string",
                                     "totalGrossValue": "string",
-                                    "createdAt": "2021-07-09T09:17:44Z",
-                                    "updatedAt": "2012-12-16T21:14:02Z"
+                                    "createdAt": "1989-05-21T08:09:01Z",
+                                    "updatedAt": "2013-12-04T02:42:24Z"
                                 }
                             }
                         }
@@ -5977,18 +5977,18 @@
                                     }
                                 },
                                 "example": {
-                                    "siteKey": "04000835111036",
-                                    "vendorKey": "03000552538835",
-                                    "poKey": "07000262459726",
-                                    "code": "49362800",
+                                    "siteKey": "09000558307068",
+                                    "vendorKey": "04000042363381",
+                                    "poKey": "01000670220498",
+                                    "code": "26242675",
                                     "orderNo": "string",
-                                    "orderDate": "1979-03-30T11:58:23Z",
-                                    "title": "Consequuntur velit non rerum autem repudiandae.",
-                                    "description": "Dolor et ipsum temporibus nemo accusamus beatae.",
-                                    "completedAt": "2022-04-09T10:05:44Z",
+                                    "orderDate": "1994-06-23T08:14:30Z",
+                                    "title": "Repellat et dolore iure corporis.",
+                                    "description": "Facere ipsam voluptatum molestiae.",
+                                    "completedAt": "1970-08-18T14:39:26Z",
                                     "shippingMethod": "string",
                                     "notes": "string",
-                                    "currencyKey": "09000624615276",
+                                    "currencyKey": "07000019841744",
                                     "totalNetValue": "string",
                                     "totalTaxValue": "string",
                                     "totalGrossValue": "string"
@@ -6165,18 +6165,18 @@
                                     }
                                 },
                                 "example": {
-                                    "siteKey": "00000740981321",
-                                    "vendorKey": "03000966865327",
-                                    "poKey": "03000864023942",
-                                    "code": "00805995",
+                                    "siteKey": "06000146330934",
+                                    "vendorKey": "03000140850466",
+                                    "poKey": "06000793251032",
+                                    "code": "17398336",
                                     "orderNo": "string",
-                                    "orderDate": "2022-08-15T06:05:05Z",
-                                    "title": "Minima non sed dicta.",
-                                    "description": "Excepturi quae nulla deleniti asperiores enim.",
-                                    "completedAt": "2002-05-06T06:40:26Z",
+                                    "orderDate": "1980-11-24T09:24:39Z",
+                                    "title": "Expedita non sit id debitis rerum.",
+                                    "description": "Soluta ratione quibusdam repellat rerum.",
+                                    "completedAt": "2007-04-22T03:06:48Z",
                                     "shippingMethod": "string",
                                     "notes": "string",
-                                    "currencyKey": "05000043506144",
+                                    "currencyKey": "06000898752507",
                                     "totalNetValue": "string",
                                     "totalTaxValue": "string",
                                     "totalGrossValue": "string"
@@ -6420,12 +6420,12 @@
                                     }
                                 },
                                 "example": {
-                                    "organizationKey": "01000921164038",
-                                    "siteKey": "06000441229366",
-                                    "userRequestedKey": "02000410049368",
-                                    "userApprovedKey": "00000998740547",
-                                    "statusKey": "04000467289587",
-                                    "code": "26096865",
+                                    "organizationKey": "03000823313816",
+                                    "siteKey": "06000339991851",
+                                    "userRequestedKey": "09000056427871",
+                                    "userApprovedKey": "06000458027084",
+                                    "statusKey": "09000940341286",
+                                    "code": "73115199",
                                     "type": "string",
                                     "shippingMethod": "string",
                                     "shippingAddress": "string",
@@ -6433,8 +6433,8 @@
                                     "documentKeys": "string",
                                     "totalNetValue": "string",
                                     "totalTaxValue": "string",
-                                    "createdAt": "2002-08-17T05:48:05Z",
-                                    "updatedAt": "1983-05-22T08:39:26Z"
+                                    "createdAt": "1991-11-21T13:14:07Z",
+                                    "updatedAt": "1970-10-02T14:51:02Z"
                                 }
                             }
                         }
@@ -6608,12 +6608,12 @@
                                     }
                                 },
                                 "example": {
-                                    "organizationKey": "02000977022024",
-                                    "siteKey": "04000546848698",
-                                    "userRequestedKey": "07000656466105",
-                                    "userApprovedKey": "09000886400160",
-                                    "statusKey": "03000239899495",
-                                    "code": "14288845",
+                                    "organizationKey": "00000286892669",
+                                    "siteKey": "06000930633476",
+                                    "userRequestedKey": "05000202807059",
+                                    "userApprovedKey": "03000704874538",
+                                    "statusKey": "07000394280084",
+                                    "code": "46249524",
                                     "type": "string",
                                     "shippingMethod": "string",
                                     "shippingAddress": "string",
@@ -6621,8 +6621,8 @@
                                     "documentKeys": "string",
                                     "totalNetValue": "string",
                                     "totalTaxValue": "string",
-                                    "createdAt": "2011-06-11T06:11:33Z",
-                                    "updatedAt": "1980-10-09T03:02:24Z"
+                                    "createdAt": "1978-07-05T19:10:12Z",
+                                    "updatedAt": "1983-05-14T16:05:45Z"
                                 }
                             }
                         }
@@ -6869,11 +6869,11 @@
                                     }
                                 },
                                 "example": {
-                                    "code": "47954373",
+                                    "code": "89679241",
                                     "name": "string",
                                     "quantity": 10,
                                     "unitCost": 10,
-                                    "locationKey": "06000217746979"
+                                    "locationKey": "00000193975084"
                                 }
                             }
                         }
@@ -7192,12 +7192,12 @@
                                     "assetKeys": "[]",
                                     "vendorKeys": "string",
                                     "documents": "[]",
-                                    "accountKey": "09000771997977",
-                                    "code": "39239587",
-                                    "isAssembly": "true",
+                                    "accountKey": "06000276174814",
+                                    "code": "47102057",
+                                    "isAssembly": "false",
                                     "partNumber": "string",
                                     "name": "string",
-                                    "description": "Repellendus et sequi ipsam a error est.",
+                                    "description": "Ut aut sint debitis tempora dolores quod vitae.",
                                     "notes": "string",
                                     "criticality": "string",
                                     "isActive": "true",
@@ -7398,12 +7398,12 @@
                                     "assetKeys": "[]",
                                     "vendorKeys": "string",
                                     "documents": "[]",
-                                    "accountKey": "04000422591955",
-                                    "code": "06484255",
-                                    "isAssembly": "false",
+                                    "accountKey": "08000515527613",
+                                    "code": "85149519",
+                                    "isAssembly": "true",
                                     "partNumber": "string",
                                     "name": "string",
-                                    "description": "Magnam illum eum et quod.",
+                                    "description": "Corrupti voluptates sed eum.",
                                     "notes": "string",
                                     "criticality": "string",
                                     "isActive": "true",
@@ -7655,11 +7655,11 @@
                                     }
                                 },
                                 "example": {
-                                    "code": "68034580",
+                                    "code": "77578785",
                                     "name": "string",
                                     "quantity": 10,
                                     "unitCost": 10,
-                                    "locationKey": "01000311860822"
+                                    "locationKey": "04000445565554"
                                 }
                             }
                         }
@@ -8975,12 +8975,12 @@
                                     }
                                 },
                                 "example": {
-                                    "fromLocationKey": "04000485388972",
-                                    "toLocationKey": "00000101261381",
-                                    "fromStoreroomKey": "04000818804613",
-                                    "toStoreroomKey": "05000754028093",
-                                    "statusKey": "07000634631128",
-                                    "code": "50416844",
+                                    "fromLocationKey": "09000639773264",
+                                    "toLocationKey": "00000470778361",
+                                    "fromStoreroomKey": "00000538961830",
+                                    "toStoreroomKey": "09000607354786",
+                                    "statusKey": "06000720321793",
+                                    "code": "35379652",
                                     "date": "string",
                                     "orderNumber": "string"
                                 }
@@ -9121,12 +9121,12 @@
                                     }
                                 },
                                 "example": {
-                                    "fromLocationKey": "01000067227755",
-                                    "toLocationKey": "05000361364951",
-                                    "fromStoreroomKey": "09000456624877",
-                                    "toStoreroomKey": "05000192082335",
-                                    "statusKey": "08000036500265",
-                                    "code": "43934973",
+                                    "fromLocationKey": "01000300215463",
+                                    "toLocationKey": "09000323226686",
+                                    "fromStoreroomKey": "04000255523070",
+                                    "toStoreroomKey": "08000685085965",
+                                    "statusKey": "04000117777934",
+                                    "code": "23254855",
                                     "date": "string",
                                     "orderNumber": "string"
                                 }
@@ -9319,10 +9319,10 @@
                                     }
                                 },
                                 "example": {
-                                    "organizationKey": "00000180520578",
-                                    "locationKey": "04000508691302",
-                                    "vendorKey": "06000944980208",
-                                    "description": "Quia sed veritatis inventore nobis et ut et.",
+                                    "organizationKey": "08000460095125",
+                                    "locationKey": "06000331907252",
+                                    "vendorKey": "00000318026063",
+                                    "description": "Ab enim praesentium neque ipsa.",
                                     "lineItems": "string"
                                 }
                             }
@@ -9654,18 +9654,18 @@
                                     }
                                 },
                                 "example": {
-                                    "siteKey": "09000636803308",
-                                    "vendorKey": "09000704262231",
-                                    "customerKey": "07000873235708",
-                                    "salesOrderKey": "00000570315839",
-                                    "stockTransferKey": "08000829367747",
-                                    "statusKey": "04000878565964",
-                                    "code": "84353993",
+                                    "siteKey": "04000443254897",
+                                    "vendorKey": "07000474723557",
+                                    "customerKey": "07000655936185",
+                                    "salesOrderKey": "04000522184859",
+                                    "stockTransferKey": "05000850728249",
+                                    "statusKey": "06000323086797",
+                                    "code": "07174940",
                                     "orderNo": "string",
-                                    "orderDate": "2012-06-25T07:28:14Z",
-                                    "title": "Voluptatum ea eius corrupti nesciunt placeat cum.",
-                                    "description": "Nostrum ut reprehenderit laboriosam laborum ut.",
-                                    "completedAt": "1993-09-07T20:27:38Z",
+                                    "orderDate": "2017-07-09T03:15:44Z",
+                                    "title": "Ut excepturi aut assumenda doloribus.",
+                                    "description": "Et tempore sed voluptates voluptatem dolor non.",
+                                    "completedAt": "2024-04-13T19:27:20Z",
                                     "notes": "string",
                                     "lineItems": "[]"
                                 }
@@ -9836,18 +9836,18 @@
                                     }
                                 },
                                 "example": {
-                                    "siteKey": "09000189354973",
-                                    "vendorKey": "03000632272969",
-                                    "customerKey": "09000220694014",
-                                    "salesOrderKey": "02000650162593",
-                                    "stockTransferKey": "07000637839888",
-                                    "statusKey": "03000394581216",
-                                    "code": "76459641",
+                                    "siteKey": "06000049077046",
+                                    "vendorKey": "06000382891750",
+                                    "customerKey": "03000325492904",
+                                    "salesOrderKey": "07000237694559",
+                                    "stockTransferKey": "00000795907162",
+                                    "statusKey": "02000278244635",
+                                    "code": "55456760",
                                     "orderNo": "string",
-                                    "orderDate": "2020-08-11T15:31:19Z",
-                                    "title": "Dolorum saepe aut quo et.",
-                                    "description": "Natus nobis et nobis aspernatur.",
-                                    "completedAt": "2022-11-30T10:54:25Z",
+                                    "orderDate": "2000-06-25T05:51:58Z",
+                                    "title": "Aliquid similique sit minus omnis.",
+                                    "description": "In non asperiores eos eaque.",
+                                    "completedAt": "1996-06-16T10:43:41Z",
                                     "notes": "string",
                                     "lineItems": "[]"
                                 }
@@ -9980,7 +9980,7 @@
                     "position": "string",
                     "phones": "string",
                     "emails": "string",
-                    "isActive": "false",
+                    "isActive": "true",
                     "isDefault": "true"
                 }
             },
@@ -10071,8 +10071,8 @@
                     "email": "string",
                     "notes": "string",
                     "isActive": "false",
-                    "createdAt": "1995-08-29T01:42:20Z",
-                    "updatedAt": "1976-03-27T00:47:07Z"
+                    "createdAt": "1977-05-19T22:49:13Z",
+                    "updatedAt": "1973-08-08T14:43:47Z"
                 }
             },
             "Site": {
@@ -10170,20 +10170,20 @@
                     }
                 },
                 "example": {
-                    "key": "06000174414556",
-                    "organizationKey": "02000706029564",
+                    "key": "05000849659920",
+                    "organizationKey": "03000430814582",
                     "name": "string",
-                    "code": "97597148",
-                    "description": "Eos iste voluptate commodi unde.",
+                    "code": "52444043",
+                    "description": "Expedita et magnam saepe.",
                     "contact": {
                         "name": "string",
                         "position": "string",
                         "phones": "string",
                         "emails": "string",
-                        "isActive": "false",
+                        "isActive": "true",
                         "isDefault": "false"
                     },
-                    "customerKey": "03000934909723",
+                    "customerKey": "03000624531072",
                     "lat": "string",
                     "lng": "string",
                     "address": {
@@ -10196,9 +10196,9 @@
                         "phone": "string",
                         "email": "string",
                         "notes": "string",
-                        "isActive": "true",
-                        "createdAt": "2004-01-12T21:59:48Z",
-                        "updatedAt": "1977-01-29T03:03:36Z"
+                        "isActive": "false",
+                        "createdAt": "2013-10-09T06:02:02Z",
+                        "updatedAt": "1972-03-30T23:14:32Z"
                     },
                     "billingAddress": {
                         "country": "string",
@@ -10210,15 +10210,15 @@
                         "phone": "string",
                         "email": "string",
                         "notes": "string",
-                        "isActive": "false",
-                        "createdAt": "2003-06-08T17:50:37Z",
-                        "updatedAt": "2008-11-11T21:12:06Z"
+                        "isActive": "true",
+                        "createdAt": "2013-03-23T19:38:35Z",
+                        "updatedAt": "2006-01-25T20:29:38Z"
                     },
                     "properties": "string",
                     "notes": "string",
-                    "createdAt": "1977-02-06T03:18:24Z",
-                    "updatedAt": "1993-11-12T20:12:42Z",
-                    "deletedAt": "2025-05-08T15:43:52Z"
+                    "createdAt": "1992-03-06T12:24:21Z",
+                    "updatedAt": "1997-01-07T09:29:43Z",
+                    "deletedAt": "1980-09-27T15:09:00Z"
                 }
             },
             "Organization": {
@@ -10290,11 +10290,11 @@
                     }
                 },
                 "example": {
-                    "key": "00000903565401",
-                    "currencyKey": "08000859485411",
+                    "key": "06000948722729",
+                    "currencyKey": "05000793165027",
                     "name": "string",
-                    "code": "29667307",
-                    "description": "Quia eaque aperiam voluptatem soluta minus et.",
+                    "code": "81183005",
+                    "description": "Esse veritatis blanditiis dolor inventore cumque.",
                     "addresses": [
                         {
                             "country": "string",
@@ -10306,9 +10306,9 @@
                             "phone": "string",
                             "email": "string",
                             "notes": "string",
-                            "isActive": "true",
-                            "createdAt": "1979-07-02T08:02:10Z",
-                            "updatedAt": "2018-03-08T05:39:32Z"
+                            "isActive": "false",
+                            "createdAt": "1989-11-27T10:44:57Z",
+                            "updatedAt": "1990-11-28T16:13:35Z"
                         }
                     ],
                     "billingAddress": {
@@ -10322,8 +10322,8 @@
                         "email": "string",
                         "notes": "string",
                         "isActive": "true",
-                        "createdAt": "1991-08-08T10:00:38Z",
-                        "updatedAt": "1999-01-13T17:56:57Z"
+                        "createdAt": "1984-02-29T06:16:34Z",
+                        "updatedAt": "2022-07-28T23:26:53Z"
                     },
                     "contacts": [
                         {
@@ -10331,13 +10331,13 @@
                             "position": "string",
                             "phones": "string",
                             "emails": "string",
-                            "isActive": "false",
+                            "isActive": "true",
                             "isDefault": "false"
                         }
                     ],
-                    "createdAt": "2020-11-17T18:10:42Z",
-                    "updatedAt": "1975-09-07T23:25:45Z",
-                    "deletedAt": "1997-04-20T15:09:34Z"
+                    "createdAt": "2022-05-10T21:27:12Z",
+                    "updatedAt": "2014-05-02T02:01:52Z",
+                    "deletedAt": "2006-01-11T16:23:28Z"
                 }
             },
             "Location": {
@@ -10445,15 +10445,15 @@
                     }
                 },
                 "example": {
-                    "key": "04000812672094",
-                    "siteKey": "05000712836882",
-                    "parentKey": "05000624490106",
-                    "teamKey": "00000361271895",
-                    "organizationKey": "06000746521736",
+                    "key": "03000154199187",
+                    "siteKey": "00000222390575",
+                    "parentKey": "04000472107136",
+                    "teamKey": "00000723673732",
+                    "organizationKey": "00000370257402",
                     "name": "string",
-                    "userManagerKey": "01000581425332",
-                    "description": "Illum qui labore quos et.",
-                    "code": "20513856",
+                    "userManagerKey": "06000007857180",
+                    "description": "Delectus voluptatem et adipisci aut nihil ipsa.",
+                    "code": "96360712",
                     "type": "string",
                     "address": {
                         "country": "string",
@@ -10465,16 +10465,16 @@
                         "phone": "string",
                         "email": "string",
                         "notes": "string",
-                        "isActive": "true",
-                        "createdAt": "1976-07-16T16:59:21Z",
-                        "updatedAt": "1970-05-29T22:28:03Z"
+                        "isActive": "false",
+                        "createdAt": "2014-05-08T10:55:29Z",
+                        "updatedAt": "1998-12-04T21:59:03Z"
                     },
                     "isActive": "true",
                     "contact": "string",
                     "isDefault": "false",
-                    "createdAt": "1971-09-08T02:05:38Z",
-                    "updatedAt": "1975-11-14T03:46:44Z",
-                    "deletedAt": "1978-04-05T11:15:50Z"
+                    "createdAt": "2012-09-28T11:26:36Z",
+                    "updatedAt": "2019-01-14T20:51:38Z",
+                    "deletedAt": "1999-12-17T05:07:20Z"
                 }
             },
             "Storeroom": {
@@ -10560,19 +10560,19 @@
                     }
                 },
                 "example": {
-                    "key": "04000161305182",
-                    "parentKey": "04000089115247",
-                    "siteKey": "07000799366431",
-                    "locationKey": "08000369329698",
-                    "userManagerKey": "01000714546104",
-                    "code": "86238137",
+                    "key": "01000670311319",
+                    "parentKey": "00000763159802",
+                    "siteKey": "04000248111204",
+                    "locationKey": "00000114902585",
+                    "userManagerKey": "03000475178461",
+                    "code": "16761469",
                     "name": "string",
                     "type": "string",
-                    "description": "Quaerat et ullam voluptatem omnis.",
+                    "description": "Facere similique reiciendis provident vero odio.",
                     "priority": "string",
-                    "createdAt": "1985-12-31T19:30:18Z",
-                    "updatedAt": "2015-06-22T06:03:11Z",
-                    "deletedAt": "2016-07-29T15:10:56Z"
+                    "createdAt": "2011-09-04T04:09:09Z",
+                    "updatedAt": "1980-08-24T17:43:40Z",
+                    "deletedAt": "2018-10-25T13:44:41Z"
                 }
             },
             "Account": {
@@ -10634,15 +10634,15 @@
                     }
                 },
                 "example": {
-                    "key": "02000169241427",
-                    "code": "92581975",
+                    "key": "04000135102131",
+                    "code": "13556976",
                     "name": "string",
-                    "description": "Dolore laborum fuga omnis accusamus vero.",
-                    "activatedAt": "1992-04-07T20:47:58Z",
-                    "expiresAt": "2003-08-02T19:54:26Z",
-                    "createdAt": "2006-08-14T03:23:08Z",
-                    "updatedAt": "1988-06-13T15:20:24Z",
-                    "deletedAt": "1980-06-08T18:30:48Z"
+                    "description": "Consectetur ab soluta nihil quis voluptas aut.",
+                    "activatedAt": "1971-06-02T10:45:02Z",
+                    "expiresAt": "2013-12-08T07:30:20Z",
+                    "createdAt": "1992-11-01T02:24:03Z",
+                    "updatedAt": "2021-06-15T04:26:33Z",
+                    "deletedAt": "2010-12-21T02:07:15Z"
                 }
             },
             "Team": {
@@ -10704,15 +10704,15 @@
                     }
                 },
                 "example": {
-                    "key": "08000270341095",
-                    "accountKey": "08000108747579",
-                    "code": "62968324",
+                    "key": "01000088132316",
+                    "accountKey": "06000680263672",
+                    "code": "55324915",
                     "name": "string",
-                    "description": "Ea recusandae dolore necessitatibus et.",
-                    "createdAt": "1972-02-04T04:00:57Z",
-                    "updatedAt": "1999-10-21T19:31:06Z",
-                    "deletedAt": "1970-03-18T12:16:52Z",
-                    "organizationKey": "05000093334498"
+                    "description": "Illo eos error iste omnis molestias.",
+                    "createdAt": "1996-10-18T23:19:30Z",
+                    "updatedAt": "1993-03-03T11:08:09Z",
+                    "deletedAt": "1971-02-12T04:22:39Z",
+                    "organizationKey": "06000564222968"
                 }
             },
             "Labor": {
@@ -10852,28 +10852,28 @@
                     }
                 },
                 "example": {
-                    "key": "04000549270618",
+                    "key": "07000132409340",
                     "organizationKeys": "string",
                     "siteKeys": "[]",
                     "locationKeys": "[]",
-                    "accountKey": "02000361094849",
-                    "vendorKey": "04000632927710",
-                    "userKey": "02000664066338",
-                    "code": "68086046",
-                    "teamKey": "06000597915789",
+                    "accountKey": "03000839691612",
+                    "vendorKey": "00000590200553",
+                    "userKey": "07000507258136",
+                    "code": "61585744",
+                    "teamKey": "01000503631786",
                     "name": "string",
                     "firstName": "string",
                     "middleName": "string",
                     "lastName": "string",
                     "roleName": "string",
-                    "description": "Repellendus aliquid non eum ipsam.",
+                    "description": "Sit molestiae ullam eum quo nam.",
                     "notes": "string",
-                    "isActive": "false",
-                    "costUomKey": "04000604769868",
-                    "currencyKey": "09000043475579",
-                    "createdAt": "2025-06-11T02:28:14Z",
-                    "updatedAt": "2014-08-05T05:33:15Z",
-                    "deletedAt": "1970-06-03T18:48:32Z"
+                    "isActive": "true",
+                    "costUomKey": "05000646499922",
+                    "currencyKey": "08000874155400",
+                    "createdAt": "1981-09-09T05:49:09Z",
+                    "updatedAt": "1979-03-29T06:45:03Z",
+                    "deletedAt": "1995-12-17T20:37:34Z"
                 }
             },
             "User": {
@@ -10953,18 +10953,18 @@
                     }
                 },
                 "example": {
-                    "key": "06000213610453",
-                    "organizationKey": "05000305192980",
+                    "key": "04000639281835",
+                    "organizationKey": "03000671428897",
                     "siteKeys": "[]",
                     "locationKeys": "[]",
                     "name": "string",
                     "roleName": "string",
-                    "description": "Autem sit officiis rem veniam.",
+                    "description": "Eos voluptas porro ea omnis voluptatem.",
                     "notes": "string",
                     "isActive": "string",
-                    "createdAt": "1983-04-18T10:15:59Z",
-                    "updatedAt": "2002-01-28T09:02:59Z",
-                    "deletedAt": "2017-09-24T01:24:21Z"
+                    "createdAt": "1986-09-06T12:49:09Z",
+                    "updatedAt": "1995-03-21T21:26:53Z",
+                    "deletedAt": "1993-08-19T18:21:16Z"
                 }
             },
             "Tax": {
@@ -11026,15 +11026,15 @@
                     }
                 },
                 "example": {
-                    "key": "07000995637547",
-                    "organizationKey": "04000087811928",
+                    "key": "07000198106739",
+                    "organizationKey": "04000221649976",
                     "name": "string",
                     "type": "string",
                     "taxPercentage": "string",
-                    "isActive": "true",
-                    "createdAt": "1985-07-26T00:13:00Z",
-                    "updatedAt": "1978-06-14T19:33:54Z",
-                    "deletedAt": "1987-05-01T16:44:21Z"
+                    "isActive": "false",
+                    "createdAt": "1984-09-09T10:25:17Z",
+                    "updatedAt": "1989-10-02T16:17:41Z",
+                    "deletedAt": "2020-06-16T06:05:04Z"
                 }
             },
             "Currency": {
@@ -11090,14 +11090,14 @@
                     }
                 },
                 "example": {
-                    "key": "06000451558072",
+                    "key": "04000473258322",
                     "name": "string",
-                    "code": "99444778",
+                    "code": "39709172",
                     "isBase": "string",
                     "isActive": "string",
-                    "createdAt": "1991-03-27T19:36:35Z",
-                    "updatedAt": "2008-07-20T14:14:36Z",
-                    "deletedAt": "2025-02-04T13:20:49Z"
+                    "createdAt": "2012-04-09T00:38:07Z",
+                    "updatedAt": "1977-02-28T11:06:45Z",
+                    "deletedAt": "2016-11-01T22:46:12Z"
                 }
             },
             "ExchangeRate": {
@@ -11135,11 +11135,11 @@
                     }
                 },
                 "example": {
-                    "key": "04000062538682",
-                    "currencyKey": "00000563565603",
-                    "baseCurrencyKey": "07000819506109",
+                    "key": "03000416856787",
+                    "currencyKey": "01000488597740",
+                    "baseCurrencyKey": "06000514993036",
                     "rate": "string",
-                    "createdAt": "1999-01-16T12:31:27Z"
+                    "createdAt": "2016-06-28T09:29:36Z"
                 }
             },
             "UnitOfMeasure": {
@@ -11183,10 +11183,10 @@
                     }
                 },
                 "example": {
-                    "key": "06000658763407",
+                    "key": "08000049411772",
                     "name": "string",
-                    "code": "59139096",
-                    "rateBaseKey": "07000348053744",
+                    "code": "49244021",
+                    "rateBaseKey": "08000747624040",
                     "rate": "string",
                     "isActive": "true"
                 }
@@ -11266,11 +11266,11 @@
                     }
                 },
                 "example": {
-                    "key": "04000196907908",
-                    "parentKey": "00000769424282",
-                    "organizationKey": "04000641501846",
+                    "key": "01000044073801",
+                    "parentKey": "03000710307710",
+                    "organizationKey": "04000887395688",
                     "name": "string",
-                    "code": "34797686",
+                    "code": "56414875",
                     "addresses": [
                         {
                             "country": "string",
@@ -11282,9 +11282,9 @@
                             "phone": "string",
                             "email": "string",
                             "notes": "string",
-                            "isActive": "true",
-                            "createdAt": "2010-12-07T23:23:38Z",
-                            "updatedAt": "2014-06-07T18:21:56Z"
+                            "isActive": "false",
+                            "createdAt": "2011-04-12T14:55:10Z",
+                            "updatedAt": "1979-12-26T04:34:11Z"
                         }
                     ],
                     "billingAddress": {
@@ -11297,15 +11297,15 @@
                         "phone": "string",
                         "email": "string",
                         "notes": "string",
-                        "isActive": "true",
-                        "createdAt": "1983-11-22T15:38:37Z",
-                        "updatedAt": "1980-04-24T21:38:47Z"
+                        "isActive": "false",
+                        "createdAt": "2019-07-05T10:01:30Z",
+                        "updatedAt": "2016-10-26T12:10:18Z"
                     },
-                    "currencyKey": "03000945527760",
+                    "currencyKey": "01000914454760",
                     "notes": "string",
-                    "createdAt": "1979-02-23T02:46:35Z",
-                    "updatedAt": "1976-10-02T03:43:04Z",
-                    "deletedAt": "1989-03-18T03:31:50Z"
+                    "createdAt": "1971-11-12T23:37:40Z",
+                    "updatedAt": "1987-03-18T10:19:40Z",
+                    "deletedAt": "2006-10-16T14:26:54Z"
                 }
             },
             "Vendor": {
@@ -11361,14 +11361,14 @@
                     }
                 },
                 "example": {
-                    "key": "07000403186499",
+                    "key": "02000486864831",
                     "name": "string",
-                    "code": "65109076",
-                    "companyKey": "01000009346473",
-                    "organizationKey": "03000213856370",
-                    "createdAt": "2004-07-07T08:13:51Z",
-                    "updatedAt": "2005-04-08T06:08:11Z",
-                    "deletedAt": "1971-01-30T13:18:54Z"
+                    "code": "58984246",
+                    "companyKey": "08000565825119",
+                    "organizationKey": "00000401105872",
+                    "createdAt": "1987-03-30T12:11:10Z",
+                    "updatedAt": "1991-10-29T18:08:38Z",
+                    "deletedAt": "2016-01-04T09:49:04Z"
                 }
             },
             "Customer": {
@@ -11436,16 +11436,16 @@
                     }
                 },
                 "example": {
-                    "key": "06000350250664",
+                    "key": "02000775041729",
                     "name": "string",
-                    "code": "38940910",
-                    "organizationKey": "00000860750947",
+                    "code": "59606475",
+                    "organizationKey": "04000875094575",
                     "addresses": "string",
                     "billingAddress": "string",
-                    "companyKey": "01000435199696",
-                    "createdAt": "2019-06-02T06:12:32Z",
-                    "updatedAt": "1975-07-01T11:07:36Z",
-                    "deletedAt": "2011-01-24T10:37:42Z"
+                    "companyKey": "09000579572387",
+                    "createdAt": "2024-07-11T03:13:58Z",
+                    "updatedAt": "1993-12-21T09:14:30Z",
+                    "deletedAt": "2024-09-03T10:49:35Z"
                 }
             },
             "CustomerCollection": {
@@ -11520,16 +11520,16 @@
                     }
                 },
                 "example": {
-                    "vendorKey": "00000177849452",
+                    "vendorKey": "04000106681426",
                     "partNumber": "[]",
                     "price": "[]",
-                    "uomKey": "08000364816081",
-                    "currencyKey": "00000641991635",
+                    "uomKey": "09000566167025",
+                    "currencyKey": "09000624628300",
                     "uomQuantity": "string",
                     "makePartNumber": "string",
                     "reorderPoint": "string",
-                    "createdAt": "1997-12-03T12:40:27Z",
-                    "updatedAt": "2011-08-08T17:23:39Z"
+                    "createdAt": "1995-09-01T05:31:30Z",
+                    "updatedAt": "2001-12-07T03:53:08Z"
                 }
             },
             "PriceLevel": {
@@ -11599,14 +11599,14 @@
                 "example": {
                     "name": "string",
                     "price": "string",
-                    "uomKey": "01000921970012",
+                    "uomKey": "09000636098031",
                     "uomQuantity": "string",
-                    "currencyKey": "08000110569902",
-                    "taxKey": "06000560765534",
+                    "currencyKey": "00000546334815",
+                    "taxKey": "08000166115103",
                     "minQuantity": "string",
                     "maxQuantity": "string",
-                    "updatedAt": "2007-03-31T08:12:28Z",
-                    "deletedAt": "1989-03-01T07:21:21Z"
+                    "updatedAt": "2002-12-01T23:23:32Z",
+                    "deletedAt": "1983-01-08T07:28:18Z"
                 }
             },
             "Product": {
@@ -11762,19 +11762,19 @@
                     }
                 },
                 "example": {
-                    "key": "03000422792198",
-                    "groupKey": "00000747227887",
-                    "organizationKey": "04000920018677",
-                    "uomKey": "04000299284026",
-                    "code": "27114476",
+                    "key": "07000055579030",
+                    "groupKey": "07000180036299",
+                    "organizationKey": "09000811065019",
+                    "uomKey": "04000079386520",
+                    "code": "76354427",
                     "name": "string",
-                    "description": "Architecto perferendis eligendi doloribus et.",
+                    "description": "Eos velit nam ipsum sed mollitia quasi sit.",
                     "type": "string",
                     "isTaxable": "false",
                     "taxKeys": "[]",
                     "status": "string",
                     "price": "string",
-                    "currencyKey": "00000363833145",
+                    "currencyKey": "05000192447790",
                     "quantity": "string",
                     "sku": "string",
                     "upc": "string",
@@ -11784,35 +11784,35 @@
                     "dimensions": [],
                     "supplyOptions": [
                         {
-                            "vendorKey": "02000391084749",
+                            "vendorKey": "01000635258795",
                             "partNumber": "[]",
                             "price": "[]",
-                            "uomKey": "05000479735714",
-                            "currencyKey": "06000390131089",
+                            "uomKey": "06000854386619",
+                            "currencyKey": "01000449785887",
                             "uomQuantity": "string",
                             "makePartNumber": "string",
                             "reorderPoint": "string",
-                            "createdAt": "1997-03-05T05:05:01Z",
-                            "updatedAt": "2007-09-10T09:26:41Z"
+                            "createdAt": "1991-06-27T13:16:40Z",
+                            "updatedAt": "1984-03-15T07:54:50Z"
                         }
                     ],
                     "priceLevels": [
                         {
                             "name": "string",
                             "price": "string",
-                            "uomKey": "09000328730416",
+                            "uomKey": "06000073820374",
                             "uomQuantity": "string",
-                            "currencyKey": "09000282243126",
-                            "taxKey": "07000850826650",
+                            "currencyKey": "04000729654957",
+                            "taxKey": "01000971407951",
                             "minQuantity": "string",
                             "maxQuantity": "string",
-                            "updatedAt": "1998-11-22T12:36:12Z",
-                            "deletedAt": "1984-11-06T12:47:07Z"
+                            "updatedAt": "2014-07-12T10:19:00Z",
+                            "deletedAt": "1999-08-11T01:39:24Z"
                         }
                     ],
-                    "createdAt": "2001-07-07T05:09:59Z",
-                    "updatedAt": "2008-02-15T06:21:45Z",
-                    "deletedAt": "1994-10-08T11:44:02Z"
+                    "createdAt": "2020-05-07T04:43:45Z",
+                    "updatedAt": "2018-06-29T16:22:20Z",
+                    "deletedAt": "2006-05-04T06:49:19Z"
                 }
             },
             "ProductCollection": {
@@ -11934,24 +11934,24 @@
                     }
                 },
                 "example": {
-                    "key": "02000694314373",
-                    "productKey": "03000947182177",
-                    "materialKey": "02000727669601",
-                    "locationKey": "05000655945587",
-                    "storeroomKey": "07000285791859",
-                    "assetKey": "08000934422555",
+                    "key": "08000445785403",
+                    "productKey": "09000474439370",
+                    "materialKey": "00000922596119",
+                    "locationKey": "00000089017137",
+                    "storeroomKey": "04000211230819",
+                    "assetKey": "06000412034826",
                     "position": "string",
-                    "uomKey": "06000833831874",
+                    "uomKey": "01000047155012",
                     "quantity": "string",
                     "reorderPoint": "string",
-                    "expiresAt": "1997-03-14T01:38:14Z",
+                    "expiresAt": "1975-06-14T02:29:34Z",
                     "reorderQuantity": "string",
                     "minLevel": "string",
                     "maxLevel": "string",
                     "reorderLevel": "string",
-                    "createdAt": "1995-07-27T12:31:38Z",
-                    "updatedAt": "2014-10-16T13:47:07Z",
-                    "deletedAt": "2014-05-31T12:30:01Z"
+                    "createdAt": "1987-05-25T22:59:26Z",
+                    "updatedAt": "1974-01-07T14:07:14Z",
+                    "deletedAt": "1972-02-19T08:49:20Z"
                 }
             },
             "StockCollection": {
@@ -12025,16 +12025,16 @@
                     }
                 },
                 "example": {
-                    "productKey": "03000382552297",
-                    "locationKey": "05000324669094",
-                    "storeroomKey": "02000442719685",
+                    "productKey": "02000753299585",
+                    "locationKey": "07000844811873",
+                    "storeroomKey": "06000131356816",
                     "quantity": "string",
                     "quantityRequired": "string",
                     "price": "string",
                     "discount": "string",
                     "lineTaxValue": "string",
                     "lineTotalValue": "string",
-                    "taxKey": "01000138386285"
+                    "taxKey": "05000628775717"
                 }
             },
             "SalesOrder": {
@@ -12152,33 +12152,33 @@
                     }
                 },
                 "example": {
-                    "key": "07000950526930",
-                    "organizationKey": "04000788302131",
-                    "customerKey": "00000387079388",
-                    "userKey": "04000172270288",
-                    "code": "16749061",
+                    "key": "00000877809882",
+                    "organizationKey": "01000395209378",
+                    "customerKey": "06000528633754",
+                    "userKey": "00000573357159",
+                    "code": "59990642",
                     "orderNumber": "string",
                     "date": "string",
-                    "statusKey": "00000398426673",
-                    "shipmentDate": "1972-08-20T15:15:45Z",
+                    "statusKey": "01000246856853",
+                    "shipmentDate": "1975-07-04T10:05:21Z",
                     "contactPerson": "string",
                     "lines": [
                         {
-                            "productKey": "04000025830758",
-                            "locationKey": "01000549392094",
-                            "storeroomKey": "09000713548046",
+                            "productKey": "04000077351760",
+                            "locationKey": "07000279284363",
+                            "storeroomKey": "06000624507941",
                             "quantity": "string",
                             "quantityRequired": "string",
                             "price": "string",
                             "discount": "string",
                             "lineTaxValue": "string",
                             "lineTotalValue": "string",
-                            "taxKey": "03000101686150"
+                            "taxKey": "07000887032340"
                         }
                     ],
-                    "currencyKey": "07000106946713",
+                    "currencyKey": "08000510045416",
                     "currencyRate": "string",
-                    "shipmentOrderKey": "02000210409446",
+                    "shipmentOrderKey": "00000952774585",
                     "shipmentAddress": {
                         "country": "string",
                         "addressLines": "string",
@@ -12190,8 +12190,8 @@
                         "email": "string",
                         "notes": "string",
                         "isActive": "false",
-                        "createdAt": "2019-10-23T17:04:45Z",
-                        "updatedAt": "1989-06-17T23:16:17Z"
+                        "createdAt": "2019-02-13T03:56:54Z",
+                        "updatedAt": "1998-07-09T14:13:24Z"
                     },
                     "billingAddress": {
                         "country": "string",
@@ -12203,13 +12203,13 @@
                         "phone": "string",
                         "email": "string",
                         "notes": "string",
-                        "isActive": "false",
-                        "createdAt": "2022-05-23T18:57:17Z",
-                        "updatedAt": "2023-04-22T00:33:09Z"
+                        "isActive": "true",
+                        "createdAt": "2008-06-21T16:58:31Z",
+                        "updatedAt": "1977-07-13T06:09:57Z"
                     },
-                    "createdAt": "1995-04-05T10:17:00Z",
-                    "updatedAt": "2013-07-11T09:30:52Z",
-                    "deletedAt": "2008-08-16T16:35:32Z"
+                    "createdAt": "2016-12-14T05:32:30Z",
+                    "updatedAt": "2022-03-26T18:46:26Z",
+                    "deletedAt": "1999-03-02T15:53:07Z"
                 }
             },
             "SalesOrderCollection": {
@@ -12277,15 +12277,15 @@
                     }
                 },
                 "example": {
-                    "key": "06000861546472",
-                    "siteKey": "06000805206620",
+                    "key": "01000629780404",
+                    "siteKey": "02000474408294",
                     "name": "string",
-                    "accountKey": "00000531375430",
-                    "statusKey": "06000907141443",
+                    "accountKey": "06000406040496",
+                    "statusKey": "08000549691324",
                     "budget": "string",
-                    "createdAt": "2014-03-04T03:39:00Z",
-                    "updatedAt": "1996-07-16T13:05:07Z",
-                    "deletedAt": "2016-12-21T19:19:17Z"
+                    "createdAt": "2013-07-12T19:53:03Z",
+                    "updatedAt": "1973-03-23T20:25:08Z",
+                    "deletedAt": "1980-05-25T16:22:47Z"
                 }
             },
             "InvoiceLineItem": {
@@ -12425,28 +12425,28 @@
                     }
                 },
                 "example": {
-                    "key": "00000143238766",
-                    "locationKey": "04000785190776",
-                    "vendorKey": "06000697717899",
-                    "productKey": "03000567082290",
-                    "statusKey": "02000184322543",
-                    "storeroomKey": "07000227348875",
-                    "currencyKey": "01000277386987",
+                    "key": "08000506719735",
+                    "locationKey": "00000015445151",
+                    "vendorKey": "09000496427295",
+                    "productKey": "05000503262339",
+                    "statusKey": "01000347010991",
+                    "storeroomKey": "06000332172094",
+                    "currencyKey": "07000462627284",
                     "lineNo": "string",
-                    "code": "32740226",
+                    "code": "67745340",
                     "lineRef": "string",
                     "quantity": "string",
                     "receivedQuantity": "string",
-                    "uomKey": "01000227628919",
+                    "uomKey": "01000021607011",
                     "price": "string",
                     "discount": "string",
                     "lineTaxValue": "string",
                     "lineTotalValue": "string",
                     "notes": "string",
-                    "deliveryAt": "2013-06-13T01:32:23Z",
-                    "createdAt": "2016-08-29T00:24:22Z",
-                    "updatedAt": "1976-02-08T21:13:53Z",
-                    "deletedAt": "1997-06-26T21:23:07Z"
+                    "deliveryAt": "1991-02-13T19:28:15Z",
+                    "createdAt": "2011-10-20T22:46:12Z",
+                    "updatedAt": "2020-12-27T12:13:42Z",
+                    "deletedAt": "1980-11-22T13:36:32Z"
                 }
             },
             "Invoice": {
@@ -12574,51 +12574,51 @@
                     }
                 },
                 "example": {
-                    "key": "05000715381868",
-                    "title": "At et eveniet ut alias sunt et pariatur.",
-                    "customerKey": "08000921856185",
-                    "locationKey": "07000083636464",
+                    "key": "09000163967014",
+                    "title": "Cum rerum id sapiente eum eos quia.",
+                    "customerKey": "03000870323999",
+                    "locationKey": "09000195363565",
                     "invoiceNumber": "string",
-                    "vendorKey": "02000978695894",
-                    "poKey": "07000727376709",
-                    "statusKey": "09000285402505",
+                    "vendorKey": "09000707473198",
+                    "poKey": "02000457640461",
+                    "statusKey": "00000196362696",
                     "lineItems": [
                         {
-                            "key": "02000184771989",
-                            "locationKey": "02000678164828",
-                            "vendorKey": "05000325031291",
-                            "productKey": "04000060226608",
-                            "statusKey": "07000800898902",
-                            "storeroomKey": "04000830763941",
-                            "currencyKey": "07000947326819",
+                            "key": "08000885778714",
+                            "locationKey": "03000122976706",
+                            "vendorKey": "02000880234939",
+                            "productKey": "05000874291491",
+                            "statusKey": "01000681566196",
+                            "storeroomKey": "00000642865733",
+                            "currencyKey": "09000733040852",
                             "lineNo": "string",
-                            "code": "51373757",
+                            "code": "32584882",
                             "lineRef": "string",
                             "quantity": "string",
                             "receivedQuantity": "string",
-                            "uomKey": "02000798900901",
+                            "uomKey": "07000870759765",
                             "price": "string",
                             "discount": "string",
                             "lineTaxValue": "string",
                             "lineTotalValue": "string",
                             "notes": "string",
-                            "deliveryAt": "1970-04-06T02:06:49Z",
-                            "createdAt": "1995-06-26T15:57:54Z",
-                            "updatedAt": "2012-11-02T22:40:21Z",
-                            "deletedAt": "1996-04-04T18:15:31Z"
+                            "deliveryAt": "1985-12-21T00:24:48Z",
+                            "createdAt": "2025-07-07T23:18:38Z",
+                            "updatedAt": "2009-12-03T08:35:03Z",
+                            "deletedAt": "2015-08-09T17:12:41Z"
                         }
                     ],
-                    "invoiceDate": "2002-07-06T17:13:37Z",
-                    "dueDate": "2016-07-07T19:29:37Z",
-                    "receivedDate": "2009-07-11T07:38:18Z",
-                    "currencyKey": "00000017377562",
+                    "invoiceDate": "1990-04-29T19:41:51Z",
+                    "dueDate": "1977-04-26T07:35:22Z",
+                    "receivedDate": "1996-06-15T17:47:48Z",
+                    "currencyKey": "03000403984547",
                     "totalNetValue": "string",
                     "totalTaxValue": "string",
                     "totalGrossValue": "string",
-                    "salesOrderKey": "04000693485294",
-                    "createdAt": "2019-11-18T07:06:10Z",
-                    "updatedAt": "2004-11-08T17:55:16Z",
-                    "deletedAt": "2011-08-26T20:42:54Z"
+                    "salesOrderKey": "07000328749015",
+                    "createdAt": "2012-03-14T01:32:11Z",
+                    "updatedAt": "1990-06-20T20:24:17Z",
+                    "deletedAt": "1988-09-03T06:50:44Z"
                 }
             },
             "InvoiceCollection": {
@@ -12806,35 +12806,35 @@
                     }
                 },
                 "example": {
-                    "key": "09000225731264",
-                    "locationKey": "09000383428234",
-                    "accountKey": "04000410631905",
-                    "vendorKey": "03000474566178",
-                    "assetKey": "01000054276195",
-                    "materialKey": "08000729937154",
-                    "productKey": "01000844234973",
-                    "statusKey": "00000852604300",
-                    "storeroomKey": "09000330058673",
+                    "key": "06000727993011",
+                    "locationKey": "04000130884198",
+                    "accountKey": "02000412560514",
+                    "vendorKey": "06000775382151",
+                    "assetKey": "02000691051459",
+                    "materialKey": "08000660068347",
+                    "productKey": "05000338878370",
+                    "statusKey": "01000233455709",
+                    "storeroomKey": "01000920084435",
                     "lineNo": "string",
-                    "code": "93619196",
+                    "code": "12966424",
                     "type": "string",
                     "name": "string",
-                    "description": "Qui mollitia consequatur iusto sed velit.",
+                    "description": "Repellendus repellendus est voluptas tempora.",
                     "lineRef": "string",
                     "quantity": "string",
                     "receivedQuantity": "string",
-                    "uomKey": "01000580668638",
-                    "currencyKey": "08000271184798",
+                    "uomKey": "02000210409209",
+                    "currencyKey": "04000277400534",
                     "price": "string",
                     "discount": "string",
                     "lineTaxValue": "string",
                     "lineTotalValue": "string",
                     "notes": "string",
-                    "deliveryAt": "2021-09-16T01:07:59Z",
-                    "dueAt": "1997-09-09T17:22:21Z",
-                    "createdAt": "2004-01-14T12:48:23Z",
-                    "updatedAt": "2013-07-11T19:41:35Z",
-                    "deletedAt": "2008-03-20T15:03:06Z"
+                    "deliveryAt": "2003-10-07T17:56:23Z",
+                    "dueAt": "1971-08-02T23:33:35Z",
+                    "createdAt": "2012-10-16T15:47:20Z",
+                    "updatedAt": "2006-01-22T16:25:30Z",
+                    "deletedAt": "2014-04-16T11:07:32Z"
                 }
             },
             "Receipt": {
@@ -12956,57 +12956,57 @@
                     }
                 },
                 "example": {
-                    "key": "00000788859860",
-                    "siteKey": "00000061304197",
-                    "vendorKey": "01000960429572",
-                    "poKey": "03000220722285",
-                    "code": "46196729",
+                    "key": "04000496238828",
+                    "siteKey": "03000880796978",
+                    "vendorKey": "06000143533821",
+                    "poKey": "08000402145780",
+                    "code": "59894001",
                     "orderNo": "string",
-                    "orderDate": "1978-04-14T15:11:39Z",
-                    "title": "Enim eum ut odit dignissimos dolore animi neque.",
-                    "description": "Nobis est a in quis placeat sapiente earum.",
-                    "completedAt": "2004-03-13T18:31:02Z",
+                    "orderDate": "2008-09-02T05:36:56Z",
+                    "title": "Voluptatem accusantium ea cum ipsam fugit.",
+                    "description": "Doloremque assumenda quis fugiat.",
+                    "completedAt": "2009-03-14T23:06:03Z",
                     "shippingMethod": "string",
                     "notes": "string",
-                    "currencyKey": "00000104915225",
+                    "currencyKey": "08000843364983",
                     "totalNetValue": "string",
                     "totalTaxValue": "string",
                     "totalGrossValue": "string",
                     "lineItems": [
                         {
-                            "key": "07000435473188",
-                            "locationKey": "01000044727277",
-                            "accountKey": "09000346393994",
-                            "vendorKey": "08000353152752",
-                            "assetKey": "04000965299974",
-                            "materialKey": "07000637591322",
-                            "productKey": "00000863171342",
-                            "statusKey": "06000079418204",
-                            "storeroomKey": "04000489211553",
+                            "key": "07000464239843",
+                            "locationKey": "00000401569664",
+                            "accountKey": "06000121452855",
+                            "vendorKey": "06000069936467",
+                            "assetKey": "00000196091832",
+                            "materialKey": "03000379286912",
+                            "productKey": "04000478284040",
+                            "statusKey": "08000725295236",
+                            "storeroomKey": "05000589146670",
                             "lineNo": "string",
-                            "code": "66106463",
+                            "code": "36822355",
                             "type": "string",
                             "name": "string",
-                            "description": "Qui id animi ab maxime.",
+                            "description": "Non laudantium ut consequatur ullam accusantium.",
                             "lineRef": "string",
                             "quantity": "string",
                             "receivedQuantity": "string",
-                            "uomKey": "03000362028222",
-                            "currencyKey": "02000498899769",
+                            "uomKey": "07000564377810",
+                            "currencyKey": "04000038932216",
                             "price": "string",
                             "discount": "string",
                             "lineTaxValue": "string",
                             "lineTotalValue": "string",
                             "notes": "string",
-                            "deliveryAt": "1979-11-25T03:15:13Z",
-                            "dueAt": "2022-10-05T06:32:10Z",
-                            "createdAt": "1973-02-23T10:51:53Z",
-                            "updatedAt": "2011-02-18T16:08:17Z",
-                            "deletedAt": "2002-06-18T10:19:51Z"
+                            "deliveryAt": "2013-05-23T13:32:38Z",
+                            "dueAt": "2020-11-11T08:42:33Z",
+                            "createdAt": "1990-08-22T17:10:49Z",
+                            "updatedAt": "1997-08-06T19:05:26Z",
+                            "deletedAt": "1989-08-14T06:13:24Z"
                         }
                     ],
-                    "createdAt": "1996-09-12T20:25:57Z",
-                    "updatedAt": "1991-03-10T03:05:54Z"
+                    "createdAt": "1980-07-25T20:43:39Z",
+                    "updatedAt": "2019-08-31T13:52:01Z"
                 }
             },
             "PurchaseOrder": {
@@ -13170,22 +13170,22 @@
                     }
                 },
                 "example": {
-                    "key": "01000419930137",
-                    "siteKey": "07000730633425",
-                    "organizationKey": "07000937437662",
-                    "orderDate": "2014-07-06T19:17:10Z",
-                    "vendorKey": "08000216531127",
-                    "userRequestedKey": "09000463960733",
-                    "userApprovedKey": "07000417675754",
+                    "key": "01000293247877",
+                    "siteKey": "09000290445626",
+                    "organizationKey": "09000238138589",
+                    "orderDate": "2010-10-20T13:41:25Z",
+                    "vendorKey": "07000321293695",
+                    "userRequestedKey": "06000631203106",
+                    "userApprovedKey": "02000634735199",
                     "orderNo": "string",
-                    "statusKey": "07000477225663",
-                    "title": "Amet earum enim dolore qui.",
-                    "description": "Provident at aut iusto.",
-                    "dueAt": "1992-05-26T10:19:02Z",
-                    "approvedAt": "2001-10-10T14:45:54Z",
-                    "completedAt": "1972-11-13T23:59:39Z",
+                    "statusKey": "01000496312140",
+                    "title": "Hic qui rerum in perferendis.",
+                    "description": "Non error illum minus nihil minima et nostrum.",
+                    "dueAt": "1996-02-27T19:25:48Z",
+                    "approvedAt": "1999-01-05T18:05:47Z",
+                    "completedAt": "1970-11-24T03:09:48Z",
                     "shippingMethod": "string",
-                    "shipmentDate": "1973-12-28T21:43:22Z",
+                    "shipmentDate": "2002-09-16T04:05:46Z",
                     "shipmentAddress": {
                         "country": "string",
                         "addressLines": "string",
@@ -13196,9 +13196,9 @@
                         "phone": "string",
                         "email": "string",
                         "notes": "string",
-                        "isActive": "true",
-                        "createdAt": "1987-01-03T08:17:52Z",
-                        "updatedAt": "2005-11-07T15:35:28Z"
+                        "isActive": "false",
+                        "createdAt": "2000-10-28T16:42:53Z",
+                        "updatedAt": "1984-01-10T18:09:32Z"
                     },
                     "billingAddress": {
                         "country": "string",
@@ -13210,9 +13210,9 @@
                         "phone": "string",
                         "email": "string",
                         "notes": "string",
-                        "isActive": "false",
-                        "createdAt": "2019-01-03T11:19:35Z",
-                        "updatedAt": "1978-05-24T11:44:04Z"
+                        "isActive": "true",
+                        "createdAt": "1999-11-04T17:41:30Z",
+                        "updatedAt": "1970-10-26T06:24:48Z"
                     },
                     "terms": "string",
                     "notes": "string",
@@ -13227,45 +13227,45 @@
                         "email": "string",
                         "notes": "string",
                         "isActive": "false",
-                        "createdAt": "1998-06-25T00:09:24Z",
-                        "updatedAt": "1981-11-08T21:56:25Z"
+                        "createdAt": "1986-03-24T00:31:42Z",
+                        "updatedAt": "2010-06-26T21:38:02Z"
                     },
-                    "currencyKey": "03000047017209",
-                    "locationKey": "03000718350154",
+                    "currencyKey": "03000049238816",
+                    "locationKey": "08000635066525",
                     "totalNetValue": "string",
                     "totalGrossValue": "string",
-                    "updatedAt": "2019-03-04T17:12:31Z",
+                    "updatedAt": "2002-01-28T22:29:01Z",
                     "lineItems": [
                         {
-                            "key": "05000115897297",
-                            "locationKey": "09000252871940",
-                            "accountKey": "06000660621332",
-                            "vendorKey": "09000189994206",
-                            "assetKey": "01000510770194",
-                            "materialKey": "01000581108897",
-                            "productKey": "09000435965182",
-                            "statusKey": "03000093020726",
-                            "storeroomKey": "03000936527728",
+                            "key": "01000580936927",
+                            "locationKey": "01000225417651",
+                            "accountKey": "03000737418296",
+                            "vendorKey": "08000240820799",
+                            "assetKey": "07000964556189",
+                            "materialKey": "07000852769953",
+                            "productKey": "05000431611094",
+                            "statusKey": "09000364405319",
+                            "storeroomKey": "07000853095801",
                             "lineNo": "string",
-                            "code": "75505707",
+                            "code": "85680449",
                             "type": "string",
                             "name": "string",
-                            "description": "Nihil impedit dicta nihil.",
+                            "description": "Possimus dolor ut commodi quas.",
                             "lineRef": "string",
                             "quantity": "string",
                             "receivedQuantity": "string",
-                            "uomKey": "09000997020403",
-                            "currencyKey": "08000988019081",
+                            "uomKey": "03000432455659",
+                            "currencyKey": "06000315472202",
                             "price": "string",
                             "discount": "string",
                             "lineTaxValue": "string",
                             "lineTotalValue": "string",
                             "notes": "string",
-                            "deliveryAt": "2023-04-10T00:03:11Z",
-                            "dueAt": "1987-06-26T05:40:31Z",
-                            "createdAt": "2000-01-04T02:33:10Z",
-                            "updatedAt": "2002-09-03T04:47:31Z",
-                            "deletedAt": "1970-04-13T22:53:54Z"
+                            "deliveryAt": "1986-03-20T07:53:50Z",
+                            "dueAt": "2008-03-20T01:47:03Z",
+                            "createdAt": "1980-04-11T22:28:21Z",
+                            "updatedAt": "1994-11-13T14:52:28Z",
+                            "deletedAt": "2015-05-22T06:46:36Z"
                         }
                     ]
                 }
@@ -13449,34 +13449,34 @@
                     }
                 },
                 "example": {
-                    "key": "08000365684560",
-                    "locationKey": "09000349354138",
-                    "assetKey": "05000185081841",
-                    "statusKey": "09000905051622",
-                    "materialKey": "00000982925107",
-                    "storeroomKey": "09000761085929",
-                    "vendorKey": "04000826769368",
-                    "productKey": "06000316189140",
+                    "key": "02000067854063",
+                    "locationKey": "05000167417384",
+                    "assetKey": "01000302082661",
+                    "statusKey": "05000563435553",
+                    "materialKey": "06000408917360",
+                    "storeroomKey": "04000457528659",
+                    "vendorKey": "01000977054516",
+                    "productKey": "09000077347251",
                     "price": "string",
                     "discount": "string",
-                    "deliveryAt": "1987-04-02T19:17:46Z",
+                    "deliveryAt": "2016-01-05T09:10:45Z",
                     "lineNo": "string",
-                    "code": "29602643",
+                    "code": "77495761",
                     "name": "string",
-                    "description": "Et quaerat aut neque. Ut qui eius aspernatur.",
+                    "description": "Libero id aut maiores dolore ullam nesciunt qui.",
                     "lineRef": "string",
                     "quantity": "string",
                     "receivedQuantity": "string",
                     "type": "string",
-                    "uomKey": "06000586747598",
+                    "uomKey": "03000698406203",
                     "cost": "string",
-                    "currencyKey": "00000808308932",
+                    "currencyKey": "08000114017660",
                     "lineTotalValue": "string",
                     "lineTaxValue": "string",
                     "notes": "string",
-                    "dueAt": "1995-10-05T11:42:31Z",
-                    "createdAt": "2013-09-02T19:39:47Z",
-                    "updatedAt": "2025-02-23T10:03:32Z"
+                    "dueAt": "1994-04-27T00:31:21Z",
+                    "createdAt": "1973-03-10T09:42:04Z",
+                    "updatedAt": "2012-04-25T14:31:27Z"
                 }
             },
             "BOMLineItem": {
@@ -13550,17 +13550,17 @@
                     }
                 },
                 "example": {
-                    "locationKey": "04000420985859",
-                    "materialKey": "03000394328568",
-                    "productKey": "03000126348983",
-                    "currencyKey": "02000864650903",
-                    "description": "Itaque perspiciatis rerum qui ea.",
+                    "locationKey": "03000129893016",
+                    "materialKey": "04000340408590",
+                    "productKey": "06000815392359",
+                    "currencyKey": "07000487984847",
+                    "description": "Dolor aut nemo iure quam.",
                     "quantity": "string",
-                    "uomKey": "04000952584721",
+                    "uomKey": "05000797405273",
                     "notes": "string",
                     "price": "string",
-                    "createdAt": "1999-08-08T20:19:33Z",
-                    "updatedAt": "1974-04-08T05:00:30Z"
+                    "createdAt": "1992-07-13T07:39:17Z",
+                    "updatedAt": "1995-06-09T04:15:44Z"
                 }
             },
             "BillOfMaterial": {
@@ -13616,28 +13616,28 @@
                     }
                 },
                 "example": {
-                    "key": "09000028376640",
-                    "siteKey": "05000474174432",
+                    "key": "00000277548834",
+                    "siteKey": "05000370169357",
                     "name": "string",
-                    "projectKey": "05000266895185",
+                    "projectKey": "06000804813167",
                     "type": "string",
                     "lineItems": [
                         {
-                            "locationKey": "04000238976628",
-                            "materialKey": "08000877369863",
-                            "productKey": "07000277270696",
-                            "currencyKey": "07000045283756",
-                            "description": "Tenetur tempora eius itaque et.",
+                            "locationKey": "09000143971169",
+                            "materialKey": "06000593397739",
+                            "productKey": "00000971130650",
+                            "currencyKey": "03000991717761",
+                            "description": "Blanditiis delectus tenetur quo enim animi.",
                             "quantity": "string",
-                            "uomKey": "05000317879672",
+                            "uomKey": "03000989698163",
                             "notes": "string",
                             "price": "string",
-                            "createdAt": "1995-03-16T16:41:30Z",
-                            "updatedAt": "2005-06-04T22:26:18Z"
+                            "createdAt": "2001-09-24T03:34:21Z",
+                            "updatedAt": "2007-04-21T14:46:15Z"
                         }
                     ],
-                    "createdAt": "2005-10-02T15:44:51Z",
-                    "updatedAt": "1990-11-05T02:13:21Z"
+                    "createdAt": "1973-07-21T11:33:24Z",
+                    "updatedAt": "1971-02-17T04:56:51Z"
                 }
             },
             "MaterialItem": {
@@ -13759,25 +13759,25 @@
                     }
                 },
                 "example": {
-                    "key": "09000073358609",
-                    "materialKey": "06000939367606",
-                    "assemblyKey": "09000283192131",
-                    "assetKey": "04000638845756",
-                    "assetTemplateKey": "08000560175581",
-                    "workOrderKey": "03000918521629",
-                    "pmKey": "08000340641599",
-                    "productionOrderKey": "02000788248710",
+                    "key": "08000100528145",
+                    "materialKey": "08000940124800",
+                    "assemblyKey": "03000602511626",
+                    "assetKey": "08000556180953",
+                    "assetTemplateKey": "04000421050420",
+                    "workOrderKey": "06000293745603",
+                    "pmKey": "03000977489447",
+                    "productionOrderKey": "04000732373463",
                     "partNumber": "string",
                     "drawingNumber": "string",
                     "positionNumber": "string",
-                    "documentKey": "01000549049258",
+                    "documentKey": "04000350544700",
                     "name": "string",
-                    "uomKey": "04000110508083",
+                    "uomKey": "05000790568229",
                     "quantity": "string",
                     "requiredQuantity": "string",
-                    "createdAt": "2007-09-17T04:10:06Z",
-                    "updatedAt": "1970-09-19T01:10:31Z",
-                    "deletedAt": "1989-11-04T11:30:19Z"
+                    "createdAt": "2006-12-26T14:39:19Z",
+                    "updatedAt": "2013-03-23T16:58:28Z",
+                    "deletedAt": "1988-11-17T08:27:13Z"
                 }
             },
             "ProductionOrder": {
@@ -13869,52 +13869,52 @@
                     }
                 },
                 "example": {
-                    "key": "08000360055540",
-                    "siteKey": "07000861440863",
-                    "statusKey": "05000350105584",
-                    "locationKey": "00000430772822",
+                    "key": "00000280235965",
+                    "siteKey": "09000750667269",
+                    "statusKey": "07000948442190",
+                    "locationKey": "07000157892125",
                     "orderNo": "string",
-                    "orderDate": "1980-07-28T11:24:30Z",
+                    "orderDate": "1985-04-28T07:50:07Z",
                     "totalNetValue": "string",
                     "totalTaxValue": "string",
                     "totalGrossValue": "string",
                     "note": "string",
                     "lineItems": [
                         {
-                            "key": "00000898606800",
-                            "locationKey": "05000826582905",
-                            "accountKey": "05000568866024",
-                            "vendorKey": "00000320719237",
-                            "assetKey": "08000959449862",
-                            "materialKey": "00000237618930",
-                            "productKey": "03000457070711",
-                            "statusKey": "09000259960010",
-                            "storeroomKey": "02000070846358",
+                            "key": "05000893414231",
+                            "locationKey": "04000119005445",
+                            "accountKey": "08000603372748",
+                            "vendorKey": "00000190910784",
+                            "assetKey": "04000619582170",
+                            "materialKey": "02000990340405",
+                            "productKey": "04000704099587",
+                            "statusKey": "05000819828282",
+                            "storeroomKey": "03000304794184",
                             "lineNo": "string",
-                            "code": "86887984",
+                            "code": "22708786",
                             "type": "string",
                             "name": "string",
-                            "description": "Nobis quas quo quisquam enim.",
+                            "description": "Voluptatem quia eum totam laborum.",
                             "lineRef": "string",
                             "quantity": "string",
                             "receivedQuantity": "string",
-                            "uomKey": "03000031384470",
-                            "currencyKey": "04000438996625",
+                            "uomKey": "05000575869383",
+                            "currencyKey": "02000017929318",
                             "price": "string",
                             "discount": "string",
                             "lineTaxValue": "string",
                             "lineTotalValue": "string",
                             "notes": "string",
-                            "deliveryAt": "1993-02-05T15:42:28Z",
-                            "dueAt": "1981-05-21T23:00:07Z",
-                            "createdAt": "2008-02-01T04:49:10Z",
-                            "updatedAt": "1973-07-18T12:56:17Z",
-                            "deletedAt": "2006-09-16T05:45:45Z"
+                            "deliveryAt": "2016-08-09T03:18:40Z",
+                            "dueAt": "1995-12-29T02:05:39Z",
+                            "createdAt": "2003-07-10T01:48:20Z",
+                            "updatedAt": "1976-11-30T19:50:27Z",
+                            "deletedAt": "1992-05-14T23:52:15Z"
                         }
                     ],
-                    "createdAt": "2005-09-19T04:14:24Z",
-                    "updatedAt": "1990-12-13T12:51:18Z",
-                    "deletedAt": "2020-12-13T15:20:01Z"
+                    "createdAt": "1970-03-22T22:58:59Z",
+                    "updatedAt": "2016-11-01T17:29:18Z",
+                    "deletedAt": "2013-12-09T10:26:24Z"
                 }
             },
             "Receiving": {
@@ -14042,58 +14042,58 @@
                     }
                 },
                 "example": {
-                    "key": "01000835031210",
-                    "organizationKey": "02000009434179",
-                    "siteKey": "00000068444107",
-                    "vendorKey": "01000244450256",
-                    "poKey": "01000144755280",
-                    "code": "41398654",
+                    "key": "06000199138438",
+                    "organizationKey": "04000141369955",
+                    "siteKey": "08000834407267",
+                    "vendorKey": "03000676253783",
+                    "poKey": "00000887196588",
+                    "code": "52294013",
                     "orderNo": "string",
-                    "orderDate": "1975-11-02T23:21:08Z",
-                    "title": "Est beatae est ipsa beatae natus voluptatem.",
-                    "description": "Nesciunt rerum libero alias.",
-                    "completedAt": "1997-02-05T03:02:38Z",
+                    "orderDate": "1986-01-03T12:12:16Z",
+                    "title": "Ea ducimus quia ut hic similique laudantium.",
+                    "description": "Dignissimos excepturi blanditiis itaque.",
+                    "completedAt": "1995-08-04T09:42:49Z",
                     "shippingMethod": "string",
                     "notes": "string",
-                    "currencyKey": "04000633285353",
+                    "currencyKey": "07000584739128",
                     "totalNetValue": "string",
                     "totalTaxValue": "string",
                     "totalGrossValue": "string",
                     "lineItems": [
                         {
-                            "key": "06000589033648",
-                            "locationKey": "00000509120252",
-                            "accountKey": "02000011058928",
-                            "vendorKey": "01000094583132",
-                            "assetKey": "04000008711329",
-                            "materialKey": "08000635511540",
-                            "productKey": "06000550118055",
-                            "statusKey": "08000590292917",
-                            "storeroomKey": "06000272912190",
+                            "key": "09000466577002",
+                            "locationKey": "08000664538178",
+                            "accountKey": "01000296228206",
+                            "vendorKey": "08000626496124",
+                            "assetKey": "08000287219031",
+                            "materialKey": "06000962785480",
+                            "productKey": "00000871882389",
+                            "statusKey": "02000463806837",
+                            "storeroomKey": "04000631870517",
                             "lineNo": "string",
-                            "code": "74060085",
+                            "code": "63937930",
                             "type": "string",
                             "name": "string",
-                            "description": "Aut quia modi dolor odio earum provident.",
+                            "description": "Blanditiis quod dolor quia quia eveniet.",
                             "lineRef": "string",
                             "quantity": "string",
                             "receivedQuantity": "string",
-                            "uomKey": "08000542497540",
-                            "currencyKey": "00000823597348",
+                            "uomKey": "02000566970108",
+                            "currencyKey": "07000998570189",
                             "price": "string",
                             "discount": "string",
                             "lineTaxValue": "string",
                             "lineTotalValue": "string",
                             "notes": "string",
-                            "deliveryAt": "1991-12-26T01:09:04Z",
-                            "dueAt": "2023-03-10T20:22:51Z",
-                            "createdAt": "1974-01-19T18:21:37Z",
-                            "updatedAt": "1996-09-17T22:38:33Z",
-                            "deletedAt": "1983-09-09T09:45:28Z"
+                            "deliveryAt": "1982-11-22T11:07:31Z",
+                            "dueAt": "2019-08-13T14:59:22Z",
+                            "createdAt": "2023-10-31T14:33:21Z",
+                            "updatedAt": "1980-06-12T00:05:48Z",
+                            "deletedAt": "1974-11-23T09:16:37Z"
                         }
                     ],
-                    "createdAt": "2001-04-12T20:59:42Z",
-                    "updatedAt": "2023-10-07T14:08:25Z"
+                    "createdAt": "1971-08-18T11:35:37Z",
+                    "updatedAt": "1992-08-16T17:21:43Z"
                 }
             },
             "ReceivingCollection": {
@@ -14209,13 +14209,13 @@
                     }
                 },
                 "example": {
-                    "key": "06000311139084",
-                    "siteKey": "05000190845174",
-                    "vendorKey": "06000909852767",
-                    "organizationKey": "02000083299914",
-                    "accountKey": "04000638839611",
-                    "code": "93873024",
-                    "statusKey": "08000665516734",
+                    "key": "05000033454674",
+                    "siteKey": "08000253107652",
+                    "vendorKey": "04000422524953",
+                    "organizationKey": "05000955054230",
+                    "accountKey": "02000798791734",
+                    "code": "87659405",
+                    "statusKey": "08000337481195",
                     "shippingMethod": "string",
                     "shippingAddress": [
                         {
@@ -14228,51 +14228,51 @@
                             "phone": "string",
                             "email": "string",
                             "notes": "string",
-                            "isActive": "false",
-                            "createdAt": "2020-09-24T00:29:13Z",
-                            "updatedAt": "1991-05-12T22:56:58Z"
+                            "isActive": "true",
+                            "createdAt": "1972-10-22T17:14:39Z",
+                            "updatedAt": "2019-11-23T05:40:19Z"
                         }
                     ],
                     "lineItems": [
                         {
-                            "key": "01000987036258",
-                            "locationKey": "07000596715969",
-                            "accountKey": "09000277309696",
-                            "vendorKey": "09000480404269",
-                            "assetKey": "02000436763901",
-                            "materialKey": "01000212457861",
-                            "productKey": "02000202160965",
-                            "statusKey": "03000659285603",
-                            "storeroomKey": "02000251698979",
+                            "key": "09000415860524",
+                            "locationKey": "01000383096319",
+                            "accountKey": "04000079321751",
+                            "vendorKey": "04000696074065",
+                            "assetKey": "02000131234690",
+                            "materialKey": "03000274352583",
+                            "productKey": "03000332220162",
+                            "statusKey": "09000430573661",
+                            "storeroomKey": "09000474942998",
                             "lineNo": "string",
-                            "code": "22019882",
+                            "code": "26682419",
                             "type": "string",
                             "name": "string",
-                            "description": "Error sapiente exercitationem nulla ut quos.",
+                            "description": "Architecto aspernatur quod ut qui.",
                             "lineRef": "string",
                             "quantity": "string",
                             "receivedQuantity": "string",
-                            "uomKey": "07000443881551",
-                            "currencyKey": "05000366058352",
+                            "uomKey": "08000941787942",
+                            "currencyKey": "00000460806247",
                             "price": "string",
                             "discount": "string",
                             "lineTaxValue": "string",
                             "lineTotalValue": "string",
                             "notes": "string",
-                            "deliveryAt": "1984-12-05T19:26:39Z",
-                            "dueAt": "1994-05-18T02:37:22Z",
-                            "createdAt": "2008-04-09T14:44:17Z",
-                            "updatedAt": "2020-11-11T02:10:58Z",
-                            "deletedAt": "1981-12-14T10:17:59Z"
+                            "deliveryAt": "1976-05-12T05:09:00Z",
+                            "dueAt": "2001-10-04T00:44:47Z",
+                            "createdAt": "2019-03-24T12:56:24Z",
+                            "updatedAt": "1993-10-15T01:34:02Z",
+                            "deletedAt": "1983-03-11T12:16:49Z"
                         }
                     ],
                     "documentKeys": "string",
                     "totalNetValue": "string",
                     "totalTaxValue": "string",
                     "totalGrossValue": "string",
-                    "createdAt": "2005-08-04T17:57:38Z",
-                    "updatedAt": "2004-10-08T05:44:02Z",
-                    "deletedAt": "2006-11-11T19:52:38Z"
+                    "createdAt": "2018-02-20T02:23:15Z",
+                    "updatedAt": "1988-12-22T19:44:34Z",
+                    "deletedAt": "2001-05-05T10:22:10Z"
                 }
             },
             "RequestForQuotationCollection": {
@@ -14392,14 +14392,14 @@
                     }
                 },
                 "example": {
-                    "key": "03000149096758",
-                    "siteKey": "09000729172927",
-                    "requesterKey": "03000884293234",
-                    "accountKey": "00000288777894",
-                    "userRequestedKey": "04000828469284",
-                    "userApprovedKey": "07000006863815",
-                    "code": "00943895",
-                    "statusKey": "02000045076192",
+                    "key": "04000768945960",
+                    "siteKey": "02000777478508",
+                    "requesterKey": "08000051122178",
+                    "accountKey": "08000346747283",
+                    "userRequestedKey": "00000106092083",
+                    "userApprovedKey": "05000868021005",
+                    "code": "85413573",
+                    "statusKey": "08000216808933",
                     "shippingMethod": "string",
                     "shippingAddress": {
                         "country": "string",
@@ -14411,50 +14411,50 @@
                         "phone": "string",
                         "email": "string",
                         "notes": "string",
-                        "isActive": "true",
-                        "createdAt": "2020-02-14T00:58:38Z",
-                        "updatedAt": "1983-07-01T17:00:50Z"
+                        "isActive": "false",
+                        "createdAt": "1975-03-21T10:42:32Z",
+                        "updatedAt": "1996-04-06T16:25:16Z"
                     },
                     "lineItems": [
                         {
-                            "key": "06000206903879",
-                            "locationKey": "06000493656068",
-                            "accountKey": "07000911708334",
-                            "vendorKey": "07000778252073",
-                            "assetKey": "05000606816158",
-                            "materialKey": "04000336029321",
-                            "productKey": "07000265890412",
-                            "statusKey": "09000935722489",
-                            "storeroomKey": "09000150948403",
+                            "key": "05000724842036",
+                            "locationKey": "00000427297417",
+                            "accountKey": "07000841570026",
+                            "vendorKey": "08000363063871",
+                            "assetKey": "00000218578619",
+                            "materialKey": "03000796771514",
+                            "productKey": "05000836592086",
+                            "statusKey": "03000135500854",
+                            "storeroomKey": "06000909181327",
                             "lineNo": "string",
-                            "code": "93992206",
+                            "code": "00650748",
                             "type": "string",
                             "name": "string",
-                            "description": "Sint quibusdam et non asperiores rerum vel qui.",
+                            "description": "Vel aliquam blanditiis sunt repellat est qui.",
                             "lineRef": "string",
                             "quantity": "string",
                             "receivedQuantity": "string",
-                            "uomKey": "02000205784110",
-                            "currencyKey": "06000823964139",
+                            "uomKey": "09000266174413",
+                            "currencyKey": "09000381569202",
                             "price": "string",
                             "discount": "string",
                             "lineTaxValue": "string",
                             "lineTotalValue": "string",
                             "notes": "string",
-                            "deliveryAt": "1988-02-17T08:56:03Z",
-                            "dueAt": "2017-07-03T17:20:09Z",
-                            "createdAt": "2008-12-01T14:30:12Z",
-                            "updatedAt": "2005-04-07T00:59:42Z",
-                            "deletedAt": "1975-08-29T13:42:44Z"
+                            "deliveryAt": "1971-12-30T00:57:03Z",
+                            "dueAt": "2016-10-16T14:38:54Z",
+                            "createdAt": "2016-04-30T00:50:51Z",
+                            "updatedAt": "1992-08-30T15:54:52Z",
+                            "deletedAt": "2002-09-12T08:02:27Z"
                         }
                     ],
                     "documentKeys": "string",
                     "totalNetValue": "string",
                     "totalTaxValue": "string",
                     "totalGrossValue": "string",
-                    "createdAt": "1982-07-25T09:58:29Z",
-                    "updatedAt": "2000-11-19T15:43:46Z",
-                    "deletedAt": "2024-09-29T23:39:56Z"
+                    "createdAt": "2020-05-01T19:59:35Z",
+                    "updatedAt": "2003-06-10T03:19:56Z",
+                    "deletedAt": "1991-12-06T23:06:25Z"
                 }
             },
             "Inventory": {
@@ -14510,14 +14510,14 @@
                     }
                 },
                 "example": {
-                    "key": "06000570446511",
-                    "code": "47890343",
+                    "key": "03000187422539",
+                    "code": "43542154",
                     "name": "string",
                     "quantity": 10,
                     "unitCost": 10,
-                    "locationKey": "00000297463869",
-                    "updatedAt": "2014-06-21T17:07:49Z",
-                    "createdAt": "2003-10-09T05:45:23Z"
+                    "locationKey": "02000558899613",
+                    "updatedAt": "2007-01-21T10:15:47Z",
+                    "createdAt": "2024-05-26T20:22:20Z"
                 }
             },
             "Material": {
@@ -14649,61 +14649,61 @@
                     }
                 },
                 "example": {
-                    "key": "06000346699270",
-                    "organizationKey": "02000897550804",
+                    "key": "02000761551793",
+                    "organizationKey": "07000603504334",
                     "parentKeys": "[]",
                     "assetKeys": "[]",
-                    "code": "15861603",
+                    "code": "71800127",
                     "isAssembly": "true",
                     "partNumber": "string",
                     "name": "string",
-                    "description": "Animi ut quis quia nostrum.",
+                    "description": "Voluptatem aut aut laudantium.",
                     "notes": "string",
                     "criticality": "string",
-                    "isActive": "false",
+                    "isActive": "true",
                     "manufacturerName": "string",
-                    "uomKey": "08000353633490",
+                    "uomKey": "05000982507606",
                     "supplyOptions": [
                         {
-                            "vendorKey": "02000392231707",
+                            "vendorKey": "01000971640917",
                             "partNumber": "[]",
                             "price": "[]",
-                            "uomKey": "04000924159409",
-                            "currencyKey": "04000283271505",
+                            "uomKey": "06000486362710",
+                            "currencyKey": "04000598342213",
                             "uomQuantity": "string",
                             "makePartNumber": "string",
                             "reorderPoint": "string",
-                            "createdAt": "1970-01-16T08:52:22Z",
-                            "updatedAt": "1976-05-03T11:05:38Z"
+                            "createdAt": "2007-05-18T16:07:53Z",
+                            "updatedAt": "2018-10-23T05:14:35Z"
                         }
                     ],
                     "priceLevels": [
                         {
                             "name": "string",
                             "price": "string",
-                            "uomKey": "03000813203200",
+                            "uomKey": "02000071382803",
                             "uomQuantity": "string",
-                            "currencyKey": "03000782178507",
-                            "taxKey": "06000890583664",
+                            "currencyKey": "09000977086096",
+                            "taxKey": "02000492764422",
                             "minQuantity": "string",
                             "maxQuantity": "string",
-                            "updatedAt": "1976-10-16T11:30:44Z",
-                            "deletedAt": "2005-06-08T18:57:31Z"
+                            "updatedAt": "1986-02-06T05:13:11Z",
+                            "deletedAt": "1979-04-21T03:54:39Z"
                         }
                     ],
-                    "createdAt": "2019-03-30T09:32:41Z",
-                    "updatedAt": "1990-11-06T16:14:57Z",
-                    "deletedAt": "2005-01-01T13:51:22Z",
+                    "createdAt": "1981-08-24T13:13:59Z",
+                    "updatedAt": "1990-10-14T13:57:01Z",
+                    "deletedAt": "1988-03-07T04:53:41Z",
                     "inventories": [
                         {
-                            "key": "02000907071482",
-                            "code": "46637536",
+                            "key": "08000503136122",
+                            "code": "34319796",
                             "name": "string",
                             "quantity": 10,
                             "unitCost": 10,
-                            "locationKey": "01000499974178",
-                            "updatedAt": "2014-12-19T11:39:23Z",
-                            "createdAt": "1982-02-01T17:20:38Z"
+                            "locationKey": "05000320729238",
+                            "updatedAt": "1986-11-12T22:56:25Z",
+                            "createdAt": "2014-12-16T02:07:07Z"
                         }
                     ],
                     "dimensions": []
@@ -14774,16 +14774,16 @@
                     }
                 },
                 "example": {
-                    "key": "07000116076797",
+                    "key": "08000535346875",
                     "entityKeys": "[]",
                     "name": "string",
                     "url": "string",
                     "type": "string",
                     "contentType": "string",
-                    "description": "Harum aut qui quia ratione necessitatibus.",
+                    "description": "Molestiae assumenda odio consequatur quia et.",
                     "notes": "string",
-                    "createdAt": "2006-08-30T17:05:16Z",
-                    "updatedAt": "1997-12-19T11:37:14Z"
+                    "createdAt": "2015-09-14T05:13:04Z",
+                    "updatedAt": "2021-01-23T18:57:18Z"
                 }
             },
             "Drawing": {
@@ -14827,16 +14827,16 @@
                     "referencePos": "string",
                     "documents": [
                         {
-                            "key": "06000585302868",
+                            "key": "05000031083730",
                             "entityKeys": "[]",
                             "name": "string",
                             "url": "string",
                             "type": "string",
                             "contentType": "string",
-                            "description": "Nihil sit nihil dolores laborum aut aut.",
+                            "description": "Animi et ut possimus dicta voluptatem quis ex.",
                             "notes": "string",
-                            "createdAt": "1979-04-24T22:54:23Z",
-                            "updatedAt": "2009-11-23T19:16:21Z"
+                            "createdAt": "1994-01-08T15:25:56Z",
+                            "updatedAt": "1973-05-25T04:37:50Z"
                         }
                     ]
                 }
@@ -15022,81 +15022,81 @@
                     }
                 },
                 "example": {
-                    "key": "05000252463476",
+                    "key": "01000239176380",
                     "siteKeys": "[]",
                     "parentKeys": "[]",
                     "assetKeys": "[]",
                     "vendorKeys": "string",
-                    "organizationKey": "06000686821382",
+                    "organizationKey": "01000476263285",
                     "documents": [
                         {
-                            "key": "03000417597771",
+                            "key": "05000359335053",
                             "entityKeys": "[]",
                             "name": "string",
                             "url": "string",
                             "type": "string",
                             "contentType": "string",
-                            "description": "Alias vitae voluptatem odio esse aut error.",
+                            "description": "Totam illo error sed tempora ut excepturi ut.",
                             "notes": "string",
-                            "createdAt": "2009-08-14T21:44:47Z",
-                            "updatedAt": "1991-01-16T20:20:55Z"
+                            "createdAt": "1999-10-09T23:42:30Z",
+                            "updatedAt": "2015-07-30T12:47:11Z"
                         }
                     ],
-                    "accountKey": "07000253625187",
+                    "accountKey": "08000280593607",
                     "categoryName": "string",
-                    "code": "30705210",
+                    "code": "40735511",
                     "isAssembly": "false",
                     "partNumber": "string",
                     "name": "string",
-                    "description": "Laudantium atque incidunt et sunt sit.",
+                    "description": "Est facere minima dolor accusantium qui error.",
                     "notes": "string",
                     "criticality": "string",
-                    "isActive": "false",
+                    "isActive": "true",
                     "manufacturerName": "string",
                     "minimumQuantity": "string",
-                    "uomKey": "01000847832906",
+                    "uomKey": "07000504945999",
                     "cost": "string",
                     "currency": "string",
                     "supplyOptions": [
                         {
-                            "vendorKey": "01000524292362",
+                            "vendorKey": "04000842845591",
                             "partNumber": "[]",
                             "price": "[]",
-                            "uomKey": "09000862144871",
-                            "currencyKey": "08000181291960",
+                            "uomKey": "05000259110698",
+                            "currencyKey": "01000297743566",
                             "uomQuantity": "string",
                             "makePartNumber": "string",
                             "reorderPoint": "string",
-                            "createdAt": "2016-11-30T19:30:20Z",
-                            "updatedAt": "1989-01-04T16:18:40Z"
+                            "createdAt": "1980-07-05T16:02:00Z",
+                            "updatedAt": "1999-02-18T14:48:43Z"
                         }
                     ],
                     "priceLevels": [
                         {
                             "name": "string",
                             "price": "string",
-                            "uomKey": "04000110120983",
+                            "uomKey": "01000473623610",
                             "uomQuantity": "string",
-                            "currencyKey": "08000434925572",
-                            "taxKey": "08000554190456",
+                            "currencyKey": "00000375994414",
+                            "taxKey": "02000361666612",
                             "minQuantity": "string",
                             "maxQuantity": "string",
-                            "updatedAt": "1994-01-10T18:43:51Z",
-                            "deletedAt": "1976-02-16T10:59:47Z"
+                            "updatedAt": "2004-05-28T17:04:34Z",
+                            "deletedAt": "2024-05-19T04:36:39Z"
                         }
                     ],
-                    "createdAt": "2020-08-02T03:32:44Z",
-                    "updatedAt": "2023-09-11T14:05:10Z",
-                    "deletedAt": "2003-10-03T13:52:00Z",
+                    "createdAt": "2003-12-12T15:31:14Z",
+                    "updatedAt": "1994-10-10T04:26:03Z",
+                    "deletedAt": "2020-04-09T14:16:36Z",
                     "inventory": {
-                        "key": "04000702232534",
-                        "code": "97231028",
+                        "key": "04000816194074",
+                        "code": "46525864",
                         "name": "string",
                         "quantity": 10,
                         "unitCost": 10,
-                        "locationKey": "08000471619757",
-                        "updatedAt": "2017-05-24T19:50:44Z",
-                        "createdAt": "2018-10-24T17:12:50Z"
+                        "locationKey": "05000284159984",
+                        "updatedAt": "2018-12-10T18:05:20Z",
+                        "createdAt": "2008-11-19T04:33:35Z"
                     },
                     "drawings": [
                         {
@@ -15106,16 +15106,16 @@
                             "referencePos": "string",
                             "documents": [
                                 {
-                                    "key": "06000233553149",
+                                    "key": "08000488374523",
                                     "entityKeys": "[]",
                                     "name": "string",
                                     "url": "string",
                                     "type": "string",
                                     "contentType": "string",
-                                    "description": "Enim ad modi sapiente aspernatur.",
+                                    "description": "Nihil laboriosam velit totam vitae unde.",
                                     "notes": "string",
-                                    "createdAt": "1993-11-28T02:37:06Z",
-                                    "updatedAt": "1994-12-02T05:47:15Z"
+                                    "createdAt": "1979-12-04T12:04:44Z",
+                                    "updatedAt": "1989-03-01T13:11:29Z"
                                 }
                             ]
                         }
@@ -15200,17 +15200,17 @@
                     }
                 },
                 "example": {
-                    "key": "08000141814704",
-                    "organizationKey": "09000564001006",
-                    "parentKey": "05000879426920",
+                    "key": "04000567370294",
+                    "organizationKey": "06000009532387",
+                    "parentKey": "05000738216088",
                     "name": "string",
-                    "code": "93322430",
+                    "code": "42066088",
                     "subCode": "string",
                     "scope": "string",
                     "isActive": "false",
-                    "createdAt": "2024-06-16T14:07:47Z",
-                    "updatedAt": "1995-10-10T11:03:53Z",
-                    "deletedAt": "2004-11-22T09:02:14Z"
+                    "createdAt": "1984-07-16T23:58:02Z",
+                    "updatedAt": "2007-09-20T10:39:05Z",
+                    "deletedAt": "2005-08-02T18:23:33Z"
                 }
             },
             "StockLineItem": {
@@ -15248,11 +15248,11 @@
                     }
                 },
                 "example": {
-                    "productKey": "01000196818131",
-                    "materialKey": "07000300232213",
+                    "productKey": "03000450185516",
+                    "materialKey": "09000954574543",
                     "quantity": "string",
-                    "locationKey": "07000255896714",
-                    "storeroomKey": "07000023004222"
+                    "locationKey": "08000676045582",
+                    "storeroomKey": "01000759674791"
                 }
             },
             "StockTransfer": {
@@ -15372,23 +15372,23 @@
                     }
                 },
                 "example": {
-                    "key": "04000201952707",
-                    "organizationKey": "02000407463201",
-                    "shipmentOrderKey": "09000779578878",
-                    "fromLocationKey": "04000189315969",
-                    "toLocationKey": "06000914561791",
-                    "fromStoreroomKey": "01000452454746",
-                    "toStoreroomKey": "06000056731206",
-                    "statusKey": "09000050219248",
-                    "code": "81538324",
+                    "key": "07000130967208",
+                    "organizationKey": "02000208996650",
+                    "shipmentOrderKey": "07000099552328",
+                    "fromLocationKey": "09000402635755",
+                    "toLocationKey": "03000708273371",
+                    "fromStoreroomKey": "02000571387841",
+                    "toStoreroomKey": "06000305216310",
+                    "statusKey": "08000830524332",
+                    "code": "52744006",
                     "date": "string",
                     "lineItems": [
                         {
-                            "productKey": "03000322744590",
-                            "materialKey": "03000004150774",
+                            "productKey": "08000525262543",
+                            "materialKey": "02000313380610",
                             "quantity": "string",
-                            "locationKey": "08000522321687",
-                            "storeroomKey": "09000050552604"
+                            "locationKey": "06000162238279",
+                            "storeroomKey": "05000405973377"
                         }
                     ],
                     "orderNumber": "string",
@@ -15403,15 +15403,15 @@
                         "phone": "string",
                         "email": "string",
                         "notes": "string",
-                        "isActive": "false",
-                        "createdAt": "1995-11-06T19:47:11Z",
-                        "updatedAt": "2017-12-21T14:32:01Z"
+                        "isActive": "true",
+                        "createdAt": "2006-09-01T01:55:29Z",
+                        "updatedAt": "2002-01-06T15:31:59Z"
                     },
                     "shipmentRequired": "string",
                     "shippingMethod": "string",
-                    "createdAt": "2004-09-14T12:30:16Z",
-                    "updatedAt": "1972-11-10T07:43:51Z",
-                    "deletedAt": "1984-03-22T00:07:53Z"
+                    "createdAt": "1999-05-03T12:53:06Z",
+                    "updatedAt": "2006-07-01T00:15:08Z",
+                    "deletedAt": "1996-10-24T07:50:40Z"
                 }
             },
             "StockTransferCollection": {
@@ -15575,63 +15575,63 @@
                     }
                 },
                 "example": {
-                    "key": "07000745540049",
-                    "organizationKey": "08000620357023",
-                    "siteKey": "07000360605845",
-                    "vendorKey": "03000579808343",
-                    "statusKey": "02000809216069",
-                    "code": "85415119",
-                    "poKey": "02000318196100",
+                    "key": "08000145653559",
+                    "organizationKey": "02000293126395",
+                    "siteKey": "05000482045710",
+                    "vendorKey": "07000443851188",
+                    "statusKey": "01000248500489",
+                    "code": "38291814",
+                    "poKey": "06000952962526",
                     "orderNo": "string",
-                    "orderDate": "1998-11-15T21:33:43Z",
+                    "orderDate": "1982-05-21T20:12:23Z",
                     "type": "string",
-                    "title": "Est aperiam rerum sed sit labore quia.",
-                    "description": "At tempore voluptas nam sit modi velit.",
-                    "dueAt": "1982-01-13T12:06:19Z",
-                    "approvedAt": "2010-01-04T20:20:34Z",
-                    "completedAt": "1995-07-28T07:06:00Z",
+                    "title": "Quia rerum qui tempora.",
+                    "description": "Velit quo iste et est accusamus.",
+                    "dueAt": "1988-10-08T16:20:35Z",
+                    "approvedAt": "1984-03-08T06:38:29Z",
+                    "completedAt": "1999-05-12T16:57:24Z",
                     "shippingMethod": "string",
                     "terms": "string",
                     "notes": "string",
-                    "currencyKey": "03000972947146",
+                    "currencyKey": "00000877784566",
                     "totalNetValue": "string",
                     "totalTaxValue": "string",
                     "totalGrossValue": "string",
                     "lineItems": [
                         {
-                            "key": "08000943911452",
-                            "locationKey": "05000998844724",
-                            "accountKey": "01000315157002",
-                            "vendorKey": "05000101659883",
-                            "assetKey": "02000708482201",
-                            "materialKey": "00000595587989",
-                            "productKey": "01000699391915",
-                            "statusKey": "00000506961441",
-                            "storeroomKey": "02000235660642",
+                            "key": "02000612082406",
+                            "locationKey": "09000449299365",
+                            "accountKey": "01000094084069",
+                            "vendorKey": "03000307061141",
+                            "assetKey": "09000197508646",
+                            "materialKey": "04000300822291",
+                            "productKey": "04000415235606",
+                            "statusKey": "02000497212381",
+                            "storeroomKey": "08000888972039",
                             "lineNo": "string",
-                            "code": "73454441",
+                            "code": "32318227",
                             "type": "string",
                             "name": "string",
-                            "description": "Autem consequatur quo atque tenetur omnis sed ea.",
+                            "description": "Ullam tempora harum reprehenderit.",
                             "lineRef": "string",
                             "quantity": "string",
                             "receivedQuantity": "string",
-                            "uomKey": "08000263478335",
-                            "currencyKey": "05000975377804",
+                            "uomKey": "05000522993479",
+                            "currencyKey": "01000183642886",
                             "price": "string",
                             "discount": "string",
                             "lineTaxValue": "string",
                             "lineTotalValue": "string",
                             "notes": "string",
-                            "deliveryAt": "1980-07-26T03:41:08Z",
-                            "dueAt": "2009-03-29T18:41:48Z",
-                            "createdAt": "1974-06-29T05:10:23Z",
-                            "updatedAt": "1972-04-19T08:47:55Z",
-                            "deletedAt": "2002-08-17T18:32:33Z"
+                            "deliveryAt": "1988-11-15T22:42:58Z",
+                            "dueAt": "1979-01-18T10:40:25Z",
+                            "createdAt": "2011-03-18T23:00:02Z",
+                            "updatedAt": "1992-11-30T21:04:05Z",
+                            "deletedAt": "1974-05-14T00:51:14Z"
                         }
                     ],
-                    "createdAt": "2002-01-31T04:52:18Z",
-                    "updatedAt": "1997-02-26T08:07:45Z"
+                    "createdAt": "2000-03-29T03:18:39Z",
+                    "updatedAt": "1973-11-08T04:14:23Z"
                 }
             },
             "ReturnOrderCollection": {
@@ -15757,20 +15757,20 @@
                     }
                 },
                 "example": {
-                    "key": "07000408603536",
-                    "organizationKey": "07000676256657",
-                    "siteKey": "09000952088967",
-                    "vendorKey": "08000162056441",
-                    "customerKey": "05000646322791",
-                    "salesOrderKey": "07000640499294",
-                    "stockTransferKey": "07000307268389",
-                    "statusKey": "03000763880464",
-                    "code": "75960421",
+                    "key": "08000121004724",
+                    "organizationKey": "03000066417404",
+                    "siteKey": "08000503443088",
+                    "vendorKey": "06000406880385",
+                    "customerKey": "06000716499357",
+                    "salesOrderKey": "08000377422813",
+                    "stockTransferKey": "02000013062668",
+                    "statusKey": "08000378663204",
+                    "code": "15951908",
                     "orderNo": "string",
-                    "orderDate": "1977-03-29T22:49:37Z",
-                    "title": "Ipsam impedit fugiat inventore.",
-                    "description": "Est occaecati ex dolores.",
-                    "completedAt": "2002-04-28T15:06:02Z",
+                    "orderDate": "2013-01-01T06:57:21Z",
+                    "title": "Fugit minus blanditiis est.",
+                    "description": "Voluptas voluptas rerum quis quasi delectus.",
+                    "completedAt": "1975-05-24T10:46:24Z",
                     "notes": "string",
                     "shipmentAddress": {
                         "country": "string",
@@ -15782,13 +15782,13 @@
                         "phone": "string",
                         "email": "string",
                         "notes": "string",
-                        "isActive": "false",
-                        "createdAt": "2016-01-12T21:10:51Z",
-                        "updatedAt": "2023-11-30T05:53:58Z"
+                        "isActive": "true",
+                        "createdAt": "1981-05-06T02:22:24Z",
+                        "updatedAt": "2008-09-16T00:11:46Z"
                     },
                     "lineItems": "string",
-                    "createdAt": "2006-12-13T23:01:48Z",
-                    "updatedAt": "1977-05-09T09:06:42Z"
+                    "createdAt": "1988-03-24T16:11:05Z",
+                    "updatedAt": "2020-09-08T00:49:31Z"
                 }
             },
             "FulfillmentCollection": {
