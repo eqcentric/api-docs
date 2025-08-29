@@ -21,7 +21,7 @@
         "description": "",
         "summary": "Get list of tables",
         "parameters": [],
-        "tags": ["System"],
+        "tags": ["Raw"],
         "responses": {
           "200": {
             "description": "Successful operation",
@@ -44,7 +44,7 @@
     "/api/raw/tables/{table}/data": {
       "get": {
         "description": "",
-        "summary": "Get raw data of a table",
+        "summary": "Get raw data from a table",
         "parameters": [
           {
             "name": "table",
@@ -87,7 +87,7 @@
             }
           }
         ],
-        "tags": ["System"],
+        "tags": ["Raw"],
         "responses": {
           "200": {
             "description": "Successful operation",
