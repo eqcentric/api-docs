@@ -153,6 +153,53 @@
                 ]
             }
         },
+        "/api/system/client": {
+            "get": {
+                "description": " <details>\n   Get details of the client\n </details>\n\nSample payload:\n```json\n {\n     \"id\": \"f47ac10b-58cc-4372-a567-0e02b2c3d479\",\n     \"name\": \"Demo Client\",\n     \"logo_url\": \"https://example-assets.s3.amazonaws.com/uploads/f47ac10b-58cc-4372-a567-0e02b2c3d479/sample-logo.png\",\n     \"email\": \"demo@example.com\",\n     \"default_redirect\": \"https://demo.example.com/auth/callback\",\n     \"redirects\": [\n         \"https://demo.example.com/auth/callback\",\n         \"https://test.example.com/oauth/callback\",\n         \"https://localhost:3000/callback\"\n     ]\n }\n\n```",
+                "summary": "Get a ",
+                "parameters": [],
+                "tags": [
+                    "Connection"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "example": {
+                                    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+                                    "name": "Demo Client",
+                                    "logo_url": "https://example-assets.s3.amazonaws.com/uploads/f47ac10b-58cc-4372-a567-0e02b2c3d479/sample-logo.png",
+                                    "email": "demo@example.com",
+                                    "default_redirect": "https://demo.example.com/auth/callback",
+                                    "redirects": [
+                                        "https://demo.example.com/auth/callback",
+                                        "https://test.example.com/oauth/callback",
+                                        "https://localhost:3000/callback"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
         "/api/system/connections": {
             "get": {
                 "description": "",
@@ -305,13 +352,68 @@
                 ]
             }
         },
-        "/api/system/connections/{id}": {
+        "/api/system/connections/{connectionId}/token": {
+            "post": {
+                "description": " <details>\n   Issue a new access token for a connection\n </details>\n\nSample payload:\n```json\n {\n     \"token\": \"{{TOKEN_GENERATED}}\",\n     \"expires_in\": 300\n }\n/\n\n```",
+                "summary": "Create a ",
+                "parameters": [
+                    {
+                        "name": "connectionId",
+                        "description": "string|required",
+                        "in": "path",
+                        "style": "simple",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "tags": [
+                    "Connection"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "$ref": "#/components/schemas/ConnectionStore"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "requestBody": {
+                    "description": "Request body",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": [],
+                                "example": null
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/system/connections/{connectionId}": {
             "delete": {
                 "description": "",
                 "summary": "Delete a ",
                 "parameters": [
                     {
-                        "name": "id",
+                        "name": "connectionId",
                         "description": "string|required",
                         "in": "path",
                         "style": "simple",
@@ -343,13 +445,13 @@
                 ]
             }
         },
-        "/api/system/connections/{id}/metadata": {
+        "/api/system/connections/{connectionId}/metadata": {
             "get": {
                 "description": "",
                 "summary": "List ",
                 "parameters": [
                     {
-                        "name": "id",
+                        "name": "connectionId",
                         "description": "string|required",
                         "in": "path",
                         "style": "simple",
@@ -438,7 +540,7 @@
                 "summary": "Create a ",
                 "parameters": [
                     {
-                        "name": "id",
+                        "name": "connectionId",
                         "description": "string|required",
                         "in": "path",
                         "style": "simple",
@@ -769,7 +871,7 @@
                     }
                 },
                 "example": {
-                    "key": "04000955519716",
+                    "key": "06000480785315",
                     "name": "string",
                     "email": "string",
                     "status": "string",
@@ -895,7 +997,7 @@
                     }
                 },
                 "example": {
-                    "key": "04000019461771",
+                    "key": "07000791062644",
                     "name": "string",
                     "email": "string",
                     "status": "string",
